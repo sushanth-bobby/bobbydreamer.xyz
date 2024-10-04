@@ -8,15 +8,15 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
-    pageTitleSuffix: "",
+    pageTitle: "bobby_dreamer",
+    pageTitleSuffix: " | bobby_dreamer",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
-    locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    locale: "en-US", 
+    baseUrl: "bobydreamer.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
