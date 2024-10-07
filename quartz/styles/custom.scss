@@ -1,3 +1,26 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+// CSS Custom Classes
+
+.onecompilerCode-wrapper {
+    width: 100%;
+}
+
+.onecompilerCode {
+height: 450px;
+width: 100%;
+border-radius: 10px;
+}
+  
+// Icons from https://flowbite.com/icons/
+.callout {
+    // Icon size: 24px, Stroke width: 2
+    &[data-callout="archive"] {
+      --color: #f31505;
+      --border: #b90303bd;
+      --bg: #5e040444;
+      --callout-icon: url('data:image/svg+xml; utf8,<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"/></svg>'); //SVG icon code
+    }    
+  
+}

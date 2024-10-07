@@ -10,6 +10,10 @@ slug: "/142-omam-for-gastric"
 
 ![[142_omam-water.png]]
 
+![omam water](142_omam-water.png)
+<!-- ![Login choice page](./27-stash1.png) -->
+
+
 **What i was told is, this solves gastric problem or bloating ?**     
 *I have tried it and it works.*
 
