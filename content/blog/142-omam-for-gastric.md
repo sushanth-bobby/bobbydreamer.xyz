@@ -8,18 +8,14 @@ slug: "/142-omam-for-gastric"
 
 ## Recipe 1
 
-![[142_omam-water.png]]
-
-![omam water](142_omam-water.png)
-<!-- ![Login choice page](./27-stash1.png) -->
-
+![Omam Water](assets/142-omam-water.png)
 
 **What i was told is, this solves gastric problem or bloating ?**     
 *I have tried it and it works.*
 
 #### Ingredients
 
-1. Spoon of omam seeds *(in tamil)* aka ajwain seeds *(in hindi)* aka carmon seeds *(in english)*
+1. Spoon of omam seeds*(in tamil)* aka ajwain seeds*(in hindi)* aka carmon seeds*(in english)*
 
 1. Soak it in a glass of water overnight
 
@@ -42,7 +38,7 @@ I used it for only gastic/bloating issue i had and it did help.
 
 Mix the powder in a glass of warm water and consume it twice a day.
 
-![[142_fenugreek-oman-seeds-with-asafoetida-powdered-mix.png]]
+![Recipe 2 Mix](assets/142-fenugreek-oman-seeds-with-asafoetida-powdered-mix.png)
 
 
 **Eat well, Stay Healthy**

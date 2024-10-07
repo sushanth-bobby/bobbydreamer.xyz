@@ -16,7 +16,7 @@ export default (() => {
           </span>
           <span>
             {/* <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Books/Color/books_color.svg"></img> */}
-            <a href="/blogs">blog</a>
+            <a href="/blog">blog</a>
           </span>
           <span>
             {/* <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Brain/Color/brain_color.svg"></img> */}
