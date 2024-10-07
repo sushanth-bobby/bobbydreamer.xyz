@@ -24,3 +24,12 @@ border-radius: 10px;
     }    
   
 }
+
+// Mermaid Text Label color
+[saved-theme="dark"] .messageText {
+  fill: var(--lightgrey) !important
+}
+
+[saved-theme="light"] .messageText {
+  fill: black !important
+}

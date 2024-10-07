@@ -172,6 +172,8 @@ This wrapper CSS is added in `\quartz\styles\custom.scss`
  
 ## Mermaid diagram
 ---
+
+#### Sequence Diagram
 ````
 ```mermaid
 sequenceDiagram
@@ -191,4 +193,42 @@ sequenceDiagram
     John-->>-Alice: I feel great!
 ```
 
+#### Mindmaps
 
+```mermaid
+mindmap
+  root((mindmap))
+    quartz
+      check features
+      check whats possible
+    Whats obsidian
+      Is it markdown
+      How much it differs from markdown
+    Plan Gatsby to Quartz Migration
+      Changes to markdown content
+        No longer have refer internal links by folder structure
+      Changes to frontmatter
+        Minimal to none
+      What happens to images
+        Prefix and move all to assets folder
+    Migration
+      Write a python code to update internal links
+      WAPC to update prefix images with post number
+      WAPC to rename index.mdx to respective post name
+      WAPC to move all .md to blogs folder and images to assets folder 
+```
+
+#### Timeline
+
+```mermaid
+timeline
+        title England's History Timeline
+        section Stone Age
+          7600 BC : Britain's oldest known house was built in Orkney, Scotland
+          6000 BC : Sea levels rise and Britain becomes an island.<br> The people who live here are hunter-gatherers.
+        section Bronze Age
+          2300 BC : People arrive from Europe and settle in Britain. <br>They bring farming and metalworking.
+                  : New styles of pottery and ways of burying the dead appear.
+          2200 BC : The last major building works are completed at Stonehenge.<br> People now bury their dead in stone circles.
+                  : The first metal objects are made in Britain.Some other nice things happen. it is a good time to be alive.
+```

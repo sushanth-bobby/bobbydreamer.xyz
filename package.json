@@ -1,12 +1,12 @@
 {
-  "name": "@jackyzha0/quartz",
-  "description": "🌱 publish your digital garden and notes as a website",
+  "name": "@sushanth/bobbydreamer.xyz",
+  "description": "Sushanth : Knowledge Repository",
   "private": true,
   "version": "4.4.0",
   "type": "module",
-  "author": "jackyzha0 <j.zhao2k19@gmail.com>",
+  "author": "sushanth <sushanth.august@gmail.com>",
   "license": "MIT",
-  "homepage": "https://quartz.jzhao.xyz",
+  "homepage": "https://bobbydreamer.xyz",
   "repository": {
     "type": "git",
     "url": "https://github.com/jackyzha0/quartz.git"
