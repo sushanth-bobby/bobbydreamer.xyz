@@ -1,0 +1,11 @@
+:8080 {
+	root * ./public
+	try_files {path} {path}.html {path}/ =404
+	file_server
+	encode gzip
+
+	handle_errors {
+		rewrite * /{err.status_code}.html
+		file_server
+	}
+}

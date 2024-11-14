@@ -65,7 +65,7 @@ To serve docs
 npx quartz build --serve -d docs
 ```
 
-Building quartz locally
+Build and Serve locally
 ```
 npx quartz build --serve
 ```
@@ -84,11 +84,25 @@ This should start in `http://localhost:8080/`
 > - `--port`: what port to run the local preview server on
 > - `--concurrency`: how many threads to use to parse notes
 
+## Build
 
-## Deployment
-
+All outputs should come to `public` directory
 ```
 npx quartz build
 ```
 
-All outputs should come to `public` directory
+Open two command prompts
+```
+--Command Prompt 1
+caddy run
+
+--Command Prompt 2
+caddy reload --config "d:\20230422 - BigData\08. HTML\quartz\bdv4q1\Caddyfile"
+```
+
+## Deployment
+```
+
+```
+
+
