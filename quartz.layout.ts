@@ -1,5 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import { SimpleSlug } from "./quartz/util/path"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -26,12 +27,14 @@ export const defaultContentPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),    
-    Component.DesktopOnly(Component.Explorer()),
+
     Component.DesktopOnly(Component.RecentNotes({
       title: "Recently Created",
-      limit: 3,
-      showTags: false
+      limit: 7,
+      showTags: false,
+      linkToMore: "blog/" as SimpleSlug,
     })),    
+    
   ],
   right: [
     Component.Darkmode(),
@@ -48,8 +51,20 @@ export const defaultListPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
-    Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+
+    Component.DesktopOnly(Component.Explorer({
+      filterFn: (node) => {
+        // set containing names of everything you want to filter out
+        const omit = new Set(["about_me", "irevere", "til"])
+        // console.log(node.name.toLowerCase())
+        return !omit.has(node.name.toLowerCase())
+      },
+    })),
+
   ],
-  right: [],
+  right: [
+    Component.Darkmode(),
+    Component.Backlinks(),
+  ],
 }
+

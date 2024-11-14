@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Welcome
 ---
 
 # Hello, i am Sushanth.

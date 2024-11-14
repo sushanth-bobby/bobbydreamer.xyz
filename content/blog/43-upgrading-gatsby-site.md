@@ -8,6 +8,9 @@ tags:
 slug: "/43-upgrading-gatsby-site"
 ---
 
+> [!attention]
+> Possibly outdated
+
 Today, when trying to make some posts and test via `gatsby develop`, saw few warnings and decided to do `npm update`. I think, that was the worst decision, i made this week. `npm update` failed in-between due to some deprecated packages and out-of-support stuff and after few failed attempts to correct things. Only option i was left with is to re-deploy [@lekoarts/gatsby-theme-minimal-blog](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog) and manually redo all the customizations again. Good thing i did last time is i had documented all the changes i had done, so, it was bit easy but even so, it took a day. 
 
 ### # Upgrading site ( codename : bdv32 ) 

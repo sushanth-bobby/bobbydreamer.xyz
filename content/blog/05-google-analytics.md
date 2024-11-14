@@ -11,7 +11,8 @@ slug: "/google-analytics"
 ##### Note 
 **Updated** : 2021-07-17    
 
-This is outdated. This technique is pre-2021. New one is *gtag*. This [youtube video has clear instructions on setting up GatsbyJS & GA4](https://www.youtube.com/watch?v=Dwi99jtl3Fs) 
+> [!attention]
+> This is outdated. This technique is pre-2021. New one is *gtag*. This [youtube video has clear instructions on setting up GatsbyJS & GA4](https://www.youtube.com/watch?v=Dwi99jtl3Fs) 
 
 * * * 
 

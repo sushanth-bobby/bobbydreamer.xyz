@@ -6,6 +6,7 @@ tags: ['personal-development']
 slug: "/138-stoic-lessons"
 ---
 
+
 ![Stoicism](assets/138-stoicism.png)
 
 Stoicism teaches the development of self-control and fortitude as a means of overcoming destructive emotions; the philosophy holds that becoming a clear and unbiased thinker allows one to understand the universal reason. Stoicism's primary aspect involves improving the individual's ethical and moral well-being: *"Virtue consists in a will that is in agreement with Nature."* This principle also applies to the realm of interpersonal relationships; "to be free from anger, envy, and jealousy", and to accept even slaves as "equals of other men, because all men alike are products of nature".

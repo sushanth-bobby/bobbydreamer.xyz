@@ -1,12 +1,14 @@
 ---
 title: The Education of a Value Investor, Talks at Google, Guy Spier
-date: 2021-12-16
+date: 2024-10-14
 description: Advices, Strategies, Ideas and Philosophies from Guy Spier
-tags: ['nfwyt', 'quest-for-wealth']
-slug: "/68-qfw-guy-spier"
+tags:
+  - nfwyt
+  - quest-for-wealth
+slug: /68-qfw-guy-spier
+Creation Date: 2020-10-06
 ---
 
-**Created on**: 2020-10-06    
 
 ![Guy Spier](assets/68-Guy_Spier.png)
 
@@ -108,6 +110,19 @@ Resiliency costs
 
 Stick with psychological pain longer and you will recover. 
 
+### # My 8 Key Rules For Investing & Refining the Checklist Process
+
+**Date** : 14/October/2024
+
+Skier who wants to win the season has to make a very very difficult tradeoff because if he skis the fastest possible he increases the likelihood of injury and if he/she injures themselves then they're not going to get to the end of the season. 
+
+In the in the Dynamics of the individual race there is enormous pressure to ski as fast as you can and take a hidden risk that you will get injured and when you win the race nobody says *'oh my God! you took all these hidden risks that actually wasn't optimal for the whole season'* and so there there are things that appear optim optimal from one perspective which are not optimal from another perspective 
+
+Often I think that we as investors get the perspective wrong and so you know if I was to go into the task of running a great fund and I try to put up really really good numbers but I take hidden risks to do it and then at the end of 5 years or at the end of n years I blow up and that happens constantly and consistently and so that that's a big part of what makes it extraordinarily hard to have a long track record and especially a long track record that beats the index. 
+
+I think that what I figured out maybe a decade ago was that because it's so hard to beat the index and because such a big proportion of the fund is is either IM immediate family myself or people that I know well uh and I'm not willing to take hidden risks in order to juice returns and then show up one year and be down permanently 50%. 
+
+Funnily enough as a guy who's a active manager. I've driven myself to be incredibly passive because what I see and what what we all see at Berkshire Hathaway is that you can if you get the right businesses into your portfolio you can do extraordinarily well and when your intent is to be passive you free up an awful lot of brain Cycles to think about something else. 
 
 ### # References
 * [Wealth Education](40-wealth-education)

@@ -7,6 +7,10 @@ tags:
   - music
 slug: "/28-add-spotify-to-gatsby-site"
 ---
+
+> [!attention]
+> Possibly outdated
+
 **Last updated** : 26/April/2020     
 
 Follow below steps to setup Spotify Music Player in a Gatsby site,    

@@ -143,6 +143,13 @@ At the 2019 Berkshire Hathaway shareholder meeting, Charlie Munger described Bel
 	
 In 1979, the Belridge CEO put the company on the auction block for sale in a bidding war between Mobil Corporation, Texaco, and Shell. Ultimately, Shell was the high bidder at a price of $3,665 in cash. Munger near instantly turned a $34,500 investment into $1,099,500. This instantly transformed Munger's life and put him in the position to become a substantial Berkshire Hathaway shareholder alongside Warren Buffett.Of course, as Munger recounts, those extra 1500 shares would have turned $172,500 into $5,497,500. If Munger had purchased those Belridge shares and then put it into Berkshire, which was trading at $260 per share, we are talking 21,114 Berkshire Hathaway Class A shares that currently trade for $314,750. Such a maneuver would have added $6 billion to the Munger family's net worth.In hindsight, Munger said that what bothered him the most was that he knew Belridge Oil was the most undervalued stock he would ever see in his life, and didn't maximize the opportunity.
 
+---
+### Some quotes from Charlie
+
+> Figure out,  what's really stupid and avoid it
+> --Charlie Munger
+
+---
 
 ### # References
 * [Wealth Education](40-wealth-education)

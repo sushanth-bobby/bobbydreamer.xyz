@@ -29,7 +29,7 @@ export default (() => {
           <span>
             {/* Quick Commands */}
             {/* <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Triangular%20ruler/Color/triangular_ruler_color.svg"></img> */}
-            <a href="/quicks">Quicks</a>
+            <a href="/tags/cheats">Cheats</a>
           </span>
         </div>
       <hr style="background-color: var(--gray); border-top: 1px var(--gray) solid; margin-top: 1.3rem"></hr>

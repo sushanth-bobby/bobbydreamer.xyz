@@ -44,14 +44,16 @@ Below notes are taken while watching youtube videos.
 
 ##### Trying to solve the investment puzzle, Chuck Akre
 
-Investment concept as a 3 Legged Stool,     
-1. Profit Margin - when high check the quality of business and invest in that business. Eg: MasterCard profit margin is  40% . Even if you divide that 3 times 40/2=20 /2= 10 . That 10% on a average good margin. 
-2. Operations - People who run the business . They should treat even the unseen share holder as the partner in business
-3. Reinvest
+How to beat market with compounding,  the 3 legged stool - 
+1. Quality of business - When Profit Margin is high, check the quality of business and invest in that business. Eg: MasterCard profit margin is  40% . Even if you divide that 3 times 40/2=20 /2= 10 . That 10% on a average good margin. Only quality business can deliver consistent margins. 
+
+2. Quality of people who run the business - People who run the business . They should treat even the unseen share holder as the partner in business
+
+3. Reinvestment in business today gives greater profit margin is compounding
 
 ##### Thatcher Martin, Spree Capital
 
-20 business in portfolio but do research on lots of companies. Have high bar to get on portfolio
+Have 20 businesses in your portfolio but do research on lots of companies. Have high-bar to get on your portfolio
 
 **Key things**     
 
@@ -124,3 +126,13 @@ From the day he started Microsoft he insisted on always having enough cash in th
 ##### Unknown
 
 * Diversify when you think your choices can go wrong
+
+##### Nassim Taleb
+
+* Evolution likes randomness
+* Bankruptcies help cleanup the system before it becomes robust.
+* If you starve, weaker cells get cleaned up first
+* Evolution likes voltality
+* Stay invested during uncertain times. Like feeling all stocks/indices are at ATH
+* Did education ever make a country rich, no. Education came afterwards
+	* He said near to the end["Tinkering" is Greater Than "Knowledge" - Nassim Taleb (Mind-blowing insights)](https://www.youtube.com/watch?v=xltsxR90-p8).

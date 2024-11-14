@@ -147,7 +147,6 @@ All of these things, i think, say something about modesty and humility rather th
   + If a creditor of a company, doesn't get paid the interest in principle as promised, they have a claim against the value of the company. And they exert that claim in a process called bankruptcy. And in bankruptcy, to oversimplify and over generalize, the old owners are wiped out and old creditors become the new owners and if bought an ownership stake through the debt for what for less that its worth, then you make money. And we have made about 23% a year for 28 years of investing in distressed debt before fees without any leverage. 
 
 * * * 
-
 ### # Points noted in other speeches
 
 * As the prices rise emotion turns more positive, until you reach the top. When price is at its maximum and emotion at its maximum, that's where you have to be selling when price is high by definition few people do because they feel positive and ofcourse reverse is true in opposite direction at the bottom price reached its minimum in the same day investors are most depressed and most unlikely to buy. So we must do the opposite, we must stand against herd, stand against mass psychology. We must sell when fundamentals are at its peak and emotion are most positive and we must buy when fundamentals are at trough and people are depressed. Goal is to buy low sell high, more people buy high than but low. 
@@ -185,6 +184,8 @@ All of these things, i think, say something about modesty and humility rather th
 * Every time something is in a bubble
 
 * Find something you enjoy, find something that plays to your strength and avoid your weaknesses
+
+* Look for something that plays to your strength, avoids your weaknesses and you enjoy it doing
 
 * * * 
 

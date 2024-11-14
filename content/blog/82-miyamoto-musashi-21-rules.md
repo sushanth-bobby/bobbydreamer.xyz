@@ -153,9 +153,55 @@ Honor transcends the body. Your legacy will live forever if you build it high en
 #### 21. Never stray from the way.
 Lastly, Musashi reminds us of the importance of sticking assiduously to the Way. These precepts are meant to be practiced. They are meant to be put in action, to be lived — not just browsed through in seconds and forgotten just as quickly. There is a quote by Bruce Lee that goes, "Knowing is not enough, we must apply. Willing is not enough, we must do." So go forth and put these principles into practice. Remember, we are what we do, not what we think. It is only with constant action and repeated practices that we rise above and forge a better version of ourselves.
 
-<a id="ref01"></a>
+---
 
-### # References
+### Miyamoto Musashi's strategy to fix overthinking, improve mental health, and boost focus and productivity
+
+Source: [Youtube]([https://youtu.be/J2e2ipkc6IY?si=Dtxmw5JRscR8NAdy](https://youtu.be/J2e2ipkc6IY?si=Dtxmw5JRscR8NAdy))
+<a id="ref01"></a>
+#### Understanding the Root of Overthinking
+* Identify the root of your mental struggles by looking inward and being honest with yourself
+* Acknowledge your inner fears and insecurities to begin addressing them and moving forward
+
+#### Embracing Flexibility and Open-Mindedness
+* Be adaptable and accept that there's more than one way to solve a problem
+* Let go of the anxiety that comes from perfectionism and rigid thinking
+
+#### Finding Your Unique Path
+* Recognize that there are many paths to success and that your unique path might be different from others
+* Focus on what you truly want to do and remove the influence of others' expectations
+
+#### Focusing on What's Important
+* Eliminate unnecessary thoughts and focus on what's crucial
+* Identify & Remove unnecessary fillers from your life
+* Remove distractions that don't serve you and create space for purposeful action
+
+#### Self-Improvement and Discipline
+* Focus on personal progress and discipline each day
+* Concentrate on improving yourself bit by bit, rather than comparing yourself to others or worrying about the future
+* Adopt ****One day at a time**** philosophy
+
+#### Timing and Patience
+* Recognize that there's a right time for everything and that rushing usually leads to stress and mistakes
+* Respect the natural rhythm of how things unfold and wait for the right moment to take action
+
+#### Balance and Harmony
+* Create a harmonious state by sinking the mind and body
+* Prioritize different things for different seasons to avoid imbalance and unnecessary stress
+
+### Practice and Discipline
+* Embrace the power of practice and discipline to manage overthinking
+* Channel your energy into working towards your goals rather than beating yourself up over mistakes
+
+#### Taking Control of Your Life
+* Take responsibility for your life and identify areas where you need to improve
+* Create a list of your struggles and focus on addressing them one by one
+
+---
+
+<a id="ref01"/> 
+
+### References
 * [Alvin Ang - How the Asian Concept of Dokkōdō Can Help You Live a More Fulfilled Life](https://medium.com/mind-cafe/how-the-asian-concept-of-dokk%C5%8Dd%C5%8D-can-help-you-live-a-more-fulfilled-life-3c8bc74cf013)
 * [Andreian - Musashi 21 rules for life](https://andreian.com/musashi-21-rules/)
 * [YT - Einzelgänger - Miyamoto Musashi | The Way of the Ronin (Dokkodo)](https://www.youtube.com/watch?v=bhlvYmn1IUQ&t=290s)

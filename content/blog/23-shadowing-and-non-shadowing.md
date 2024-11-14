@@ -8,6 +8,9 @@ tags:
 slug: "/shadowing-and-non-shadowing"
 ---
 
+> [!attention]
+> Possibly outdated
+
 > To make your site stand out from the default, you have to make some custom changes.    
 > Just to let the world know, **"You have started"**
 
