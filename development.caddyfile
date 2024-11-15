@@ -1,5 +1,5 @@
 :8080 {
-	root * /srv
+	root * ./public
 	try_files {path} {path}.html {path}/ =404
 	file_server
 	encode gzip

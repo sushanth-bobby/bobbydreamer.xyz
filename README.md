@@ -94,10 +94,10 @@ npx quartz build
 Open two command prompts
 ```
 --Command Prompt 1
-caddy run
+caddy run --config "d:\20230422 - BigData\08. HTML\quartz\bdv4q1\development.caddyfile"
 
---Command Prompt 2
-caddy reload --config "d:\20230422 - BigData\08. HTML\quartz\bdv4q1\Caddyfile"
+--Command Prompt 2 ( If Caddyfile is updated and needs to be reloaded live)
+caddy reload --config "d:\20230422 - BigData\08. HTML\quartz\bdv4q1\development.caddyfile"
 ```
 
 ## Deployment
