@@ -24,7 +24,7 @@ RUN npx quartz build
 FROM caddy:2.7-alpine
 
 # Copy the static files from the 'public' directory to /src
-COPY ./public /srv 
+COPY --from=build /usr/src/app/public /srv 
 
 COPY --from=build /usr/src/app/Caddyfile /etc/caddy/Caddyfile
 

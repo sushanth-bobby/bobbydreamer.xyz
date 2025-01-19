@@ -1,12 +1,13 @@
 ---
 title: The Most Important Thing - Origins and Inspirations, Talks at Google, Howard Marks
-date: 2022-03-28
+created-date: 2020-02-04
+date: 2024-12-18
 description: Advices, Strategies, Ideas and Philosophies from Howard Marks
-tags: ['nfwyt', 'quest-for-wealth']
-slug: "/69-qfw-howard-marks"
+tags:
+  - nfwyt
+  - quest-for-wealth
+slug: /69-qfw-howard-marks
 ---
-
-**Created on :** 2020-02-04
 
 ![Howard Marks](assets/69-howard_marks.png)
 
@@ -188,10 +189,121 @@ All of these things, i think, say something about modesty and humility rather th
 * Look for something that plays to your strength, avoids your weaknesses and you enjoy it doing
 
 * * * 
+### # How to Think About Risk
+Podcast Listened on: 2024/12/18
+
+How to think about Risk ? 
+Risk is counter intuitive
+
+* They did an experiment in Drachten, Holland. They took away all the traffic lights, signs and road markings, what do you think happened to the level of accidents and fatalities, it went down, how could it possibly have gone down, when all the road aids were gone and the answer is, people said, oh! there are no more traffic signs traffic lights or Road markings I'd better drive more carefully. 
+
+* Jill Fredson is an expert on a avalanches and she said that better gear is created every year which makes it easier and more feasible to climb and yet the risk the number of fatalities and accidents in Climbing doesn't go down how can that be obviously counter intuitive people see, that better gear is being invented and they say Well since we have better gear, we can do riskier things, and the level of accidents and fatalities is maintained even in in spite of the arrival of better gear
+
+So if you think about those two examples you realize that 
+
+> The risk of an activity doesn't just lie in the activity in itself but importantly in how the participants approach it 
+
+The degree of risk present in a market or in an investment doesn't come just from the market or the investment but how people participate in that investment and if they conclude that the market has become safer they may say that that frees them to do riskier things and that's why I believe that risk is low when investors behave prudently and High when they don't. Just as risk is counterintuitive I believe that risk is perverse as I said the riskiest thing in the world is the belief that there's no risk a high level of risk Consciousness on the other hand tends to mitigate risk so when people say well that's really risky if they take a cautious approach then it becomes safe. 
+
+As an asset declines in price, most people say oh it's risky look, how it's falling but with the lower price it actually becomes less risky as an asset appreciates most people say that's a great asset look how well it's doing but the rising price makes it riskier so again pervert and this perversity is one of the main things that render most people incapable of understanding risk. 
+
+I think it's important to grasp a concept risk is hidden and risk is deceptive loss is what happens when risk the potential for loss collides with negative events you know.  
+
+> It's only when the tide goes out that we find out who's been swimming naked
+> -- Warren Buffett 
+
+It's only in times of testing that investors and their strategies are examined for the risk they really held. An example of that I wrote in my book The most important thing uh those of us who live in California as I did at the time our houses might contain a construction flaw but if all is well that flaw sits there for year after year and doesn't produce any loss it's only when the earthquakes occur that the house is tested and the flaws are disclosed and the risk the potential for loss turns into actual loss. 
+
+So similarly an investment can be risky but if it only exists in salutary environments it may look like a winter for a long time and it may look safe for a long time the fact that an investment is susceptible to a risk that occurs extremely rarely, what I call an improbable disaster. 
+
+> The infrequency of loss can make it appear that the investment is safer than it really is
+> -- Nasim Nicholas, The Black Swan
+
+* * * 
+### # You Bet! - January 13, 2020
+Podcast Listened on: 2025/01/03 ~ Source: [The Archive: You Bet!](https://www.oaktreecapital.com/insights/memo-podcast/the-archive-you-bet)
+
+Lasting thing i took away from Grayson's book was the observation that *"you cant tell the quality of a decision from the outcome*".
+
+As Grayson explained, you make the best decision you can based on what you know, but the success of your decision will be heavily influenced by 
+(a) relevant information you may lack and 
+(b) luck or randomness. 
+**Because of these two factors, well-thought-out decisions may fail, and poor decisions may succeed. While it might seem counterintuitive, the best decision-maker isn’t necessarily the person with the most successes, but rather the one with the best process and judgment. The two can be far from the same, and especially over a small number of trials, it can be impossible to know who’s who.**
+
+--
+In 1978, I switched to Citi’s bond department, and I was asked to start a high yield bond fund. Now I was investing in the bonds of the worst public companies in America – all rated speculative grade, or “junk.” And I was making good money safely and steadily. Not because the companies were flawless – in fact, about 4% by dollar amount would go on to default each year on average – but because “the price” was too favorable to those who bet on them. 
+
+This experience produced two of my most important observations: 
+* Success in investing doesn’t come from buying good things, but from buying things well, and it’s essential to know the difference. 
+* It’s not a matter of what you buy, but what you pay for it. 
+Nifty Fifty investors spent all of their time picking favorites and failed to notice that the prices they paid were too high. Mostly winning companies, but poor investments
+
+--
+Some points from book "Thinking in Bets - Annie Duke"
+
+* When we think probabilistically, we are less likely to use adverse results alone as proof that we made a decision error, because we recognize the possibility that the decision might have been good but luck and/or incomplete information (and a sample size of one) intervened. 
+* Maybe we made the best decisions from a set of unappealing choices, none of which were likely to turn out well. 
+* Maybe we committed our resources on a long shot because the payout more than compensated for the risk, but the long shot didn’t come in this time. 
+* Maybe we made the best choice based on the available information, but decisive information was hidden and we could not have known about it. 
+* Maybe we chose a path with very high likelihood of success and got unlucky. . . .
+
+How can we be sure that we are choosing the alternative that is best for us? What if another alternative would bring us more happiness, satisfaction, or money? The answer, of course, is we can’t be sure. Things outside our control (luck) can influence the result. The futures we imagine are merely possible. They haven’t happened yet. We can only make our best guess, given what we know and don’t know, at what the future will look like. . . . When we decide, we are betting whatever we value . . . on one of a set of possible and uncertain futures. That is where the risk is
+
+* * * 
+### # Fewer Losers, or More Winners? - September 12, 2023
+Podcast Listened on: 2025/01/03 ~ Source: [Fewer Losers, or More Winners?](https://www.oaktreecapital.com/insights/memo/fewer-losers-or-more-winners)
+
+From Graham and Dodd’s *Security Analysis* description of “fixed-value” (or fixed-income) investing as “a negative art.” What did they mean?  
+
+At first, I found their observation cynical, but then I realized what they were saying. Let’s assume there are one hundred 8% bonds outstanding. Let’s further assume that ninety will pay interest and principal as promised and ten will default. Since they’re all 8% bonds, all the ones that pay will deliver the same 8% return – it doesn’t matter which ones you bought. The only thing that matters is whether you bought any of the ten that defaulted. In other words, bond investors improve their performance not through what they buy, but through what they exclude – not by finding winners, but by avoiding losers. There it is: a negative art.
+
+--
+Risk control isn’t everything; it is the only thing
+
+**Understanding the distinction between risk control and risk avoidance is truly essential for investors.** Risk avoidance basically consists of not doing anything where the outcome is uncertain and could be negative. And yet, at its heart, investing consists of bearing uncertainty in the pursuit of attractive returns. For this reason, risk avoidance usually equates to return avoidance. You can avoid risk by buying Treasury bills or putting your money into government-insured deposits, but there’s a reason why the returns on these are generally the lowest available in the investment world. Why should you be well paid for parting with your money for a while if you’re sure to get it back?
+
+**Risk control, on the other hand, consists of declining to take risks that (a) exceed the quantum of risk you want to live with and/or (b) you wouldn’t be well rewarded for bearing.**
+
+--
+There are two kinds of tennis players . . . actually, two different types of tennis games. 
+
+Professionals play a winner’s game: **They win by hitting winners** (in tennis, that means shots the opponent can’t return). Since their game is so much within their control, they can usually produce the shots they want, the best of which win points. 
+But amateur tennis is a loser’s game: **The winner is usually the person who hits the fewest losers.** If you can just keep the ball in play long enough, eventually your opponent will hit it off the court or into the net. The amateur doesn’t have to hit winners to win, and that’s a good thing
+
+![Return-to-Risk](assets/69-risk-return.png)
+
+* * * 
+### # What Really Matters - November 22, 2022
+Podcast Listened on: 2025/01/03 ~ Source: [What Really Matters?](https://www.oaktreecapital.com/insights/memo/what-really-matters)
+
+**What Doesn’t Matter: Hyper-Activity**
+Most investors trade too much.  Since it’s hard to make multiple consecutive decisions correctly, and trading costs money and is often likely to result from an investor’s emotional swings, it’s better to do less of it.
+
+**When I was a boy, there was a popular saying: Don’t just sit there; do something.  But for investing, I’d invert it: Don’t just do something; sit there.**  Develop the mindset that you don’t make money on what you buy and sell; you make money (hopefully) on what you hold.  Think more.  Trade less.  Make fewer, but more consequential, trades.  Over-diversification reduces the importance of each trade; thus it can allow investors to take actions without adequate investigation or great conviction.  I think most portfolios are overdiversified and over-traded.
+
+> A news item that has gotten a lot of attention recently concerned an internal performance review of Fidelity accounts to determine which type of investors received the best returns between 2003 and 2013. The customer account audit revealed that the best investors were either dead or inactive – the people who switched jobs and “forgot” about an old 401(k) leaving the current options in place, or the people who died and the assets were frozen while the estate handled the assets.  (“Fidelity’s Best Investors Are Dead,” _The Conservative Income Investor_, April 8, 2020)
+
+**A Special Word in Closing: Asymmetry**
+“Asymmetry” is a concept I’ve been conscious of for decades and consider more important with every passing year.  It’s my word for the essence of investment excellence and a standard against which investors should be measured.
+
+First, some definitions:
+- I’m going to talk below about whether an investor has “alpha.”  Alpha is technically defined as return in excess of the benchmark return, but I prefer to think of it as superior investing skill.  It’s the ability to find and exploit inefficiencies when they’re present. 
+- Inefficiencies – mispricings or mistakes – represent instances when an asset’s price diverges from its fair value.  These divergences can show up as bargains or the opposite, over-pricings.
+- Bargains will dependably perform better than other investments over time after adjustment for their riskiness.  Over-pricings will do the opposite.
+- “Beta” is an investor’s or a portfolio’s relative volatility, also described as relative sensitivity or systematic risk.
+
+In my view, asymmetry is present when an investor can repeatedly do some or all of the following:
+- make more money in good markets than he gives back in bad markets,   
+- have more winners than losers,
+- make more money on his winners than he loses on his losers,
+- do well when his aggressive or defensive bias proves timely but not badly when it doesn’t,
+- do well when his sector or strategy is in favor but not badly when it isn’t, and
+- construct portfolios so that most of the surprises are on the upside.
 
 
-
+* * * 
 ### # References
 * [Howard Marks : Memos from Oaktree Capital(PDFs)](https://www.oaktreecapital.com/insights/howard-marks-memos)
 * [The Memo with Howard Marks(Videos)](https://www.oaktreecapital.com/insights/videos/the-memo-with-howard-marks)
+* [Lessons from Silicon Valley Bank](https://www.oaktreecapital.com/insights/memo/lessons-from-silicon-valley-bank)
 * [Wealth Education](40-wealth-education)

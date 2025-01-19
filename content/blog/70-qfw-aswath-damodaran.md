@@ -1,9 +1,12 @@
 ---
 title: The Value of Stories in Business, Talks at Google, Aswath Damodaran
+created-date: 2020-12-23
 date: 2020-12-23
 description: Advices, Strategies, Ideas and Philosophies from Aswath Damodaran
-tags: ['nfwyt', 'quest-for-wealth']
-slug: "/70-qfw-aswath-damodaran"
+tags:
+  - nfwyt
+  - quest-for-wealth
+slug: /70-qfw-aswath-damodaran
 ---
 
 ![aswath-damodaran](assets/70-aswath-damodaran.png)
@@ -133,10 +136,24 @@ Uber example ( Different Narrative, Different Numbers )
 
 ![focus-changes](assets/70-focus-changes.png)
 
+* * *
+**Date** : 08/09/2024    
+#### # Unlocking the Secrets of Valuation in This Masterclass (TIP577)
+Source [Unlocking the Secrets of Valuation in This Masterclass w/ Aswath Damodaran (TIP577)](https://www.youtube.com/watch?v=KaD0qFJhceo&t=92s)
 
+It really pays off when it's uncertain,  go where it's darkest, where there a crisis.
+
+Biggest edge
+
+Putting a table of list of companies from awesome to awful based on intrinsic, ratios,  qualitative.
+
+Finding mismatch on what you believe about a company and what market in concensus believes about a company. 
+
+Every company at some point in time will be price right.
+
+* * *
 #### Attachments
 * [Aswath Damodaran - narrative and numbers](https://storage.googleapis.com/bobbydreamer-com-technicals/quest-for-wealth/AswathDamodaran-narrative-and-numbers.pdf)
-
 
 ### # References
 * [Class of Aswath Damodaran](102-class-of-aswath-damodaran)

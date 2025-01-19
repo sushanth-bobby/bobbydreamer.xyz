@@ -111,3 +111,7 @@ source: [youtube](https://youtu.be/nYYkRaU0xh8?si=Qimgxi5rmY5T_JKt)
 **Exponential Growth:** Underestimating the power of exponential growth due to our inability to intuitively understand it.
 
 **Barnum Effect:** Attributing vague and generalized statements to our own personalities.
+
+---
+
+### That's all for now

@@ -1,4 +1,4 @@
---- 
+---
 title: Puppeteer - Most likely the page has been closed
 date: 2023-08-23
 description: Error - Session Closed. Most likely the page has been closed

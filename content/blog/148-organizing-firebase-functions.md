@@ -1,4 +1,4 @@
---- 
+---
 title: Organizing Firebase Functions
 date: 2022-10-08
 description: Organizing Firebase Functions

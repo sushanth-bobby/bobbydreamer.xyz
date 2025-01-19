@@ -102,7 +102,12 @@ caddy reload --config "d:\20230422 - BigData\08. HTML\quartz\bdv4q1\development.
 
 ## Deployment
 ```
-
+firebase deploy --only hosting --project bdxyz-361015
 ```
 
 
+## References
+* https://codelabs.developers.google.com/codelabs/cloud-run-deploy?authuser=1#8
+* https://til.cafe/blog/2024/hosting-static-web-site-using-google-cloud-run/
+* https://quartz.jzhao.xyz/hosting
+* https://cloud.google.com/run/docs/quickstarts/deploy-continuously

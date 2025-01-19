@@ -1,4 +1,4 @@
---- 
+---
 title: Omam aka Ajwain aka Carom Seeds for Gastric Troubles
 date: 2022-03-28
 description: Drink first thing in the morning for gastric troubles

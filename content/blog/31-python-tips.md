@@ -1,14 +1,13 @@
 ---
 title: Python tips
+created-date: 2020-04-11
 date: 2022-08-06
 description: Tips to improve python programming skills
 tags:
   - python
   - pandas
-slug: "/31-python-tips"
+slug: /31-python-tips
 ---
-
-**Last updated** : 06/Aug/2022     
 
 Events are in reverse chronological order. 
 * 2022/08/06 - [Find and delete specific keys from dict](#pt12)

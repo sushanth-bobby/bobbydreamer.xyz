@@ -1,4 +1,4 @@
---- 
+---
 title: You and Your Research, Dr. Richard W. Hamming
 date: 2022-01-14
 description: You and Your Research, Dr. Richard W. Hamming

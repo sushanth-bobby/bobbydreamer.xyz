@@ -1,15 +1,15 @@
 ---
 title: Python Errors & Solutions
+created-date: 2020-03-04
 date: 2020-08-08
 description: Python errors and solutions bank
-tags: 
-  - python 
-  - numpy 
-  - pandas 
+tags:
+  - python
+  - numpy
+  - pandas
   - e&s
-slug: "/python-errors-and-solution"
+slug: /python-errors-and-solution
 ---
-**Last updated** : 08/August/2020     
 
 Events are in reverse chronological order. 
 * 2020/08/08 - [AttributeError: 'float' object has no attribute 'lower'](#bl5)

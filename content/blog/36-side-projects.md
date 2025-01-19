@@ -9,9 +9,12 @@ slug: "/36-side-projects"
 
 * [stash](27-stash)    
   + A simple app where i store my notes and bookmark. This is very basic and uses firebase in the backend. 
+  + **Decomissioned**
 
 * [bobbydreamer.com](https://www.bobbydreamer.com)    
   + This site. Built using Gatsby and theme by leko arts. 
+  + Migrated to www.bobbydreamer.xyz
 
 * [tests.bobbydreamer.com](https://tests.bobbydreamer.com)    
   + This will be my test environment.
+  + **Decomissioned**

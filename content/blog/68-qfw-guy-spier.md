@@ -1,12 +1,12 @@
 ---
 title: The Education of a Value Investor, Talks at Google, Guy Spier
+created-date: 2020-10-06
 date: 2024-10-14
 description: Advices, Strategies, Ideas and Philosophies from Guy Spier
 tags:
   - nfwyt
   - quest-for-wealth
 slug: /68-qfw-guy-spier
-Creation Date: 2020-10-06
 ---
 
 

@@ -49,7 +49,12 @@ Those three little words.
 2022-02-23 : [Books to reread](141-books-to-revisit)
 
 * * * 
+**Date** : 2024    
+##### To know your purpose, think on these questions
 
+Who inspires you and why? Understanding who you look up to can help you uncover the qualities or values you aspire to embody. What problems do you enjoy solving? Identify the challenges that excite you and make you feel purposeful when working on them. What recurring dreams or goals do you have? Pay attention to any long-standing desires or visions that keep coming up in your life.
+
+* * * 
 **Date** : 18/March/2022    
 
 ##### Said by Ginni Rometty, Chairman, President and CEO of IBM @ Stanford Graduate School of Business

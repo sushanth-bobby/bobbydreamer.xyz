@@ -1,14 +1,15 @@
 ---
 title: Stash - Preview
-date: 2018-06-16
+created-date: 2018-06-16
+date: 2020-04-26
 description: Stash - My Note taking app
 tags:
   - web-development
-slug: "/27-stash"
+slug: /27-stash
 ---
-**Last updated** : 26/April/2020     
 
-This is the first web app i have made in the recent times. 
+> [!attention]
+> Decomissioned 
 
 I have a practice of taking lot of notes. These notes could be points taken from listening to video, bookmarks, quotes, urls and other things. I have been a user of Evernotes, OneNote and before this i saved notes in emails as draft. First app, i tried out is Evernotes that was almost 10 years back, i had a lots of notes in there. Then i bought Windows mobile(Nokia Lumia 920), in the beginning, Evernote wasn't available in windows phone. So i made use of OneNote which was there in windows phone. So, i had to copy all notes from Evernote to OneNote and it didn't have that much features that Evernote had, i managed and got used with it. Then came a thought, if i had to jump from windows to android, do i have to again migrate. At this time, i was learning NodeJS and Firebase, so i was thinking why not make an app, thats how everything started. I made this app eventually, this app is full fledged javascript, only a little bit of Nodejs. I use this everyday. 
 

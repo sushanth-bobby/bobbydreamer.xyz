@@ -1,12 +1,13 @@
 ---
 title: Top quotes of Charlie Munger
-date: 2022-01-12
+created-date: 2020-09-30
+date: 2025-01-09
 description: Advices, Strategies, Ideas and Philosophies from Charlie Munger
-tags: ['nfwyt','quest-for-wealth']
-slug: "/60-qfw-charlie-munger"
+tags:
+  - nfwyt
+  - quest-for-wealth
+slug: /60-qfw-charlie-munger
 ---
-
-**Created on**: 2020-09-30    
 
 ![Charlie Munger](assets/60-charlie-munger.png)
 
@@ -147,7 +148,9 @@ In 1979, the Belridge CEO put the company on the auction block for sale in a bid
 ### Some quotes from Charlie
 
 > Figure out,  what's really stupid and avoid it
-> --Charlie Munger
+
+> The wise ones bet heavily when the world offers them that opportunity. They bet big when they have the odds. And the rest of the time, they don’t. It’s just that simple.
+
 
 ---
 

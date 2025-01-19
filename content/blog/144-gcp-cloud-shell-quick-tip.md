@@ -1,4 +1,4 @@
---- 
+---
 title: GCP - Cloud Shell Quick Tips
 date: 2022-07-12
 description: Cloud shell quick tips

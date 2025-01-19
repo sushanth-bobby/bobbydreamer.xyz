@@ -1,13 +1,12 @@
 ---
 title: MySQL Tips and Tricks
-date: 2020-07-06
+created-date: 2020-07-06
+date: 2021-10-31
 description: MySQL Tips and Tricks that worked for me
 tags:
   - mysql
-slug: "/26-mysql-tips-and-tricks"
+slug: /26-mysql-tips-and-tricks
 ---
-
-**Last updated** : 31/Oct/2021     
 
 Events are in reverse chronological order. 
 * 2021/10/30 - [Speeding up mySQL LOAD](#bl12)

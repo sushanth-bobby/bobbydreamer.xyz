@@ -1,4 +1,4 @@
---- 
+---
 title: Eat that frog - Brian Tracy
 date: 2023-04-01
 description: Book on doing difficult things first

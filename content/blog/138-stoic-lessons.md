@@ -1,11 +1,11 @@
---- 
+---
 title: Stoic Lessons
 date: 2022-01-12
 description: Stoic Philosophies
-tags: ['personal-development']
-slug: "/138-stoic-lessons"
+tags:
+  - personal-development
+slug: /138-stoic-lessons
 ---
-
 
 ![Stoicism](assets/138-stoicism.png)
 

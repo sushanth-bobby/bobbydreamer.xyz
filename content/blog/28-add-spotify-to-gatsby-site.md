@@ -5,13 +5,11 @@ description: Adding Spotify playlist to your gatsby site
 tags:
   - web-development
   - music
-slug: "/28-add-spotify-to-gatsby-site"
+slug: /28-add-spotify-to-gatsby-site
 ---
 
 > [!attention]
 > Possibly outdated
-
-**Last updated** : 26/April/2020     
 
 Follow below steps to setup Spotify Music Player in a Gatsby site,    
 

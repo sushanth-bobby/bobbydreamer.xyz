@@ -1,9 +1,11 @@
 ---
 title: 21 Rules of Miyamoto Musashi
-date: 2021-02-04
+created-date: 2021-02-04
+date: 2024-08-20
 description: Miyamoto Musashi, a legendary samurai left us 21 rules which helps us focus and to be the best
-tags: ['personal-development']
-slug: "/82-miyamoto-musashi-21-rules"
+tags:
+  - personal-development
+slug: /82-miyamoto-musashi-21-rules
 ---
 
 Below texts and meanings are not written by me. Check [references](#ref01) for authors. I like this so i added those here. 
@@ -198,9 +200,19 @@ Source: [Youtube]([https://youtu.be/J2e2ipkc6IY?si=Dtxmw5JRscR8NAdy](https://you
 * Create a list of your struggles and focus on addressing them one by one
 
 ---
+**Date** : 20/08/2024    
+#### # Strategy to control overthinking
+Source: [How Miyamoto Musashi Solved Overthinking (Genius Strategy)](https://www.youtube.com/watch?v=J2e2ipkc6IY)
 
+* There is more than one path to the top of the mountain
+* Do nothing, that is of no use - Focus on whats important and purposeful
+* Today is victory over yourself of yesterday,  tomorrow is victory over lesser men - Focus on self-improvement each and every day.
+* There's timing in everything
+* Do not let body be dragged by the mind,  nor the mind be dragged by the body
+* The way is in training
+
+---
 <a id="ref01"/> 
-
 ### References
 * [Alvin Ang - How the Asian Concept of Dokkōdō Can Help You Live a More Fulfilled Life](https://medium.com/mind-cafe/how-the-asian-concept-of-dokk%C5%8Dd%C5%8D-can-help-you-live-a-more-fulfilled-life-3c8bc74cf013)
 * [Andreian - Musashi 21 rules for life](https://andreian.com/musashi-21-rules/)

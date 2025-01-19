@@ -6,8 +6,8 @@ tags:
   - GCS
   - GCP
   - web-development
-slug: "/v2-bobby-dreamer"
---- 
+slug: /v2-bobby-dreamer
+---
 
 Its not easy making a site, when you are starting from scratch and it happens to be your first or second site. There are lots of decisions to be made on how it looks like, what fonts to use for heading and what font to use for normal texts, do i need to have a logo or just name is fine or should i use initials or the website name itself and it is not just that, you will have learn some HTML, Javascript, JQuery and CSS must. 
 

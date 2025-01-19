@@ -1,13 +1,12 @@
 ---
 title: Notes from Tedx
+created-date: 2020-07-12
 date: 2022-03-28
 description: Notes taken from Tedx videos
 tags:
   - notes
-slug: "/37-tedx"
+slug: /37-tedx
 ---
-
-**Created on :** 2020-07-12
 
 Below are some notes, i have taken while listening to some Tedx videos. Initially i wasn't planning for this, i just listen to videos but after a while thought, these are good points, need to be noted down.
 

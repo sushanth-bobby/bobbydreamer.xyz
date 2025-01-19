@@ -1,4 +1,4 @@
---- 
+---
 title: Ego is the Enemy, Ryan Holiday
 date: 2022-02-06
 description: This is a book that every wannabe stoic person will want to read.
