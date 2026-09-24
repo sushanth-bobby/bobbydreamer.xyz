@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "site": "https://bobbydreamer.xyz",
+  "lastAudited": "2026-09-24",
+  "quartzBaseline": {
+    "version": "5.0.0",
+    "commit": "f1fba3fc55cbf60a60a5d09c95a49c042cdab63a",
+    "remote": "https://github.com/jackyzha0/quartz.git"
+  },
+  "coreImplementationModifications": 0,
+  "commands": {
+    "workingDirectory": "D:\\20230422 - BigData\\08. HTML\\quartz\\bdv4q2",
+    "authoringPreview": "npm run serve",
+    "productionBuild": "npm run build",
+    "quartzCli": "npm run quartz -- <command>",
+    "prohibited": "npx quartz <command>",
+    "reason": "Bare npx can resolve a second cached Quartz module root and split module-level registries; supported commands execute ./quartz/bootstrap-cli.mjs in-tree."
+  },
+  "snapshot": {
+    "migratedDocuments": 153,
+    "numberedPosts": 150,
+    "blogArticles": 150,
+    "sourceOwnedAssets": 491,
+    "aliases": 25,
+    "expectedTocs": 54,
+    "renderedTocs": 54,
+    "blogDescriptions": 150,
+    "articleTagLists": 150,
+    "propertiesPanels": 0,
+    "tests": 203,
+    "testSuites": 45
+  },
+  "customizations": [
+    {
+      "id": "QZ-CUST-001",
+      "name": "Migration corpus ownership and deterministic pipeline",
+      "category": "migration",
+      "files": [
+        "scripts/migrate-gatsby.mjs",
+        "scripts/migrate-gatsby.test.mjs",
+        "scripts/validate-gatsby.mjs",
+        "scripts/gatsby-migration-manifest.json",
+        "content"
+      ],
+      "tests": [
+        "full corpus preflight accounts for every post, page, route, and asset",
+        "full migration reruns byte-for-byte and leaves source immutable"
+      ],
+      "upgradeRisk": "MEDIUM",
+      "nativeReplacementCandidate": false
+    },
+    {
+      "id": "QZ-CUST-002",
+      "name": "MDX/content transformations and repair ledger",
+      "category": "migration",
+      "files": [
+        "scripts/migrate-gatsby.mjs",
+        "scripts/migrate-gatsby.test.mjs",
+        "scripts/validate-gatsby.mjs"
+      ],
+      "tests": [
+        "Spotify components are removed while fenced historical examples remain unchanged",
+        "numeric prose ordinals are escaped without touching code or frontmatter tags",
+        "currency prose is protected from accidental math parsing without touching code",
+        "malformed table separators are repaired and valid tables are preserved",
+        "local asset references adopt exact on-disk casing",
+        "the three known missing references have explicit outcomes"
+      ],
+      "upgradeRisk": "MEDIUM",
+      "nativeReplacementCandidate": false
+    },
+    {
+      "id": "QZ-CUST-003",
+      "name": "Canonical paths, aliases, and compatibility redirects",
+      "category": "routing",
+      "files": [
+        "scripts/migrate-gatsby.mjs",
+        "scripts/validate-gatsby.mjs",
+        "quartz.ia.ts",
+        "quartz-ia-pages/index.tsx",
+        "quartz.config.yaml"
+      ],
+      "tests": [
+        "route collision audit detects canonical and alias conflicts",
+        "route collision audit detects alias-to-canonical conflicts and self redirects",
+        "Quartz 4 compatibility routes map directly to canonical pages"
+      ],
+      "upgradeRisk": "HIGH",
+      "nativeReplacementCandidate": true
+    },
+    {
+      "id": "QZ-CUST-004",
+      "name": "Caddy production URL semantics",
+      "category": "deployment",
+      "files": ["Caddyfile", "Dockerfile"],
+      "tests": ["repository launch commands use the in-tree Quartz runtime"],
+      "upgradeRisk": "HIGH",
+      "nativeReplacementCandidate": true
+    },
+    {
+      "id": "QZ-CUST-005",
+      "name": "Numeric chronology and calendar-date separation",
+      "category": "information-architecture",
+      "files": [
+        "quartz.explorer-order.ts",
+        "quartz.ia.ts",
+        "quartz.ts",
+        "quartz-ia-pages/index.tsx",
+        "quartz-ia-article-nav/components.tsx"
+      ],
+      "tests": [
+        "sorts articles by numeric sequence descending",
+        "uses deterministic structural-slug ties for duplicate sequences",
+        "latest articles are numbered-only, numeric, limited, and date-independent",
+        "year archives use frontmatter dates, date order, and derive future years",
+        "article neighbors follow numeric sequence through gaps, duplicates, and boundaries"
+      ],
+      "upgradeRisk": "MEDIUM",
+      "nativeReplacementCandidate": false
+    },
+    {
+      "id": "QZ-CUST-006",
+      "name": "Page classification and conditional composition",
+      "category": "information-architecture",
+      "files": ["quartz.ia.ts", "quartz.ts", "quartz-ia-articles/index.ts", "quartz.config.yaml"],
+      "tests": [
+        "page classes drive structural component selection",
+        "blog article presentation is independent from numeric chronology",
+        "legacy and future posts select one Blog Article page type"
+      ],
+      "upgradeRisk": "HIGH",
+      "nativeReplacementCandidate": true
+    },
+    {
+      "id": "QZ-CUST-007",
+      "name": "Site identity, navigation, Search, and Theme header",
+      "category": "component",
+      "files": [
+        "quartz-ia-header/components.tsx",
+        "quartz-ia-header/style.ts",
+        "quartz.config.yaml",
+        "quartz/styles/custom.scss"
+      ],
+      "tests": [
+        "the site identity references the repository-owned brand asset",
+        "Phase 4D defines exact typography scales from one token source"
+      ],
+      "upgradeRisk": "MEDIUM",
+      "nativeReplacementCandidate": true
+    },
+    {
+      "id": "QZ-CUST-008",
+      "name": "Homepage, Working on, and Latest Articles",
+      "category": "information-architecture",
+      "files": ["content/index.md", "quartz.ts", "quartz.config.yaml", "quartz/styles/custom.scss"],
+      "tests": [
+        "latest articles are numbered-only, numeric, limited, and date-independent",
+        "Phase 4C keeps the homepage greeting as the semantic H1",
+        "Phase 4B removes Explorer UI registration without removing shared sequence logic"
+      ],
+      "upgradeRisk": "MEDIUM",
+      "nativeReplacementCandidate": true
+    },
+    {
+      "id": "QZ-CUST-009",
+      "name": "Blog and year archives",
+      "category": "page-type",
+      "files": [
+        "quartz-ia-pages/index.tsx",
+        "quartz-ia-pages/style.ts",
+        "quartz.ia.ts",
+        "quartz/styles/custom.scss"
+      ],
+      "tests": [
+        "year archives use frontmatter dates, date order, and derive future years",
+        "Blog and year archives share the same visible title and archive component"
+      ],
+      "upgradeRisk": "HIGH",
+      "nativeReplacementCandidate": true
+    },
+    {
+      "id": "QZ-CUST-010",
+      "name": "Topics, native tags, and taxonomy guard",
+      "category": "taxonomy",
+      "files": [
+        "quartz-ia-pages/index.tsx",
+        "quartz-ia-properties/components.tsx",
+        "scripts/migrate-gatsby.mjs",
+        "scripts/validate-gatsby.mjs",
+        "quartz/styles/custom.scss"
+      ],
+      "tests": [
+        "numeric prose ordinals are escaped without touching code or frontmatter tags",
+        "the 5AM Club ordinals stay visible but do not become taxonomy",
+        "Phase 4E tag list omits empty markup and preserves linked pills"
+      ],
+      "upgradeRisk": "MEDIUM",
+      "nativeReplacementCandidate": true
+    },
+    {
+      "id": "QZ-CUST-011",
+      "name": "Numeric Previous/Next navigation",
+      "category": "component",
+      "files": [
+        "quartz-ia-article-nav/components.tsx",
+        "quartz-ia-article-nav/style.ts",
+        "quartz.ia.ts",
+        "quartz.config.yaml"
+      ],
+      "tests": [
+        "article neighbors follow numeric sequence through gaps, duplicates, and boundaries"
+      ],
+      "upgradeRisk": "MEDIUM",
+      "nativeReplacementCandidate": true
+    },
+    {
+      "id": "QZ-CUST-012",
+      "name": "Blog Article metadata composition",
+      "category": "component",
+      "files": [
+        "quartz-ia-properties/components.tsx",
+        "quartz.config.yaml",
+        "quartz/styles/custom.scss"
+      ],
+      "tests": [
+        "Phase 4E.1 gives every Blog Article tags then content metadata without Properties",
+        "Phase 4E tag list omits empty markup and preserves linked pills",
+        "Blog listings retain descriptions while article composition does not render them"
+      ],
+      "upgradeRisk": "HIGH",
+      "nativeReplacementCandidate": true
+    },
+    {
+      "id": "QZ-CUST-013",
+      "name": "Blog Article TOC rule",
+      "category": "component-configuration",
+      "files": ["quartz.config.yaml", "scripts/audit-toc.mjs", "quartz/styles/custom.scss"],
+      "tests": ["scripts/audit-toc.mjs"],
+      "upgradeRisk": "MEDIUM",
+      "nativeReplacementCandidate": false
+    },
+    {
+      "id": "QZ-CUST-014",
+      "name": "Homepage site-wide Graph View",
+      "category": "component-configuration",
+      "files": ["quartz.config.yaml", "quartz/styles/custom.scss"],
+      "tests": ["Phase 4C moves a site-wide graph from T.I.L to the homepage"],
+      "upgradeRisk": "MEDIUM",
+      "nativeReplacementCandidate": false
+    },
+    {
+      "id": "QZ-CUST-015",
+      "name": "Brand mark, wordmark, and favicon",
+      "category": "branding",
+      "files": [
+        "quartz/static/brand/bobbydreamer-mark-source.png",
+        "quartz/static/brand/bobbydreamer-mark.png",
+        "quartz/static/icon.png",
+        "quartz-ia-header/components.tsx",
+        "quartz-ia-header/style.ts"
+      ],
+      "tests": ["the site identity references the repository-owned brand asset"],
+      "upgradeRisk": "LOW",
+      "nativeReplacementCandidate": false
+    },
+    {
+      "id": "QZ-CUST-016",
+      "name": "Typography, natural title wrapping, and responsive layout",
+      "category": "styling",
+      "files": ["quartz/styles/custom.scss", "quartz-ia-header/style.ts", "quartz.config.yaml"],
+      "tests": ["Phase 4D defines exact typography scales from one token source"],
+      "upgradeRisk": "MEDIUM",
+      "nativeReplacementCandidate": false
+    },
+    {
+      "id": "QZ-CUST-017",
+      "name": "Visual tokens and content presentation",
+      "category": "styling",
+      "files": [
+        "quartz/styles/custom.scss",
+        "quartz.config.yaml",
+        "quartz-ia-header/style.ts",
+        "quartz-ia-pages/style.ts",
+        "quartz-ia-article-nav/style.ts"
+      ],
+      "tests": ["Phase 4D defines exact typography scales from one token source"],
+      "upgradeRisk": "MEDIUM",
+      "nativeReplacementCandidate": false
+    },
+    {
+      "id": "QZ-CUST-018",
+      "name": "Intentional removals and content-compatibility configuration",
+      "category": "configuration",
+      "files": ["quartz.config.yaml", "package.json", "quartz.ts", "scripts/migrate-gatsby.mjs"],
+      "tests": [
+        "Phase 4B removes Explorer UI registration without removing shared sequence logic",
+        "Spotify components are removed while fenced historical examples remain unchanged"
+      ],
+      "upgradeRisk": "LOW",
+      "nativeReplacementCandidate": false
+    },
+    {
+      "id": "QZ-CUST-019",
+      "name": "Local-package source and generated-artifact lifecycle",
+      "category": "build-architecture",
+      "files": [
+        "package.json",
+        "package-lock.json",
+        "Dockerfile",
+        "quartz-ia-article-nav",
+        "quartz-ia-articles",
+        "quartz-ia-header",
+        "quartz-ia-pages",
+        "quartz-ia-properties"
+      ],
+      "tests": ["repository launch commands use the in-tree Quartz runtime"],
+      "upgradeRisk": "HIGH",
+      "nativeReplacementCandidate": true
+    }
+  ]
+}
