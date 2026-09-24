@@ -1,0 +1,23 @@
+{
+  "name": "@bdv/quartz-ia-pages",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "..\\node_modules\\.bin\\esbuild.cmd index.tsx --bundle --platform=node --format=esm --outfile=dist/index.js --external:preact* --external:@quartz-community/*"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "quartz": {
+    "name": "quartz-ia-pages",
+    "displayName": "Information architecture pages",
+    "category": [
+      "pageType",
+      "emitter"
+    ],
+    "version": "1.0.0",
+    "defaultOrder": 45
+  }
+}

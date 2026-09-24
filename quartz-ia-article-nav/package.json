@@ -1,0 +1,27 @@
+{
+  "name": "@bdv/quartz-ia-article-nav",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "..\\node_modules\\.bin\\esbuild.cmd index.ts components.tsx --bundle --platform=node --format=esm --outdir=dist --external:preact* --external:@quartz-community/*"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./components": "./dist/components.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "quartz": {
+    "name": "quartz-ia-article-nav",
+    "displayName": "Article sequence navigation",
+    "category": "component",
+    "version": "1.0.0",
+    "components": {
+      "ArticleSequenceNavigation": {
+        "displayName": "Article sequence navigation",
+        "defaultPosition": "afterBody",
+        "defaultPriority": 10
+      }
+    }
+  }
+}
