@@ -1,0 +1,35 @@
+:8080 {
+	root * "{$QUARTZ_ROOT:/srv}"
+
+	# Alias redirect pages use relative canonical targets. Normalize a trailing-slash
+	# alias to its generated .html route before serving the redirect page.
+	@trailingSlashAlias expression `path_regexp('alias', '^(.+)/$') && file({'try_files': [{re.alias.1} + '.html']})`
+	handle @trailingSlashAlias {
+		route {
+			uri strip_suffix /
+			redir {uri} 308
+		}
+	}
+
+	@canonicalDirectory {
+		not path */
+		file {path}/index.html
+	}
+	handle @canonicalDirectory {
+		route {
+			uri path_regexp ^(.*)$ $1/
+			redir {uri} 308
+		}
+	}
+
+	handle {
+		try_files {path} {path}.html {path}/index.html =404
+		file_server
+	}
+	encode gzip
+
+	handle_errors {
+		rewrite * /{err.status_code}.html
+		file_server
+	}
+}
