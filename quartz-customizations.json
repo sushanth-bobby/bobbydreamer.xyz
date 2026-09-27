@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "site": "https://bobbydreamer.xyz",
-  "lastAudited": "2026-09-24",
+  "lastAudited": "2026-09-27",
   "quartzBaseline": {
     "version": "5.0.0",
     "commit": "f1fba3fc55cbf60a60a5d09c95a49c042cdab63a",
@@ -12,6 +12,8 @@
     "workingDirectory": "D:\\20230422 - BigData\\08. HTML\\quartz\\bdv4q2",
     "authoringPreview": "npm run serve",
     "productionBuild": "npm run build",
+    "deploymentCheck": "npm run deploy:check",
+    "deploymentPublish": "npm run deploy:production",
     "quartzCli": "npm run quartz -- <command>",
     "prohibited": "npx quartz <command>",
     "reason": "Bare npx can resolve a second cached Quartz module root and split module-level registries; supported commands execute ./quartz/bootstrap-cli.mjs in-tree."
@@ -27,7 +29,7 @@
     "blogDescriptions": 150,
     "articleTagLists": 150,
     "propertiesPanels": 0,
-    "tests": 203,
+    "tests": 209,
     "testSuites": 45
   },
   "customizations": [
@@ -77,13 +79,17 @@
         "scripts/migrate-gatsby.mjs",
         "scripts/validate-gatsby.mjs",
         "quartz.ia.ts",
+        "quartz.production.ts",
         "quartz-ia-pages/index.tsx",
-        "quartz.config.yaml"
+        "quartz.config.yaml",
+        "scripts/finalize-production.ts",
+        "scripts/validate-production.mjs"
       ],
       "tests": [
         "route collision audit detects canonical and alias conflicts",
         "route collision audit detects alias-to-canonical conflicts and self redirects",
-        "Quartz 4 compatibility routes map directly to canonical pages"
+        "Quartz 4 compatibility routes map directly to canonical pages",
+        "production metadata uses public canonical URLs and keeps 404 out of search indexes"
       ],
       "upgradeRisk": "HIGH",
       "nativeReplacementCandidate": true
@@ -92,7 +98,14 @@
       "id": "QZ-CUST-004",
       "name": "Caddy production URL semantics",
       "category": "deployment",
-      "files": ["Caddyfile", "Dockerfile"],
+      "files": [
+        "Caddyfile",
+        "Dockerfile",
+        ".dockerignore",
+        "firebase.json",
+        "PRODUCTION.md",
+        "scripts/validate-caddy.mjs"
+      ],
       "tests": ["repository launch commands use the in-tree Quartz runtime"],
       "upgradeRisk": "HIGH",
       "nativeReplacementCandidate": true
@@ -169,11 +182,14 @@
         "quartz-ia-pages/index.tsx",
         "quartz-ia-pages/style.ts",
         "quartz.ia.ts",
+        "quartz.production.ts",
+        "scripts/validate-production.mjs",
         "quartz/styles/custom.scss"
       ],
       "tests": [
         "year archives use frontmatter dates, date order, and derive future years",
-        "Blog and year archives share the same visible title and archive component"
+        "Blog and year archives share the same visible title and archive component",
+        "production discovery emits article-only RSS and a root robots policy"
       ],
       "upgradeRisk": "HIGH",
       "nativeReplacementCandidate": true
@@ -307,13 +323,43 @@
         "package.json",
         "package-lock.json",
         "Dockerfile",
+        "scripts/validate-local-packages.mjs",
         "quartz-ia-article-nav",
         "quartz-ia-articles",
         "quartz-ia-header",
         "quartz-ia-pages",
         "quartz-ia-properties"
       ],
-      "tests": ["repository launch commands use the in-tree Quartz runtime"],
+      "tests": [
+        "repository launch commands use the in-tree Quartz runtime",
+        "npm run validate:packages"
+      ],
+      "upgradeRisk": "HIGH",
+      "nativeReplacementCandidate": true
+    },
+    {
+      "id": "QZ-CUST-020",
+      "name": "Cache-safe publishing and production replacement",
+      "category": "deployment",
+      "files": [
+        "Caddyfile",
+        "package.json",
+        "quartz.production.ts",
+        "scripts/finalize-production.ts",
+        "scripts/validate-cache-contract.mjs",
+        "scripts/validate-live-release.mjs",
+        "scripts/deploy-production.mjs",
+        "scripts/deploy-production.test.mjs",
+        "PRODUCTION.md"
+      ],
+      "tests": [
+        "content-addressed Search data survives a Release A to Release B browser cache",
+        "deploy:check is read-only",
+        "release gates finish before build, safe replacement, and traffic change",
+        "deployment captures rollback state and never embeds the operational project",
+        "npm run validate:cache",
+        "npm run validate:live -- <origin>"
+      ],
       "upgradeRisk": "HIGH",
       "nativeReplacementCandidate": true
     }
