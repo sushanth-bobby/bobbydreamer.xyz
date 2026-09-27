@@ -1,18 +1,28 @@
 FROM node:22-slim AS builder
 
-# install git to install plugins
-RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends git \
+  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /usr/src/app
-COPY package.json .
-COPY package-lock.json* .
-COPY .npmrc* .
-COPY quartz/ ./quartz/
-COPY quartz.lock.json* .
-RUN npm install; node ./quartz/bootstrap-cli.mjs plugin install
 
-FROM node:22-slim
-WORKDIR /usr/src/app
-COPY --from=builder /usr/src/app/ /usr/src/app/
+COPY package.json package-lock.json .npmrc ./
+COPY quartz-ia-article-nav/ ./quartz-ia-article-nav/
+COPY quartz-ia-articles/ ./quartz-ia-articles/
+COPY quartz-ia-header/ ./quartz-ia-header/
+COPY quartz-ia-pages/ ./quartz-ia-pages/
+COPY quartz-ia-properties/ ./quartz-ia-properties/
+RUN npm ci
+
 COPY . .
-CMD ["node", "./quartz/bootstrap-cli.mjs", "build", "--serve"]
+RUN npm run build
+
+FROM caddy:2.11.4-alpine AS runtime
+
+ENV QUARTZ_ROOT=/srv
+COPY Caddyfile /etc/caddy/Caddyfile
+COPY --from=builder /usr/src/app/public /srv
+
+EXPOSE 8080
+
+CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]

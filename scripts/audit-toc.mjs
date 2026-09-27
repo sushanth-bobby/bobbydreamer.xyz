@@ -90,7 +90,7 @@ const expectedCount = bucket((row) => row.expected)
 const renderedCount = bucket((row) => row.rendered)
 const escapeCell = (value) => String(value).replaceAll("|", "\\|").replaceAll("\n", " ")
 const lines = [
-  "# Quartz 5 — Phase 4C TOC Audit",
+  "# Quartz 5 — Blog Article TOC Audit",
   "",
   `Generated: ${new Date().toISOString()}`,
   "",

@@ -99,6 +99,42 @@ var quartz4CompatibilityRoutes = {
   "pages/til": "til/"
 };
 
+// ../quartz.production.ts
+function canonicalPathForSlug(slug) {
+  const normalized = slug.replace(/^\/+|\/+$/g, "").toLowerCase();
+  if (normalized === "" || normalized === "index") return "/";
+  if (normalized.endsWith("/index")) return `/${normalized.slice(0, -"/index".length)}/`;
+  return `/${normalized}`;
+}
+function absoluteSiteUrl(baseUrl, slug) {
+  const site = new URL(`https://${baseUrl}`);
+  const configuredBase = site.pathname.replace(/\/$/, "");
+  site.pathname = `${configuredBase}${canonicalPathForSlug(slug)}`;
+  site.search = "";
+  site.hash = "";
+  return site.toString();
+}
+function productionDescription(slug) {
+  if (slug === "blog/index") {
+    return "All bobby_dreamer Blog Articles in numeric publication sequence.";
+  }
+  const year = /^blog\/(\d{4})\/index$/.exec(slug)?.[1];
+  if (year) return `bobby_dreamer Blog Articles published in ${year}.`;
+  if (slug === "topics/index") {
+    return "Browse curated topics from bobby_dreamer Blog Articles.";
+  }
+  if (slug === "tags/index") return "Browse all article tags on bobbydreamer.xyz.";
+  const tag = /^tags\/(.+)$/.exec(slug)?.[1];
+  if (tag) return `Browse bobby_dreamer Blog Articles tagged ${tag}.`;
+  return void 0;
+}
+function escapeXml(value) {
+  return value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&apos;");
+}
+function escapeCdata(value) {
+  return value.replaceAll("]]>", "]]]]><![CDATA[>");
+}
+
 // style.ts
 var style = `
 .blog-year-navigation {
@@ -120,6 +156,7 @@ var style_default = style;
 
 // index.tsx
 import { jsx, jsxs } from "preact/jsx-runtime";
+var rssArticleLimit = 20;
 var curatedTopics = [
   { slug: "quest-for-wealth", label: "quest-for-wealth" },
   { slug: "notes", label: "notes" },
@@ -133,6 +170,43 @@ var curatedTopics = [
   { slug: "javascript", label: "javascript" },
   { slug: "pandas", label: "pandas" }
 ];
+function rssFeed(baseUrl, content) {
+  const articles = numberedArticles(content.map((entry) => entry[1].data)).slice(0, rssArticleLimit);
+  const channelUrl = absoluteSiteUrl(baseUrl, "index");
+  const feedUrl = new URL("index.xml", channelUrl).toString();
+  const lastBuildDate = frontmatterDate(articles[0])?.toUTCString();
+  const items = articles.map((article) => {
+    const url = absoluteSiteUrl(baseUrl, article.slug);
+    const title = escapeXml(article.frontmatter?.title ?? article.slug);
+    const description = escapeCdata(article.description ?? "");
+    const date = frontmatterDate(article)?.toUTCString();
+    return `<item>
+    <title>${title}</title>
+    <link>${escapeXml(url)}</link>
+    <guid isPermaLink="true">${escapeXml(url)}</guid>
+    <description><![CDATA[${description}]]></description>
+    ${date ? `<pubDate>${date}</pubDate>` : ""}
+  </item>`;
+  }).join("");
+  return `<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bobby_dreamer</title>
+    <link>${escapeXml(channelUrl)}</link>
+    <description>Latest bobby_dreamer Blog Articles in numeric publication sequence.</description>
+    <atom:link href="${escapeXml(feedUrl)}" rel="self" type="application/rss+xml" />
+    ${lastBuildDate ? `<lastBuildDate>${lastBuildDate}</lastBuildDate>` : ""}
+    ${items}
+  </channel>
+</rss>
+`;
+}
+function robotsPolicy(baseUrl) {
+  return `User-agent: *
+Allow: /
+Sitemap: ${absoluteSiteUrl(baseUrl, "sitemap.xml")}
+`;
+}
 function ArchiveBody() {
   const Archive = ({ allFiles, fileData, cfg }) => {
     const data = fileData;
@@ -188,18 +262,30 @@ var InformationArchitecturePages = () => ({
   generate({ content }) {
     const files = content.map((entry) => entry[1].data);
     return [
-      { slug: "blog/index", title: "Blog", data: { archiveKind: "blog" } },
+      {
+        slug: "blog/index",
+        title: "Blog",
+        data: { archiveKind: "blog", description: productionDescription("blog/index") }
+      },
       ...archiveYears(files).map((year) => ({
         slug: `blog/${year}/index`,
         title: "Blog",
-        data: { archiveKind: "year", archiveYear: year }
+        data: {
+          archiveKind: "year",
+          archiveYear: year,
+          description: productionDescription(`blog/${year}/index`)
+        }
       })),
-      { slug: "topics/index", title: "Topics", data: { archiveKind: "topics" } }
+      {
+        slug: "topics/index",
+        title: "Topics",
+        data: { archiveKind: "topics", description: productionDescription("topics/index") }
+      }
     ];
   },
   layout: "archive",
   body: ArchiveBody,
-  async *emit(ctx) {
+  async *emit(ctx, content) {
     for (const [slug, target] of Object.entries(quartz4CompatibilityRoutes)) {
       const html = `<!DOCTYPE html>
 <html lang="en-us">
@@ -214,6 +300,11 @@ var InformationArchitecturePages = () => ({
 `;
       yield write({ ctx, slug, ext: ".html", content: html });
     }
+    const baseUrl = ctx.cfg.configuration.baseUrl;
+    if (!baseUrl)
+      throw new Error("Production RSS and robots emission requires configuration.baseUrl");
+    yield write({ ctx, slug: "index", ext: ".xml", content: rssFeed(baseUrl, content) });
+    yield write({ ctx, slug: "robots", ext: ".txt", content: robotsPolicy(baseUrl) });
   }
 });
 var index_default = InformationArchitecturePages;

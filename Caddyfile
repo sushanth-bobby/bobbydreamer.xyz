@@ -1,6 +1,15 @@
 :8080 {
 	root * "{$QUARTZ_ROOT:/srv}"
 
+	# Stable URLs may change between releases and must revalidate. Quartz-generated
+	# content-hashed resources are safe to retain indefinitely.
+	@immutableAsset path_regexp immutableAsset -[0-9a-f]{8,64}\.(?:css|js|json)$
+	header @immutableAsset Cache-Control "public, max-age=31536000, immutable"
+	@mutableAsset {
+		not path_regexp mutableHashed -[0-9a-f]{8,64}\.(?:css|js|json)$
+	}
+	header @mutableAsset Cache-Control "no-cache"
+
 	# Alias redirect pages use relative canonical targets. Normalize a trailing-slash
 	# alias to its generated .html route before serving the redirect page.
 	@trailingSlashAlias expression `path_regexp('alias', '^(.+)/$') && file({'try_files': [{re.alias.1} + '.html']})`

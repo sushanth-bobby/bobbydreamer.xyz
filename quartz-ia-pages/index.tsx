@@ -1,6 +1,7 @@
 import type { QuartzComponent, QuartzComponentConstructor } from "../quartz/components/types"
 import type { QuartzPageTypePlugin } from "../quartz/plugins/types"
-import type { QuartzPluginData } from "../quartz/plugins/vfile"
+import type { ProcessedContent, QuartzPluginData } from "../quartz/plugins/vfile"
+import type { BuildCtx } from "../quartz/util/ctx"
 import { write } from "../quartz/plugins/emitters/helpers"
 import { formatDate, resolveRelative } from "@quartz-community/utils"
 import {
@@ -10,7 +11,15 @@ import {
   numberedArticles,
   quartz4CompatibilityRoutes,
 } from "../quartz.ia"
+import {
+  absoluteSiteUrl,
+  escapeCdata,
+  escapeXml,
+  productionDescription,
+} from "../quartz.production"
 import style from "./style"
+
+const rssArticleLimit = 20
 
 type ArchiveData = QuartzPluginData & {
   archiveKind?: "blog" | "year" | "topics"
@@ -30,6 +39,45 @@ const curatedTopics = [
   { slug: "javascript", label: "javascript" },
   { slug: "pandas", label: "pandas" },
 ]
+
+function rssFeed(baseUrl: string, content: ProcessedContent[]): string {
+  const articles = numberedArticles(content.map((entry) => entry[1].data)).slice(0, rssArticleLimit)
+  const channelUrl = absoluteSiteUrl(baseUrl, "index")
+  const feedUrl = new URL("index.xml", channelUrl).toString()
+  const lastBuildDate = frontmatterDate(articles[0])?.toUTCString()
+  const items = articles
+    .map((article) => {
+      const url = absoluteSiteUrl(baseUrl, article.slug!)
+      const title = escapeXml(article.frontmatter?.title ?? article.slug!)
+      const description = escapeCdata(article.description ?? "")
+      const date = frontmatterDate(article)?.toUTCString()
+      return `<item>
+    <title>${title}</title>
+    <link>${escapeXml(url)}</link>
+    <guid isPermaLink="true">${escapeXml(url)}</guid>
+    <description><![CDATA[${description}]]></description>
+    ${date ? `<pubDate>${date}</pubDate>` : ""}
+  </item>`
+    })
+    .join("")
+
+  return `<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bobby_dreamer</title>
+    <link>${escapeXml(channelUrl)}</link>
+    <description>Latest bobby_dreamer Blog Articles in numeric publication sequence.</description>
+    <atom:link href="${escapeXml(feedUrl)}" rel="self" type="application/rss+xml" />
+    ${lastBuildDate ? `<lastBuildDate>${lastBuildDate}</lastBuildDate>` : ""}
+    ${items}
+  </channel>
+</rss>
+`
+}
+
+function robotsPolicy(baseUrl: string): string {
+  return `User-agent: *\nAllow: /\nSitemap: ${absoluteSiteUrl(baseUrl, "sitemap.xml")}\n`
+}
 
 function ArchiveBody(): QuartzComponent {
   const Archive: QuartzComponent = ({ allFiles, fileData, cfg }) => {
@@ -119,22 +167,40 @@ const InformationArchitecturePages: QuartzPageTypePlugin = () =>
     generate({ content }) {
       const files = content.map((entry) => entry[1].data)
       return [
-        { slug: "blog/index", title: "Blog", data: { archiveKind: "blog" } },
+        {
+          slug: "blog/index",
+          title: "Blog",
+          data: { archiveKind: "blog", description: productionDescription("blog/index") },
+        },
         ...archiveYears(files).map((year) => ({
           slug: `blog/${year}/index`,
           title: "Blog",
-          data: { archiveKind: "year", archiveYear: year },
+          data: {
+            archiveKind: "year",
+            archiveYear: year,
+            description: productionDescription(`blog/${year}/index`),
+          },
         })),
-        { slug: "topics/index", title: "Topics", data: { archiveKind: "topics" } },
+        {
+          slug: "topics/index",
+          title: "Topics",
+          data: { archiveKind: "topics", description: productionDescription("topics/index") },
+        },
       ]
     },
     layout: "archive",
     body: ArchiveBody as QuartzComponentConstructor,
-    async *emit(ctx) {
+    async *emit(ctx: BuildCtx, content: ProcessedContent[]) {
       for (const [slug, target] of Object.entries(quartz4CompatibilityRoutes)) {
         const html = `<!DOCTYPE html>\n<html lang="en-us">\n<head>\n<title>${target}</title>\n<link rel="canonical" href="/${target}">\n<meta name="robots" content="noindex">\n<meta charset="utf-8">\n<meta http-equiv="refresh" content="0; url=/${target}">\n</head>\n</html>\n`
         yield write({ ctx, slug: slug as never, ext: ".html", content: html })
       }
+
+      const baseUrl = ctx.cfg.configuration.baseUrl
+      if (!baseUrl)
+        throw new Error("Production RSS and robots emission requires configuration.baseUrl")
+      yield write({ ctx, slug: "index" as never, ext: ".xml", content: rssFeed(baseUrl, content) })
+      yield write({ ctx, slug: "robots" as never, ext: ".txt", content: robotsPolicy(baseUrl) })
     },
   }) as never
 

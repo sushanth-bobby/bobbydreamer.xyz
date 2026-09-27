@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "rewrites": [
+      {
+        "source": "**",
+        "run": {
+          "serviceId": "bdxyz",
+          "region": "asia-south1"
+        }
+      }
+    ]
+  }
+}
