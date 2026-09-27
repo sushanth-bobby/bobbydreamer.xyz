@@ -9,6 +9,8 @@ import readline from "node:readline/promises"
 export const productionService = "bdxyz"
 export const productionRegion = "asia-south1"
 export const productionOrigin = "https://bobbydreamer.xyz"
+const cloudRunPollIntervalMs = 1_000
+const cloudRunPollAttempts = 60
 
 export const releaseGates = [
   ["npm", ["test"]],
@@ -37,7 +39,7 @@ export function deploymentPlan(mode) {
     ...readOnly,
     ["gcloud", ["builds", "submit"]],
     ["gcloud", ["run", "deploy", productionService]],
-    ["gcloud", ["run", "services", "update-traffic", productionService, "--to-latest"]],
+    ["gcloud", ["run", "services", "update-traffic", productionService, "--to-revisions"]],
   ]
 }
 
@@ -118,6 +120,57 @@ async function sha256Url(url) {
 function activeTraffic(service) {
   const entries = service.status?.traffic ?? []
   return entries.find((entry) => entry.percent === 100 && entry.revisionName)
+}
+
+export function replacementRevisionName(release) {
+  return `${productionService}-p51-${release.slice(0, 28)}`
+}
+
+async function waitForRevisionReady(revisionName, digest) {
+  for (let attempt = 1; attempt <= cloudRunPollAttempts; attempt++) {
+    const revision = await json("gcloud", [
+      "run",
+      "revisions",
+      "describe",
+      revisionName,
+      "--region",
+      productionRegion,
+    ])
+    const ready = (revision.status?.conditions ?? []).find(
+      (condition) => condition.type === "Ready",
+    )
+    const image = revision.spec?.containers?.[0]?.image ?? ""
+    if (String(ready?.status).toLowerCase() === "true" && image.endsWith(`@${digest}`)) {
+      return revision
+    }
+    if (String(ready?.status).toLowerCase() === "false") {
+      throw new Error(`Replacement revision ${revisionName} reported Ready=False`)
+    }
+    if (attempt < cloudRunPollAttempts) {
+      await new Promise((resolve) => setTimeout(resolve, cloudRunPollIntervalMs))
+    }
+  }
+  throw new Error(
+    `Replacement revision ${revisionName} did not become ready with the expected image`,
+  )
+}
+
+async function waitForTraffic(revisionName) {
+  for (let attempt = 1; attempt <= cloudRunPollAttempts; attempt++) {
+    const service = await json("gcloud", [
+      "run",
+      "services",
+      "describe",
+      productionService,
+      "--region",
+      productionRegion,
+    ])
+    if (activeTraffic(service)?.revisionName === revisionName) return service
+    if (attempt < cloudRunPollAttempts) {
+      await new Promise((resolve) => setTimeout(resolve, cloudRunPollIntervalMs))
+    }
+  }
+  throw new Error(`Cloud Run did not confirm 100% traffic on ${revisionName}`)
 }
 
 async function firebaseState(project) {
@@ -319,6 +372,7 @@ async function rollback(cloud, record) {
     "--to-revisions",
     `${cloud.currentRevision}=100`,
   ])
+  await waitForTraffic(cloud.currentRevision)
   const restored = await inspectCloud()
   if (restored.currentRevision !== cloud.currentRevision)
     throw new Error("Rollback traffic verification failed")
@@ -358,6 +412,7 @@ async function production() {
   const cloud = await inspectCloud()
   const release = releaseId(repository.commit, repository.dirty)
   const image = `gcr.io/${cloud.project}/${productionService}:${release}`
+  const replacementRevision = replacementRevisionName(release)
   const record = {
     timestamp: new Date().toISOString(),
     releaseId: release,
@@ -427,22 +482,11 @@ async function production() {
       "--port",
       "8080",
       "--revision-suffix",
-      `p51-${release.slice(0, 28)}`,
+      replacementRevision.slice(productionService.length + 1),
       "--no-traffic",
       "--quiet",
     ])
-    const readyService = await json("gcloud", [
-      "run",
-      "services",
-      "describe",
-      productionService,
-      "--region",
-      productionRegion,
-    ])
-    const replacementRevision = readyService.status?.latestReadyRevisionName
-    if (!replacementRevision || replacementRevision === cloud.currentRevision) {
-      throw new Error("Cloud Run did not produce a new ready revision")
-    }
+    await waitForRevisionReady(replacementRevision, digest)
     record.replacementRevision = replacementRevision
     record.finalStatus = "REPLACEMENT_READY"
     await writeRecord(record)
@@ -454,9 +498,11 @@ async function production() {
       productionService,
       "--region",
       productionRegion,
-      "--to-latest",
+      "--to-revisions",
+      `${replacementRevision}=100`,
     ])
     productionTrafficChanged = true
+    await waitForTraffic(replacementRevision)
     const deployed = await inspectCloud()
     if (deployed.currentRevision !== replacementRevision) {
       throw new Error("Cloud Run traffic did not move to the ready replacement")
