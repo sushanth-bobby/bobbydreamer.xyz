@@ -6,6 +6,7 @@ tags:
   - javascript
   - web-development
   - firebase
+status: historical
 ---
 
 Firebase is bit weird in perspective of security at first glance. For instance, when you first add firebase to your app, you get to the below screen and the first thing that should catch your eye is **apiKey**, its exposed, shouldn't it be somewhere secured. 

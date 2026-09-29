@@ -6,6 +6,7 @@ tags:
   - python
   - jupyter
   - numpy
+status: historical
 aliases:
   - bse-weekly-trend-analysis-using-pandas-and-numpy
 ---

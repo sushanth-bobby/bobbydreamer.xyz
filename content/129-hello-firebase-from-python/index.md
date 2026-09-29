@@ -7,6 +7,7 @@ tags:
   - python
   - GCP
   - firebase
+status: historical
 ---
 
 This is the first time, i am testing Firebase Admin SDK using Python. I have written programs using NodeJS. Since, i am into learning Python recently wanted to try Firebase and Python.  What really interested me is

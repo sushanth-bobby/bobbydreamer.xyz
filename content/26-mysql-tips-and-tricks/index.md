@@ -4,6 +4,7 @@ date: 2020-07-06
 description: MySQL Tips and Tricks that worked for me
 tags:
   - mysql
+status: historical
 ---
 
 **Last updated** : 31/Oct/2021     

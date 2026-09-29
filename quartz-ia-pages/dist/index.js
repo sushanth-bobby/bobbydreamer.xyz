@@ -38,7 +38,7 @@ var write = async ({ ctx, slug, ext, content }) => {
 };
 
 // index.tsx
-import { formatDate, resolveRelative as resolveRelative2 } from "@quartz-community/utils";
+import { formatDate, resolveRelative as resolveRelative2, slugTag as slugTag2 } from "@quartz-community/utils";
 
 // ../quartz.explorer-order.ts
 function getArticleSequence(entry) {
@@ -157,18 +157,37 @@ var style_default = style;
 // index.tsx
 import { jsx, jsxs } from "preact/jsx-runtime";
 var rssArticleLimit = 20;
-var curatedTopics = [
-  { slug: "quest-for-wealth", label: "quest-for-wealth" },
-  { slug: "notes", label: "notes" },
-  { slug: "web-development", label: "web-development" },
-  { slug: "gcp", label: "GCP" },
-  { slug: "python", label: "python" },
-  { slug: "nodejs", label: "nodejs" },
-  { slug: "personal-development", label: "personal-development" },
-  { slug: "gatsbyjs", label: "gatsbyjs" },
-  { slug: "firebase", label: "firebase" },
-  { slug: "javascript", label: "javascript" },
-  { slug: "pandas", label: "pandas" }
+var curatedTopicGroups = [
+  {
+    id: "build",
+    label: "Build & technology",
+    description: "Databases, programming, cloud platforms, web development, and project notes.",
+    topics: [
+      { slug: "web-development", label: "web-development" },
+      { slug: "gcp", label: "GCP" },
+      { slug: "python", label: "python" },
+      { slug: "nodejs", label: "nodejs" },
+      { slug: "gatsbyjs", label: "gatsbyjs" },
+      { slug: "firebase", label: "firebase" },
+      { slug: "javascript", label: "javascript" },
+      { slug: "pandas", label: "pandas" }
+    ]
+  },
+  {
+    id: "invest",
+    label: "Investment learning & journal",
+    description: "Concepts, research, experiments, investors, and books\u2014personal investigation rather than stock tips.",
+    topics: [{ slug: "quest-for-wealth", label: "quest-for-wealth" }]
+  },
+  {
+    id: "learn",
+    label: "Learning & reflection",
+    description: "Reading notes, personal development, observations, and lessons worth revisiting.",
+    topics: [
+      { slug: "notes", label: "notes" },
+      { slug: "personal-development", label: "personal-development" }
+    ]
+  }
 ];
 function rssFeed(baseUrl, content) {
   const articles = numberedArticles(content.map((entry) => entry[1].data)).slice(0, rssArticleLimit);
@@ -213,10 +232,27 @@ function ArchiveBody() {
     const years = archiveYears(allFiles);
     const currentSlug = fileData.slug;
     if (data.archiveKind === "topics") {
-      const availableTags = new Set(allFiles.flatMap((file) => file.frontmatter?.tags ?? []));
+      const availableTags = new Set(
+        allFiles.flatMap((file) => (file.frontmatter?.tags ?? []).map((tag) => slugTag2(tag)))
+      );
       return /* @__PURE__ */ jsxs("div", { class: "topics-landing", children: [
-        /* @__PURE__ */ jsx("p", { children: "Browse established topic collections from the existing article tags." }),
-        /* @__PURE__ */ jsx("ul", { children: curatedTopics.filter(({ slug }) => availableTags.has(slug)).map(({ slug, label }) => /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", { class: "internal tag-link", href: resolveRelative2(currentSlug, `tags/${slug}`), children: label }) })) }),
+        /* @__PURE__ */ jsx("p", { children: "Browse curated paths through the site's finer-grained article tags." }),
+        curatedTopicGroups.map((group) => {
+          const topics = group.topics.filter(({ slug }) => availableTags.has(slug));
+          if (topics.length === 0) return null;
+          return /* @__PURE__ */ jsxs("section", { class: "topic-group", "aria-labelledby": `topic-group-${group.id}`, children: [
+            /* @__PURE__ */ jsx("h2", { id: `topic-group-${group.id}`, children: group.label }),
+            /* @__PURE__ */ jsx("p", { children: group.description }),
+            /* @__PURE__ */ jsx("ul", { children: topics.map(({ slug, label }) => /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(
+              "a",
+              {
+                class: "internal tag-link",
+                href: resolveRelative2(currentSlug, `tags/${slug}`),
+                children: label
+              }
+            ) })) })
+          ] });
+        }),
         /* @__PURE__ */ jsx("p", { children: /* @__PURE__ */ jsx("a", { class: "internal", href: resolveRelative2(currentSlug, "tags/index"), children: "See all tags \u2192" }) })
       ] });
     }
@@ -309,5 +345,6 @@ var InformationArchitecturePages = () => ({
 });
 var index_default = InformationArchitecturePages;
 export {
+  curatedTopicGroups,
   index_default as default
 };

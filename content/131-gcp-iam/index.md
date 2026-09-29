@@ -4,6 +4,7 @@ date: 2021-10-10
 description: Adding roles to service accounts
 tags:
   - GCP
+status: historical
 ---
 
 #### What are service accounts ?     

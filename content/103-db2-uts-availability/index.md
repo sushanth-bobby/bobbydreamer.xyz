@@ -5,6 +5,7 @@ description: Presentation by John Campbell and Frances Villafuerte on Db2 UTS
 tags:
   - db2-notes
   - db2-tablespace
+status: historical
 ---
 
 **Presentation by**: John Campbell and Frances Villafuerte      

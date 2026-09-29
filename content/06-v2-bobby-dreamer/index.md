@@ -6,6 +6,7 @@ tags:
   - GCS
   - GCP
   - web-development
+status: historical
 aliases:
   - v2-bobby-dreamer
 ---

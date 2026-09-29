@@ -5,6 +5,7 @@ description: Transfering GCP logs to BigQuery
 tags:
   - GCP
   - bigquery
+status: historical
 ---
 
 I wanted to know how many times cloud functions are getting triggered in my project.

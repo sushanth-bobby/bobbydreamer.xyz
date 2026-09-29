@@ -5,6 +5,7 @@ description: Db2 ABCs of Filter Factor by Joe Geller
 tags:
   - db2-notes
   - db2-statistics
+status: historical
 ---
 
 **Presentation by**: Joe Geller       

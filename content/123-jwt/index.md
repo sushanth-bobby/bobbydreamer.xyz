@@ -6,6 +6,7 @@ tags:
   - notes
   - nodejs
   - security
+status: historical
 ---
 
 JWT are usually created during logins returned by the server on success and saved in clients in local storage or session or mostly in cookies. Its used when client tries to access protected route. JWT is not replacement for authentication, it just verifies that this is the client who logged in.

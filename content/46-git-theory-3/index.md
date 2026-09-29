@@ -5,6 +5,7 @@ description: This part of Git series covers checkout, revert, reset and restore
 tags:
   - notes
   - git
+status: historical
 ---
 
 Undos are the most important thing when you are using computers, its something, one cannot do in any other sector cheaply. `Ctrl+Z` and `Ctrl+Y` are something we do very often when working, its easier way to try something new and go back if something fails or doesnt work. Git has many ways to undo work and it all depends on different scenarios, below are some simple ways, i have tried and did it. 

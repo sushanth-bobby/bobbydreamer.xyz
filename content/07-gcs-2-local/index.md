@@ -6,6 +6,9 @@ tags:
   - GCS
   - gsutil
   - GCP
+status: historical
+learningArchiveContexts:
+  - gsutil
 aliases:
   - gcs-2-local
 ---

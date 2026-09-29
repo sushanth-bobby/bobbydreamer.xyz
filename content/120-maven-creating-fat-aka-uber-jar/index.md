@@ -5,6 +5,7 @@ description: Creating fat aka uber jar with maven
 tags:
   - java
   - maven
+status: historical
 ---
 
 [Earlier](../119-maven-fundamentals) we have seen how to build a JAR file using Maven and see how the dependencies are copied to a separate dependency folder. Here we will see how Maven can create a JAR file which includes all the compiled Java classes from your project, and all compiled Java classes from all JAR files your project depends on. Basically it will be like all files combined into one file like an executable JAR file. 

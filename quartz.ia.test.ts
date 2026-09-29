@@ -9,6 +9,7 @@ import type { VNode } from "preact"
 import renderToString from "preact-render-to-string"
 import type { QuartzComponentProps } from "./quartz/components/types"
 import BlogArticlePages from "./quartz-ia-articles"
+import { curatedTopicGroups } from "./quartz-ia-pages/index"
 import { ArticleTags } from "./quartz-ia-properties/components"
 import {
   absoluteSiteUrl,
@@ -274,6 +275,32 @@ test("Blog and year archives share the same visible title and archive component"
   assert.match(source, /slug: "blog\/index",\s*title: "Blog"/)
   assert.match(source, /slug: `blog\/\$\{year\}\/index`,\s*title: "Blog"/)
   assert.equal((source.match(/<div class="blog-archive">/g) ?? []).length, 1)
+})
+
+test("Phase 6 Topics groups the existing curated tags without changing tag routes", () => {
+  assert.deepEqual(
+    curatedTopicGroups.map(({ id, topics }) => ({
+      id,
+      topics: topics.map(({ slug }) => slug),
+    })),
+    [
+      {
+        id: "build",
+        topics: [
+          "web-development",
+          "gcp",
+          "python",
+          "nodejs",
+          "gatsbyjs",
+          "firebase",
+          "javascript",
+          "pandas",
+        ],
+      },
+      { id: "invest", topics: ["quest-for-wealth"] },
+      { id: "learn", topics: ["notes", "personal-development"] },
+    ],
+  )
 })
 
 test("the site identity references the repository-owned brand asset", () => {

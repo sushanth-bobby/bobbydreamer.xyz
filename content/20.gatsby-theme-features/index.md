@@ -5,6 +5,9 @@ tags:
   - web-development
   - gatsbyjs
 gatsbyBanner: ./defence-against-the-dark-arts.jpg
+status: historical
+learningArchiveContexts:
+  - gatsby
 aliases:
   - gatsby-theme-features
 ---

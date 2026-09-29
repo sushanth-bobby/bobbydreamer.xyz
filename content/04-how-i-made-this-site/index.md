@@ -5,6 +5,9 @@ description: How i made this site
 tags:
   - web-development
   - gatsbyjs
+status: historical
+learningArchiveContexts:
+  - gatsby
 aliases:
   - how-i-made-this-site
 ---

@@ -4,6 +4,7 @@ date: 2021-05-19
 description: Basics on mySQL table maintenance
 tags:
   - mysql
+status: historical
 ---
 
 Being a Db2 DBA, i know the importance of regular housekeeping. In mySQL test tables, most of the time there won't be any maintenance scenarios due to less data. Sometimes when they do need maintaining, below are the things i do. 

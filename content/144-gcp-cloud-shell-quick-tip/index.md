@@ -4,6 +4,9 @@ date: 2022-07-12
 description: Cloud shell quick tips
 tags:
   - GCP
+status: historical
+learningArchiveContexts:
+  - gsutil
 ---
 
 In GCP, for quick actions or tests, cloud shell will be the go to thing. Here are tips which i had learnt over period of time.

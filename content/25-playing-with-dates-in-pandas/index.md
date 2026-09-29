@@ -5,6 +5,7 @@ description: Date manipulation in python
 tags:
   - python
   - pandas
+status: historical
 ---
 
 I have a problem, which is trying to get a next available date from within list of dates. This list of dates contains dates which are not saturday/sunday or any public holiday. My inputs will be like, what was the first available date in last 180 days, plan is to build a function like below, 

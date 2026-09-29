@@ -5,6 +5,7 @@ description: This part of Git series covers Architecture and Internals
 tags:
   - notes
   - git
+status: historical
 ---
 
 #### # Git Architecture

@@ -7,6 +7,7 @@ tags:
   - python
   - time-wasted
   - GCP
+status: historical
 ---
 
 I wanted to build a pipeline move data from Cloud Storage to BigQuery. There are couple of options to do it. 

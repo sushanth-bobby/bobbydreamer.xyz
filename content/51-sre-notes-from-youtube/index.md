@@ -5,6 +5,7 @@ description: SRE Notes taken while watching youtube
 tags:
   - notes
   - sre
+status: historical
 ---
 
 *Note : Some of the content may seem repetitive as its same subject presented by different people.*

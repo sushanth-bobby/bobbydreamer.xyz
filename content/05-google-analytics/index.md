@@ -5,6 +5,7 @@ description: Setting up Google Analytics for your website
 tags:
   - gatsbyjs
   - web-development
+status: historical
 aliases:
   - google-analytics
 ---

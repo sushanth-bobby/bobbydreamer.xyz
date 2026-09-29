@@ -7,6 +7,7 @@ tags:
   - expressjs
   - nodejs
   - javascript
+status: historical
 ---
 
 In ExpressJS, *virtual path prefix* helped me resolve accessing static assets from public folder in a multi-level path site. Here, i am trying to access from Favicon which is in `public\images\favicon.ico` and in my HEAD tag pug file has something like this and this pug file is used in rendering all the pages. 

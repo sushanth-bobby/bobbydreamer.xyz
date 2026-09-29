@@ -6,6 +6,7 @@ description: This part of Git series covers the basics like config, init, add,
 tags:
   - notes
   - git
+status: historical
 ---
 
 In basics, we will be covering config, init, add, rm, .gitignore, commit, log, blame, diff, tag, describe, show and stash 

@@ -6,6 +6,9 @@ tags:
   - notes
   - GCS
   - GCP
+status: historical
+learningArchiveContexts:
+  - gsutil
 ---
 
 #### # Create bucket 

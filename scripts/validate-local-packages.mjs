@@ -5,6 +5,7 @@ import { build } from "esbuild"
 
 const repositoryRoot = path.resolve(import.meta.dirname, "..")
 const packages = {
+  "quartz-content-context": ["index.ts", "components.tsx"],
   "quartz-ia-article-nav": ["index.ts", "components.tsx"],
   "quartz-ia-articles": ["index.ts"],
   "quartz-ia-header": ["index.ts", "components.tsx"],

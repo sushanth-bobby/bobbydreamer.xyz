@@ -1,9 +1,9 @@
 import type { QuartzComponent, QuartzComponentConstructor } from "../quartz/components/types"
-import type { QuartzPageTypePlugin } from "../quartz/plugins/types"
+import type { PageGenerator, PageMatcher, QuartzPageTypePlugin } from "../quartz/plugins/types"
 import type { ProcessedContent, QuartzPluginData } from "../quartz/plugins/vfile"
 import type { BuildCtx } from "../quartz/util/ctx"
 import { write } from "../quartz/plugins/emitters/helpers"
-import { formatDate, resolveRelative } from "@quartz-community/utils"
+import { formatDate, resolveRelative, slugTag, type FullSlug } from "@quartz-community/utils"
 import {
   archiveYears,
   articlesForYear,
@@ -26,18 +26,38 @@ type ArchiveData = QuartzPluginData & {
   archiveYear?: number
 }
 
-const curatedTopics = [
-  { slug: "quest-for-wealth", label: "quest-for-wealth" },
-  { slug: "notes", label: "notes" },
-  { slug: "web-development", label: "web-development" },
-  { slug: "gcp", label: "GCP" },
-  { slug: "python", label: "python" },
-  { slug: "nodejs", label: "nodejs" },
-  { slug: "personal-development", label: "personal-development" },
-  { slug: "gatsbyjs", label: "gatsbyjs" },
-  { slug: "firebase", label: "firebase" },
-  { slug: "javascript", label: "javascript" },
-  { slug: "pandas", label: "pandas" },
+export const curatedTopicGroups = [
+  {
+    id: "build",
+    label: "Build & technology",
+    description: "Databases, programming, cloud platforms, web development, and project notes.",
+    topics: [
+      { slug: "web-development", label: "web-development" },
+      { slug: "gcp", label: "GCP" },
+      { slug: "python", label: "python" },
+      { slug: "nodejs", label: "nodejs" },
+      { slug: "gatsbyjs", label: "gatsbyjs" },
+      { slug: "firebase", label: "firebase" },
+      { slug: "javascript", label: "javascript" },
+      { slug: "pandas", label: "pandas" },
+    ],
+  },
+  {
+    id: "invest",
+    label: "Investment learning & journal",
+    description:
+      "Concepts, research, experiments, investors, and books—personal investigation rather than stock tips.",
+    topics: [{ slug: "quest-for-wealth", label: "quest-for-wealth" }],
+  },
+  {
+    id: "learn",
+    label: "Learning & reflection",
+    description: "Reading notes, personal development, observations, and lessons worth revisiting.",
+    topics: [
+      { slug: "notes", label: "notes" },
+      { slug: "personal-development", label: "personal-development" },
+    ],
+  },
 ]
 
 function rssFeed(baseUrl: string, content: ProcessedContent[]): string {
@@ -86,23 +106,36 @@ function ArchiveBody(): QuartzComponent {
     const currentSlug = fileData.slug!
 
     if (data.archiveKind === "topics") {
-      const availableTags = new Set(allFiles.flatMap((file) => file.frontmatter?.tags ?? []))
+      const availableTags = new Set(
+        allFiles.flatMap((file) => (file.frontmatter?.tags ?? []).map((tag) => slugTag(tag))),
+      )
       return (
         <div class="topics-landing">
-          <p>Browse established topic collections from the existing article tags.</p>
-          <ul>
-            {curatedTopics
-              .filter(({ slug }) => availableTags.has(slug))
-              .map(({ slug, label }) => (
-                <li>
-                  <a class="internal tag-link" href={resolveRelative(currentSlug, `tags/${slug}`)}>
-                    {label}
-                  </a>
-                </li>
-              ))}
-          </ul>
+          <p>Browse curated paths through the site's finer-grained article tags.</p>
+          {curatedTopicGroups.map((group) => {
+            const topics = group.topics.filter(({ slug }) => availableTags.has(slug))
+            if (topics.length === 0) return null
+            return (
+              <section class="topic-group" aria-labelledby={`topic-group-${group.id}`}>
+                <h2 id={`topic-group-${group.id}`}>{group.label}</h2>
+                <p>{group.description}</p>
+                <ul>
+                  {topics.map(({ slug, label }) => (
+                    <li>
+                      <a
+                        class="internal tag-link"
+                        href={resolveRelative(currentSlug, `tags/${slug}` as FullSlug)}
+                      >
+                        {label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )
+          })}
           <p>
-            <a class="internal" href={resolveRelative(currentSlug, "tags/index")}>
+            <a class="internal" href={resolveRelative(currentSlug, "tags/index" as FullSlug)}>
               See all tags →
             </a>
           </p>
@@ -120,7 +153,7 @@ function ArchiveBody(): QuartzComponent {
         <nav class="blog-year-navigation" aria-label="Blog archives">
           <a
             class="internal"
-            href={resolveRelative(currentSlug, "blog/index")}
+            href={resolveRelative(currentSlug, "blog/index" as FullSlug)}
             aria-current={data.archiveKind === "blog" ? "page" : undefined}
           >
             All
@@ -128,7 +161,7 @@ function ArchiveBody(): QuartzComponent {
           {years.map((year) => (
             <a
               class="internal"
-              href={resolveRelative(currentSlug, `blog/${year}/index`)}
+              href={resolveRelative(currentSlug, `blog/${year}/index` as FullSlug)}
               aria-current={data.archiveYear === year ? "page" : undefined}
             >
               {year}
@@ -163,8 +196,8 @@ const InformationArchitecturePages: QuartzPageTypePlugin = () =>
   ({
     name: "InformationArchitecturePages",
     priority: 100,
-    match: ({ slug }) => /^(?:blog|topics)(?:\/|$)/.test(slug),
-    generate({ content }) {
+    match: ({ slug }: Parameters<PageMatcher>[0]) => /^(?:blog|topics)(?:\/|$)/.test(slug),
+    generate({ content }: Parameters<PageGenerator>[0]) {
       const files = content.map((entry) => entry[1].data)
       return [
         {

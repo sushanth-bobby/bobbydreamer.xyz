@@ -9,6 +9,49 @@ import YAML from "yaml"
 
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url))
 const repositoryRoot = path.dirname(scriptDirectory)
+export const contentEditorialOverrides = JSON.parse(
+  await fs.readFile(path.join(scriptDirectory, "content-editorial-overrides.json"), "utf8"),
+)
+
+function validateEditorialOverride(destination, metadata) {
+  const allowed = new Set(["status", "supersededBy", "authorship", "learningArchiveContexts"])
+  const unexpected = Object.keys(metadata).filter((key) => !allowed.has(key))
+  if (unexpected.length > 0) {
+    throw new Error(`${destination}: unsupported editorial metadata: ${unexpected.join(", ")}`)
+  }
+  const statuses = new Set(["historical", "superseded", "point-in-time"])
+  if (metadata.status !== undefined && !statuses.has(metadata.status)) {
+    throw new Error(`${destination}: unsupported editorial status ${metadata.status}`)
+  }
+  if (metadata.status === "superseded" && !metadata.supersededBy) {
+    throw new Error(`${destination}: superseded editorial metadata requires supersededBy`)
+  }
+  if (metadata.status !== "superseded" && metadata.supersededBy !== undefined) {
+    throw new Error(`${destination}: supersededBy requires status superseded`)
+  }
+  if (metadata.authorship !== undefined && metadata.authorship !== "ai") {
+    throw new Error(`${destination}: authorship must be omitted or set to ai`)
+  }
+  if (metadata.learningArchiveContexts !== undefined) {
+    if (metadata.status !== "historical") {
+      throw new Error(`${destination}: learningArchiveContexts requires status historical`)
+    }
+    const contexts = metadata.learningArchiveContexts
+    const allowedContexts = new Set(["gatsby", "google-domains", "gsutil"])
+    if (
+      !Array.isArray(contexts) ||
+      contexts.length === 0 ||
+      contexts.some((context) => !allowedContexts.has(context)) ||
+      new Set(contexts).size !== contexts.length
+    ) {
+      throw new Error(`${destination}: invalid learningArchiveContexts`)
+    }
+  }
+}
+
+for (const [destination, metadata] of Object.entries(contentEditorialOverrides.articles ?? {})) {
+  validateEditorialOverride(destination, metadata)
+}
 
 export const migrationExceptions = {
   "posts/24-things-that-my-new-site-should-have/index.mdx": {
@@ -380,7 +423,15 @@ function applyKnownBodyRepairs(body, sourcePath) {
   }
 }
 
-export function transformFrontmatter(sourceData, destination) {
+export function editorialMetadataForDestination(destination) {
+  return contentEditorialOverrides.articles?.[destination]
+}
+
+export function transformFrontmatter(
+  sourceData,
+  destination,
+  editorialMetadata = editorialMetadataForDestination(destination),
+) {
   const oldSlug = normalizeWebPath(sourceData.slug ?? "")
   if (!oldSlug) throw new Error(`${destination}: missing Gatsby slug`)
   const transformed = {}
@@ -388,6 +439,10 @@ export function transformFrontmatter(sourceData, destination) {
     if (sourceData[key] !== undefined) transformed[key] = sourceData[key]
   }
   if (sourceData.banner !== undefined) transformed.gatsbyBanner = sourceData.banner
+  if (editorialMetadata) {
+    validateEditorialOverride(destination, editorialMetadata)
+    Object.assign(transformed, editorialMetadata)
+  }
   const canonicalSlug = normalizeWebPath(destination).toLowerCase()
   if (oldSlug.toLowerCase() !== canonicalSlug) transformed.aliases = [oldSlug]
   return transformed

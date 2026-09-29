@@ -5,6 +5,7 @@ description: Different ways of creating dataframes in python
 tags:
   - python
   - pandas
+status: historical
 ---
 
 Pandas dataframe is a 2D data structure which looks like a table. There are different ways to create a dataframe, mostly everybody sticks to few formats they like and stick to it, thats good. But, sometimes when you have a problem and you want somebody's opinion or get a suggestion or solution, you cannot give all your code and ask them to execute and start explaining the problem. Its a lot easier if you could generate a small sample data and explain it and from suggestion/solution you could copy the concept to your main program. 

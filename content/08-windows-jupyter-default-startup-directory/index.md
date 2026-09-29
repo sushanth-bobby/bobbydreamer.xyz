@@ -3,6 +3,7 @@ title: Jupyter notebook default startup directory in windows
 date: 2020-03-19
 tags:
   - jupyter
+status: historical
 aliases:
   - windows-jupyter-default-startup-directory
 ---

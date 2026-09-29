@@ -5,6 +5,9 @@ description: To make your site stand out, you have to make some custom changes
 tags:
   - web-development
   - gatsbyjs
+status: historical
+learningArchiveContexts:
+  - gatsby
 aliases:
   - shadowing-and-non-shadowing
 ---

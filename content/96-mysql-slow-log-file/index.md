@@ -5,6 +5,7 @@ description: Easy way to find which query is consuming lots of time in mySQL
   using default options and tools.
 tags:
   - mysql
+status: historical
 ---
 
 Easy way to find which query is consuming lots of time in mySQL using default options and tools. 

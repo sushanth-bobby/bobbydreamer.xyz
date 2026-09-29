@@ -5,6 +5,7 @@ description: Db2 PBR RPN explained by Haakon Roberts, DB2 for zOS Development
 tags:
   - db2-notes
   - db2-tablespace
+status: historical
 ---
 
 **Post by**: Haakon Roberts, DB2 for z/OS Development      

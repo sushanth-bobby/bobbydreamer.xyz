@@ -5,6 +5,7 @@ description: Upgrading Java and Installing Maven
 tags:
   - java
   - maven
+status: historical
 ---
 
 * Uninstalled older version of Java using `JavaUninstallTool.exe` 

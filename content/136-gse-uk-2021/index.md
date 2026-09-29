@@ -5,6 +5,7 @@ description: My notes GSE UK 2021 Conference
 tags:
   - db2-notes
   - mainframe
+status: historical
 ---
 
 ![GSE UK 2021](./gse.png)

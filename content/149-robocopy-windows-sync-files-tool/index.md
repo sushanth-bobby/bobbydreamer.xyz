@@ -5,6 +5,7 @@ description: Sync windows folder for backups
 tags:
   - windows
   - file-sync
+status: historical
 ---
 
 This is a simple file Sync tool available in windows which is easy to use, it called *robocopy*. 

@@ -5,6 +5,7 @@ description: Some unix shell learnings
 tags:
   - shell
   - unix
+status: historical
 ---
 
 **Created on:** 2021-07-26

@@ -5,6 +5,7 @@ description: Contains Git flowchart, shortcuts and references
 tags:
   - notes
   - git
+status: historical
 ---
 
 This picture, sort of gives an overview of some major git commands and where it fits in the Git World

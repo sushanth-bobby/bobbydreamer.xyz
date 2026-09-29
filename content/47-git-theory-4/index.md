@@ -6,6 +6,7 @@ description: This part of Git series covers branching concepts using checkout,
 tags:
   - notes
   - git
+status: historical
 ---
 
 Here we are covering subjects related to branches. 

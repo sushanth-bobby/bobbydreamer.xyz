@@ -7,6 +7,9 @@ tags:
   - web-development
   - designs
 gatsbyBanner: ./DarkThemeNo2-neonHK.png
+status: historical
+learningArchiveContexts:
+  - gatsby
 aliases:
   - changing-gatsby-colors-manually
 ---

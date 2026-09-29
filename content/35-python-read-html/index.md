@@ -6,6 +6,7 @@ tags:
   - python
   - pandas
   - scraping
+status: historical
 ---
 
 Just saying, sraping could be a lot of work, you go to a webpage and there are lots of tables of different formats insense diffent number of columns and rows. Pandas, combined all these and made it look easy, so you get more time to look at data and work on it. 

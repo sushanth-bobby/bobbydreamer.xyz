@@ -5,6 +5,7 @@ description: Adding EventListeners to multiple elements with same class name
 tags:
   - javascript
   - web-development
+status: historical
 ---
 
 This is quite easy to understand in jQuery and works even if elements are dynamic. Here we are adding an common eventlistener to multiple elements having same class.

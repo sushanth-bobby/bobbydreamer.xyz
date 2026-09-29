@@ -5,6 +5,9 @@ description: One of the benefits of getting a domain is getting an email of your
 tags:
   - GCP
   - web-development
+status: historical
+learningArchiveContexts:
+  - google-domains
 ---
 
 This is something i didn't know at first and later got to know it. How late ? 3 years late. 

@@ -5,6 +5,7 @@ description: Notes taken while reading SRE Book
 tags:
   - notes
   - sre
+status: historical
 ---
 
 Below are notes/points/paragraphs which seemed important to me while reading [Google SRE Book](https://landing.google.com/sre/sre-book/chapters/introduction/). This book is written by various authors from google and in this book they shared their experience of building SRE teams and google products and how they collaborated in making it. 

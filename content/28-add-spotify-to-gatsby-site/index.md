@@ -5,6 +5,9 @@ description: Adding Spotify playlist to your gatsby site
 tags:
   - web-development
   - music
+status: historical
+learningArchiveContexts:
+  - gatsby
 ---
 
 **Last updated** : 26/April/2020     

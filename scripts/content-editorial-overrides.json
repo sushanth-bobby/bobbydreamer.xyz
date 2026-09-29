@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "articles": {
+    "02-host-site-from-google-storage": {
+      "status": "historical",
+      "learningArchiveContexts": ["google-domains"]
+    },
+    "04-how-i-made-this-site": {
+      "status": "historical",
+      "learningArchiveContexts": ["gatsby"]
+    },
+    "05-google-analytics": { "status": "historical" },
+    "06-v2-bobby-dreamer": { "status": "historical" },
+    "07-gcs-2-local": {
+      "status": "historical",
+      "learningArchiveContexts": ["gsutil"]
+    },
+    "08-windows-jupyter-default-startup-directory": { "status": "historical" },
+    "09-adding-favicon-to-gatsby": {
+      "status": "historical",
+      "learningArchiveContexts": ["gatsby"]
+    },
+    "11-deploying-and-hosting-gatsby-site-in-firebase": {
+      "status": "historical",
+      "learningArchiveContexts": ["google-domains"]
+    },
+    "12-archiving-current-site-to-a-subdomain": {
+      "status": "historical",
+      "learningArchiveContexts": ["google-domains", "gsutil"]
+    },
+    "13-gatsby-performance": {
+      "status": "historical",
+      "learningArchiveContexts": ["gatsby"]
+    },
+    "14-little-mainframe-shortcuts": { "status": "historical" },
+    "15-python-profiling": {
+      "status": "historical",
+      "learningArchiveContexts": ["gsutil"]
+    },
+    "16-bse-weekly-trend-analysis-using-pandas-and-numpy": { "status": "historical" },
+    "19.changing-gatsby-colors-manually": {
+      "status": "historical",
+      "learningArchiveContexts": ["gatsby"]
+    },
+    "20.gatsby-theme-features": {
+      "status": "historical",
+      "learningArchiveContexts": ["gatsby"]
+    },
+    "21-google-cloud-storage": {
+      "status": "historical",
+      "learningArchiveContexts": ["gsutil"]
+    },
+    "22-python-errors-and-solution": { "status": "historical" },
+    "23-pytip-saving-memory-when-reading-csv-file-in-pandas": {
+      "status": "historical"
+    },
+    "23-shadowing-and-non-shadowing": {
+      "status": "historical",
+      "learningArchiveContexts": ["gatsby"]
+    },
+    "24-connecting-to-mysql-from-python": { "status": "historical" },
+    "25-playing-with-dates-in-pandas": { "status": "historical" },
+    "26-mysql-tips-and-tricks": { "status": "historical" },
+    "27-stash": { "status": "historical" },
+    "28-add-spotify-to-gatsby-site": {
+      "status": "historical",
+      "learningArchiveContexts": ["gatsby"]
+    },
+    "29-python-process-to-read-files": { "status": "historical" },
+    "31-python-tips": { "status": "historical" },
+    "32-python-creating-dataframes": { "status": "historical" },
+    "33-python-command-line-arguments": { "status": "historical" },
+    "34-mysql-user-defined-variables": { "status": "historical" },
+    "35-python-read-html": { "status": "historical" },
+    "38-python-nan": { "status": "historical" },
+    "43-upgrading-gatsby-site": {
+      "status": "historical",
+      "learningArchiveContexts": ["gatsby"]
+    },
+    "44-git-theory-1": { "status": "historical" },
+    "45-git-theory-2": { "status": "historical" },
+    "46-git-theory-3": { "status": "historical" },
+    "47-git-theory-4": { "status": "historical" },
+    "48-git-theory-5": { "status": "historical" },
+    "49-git-theory-6": { "status": "historical" },
+    "50-git-theory-7": { "status": "historical" },
+    "51-sre-notes-from-youtube": { "status": "historical" },
+    "52-sre-reliability-engineering": { "status": "historical" },
+    "53-sre-references": { "status": "historical" },
+    "54-querySelectorAll-and-getElementsByClassName": { "status": "historical" },
+    "55-add-addEventListener-on-multiple-elements-with-same-class": {
+      "status": "historical"
+    },
+    "56-firebase-email-verification": { "status": "historical" },
+    "57-firebase-rules": { "status": "historical" },
+    "58-firebase-basics-to-events": { "status": "historical" },
+    "73-csrf-csurf": { "status": "historical" },
+    "74-shortcuts-and-commands": { "status": "historical" },
+    "75-jquery-checkbox-calling-functions": { "status": "historical" },
+    "77-firebase-server-side-authentication": { "status": "historical" },
+    "78-expressjs-static-files-virtual-path-prefix": { "status": "historical" },
+    "86-google-domains-and-email": {
+      "status": "historical",
+      "learningArchiveContexts": ["google-domains"]
+    },
+    "96-mysql-slow-log-file": { "status": "historical" },
+    "97-mysql-housekeeping": { "status": "historical" },
+    "103-db2-uts-availability": { "status": "historical" },
+    "104-db2-pbr-rpn": { "status": "historical" },
+    "105-db2-notes": { "status": "historical" },
+    "106-db2-abcs-of-filter-factor": { "status": "historical" },
+    "108-db2-a-beginners-guide-to-locks-latches-claims-and-drains": {
+      "status": "historical"
+    },
+    "111-migrating-from-gatsbyjs3-to-gatsbyjs4": {
+      "status": "historical",
+      "learningArchiveContexts": ["gatsby"]
+    },
+    "113-firebase-payload-too-large": { "status": "historical" },
+    "114-shell-learnings": { "status": "historical" },
+    "115-git-hook-client-side": { "status": "historical" },
+    "117-install-java-and-maven": { "status": "historical" },
+    "118-eclipse-ide-stuffs": { "status": "historical" },
+    "119-maven-fundamentals": { "status": "historical" },
+    "120-maven-creating-fat-aka-uber-jar": { "status": "historical" },
+    "121-backup-to-gcs": {
+      "status": "historical",
+      "learningArchiveContexts": ["gsutil"]
+    },
+    "122-tls-certificates": { "status": "historical" },
+    "123-jwt": { "status": "historical" },
+    "124-server-certificates-nodejs": { "status": "historical" },
+    "125-mutual-tls": { "status": "historical" },
+    "127-a-day-with-apache-beam-and-dataflow": { "status": "historical" },
+    "129-hello-firebase-from-python": { "status": "historical" },
+    "130-mysql-partitions": { "status": "historical" },
+    "131-gcp-iam": { "status": "historical" },
+    "132-py-hello-cloud-functions": { "status": "historical" },
+    "133-hello-bigquery": { "status": "historical" },
+    "134-load-bigquery": { "status": "historical" },
+    "135-changing-log-level-at-runtime-in-winston": { "status": "historical" },
+    "136-gse-uk-2021": { "status": "historical" },
+    "143-gcp-sinking-logs-bq": { "status": "historical" },
+    "144-gcp-cloud-shell-quick-tip": {
+      "status": "historical",
+      "learningArchiveContexts": ["gsutil"]
+    },
+    "145-modularizing-expressjs-routes-and-middleware": { "status": "historical" },
+    "146-nodejs-middlewares": { "status": "historical" },
+    "147-nodejs-external-functions": { "status": "historical" },
+    "148-organizing-firebase-functions": { "status": "historical" },
+    "149-robocopy-windows-sync-files-tool": { "status": "historical" },
+    "151-puppeteer-headless-most-likely-the-page-has-been-closed-error": {
+      "status": "historical"
+    }
+  }
+}

@@ -8,6 +8,9 @@ tags:
   - cloud-shell
   - profiler
   - GCS
+status: historical
+learningArchiveContexts:
+  - gsutil
 aliases:
   - python-profiling
 ---

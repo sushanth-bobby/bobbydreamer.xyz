@@ -6,6 +6,7 @@ tags:
   - shell
   - unix
   - git
+status: historical
 ---
 
 > Git hooks allow you to run custom scripts whenever certain important events occur in the Git life-cycle, such as committing, merging and pushing. 

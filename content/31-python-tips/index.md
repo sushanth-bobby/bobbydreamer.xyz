@@ -5,6 +5,7 @@ description: Tips to improve python programming skills
 tags:
   - python
   - pandas
+status: historical
 ---
 
 **Last updated** : 06/Aug/2022     

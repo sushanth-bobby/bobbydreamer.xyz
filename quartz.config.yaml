@@ -42,6 +42,12 @@ configuration:
         highlight: rgba(224, 160, 139, 0.14)
         textHighlight: "#8d6b2580"
 plugins:
+  - source: "@bdv/quartz-content-context"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 25
+      condition: blog-article
   - source: "@bdv/quartz-ia-pages"
     enabled: true
     order: 45

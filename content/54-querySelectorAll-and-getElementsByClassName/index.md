@@ -5,6 +5,7 @@ description: Difference between querySelectorAll and getElementsByClassName
 tags:
   - javascript
   - web-development
+status: historical
 ---
 
 From Javascript, both the methods can be used to return multiple elements in the document but the difference is in what it returns. 

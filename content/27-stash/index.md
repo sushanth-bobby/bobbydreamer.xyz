@@ -4,6 +4,7 @@ date: 2018-06-16
 description: Stash - My Note taking app
 tags:
   - web-development
+status: historical
 ---
 
 **Last updated** : 26/April/2020     

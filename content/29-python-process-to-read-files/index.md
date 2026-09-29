@@ -5,6 +5,7 @@ description: Using function to read file and load dataframe
 tags:
   - python
   - pandas
+status: historical
 ---
 
 Its easy to read csv files in python into a dataframe. Problem i am encountering is, i have a file with many columns, in the program, i don't need all the columns at once, i want to process, specific set of columns for one set of logic and use other set of columns somewhere in the program, similarly i had to write many programs. So, when i looked into the code for review, i saw too many pd.read_csv()

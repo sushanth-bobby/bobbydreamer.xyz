@@ -7,6 +7,7 @@ RUN apt-get update \
 WORKDIR /usr/src/app
 
 COPY package.json package-lock.json .npmrc ./
+COPY quartz-content-context/ ./quartz-content-context/
 COPY quartz-ia-article-nav/ ./quartz-ia-article-nav/
 COPY quartz-ia-articles/ ./quartz-ia-articles/
 COPY quartz-ia-header/ ./quartz-ia-header/

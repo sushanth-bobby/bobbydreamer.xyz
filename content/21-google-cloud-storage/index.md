@@ -6,6 +6,9 @@ tags:
   - notes
   - GCP
   - GCS
+status: historical
+learningArchiveContexts:
+  - gsutil
 aliases:
   - google-cloud-storage
 ---

@@ -5,6 +5,7 @@ description: This part of Git series covers origins - How it all started
 tags:
   - notes
   - git
+status: historical
 ---
 
 This is a series of posts on Git, mostly theoretical with little practical examples. It all started couple of years back(2018), at work i thought of taking a presentation on Git and started to prepare a PPT for it but it never did happen due to more work, handling issues and other activites. But according me to, i really did a good work in gathering up all information on git which ended up sleeping in a PPT which actually i refer often. After getting my site up, i had this in my todo list to transfer Git PPT stuff to Web as it will be very much easier to refer.

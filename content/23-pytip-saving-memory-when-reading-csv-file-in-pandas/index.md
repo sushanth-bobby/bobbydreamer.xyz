@@ -5,6 +5,7 @@ description: Python tips no tricks
 tags:
   - python
   - pandas
+status: historical
 ---
 
 #### # Saving memory while reading a CSV file in Pandas

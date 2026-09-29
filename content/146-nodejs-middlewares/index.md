@@ -4,6 +4,7 @@ date: 2022-08-08
 description: Notes on Middlewares
 tags:
   - nodejs
+status: historical
 ---
 
 Middleware in ExpressJS are functions that come into play after the server receives the request and before the response is processed by the route and sent to the client. 

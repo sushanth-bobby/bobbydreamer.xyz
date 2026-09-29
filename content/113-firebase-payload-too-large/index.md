@@ -6,6 +6,7 @@ tags:
   - nodejs
   - firebase
   - time-wasted
+status: historical
 ---
 
 ![Firebase Storage and Downloads space](./fbStorageDownloads.png)

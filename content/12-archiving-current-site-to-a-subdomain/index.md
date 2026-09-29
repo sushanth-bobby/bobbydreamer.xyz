@@ -8,6 +8,10 @@ tags:
   - hosting
   - GoogleDomains
   - GCS
+status: historical
+learningArchiveContexts:
+  - google-domains
+  - gsutil
 aliases:
   - archiving-current-site-to-a-subdomain
 ---

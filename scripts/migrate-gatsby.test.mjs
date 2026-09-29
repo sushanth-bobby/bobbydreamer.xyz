@@ -7,6 +7,7 @@ import test from "node:test"
 import {
   auditRouteCollisions,
   buildCorpusManifest,
+  contentEditorialOverrides,
   escapeCurrencyDollars,
   escapeNumericOrdinalTags,
   migrateCorpus,
@@ -14,6 +15,7 @@ import {
   normalizeReactLiveMetadata,
   normalizeTableSeparators,
   splitFrontmatter,
+  transformFrontmatter,
   transformDocument,
   removeSpotifyComponents,
   withoutFencedCode,
@@ -79,6 +81,88 @@ Hello.
     ["cover.png"],
   )
   assert.equal(splitFrontmatter(canonical.output).data.aliases, undefined)
+})
+
+test("approved editorial metadata is reproducible without changing Gatsby source", () => {
+  const historical = transformFrontmatter(
+    { title: "Old guide", date: "2020-01-02", slug: "/01-old-guide" },
+    "01-old-guide",
+    { status: "historical" },
+  )
+  assert.equal(historical.status, "historical")
+
+  const superseded = transformFrontmatter(
+    { title: "Old guide", date: "2020-01-02", slug: "/01-old-guide" },
+    "01-old-guide",
+    { status: "superseded", supersededBy: "/153-new-guide/" },
+  )
+  assert.equal(superseded.supersededBy, "/153-new-guide/")
+
+  assert.throws(
+    () =>
+      transformFrontmatter(
+        { title: "Old guide", date: "2020-01-02", slug: "/01-old-guide" },
+        "01-old-guide",
+        { status: "superseded" },
+      ),
+    /requires supersededBy/,
+  )
+
+  const contextual = transformFrontmatter(
+    { title: "Old guide", date: "2020-01-02", slug: "/01-old-guide" },
+    "01-old-guide",
+    { status: "historical", learningArchiveContexts: ["gatsby", "gsutil"] },
+  )
+  assert.deepEqual(contextual.learningArchiveContexts, ["gatsby", "gsutil"])
+})
+
+test("approved Learning Archive ledger has the exact reviewed corpus and context counts", async () => {
+  const entries = Object.entries(contentEditorialOverrides.articles)
+  assert.equal(entries.length, 90)
+  assert.equal(entries.filter(([, metadata]) => metadata.status === "historical").length, 90)
+  assert.equal(
+    entries.filter(([, metadata]) => metadata.learningArchiveContexts?.includes("gatsby")).length,
+    9,
+  )
+  assert.equal(
+    entries.filter(([, metadata]) => metadata.learningArchiveContexts?.includes("google-domains"))
+      .length,
+    4,
+  )
+  assert.equal(
+    entries.filter(([, metadata]) => metadata.learningArchiveContexts?.includes("gsutil")).length,
+    6,
+  )
+  assert.deepEqual(
+    entries
+      .filter(([, metadata]) => (metadata.learningArchiveContexts?.length ?? 0) > 1)
+      .map(([destination]) => destination),
+    ["12-archiving-current-site-to-a-subdomain"],
+  )
+
+  const manifest = await corpusManifestPromise
+  const byDestination = new Map(
+    manifest.documents.map((document) => [document.quartzDestination, document]),
+  )
+  for (const [destination, metadata] of entries) {
+    const document = byDestination.get(`${destination}/index.md`)
+    assert.ok(document, `${destination} must remain a migrated destination`)
+    const parsed = splitFrontmatter(document.output)
+    assert.equal(parsed.data.status, "historical")
+    assert.deepEqual(parsed.data.learningArchiveContexts, metadata.learningArchiveContexts)
+    assert.equal(parsed.data.title, document.title)
+    assert.equal(parsed.data.date, document.date)
+    assert.deepEqual(parsed.data.tags, document.tags)
+  }
+
+  for (const destination of [
+    "10-epiphany-moment",
+    "24-things-that-my-new-site-should-have",
+    "93-wb-and-cm-faqs",
+  ]) {
+    const document = byDestination.get(`${destination}/index.md`)
+    assert.equal(splitFrontmatter(document.output).data.status, undefined)
+  }
 })
 
 test("Spotify components are removed while fenced historical examples remain unchanged", () => {

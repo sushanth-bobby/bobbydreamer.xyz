@@ -7,6 +7,9 @@ tags:
   - gatsbyjs
   - firebase
   - deployment
+status: historical
+learningArchiveContexts:
+  - google-domains
 aliases:
   - deploying-and-hosting-gatsby-site-in-firebase
 ---

@@ -5,6 +5,7 @@ description: Some standard settings in eclipse
 tags:
   - java
   - maven
+status: historical
 ---
 
 ##### Workspaces

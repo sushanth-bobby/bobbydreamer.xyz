@@ -19,6 +19,7 @@ export const releaseGates = [
   ["node", ["scripts/migrate-gatsby.mjs", "--check"]],
   ["node", ["scripts/validate-gatsby.mjs", "--public", "public"]],
   ["npm", ["run", "validate:packages"]],
+  ["npm", ["run", "validate:content"]],
   ["npm", ["run", "validate:production"]],
   ["npm", ["run", "validate:cache"]],
   ["git", ["diff", "--check"]],

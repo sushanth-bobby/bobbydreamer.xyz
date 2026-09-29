@@ -20,6 +20,7 @@
     "format": "npx prettier . --write",
     "test": "tsx --test",
     "validate:packages": "node ./scripts/validate-local-packages.mjs",
+    "validate:content": "node ./scripts/audit-content.mjs --as-of 2026-09-29",
     "finalize:production": "node --import tsx ./scripts/finalize-production.ts",
     "validate:production": "node ./scripts/validate-production.mjs",
     "validate:cache": "node ./scripts/validate-cache-contract.mjs",
@@ -47,6 +48,7 @@
     "quartz": "./quartz/bootstrap-cli.mjs"
   },
   "dependencies": {
+    "@bdv/quartz-content-context": "file:./quartz-content-context",
     "@bdv/quartz-ia-article-nav": "file:./quartz-ia-article-nav",
     "@bdv/quartz-ia-articles": "file:./quartz-ia-articles",
     "@bdv/quartz-ia-header": "file:./quartz-ia-header",

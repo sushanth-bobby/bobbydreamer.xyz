@@ -5,6 +5,7 @@ description: Git basics covers clone, pull and push
 tags:
   - notes
   - git
+status: historical
 ---
 
 One of the best feature about GIT Source Control Management(SCM) is its distributed. Git repositories can be hosted in a file server in the web which can be your backup (or) a repository you are contributing to (or) someone else is contributing to yours. 

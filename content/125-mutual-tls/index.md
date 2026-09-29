@@ -6,6 +6,7 @@ tags:
   - notes
   - nodejs
   - security
+status: historical
 ---
 
 In Mutual TLS both Client and Server have a certificate and both sides authenticate using their public/private key pair. Below are the handshake steps in simplistic way. 

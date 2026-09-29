@@ -6,6 +6,7 @@ tags:
   - firebase
   - nodejs
   - javascript
+status: historical
 ---
 
 I am so much comfortable with using firebase client side authentication and doing things on the client side basically because i haven't tried much on the server side. My server side is very simple. After a while, when looking at the code, i found out, there are a few disadvantages i have found in having code at the Firebase client-side, 

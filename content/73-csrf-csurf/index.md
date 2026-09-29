@@ -7,6 +7,7 @@ tags:
   - nodejs
   - javascript
   - time-wasted
+status: historical
 ---
 
 **Bottom-line**. Wasted a week(4/Jan/2021 - 9/Jan/2021) on Cross-Site Request Forgery (CSRF). It all started with me working on Firebase server-side authentication and in the example i was following, it had CSRF setup. So, i started investigating and studying CSRF and found it interesting wanted to try it out. So, i'd setup `firebase hosting`, `csurf` and finally got it work for all GET requests. But, when i introduced POST requests, it started failing with `invalid csrf token` errors. Did a lot of attempts with solutions posted in S.O, nothing worked. So finally, i came across a post in S.O and decided CSRF is not required for firebase hosting. I proceeded to try out `csurf` without using firebase hosting and finally gave up. 

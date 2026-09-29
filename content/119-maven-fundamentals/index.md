@@ -5,6 +5,7 @@ description: Maven fundaments and thin jar
 tags:
   - java
   - maven
+status: historical
 ---
 
 Maven is based around the central concept of a build lifecycle and its made up of phases and these are executed sequentially,     

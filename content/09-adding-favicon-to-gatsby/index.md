@@ -4,6 +4,9 @@ date: 2020-03-20
 description: Creating & Adding a logo to gatsby site
 tags:
   - gatsbyjs
+status: historical
+learningArchiveContexts:
+  - gatsby
 aliases:
   - adding-favicon-to-gatsby
 ---

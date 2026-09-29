@@ -99,6 +99,9 @@ if (articles.length !== numbered.length) {
 
 let compositionMismatches = 0
 let propertiesPanels = 0
+let contextMismatches = 0
+let renderedArticleContexts = 0
+const renderedLearningArchiveContexts = { gatsby: 0, "google-domains": 0, gsutil: 0 }
 for (const article of articles) {
   const htmlPath = path.join(publicRoot, ...article.slug.split("/")).replace(/index$/, "index.html")
   if (!(await exists(htmlPath))) {
@@ -109,8 +112,37 @@ for (const article of articles) {
   const titlePosition = html.indexOf('class="article-title"')
   const tagsPosition = html.indexOf('<ul class="tags">')
   const metaPosition = html.indexOf('class="content-meta"')
+  const contextPosition = html.indexOf('class="article-context"')
   const contentPosition = html.indexOf("<article")
   const hasProperties = /class="[^"]*(?:metadata-container|note-properties)[^"]*"/.test(html)
+  const expectsContext =
+    ["historical", "superseded", "point-in-time"].includes(article.data.status) ||
+    article.data.authorship === "ai"
+  const hasContext = contextPosition >= 0
+  const contexts = Array.isArray(article.data.learningArchiveContexts)
+    ? article.data.learningArchiveContexts
+    : []
+  if (hasContext) renderedArticleContexts += 1
+  if (expectsContext !== hasContext) contextMismatches += 1
+  if (article.data.status === "historical") {
+    if (
+      !html.includes("Learning archive") ||
+      !html.includes("This article reflects my experience with the technologies and versions") ||
+      (html.match(/content-status-notice/g) ?? []).length !== 1
+    ) {
+      contextMismatches += 1
+    }
+  }
+  for (const context of contexts) {
+    const expectedText = {
+      gatsby: "site now runs on Quartz",
+      "google-domains": "Google Domains has since migrated to Squarespace",
+      gsutil: "gcloud storage",
+    }[context]
+    if (!expectedText || !html.includes(expectedText)) contextMismatches += 1
+    else renderedLearningArchiveContexts[context] += 1
+  }
+  if (contexts.length > 0 && !html.includes("Also note:")) contextMismatches += 1
   if (hasProperties) propertiesPanels += 1
   if (
     titlePosition < 0 ||
@@ -118,6 +150,8 @@ for (const article of articles) {
     contentPosition < 0 ||
     titlePosition > metaPosition ||
     metaPosition > contentPosition ||
+    (contextPosition >= 0 &&
+      (contextPosition < metaPosition || contextPosition > contentPosition)) ||
     (tagsPosition >= 0 && (tagsPosition < titlePosition || tagsPosition > metaPosition)) ||
     hasProperties
   ) {
@@ -126,6 +160,9 @@ for (const article of articles) {
 }
 if (propertiesPanels !== 0) fail(`${propertiesPanels} Blog Articles render Properties`)
 if (compositionMismatches !== 0) fail(`${compositionMismatches} Blog Articles violate composition`)
+if (contextMismatches !== 0) {
+  fail(`${contextMismatches} Blog Articles mismatch their status/authorship context`)
+}
 
 const blogHtml = await fs.readFile(path.join(publicRoot, "blog", "index.html"), "utf8")
 const blogList = /<ul class="blog-archive-list">([\s\S]*?)<\/ul>/.exec(blogHtml)?.[1] ?? ""
@@ -250,6 +287,12 @@ if (failures.length > 0) {
 } else {
   console.log(`Production validation passed:`)
   console.log(`- ${articles.length} Blog Articles; ${compositionMismatches} composition mismatches`)
+  console.log(
+    `- ${renderedArticleContexts} metadata-driven article contexts; ${contextMismatches} mismatches`,
+  )
+  console.log(
+    `- Learning Archive contexts: ${renderedLearningArchiveContexts.gatsby} Gatsby, ${renderedLearningArchiveContexts["google-domains"]} Google Domains, ${renderedLearningArchiveContexts.gsutil} gsutil`,
+  )
   console.log(
     `- ${numbered.length} numeric chronology entries; ${neighborMismatches} neighbor mismatches`,
   )

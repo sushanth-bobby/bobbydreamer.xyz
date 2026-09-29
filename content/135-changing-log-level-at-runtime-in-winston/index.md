@@ -4,6 +4,7 @@ date: 2021-12-13
 description: Changing log level at runtime using Winston logger in NodeJS application
 tags:
   - nodejs
+status: historical
 ---
 
 Changing log level at runtime without restarting the node server is an interesting idea. Didn't see much posts on it but everywhere it was said, its doable. 

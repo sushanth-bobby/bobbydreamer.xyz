@@ -5,6 +5,7 @@ description: Contains SRE References and Study materials.
 tags:
   - notes
   - sre
+status: historical
 ---
 
 **Last updated** : 10/April/2021

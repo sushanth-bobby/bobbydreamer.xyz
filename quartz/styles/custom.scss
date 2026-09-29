@@ -520,7 +520,21 @@ html body .topics-landing > p:first-child {
   font-size: 1.05rem;
 }
 
-html body .topics-landing ul {
+html body .topics-landing .topic-group {
+  margin-top: var(--bdv-space-6);
+}
+
+html body .topics-landing .topic-group > h2 {
+  margin-bottom: var(--bdv-space-2);
+}
+
+html body .topics-landing .topic-group > p {
+  max-width: 46rem;
+  margin: 0;
+  color: var(--gray);
+}
+
+html body .topics-landing .topic-group > ul {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
@@ -530,11 +544,11 @@ html body .topics-landing ul {
   margin: var(--bdv-space-5) 0;
 }
 
-html body .topics-landing li {
+html body .topics-landing .topic-group li {
   margin: 0;
 }
 
-html body .topics-landing a.tag-link {
+html body .topics-landing .topic-group a.tag-link {
   display: block;
   padding: 0.75rem 0.85rem;
   border: 1px solid var(--bdv-border);
@@ -545,7 +559,7 @@ html body .topics-landing a.tag-link {
   box-shadow: var(--bdv-shadow-sm);
 }
 
-html body .topics-landing a.tag-link:hover {
+html body .topics-landing .topic-group a.tag-link:hover {
   border-color: color-mix(in srgb, var(--tertiary) 55%, var(--bdv-border));
   color: var(--tertiary);
 }
@@ -799,7 +813,7 @@ html body .article-sequence-navigation a.internal {
   }
 
   html body #working-on + ul,
-  html body .topics-landing ul {
+  html body .topics-landing .topic-group > ul {
     grid-template-columns: 1fr;
   }
 

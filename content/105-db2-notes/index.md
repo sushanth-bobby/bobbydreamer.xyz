@@ -4,6 +4,7 @@ date: 2021-06-07
 description: My Db2 Notes
 tags:
   - db2-notes
+status: historical
 ---
 
 ### Events

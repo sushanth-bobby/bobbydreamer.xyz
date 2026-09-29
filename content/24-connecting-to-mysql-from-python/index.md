@@ -7,6 +7,7 @@ tags:
   - pandas
   - mysql
   - e&s
+status: historical
 ---
 
 Connecting to database is mostly next step after playing with text/csv files. Here, i am trying to connect to mySQL which i have installed in my laptop using Jupyter Notebook and it seems i have not installed mysql package. 

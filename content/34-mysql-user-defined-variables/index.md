@@ -4,6 +4,7 @@ date: 2020-07-12
 description: Creating & Using MySQL User defined variables
 tags:
   - mysql
+status: historical
 ---
 
 MySQL UDV's are similar to variables used in programs. It can hold only single value. Prefixed with @ before the variable name. You can use UDV without declaring or initializing it. If its not declared or initialized, it will have `NULL` 

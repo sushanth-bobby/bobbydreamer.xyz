@@ -5,6 +5,9 @@ description: Migration is a pain
 tags:
   - time-wasted
   - gatsbyjs
+status: historical
+learningArchiveContexts:
+  - gatsby
 ---
 
 **Update** : 2021/Oct/17    

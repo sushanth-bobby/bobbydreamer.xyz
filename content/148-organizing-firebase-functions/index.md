@@ -5,6 +5,7 @@ description: Organizing Firebase Functions
 tags:
   - nodejs
   - firebase
+status: historical
 ---
 
 We are going to just get on setting new firebase project using *Functions*. 

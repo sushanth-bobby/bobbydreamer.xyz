@@ -5,6 +5,7 @@ description: Setting up partitions in mySQL tables
 tags:
   - time-wasted
   - mysql
+status: historical
 ---
 
 Partitioning is a way of splitting up big tables into small pieces, so it can be managed much efficiently. 

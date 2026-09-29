@@ -6,6 +6,7 @@ tags:
   - javascript
   - web-development
   - firebase
+status: historical
 ---
 
 In the beginning 2017 or 2018, when i first started to learn and use firebase. My perspective on certain things changed. Usually, when i get an idea or concept, i start to write the structure of the table and how the data is going to be stored and in parallel, i draw a simple sketch of the application and write out what data its going to access from which table. For me, it sort given an idea of the flow. 

@@ -4,6 +4,7 @@ date: 2020-04-02
 description: These shortcuts improve the way i work
 tags:
   - mainframe
+status: historical
 aliases:
   - little-mainframe-shortcuts
 ---

@@ -6,6 +6,7 @@ tags:
   - python
   - pandas
   - notes
+status: historical
 ---
 
 Null is just absence of a value in a variable. You can use null when you cannot specify any default value where any value would mean something.

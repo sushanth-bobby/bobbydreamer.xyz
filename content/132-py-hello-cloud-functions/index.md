@@ -5,6 +5,7 @@ description: Working with Google Cloud Functions using Python
 tags:
   - GCP
   - python
+status: historical
 ---
 
 Cloud Functions run in a fully-managed, serverless environment where Google handles infrastructure, operating systems, and runtime environments completely on your behalf. Each Cloud Function runs in its own isolated secure execution context, scales automatically, and has a lifecycle independent from other functions.

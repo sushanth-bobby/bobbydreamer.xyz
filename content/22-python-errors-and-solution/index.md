@@ -7,6 +7,7 @@ tags:
   - numpy
   - pandas
   - e&s
+status: historical
 aliases:
   - python-errors-and-solution
 ---

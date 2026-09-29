@@ -6,6 +6,7 @@ tags:
   - javascript
   - web-development
   - firebase
+status: historical
 ---
 
 There are couple of methods for sending verification emails in firebase 

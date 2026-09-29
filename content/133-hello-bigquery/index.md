@@ -5,6 +5,7 @@ description: About BigQuery
 tags:
   - GCP
   - bigquery
+status: historical
 ---
 
 BigQuery is a fully-managed enterprise data warehouse that helps you manage and analyze your data with built-in features like machine learning, geospatial analysis, and business intelligence. BigQuery's serverless architecture with zero infrastructure management lets you query terabytes in seconds and petabytes in minutes and data is stored in columnar format.

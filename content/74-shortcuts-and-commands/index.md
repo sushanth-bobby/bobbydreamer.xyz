@@ -5,6 +5,7 @@ description: Shortcut i use often, this improves productivity
 tags:
   - notes
   - commands
+status: historical
 ---
 
 **Last updated** : 2021-01-11 

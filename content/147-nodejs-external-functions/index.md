@@ -4,6 +4,7 @@ date: 2022-08-08
 description: Notes on NodeJS Functions
 tags:
   - nodejs
+status: historical
 ---
 
 When you are modularizing your code in NodeJS, functions are the easiest one to move another file. Problem is there are multiple ways, patterns when externalizing functions there is nothing like a best practise. You will just have to pick a pattern that fits your need and go along with it. 

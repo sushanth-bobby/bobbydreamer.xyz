@@ -4,6 +4,7 @@ date: 2020-07-12
 description: Writing a simple program which accepts command line arguments
 tags:
   - python
+status: historical
 aliases:
   - 33-command-line-arguments
 ---

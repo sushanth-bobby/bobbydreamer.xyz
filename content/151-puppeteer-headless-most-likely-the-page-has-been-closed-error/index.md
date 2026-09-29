@@ -4,6 +4,7 @@ date: 2023-08-23
 description: Error - Session Closed. Most likely the page has been closed
 tags:
   - nodejs
+status: historical
 ---
 
 Below is a small puppeteer program, it worked fine when `headless: false`. But it started failing when i changed `headless: 'new'`

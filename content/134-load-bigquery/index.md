@@ -6,6 +6,7 @@ tags:
   - GCP
   - bigquery
   - python
+status: historical
 ---
 
 Below picture shows options available to load BigQuery

@@ -5,6 +5,7 @@ description: Some notes on http, https, SSL, TLS and CA
 tags:
   - notes
   - security
+status: historical
 ---
 
 ### # HTTP

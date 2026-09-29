@@ -6,6 +6,9 @@ tags:
   - web-development
   - deployment
   - GCP
+status: historical
+learningArchiveContexts:
+  - google-domains
 aliases:
   - host-site-from-google-storage
 ---

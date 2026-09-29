@@ -6,6 +6,7 @@ description: Snippet of calling function from jquery event listener and it
 tags:
   - jquery
   - javascript
+status: historical
 ---
 
 Scenario : Say using JQuery, i am listening to events on a webpage under class `page > adminSwitch` and `page > premiumSwitch`. 

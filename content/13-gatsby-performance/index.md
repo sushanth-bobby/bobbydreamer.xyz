@@ -8,6 +8,9 @@ tags:
   - hosting
   - GoogleDomains
   - gatsbyjs
+status: historical
+learningArchiveContexts:
+  - gatsby
 aliases:
   - gatsby-performance
 ---
