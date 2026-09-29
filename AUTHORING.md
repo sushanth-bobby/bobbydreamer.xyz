@@ -117,7 +117,9 @@ Keep assets colocated with the article and reference them relatively:
 
 Use meaningful alt text when the image conveys information. Use empty alt text only for genuinely decorative images. Do not invent a description for an old image whose meaning cannot be established. Put caption text next to the image in ordinary Markdown until a dedicated caption syntax is documented.
 
-Do not manually move files into a central image tree or perform Phase 7's future optimization work by hand. Preserve original formats when authoring unless there is a clear reason to choose another.
+PNG and JPEG/JPG are processed when the source is large enough for responsive delivery. Small raster images stay at their natural size, SVG remains vector, and animated or unsupported formats bypass responsive processing rather than being damaged. External images are not downloaded. The first local article image loads eagerly; later images load lazily. The build adds dimensions, decoding behavior, and responsive candidates without changing the Markdown.
+
+Do not move files into a central image tree, resize them manually, create WebP copies, write `srcset`, or edit a generated manifest. Preserve the original format unless there is an authoring reason to choose another. `npm run serve` and `npm run build` run the media pipeline automatically; authors normally need no separate media command.
 
 ## Links and sources
 
@@ -158,6 +160,7 @@ npm run validate:content
 npm test
 npm run check
 npm run build
+npm run validate:media
 node scripts/migrate-gatsby.mjs --check
 node scripts/validate-gatsby.mjs --public public
 npm run validate:packages

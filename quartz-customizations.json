@@ -13,6 +13,8 @@
     "authoringPreview": "npm run serve",
     "contentValidation": "npm run validate:content",
     "productionBuild": "npm run build",
+    "mediaInventory": "npm run media:audit",
+    "mediaVerification": "npm run media:verify && npm run validate:media",
     "deploymentCheck": "npm run deploy:check",
     "deploymentPublish": "npm run deploy:production",
     "quartzCli": "npm run quartz -- <command>",
@@ -30,7 +32,7 @@
     "blogDescriptions": 150,
     "articleTagLists": 150,
     "propertiesPanels": 0,
-    "tests": 222,
+    "tests": 226,
     "testSuites": 45
   },
   "customizations": [
@@ -386,6 +388,35 @@
         "special Learning Archive contexts render inside one coherent notice",
         "Topics exposes the exact curated topic groups",
         "production validation checks Learning Archive wording, contexts, and placement"
+      ],
+      "upgradeRisk": "MEDIUM",
+      "nativeReplacementCandidate": false
+    },
+    {
+      "id": "QZ-CUST-022",
+      "name": "Repository-owned media inventory and derivative pipeline",
+      "category": "build-architecture",
+      "files": [
+        "scripts/media/config.mjs",
+        "scripts/media/inventory.mjs",
+        "scripts/media/pipeline.mjs",
+        "scripts/media/cli.mjs",
+        "scripts/media/media.test.mjs",
+        "scripts/media/benchmark-change.mjs",
+        "scripts/validate-media-output.mjs",
+        "generated/media-inventory.json",
+        "quartz-media/index.ts",
+        "quartz-media/package.json",
+        "quartz.config.yaml",
+        "quartz/styles/custom.scss"
+      ],
+      "tests": [
+        "inventory discovers ownership, dimensions, references, and duplicate content",
+        "content-addressed cache is incremental, scoped, deterministic, and source-safe",
+        "cache keys and filenames change only with relevant inputs",
+        "missing local image references fail the build",
+        "npm run media:verify",
+        "npm run validate:media"
       ],
       "upgradeRisk": "MEDIUM",
       "nativeReplacementCandidate": false

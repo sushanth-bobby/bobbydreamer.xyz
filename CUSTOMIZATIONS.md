@@ -35,26 +35,36 @@ Before this Phase 4F documentation was added, 288 of the 295 stock tracked paths
 
 ### Categorized inventory
 
-| Category                    | Current interpretation                                                                                                                                                                                                                        |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Unchanged Quartz files      | 288/295 baseline tracked paths, including Quartz CLI, parsers, emitters, component registry implementation, page renderer, and server implementation.                                                                                         |
-| Modified stock/config paths | `.prettierignore`, `package.json`, `package-lock.json`, `quartz.ts`, `quartz/styles/custom.scss`, `quartz/static/icon.png`; stock `content/.gitkeep` is deleted.                                                                              |
-| New configuration/helpers   | `quartz.config.yaml`, `quartz.ia.ts`, `quartz.explorer-order.ts`. There is no `quartz.config.ts` or `quartz.layout.ts` in this Quartz 5 design.                                                                                               |
-| New local packages          | `quartz-content-context`, `quartz-ia-article-nav`, `quartz-ia-articles`, `quartz-ia-header`, `quartz-ia-pages`, and `quartz-ia-properties`. TypeScript/TSX is authoritative and checked-in `dist` is generated runtime.                       |
-| New scripts/tooling         | Migration tooling plus the editorial override ledger, corpus audit, production finalizer, generated/route/cache validators, local-package parity validator, deployment orchestration, and TOC audit.                                          |
-| New tests                   | `quartz.explorer-order.test.ts`, `quartz.ia.test.ts`, and the migration test above. Stock Quartz tests remain unchanged.                                                                                                                      |
-| Content architecture        | 155 Markdown documents in `content`: 153 migrated documents, the authored homepage, and one newly authored post; 150 numbered Blog Articles, four migrated static pages, and 491 source-owned colocated assets.                               |
-| New static assets           | `quartz/static/brand/bobbydreamer-mark-source.png` and derived transparent `bobbydreamer-mark.png`; stock `quartz/static/icon.png` is replaced by the same derived image bytes.                                                               |
-| Serving/deployment          | `Dockerfile` builds with the in-tree Quartz CLI and runs only Caddy 2.11.4 on port 8080 with `public/` copied to `/srv`; Firebase rewrites to one Cloud Run service; repository scripts own cache-safe validation and production replacement. |
-| Generated files             | `public/` is ignored build output. Eight local-package `dist/*.js` files are generated and are runtime package entry points. The migration manifest is generated evidence.                                                                    |
-| Migration-only material     | `GatsbyMigration/*` lives outside `bdv4q2`. Only `content-original` is the current source; old Python tools and other corpus copies are historical.                                                                                           |
-| Reports/documentation       | Phase reports and the blog draft live in `bdv4q2-codex-todo`, not in the production corpus.                                                                                                                                                   |
+| Category                    | Current interpretation                                                                                                                                                                                                                                              |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Unchanged Quartz files      | 288/295 baseline tracked paths, including Quartz CLI, parsers, emitters, component registry implementation, page renderer, and server implementation.                                                                                                               |
+| Modified stock/config paths | `.prettierignore`, `package.json`, `package-lock.json`, `quartz.ts`, `quartz/styles/custom.scss`, `quartz/static/icon.png`; stock `content/.gitkeep` is deleted.                                                                                                    |
+| New configuration/helpers   | `quartz.config.yaml`, `quartz.ia.ts`, `quartz.explorer-order.ts`. There is no `quartz.config.ts` or `quartz.layout.ts` in this Quartz 5 design.                                                                                                                     |
+| New local packages          | `quartz-content-context`, `quartz-ia-article-nav`, `quartz-ia-articles`, `quartz-ia-header`, `quartz-ia-pages`, `quartz-ia-properties`, and the thin `quartz-media` adapter. TypeScript/TSX is authoritative and `dist` is generated runtime.                       |
+| New scripts/tooling         | Migration tooling plus repository-owned media inventory/processing/cache tests, the editorial override ledger, corpus audit, production finalizer, generated/route/cache/media validators, local-package parity validator, deployment orchestration, and TOC audit. |
+| New tests                   | `quartz.explorer-order.test.ts`, `quartz.ia.test.ts`, and the migration test above. Stock Quartz tests remain unchanged.                                                                                                                                            |
+| Content architecture        | 155 Markdown documents in `content`: 153 migrated documents, the authored homepage, and one newly authored post; 150 numbered Blog Articles, four migrated static pages, and 491 source-owned colocated assets.                                                     |
+| New static assets           | `quartz/static/brand/bobbydreamer-mark-source.png` and derived transparent `bobbydreamer-mark.png`; stock `quartz/static/icon.png` is replaced by the same derived image bytes.                                                                                     |
+| Serving/deployment          | `Dockerfile` builds with the in-tree Quartz CLI and runs only Caddy 2.11.4 on port 8080 with `public/` copied to `/srv`; Firebase rewrites to one Cloud Run service; repository scripts own cache-safe validation and production replacement.                       |
+| Generated files             | `public/` is ignored build output. Eleven local-package `dist/*.js` files are generated and are runtime package entry points; the media adapter output is disposable and rebuilt automatically. The migration and media inventories are generated evidence.         |
+| Migration-only material     | `GatsbyMigration/*` lives outside `bdv4q2`. Only `content-original` is the current source; old Python tools and other corpus copies are historical.                                                                                                                 |
+| Reports/documentation       | Phase reports and the blog draft live in `bdv4q2-codex-todo`, not in the production corpus.                                                                                                                                                                         |
 
 ### Quartz-core policy
 
 Quartz implementation-core modifications: **0**.
 
 `quartz.ts` is the documented site bootstrap; `quartz/styles/custom.scss` is the site stylesheet hook; and `quartz/static/icon.png` is a replaceable static site asset. They are tracked stock paths, but changing these extension surfaces is not a patch to Quartz internals. Future work should continue to prefer configuration, supported registries, local packages, `custom.scss`, and migration tooling before considering a core patch. Any future edit to other files beneath `quartz/` must be called out explicitly as a core modification.
+
+### Repository-owned media boundary
+
+Phase 7 media processing sits above Quartz. `scripts/media/` owns discovery, metadata, content hashing, eligibility, transformation keys, deterministic names, WebP generation, cache reuse, inventory, cleanup, benchmarks, and core tests. `generated/media-inventory.json` is deterministic evidence. Disposable cache/output metadata lives under `generated/cache/media/`, `generated/media-manifest.json`, and `generated/media-last-run.json`.
+
+Quartz only consumes the result. `quartz-media/index.ts` is the thin supported transformer/emitter adapter: it reads the generated manifest, adds `width`, `height`, `srcset`, `sizes`, loading/decoding attributes and presentation classes, then copies prepared derivatives into `public/media/`. `quartz.config.yaml` registers that package after link processing, and `quartz/styles/custom.scss` owns the subtle article-only presentation. No processor or cache implementation lives in Quartz core.
+
+The cache key contains source bytes, width, format, encoder settings, and the repository media pipeline version. It deliberately excludes the Quartz version. A normal Quartz upgrade must preserve `content/`, `scripts/media/`, `generated/media-inventory.json`, media tests, and the cache contract. Rebuild `quartz-media`, then verify its small HAST/emitter contract against the changed Quartz API with `npm run media:verify`, `npm run validate:media`, and the full site suite. Never overwrite or relocate the media processor during an upstream Quartz update.
+
+If Quartz is replaced, the source images, inventory, hashing, derivative naming, image processing, invalidation model, cache, benchmarks, and tests survive unchanged. Only `quartz-media`, its YAML registration, and the article-image selectors may need adaptation.
 
 ## Architecture at a glance
 
@@ -145,6 +155,7 @@ The IDs below are stable. The concise machine index is `quartz-customizations.js
 | QZ-CUST-019 | Local-package source and generated-artifact lifecycle        | build architecture       | HIGH   |
 | QZ-CUST-020 | Cache-safe publishing and production replacement             | deployment               | HIGH   |
 | QZ-CUST-021 | Content architecture, status, and authorship                 | editorial/component      | MEDIUM |
+| QZ-CUST-022 | Repository-owned media inventory and derivative pipeline     | build architecture       | MEDIUM |
 
 ### QZ-CUST-001 — Migration corpus ownership and deterministic pipeline
 
@@ -238,7 +249,7 @@ The IDs below are stable. The concise machine index is `quartz-customizations.js
 - **bobbydreamer behavior:** local classes are `home`, `article`, `til`, `static`, `archive`, `topic`, and `other`. A Blog Article is dated authored content outside reserved non-article routes; its numeric prefix is not its presentation classifier. Custom conditions place title/meta/TOC/backlinks/graph/navigation appropriately.
 - **Implementation location:** `classifyPage` in `quartz.ia.ts`; `registerCondition` calls in `quartz.ts`; local page-type plugins and `quartz.config.yaml` layout registrations.
 - **Configuration involved:** `home-page`, `not-home-page`, `blog-article`, `numbered-article`, `article-or-til`, and `never-render` conditions. `blog-article` controls article composition; `numbered-article` remains only where sequence is required. Right rails are empty on folder/tag/archive classes.
-- **Components involved:** all six local packages plus native Article Title, Content Meta, TOC, Backlinks, Graph, Search, Darkmode, Breadcrumbs, and Footer.
+- **Components involved:** the six established IA/content packages plus the thin media adapter, alongside native Article Title, Content Meta, TOC, Backlinks, Graph, Search, Darkmode, Breadcrumbs, and Footer.
 - **CSS/scripts:** page/grid selectors in `custom.scss`; no migration script.
 - **Tests protecting it:** page-class, legacy/future Blog Article matcher, classification/chronology separation, and configuration-composition tests.
 - **Content/data dependencies:** a valid frontmatter publication date identifies authored Blog content after reserved home, `til`, `bio`, `irevere`, `music`, `blog`, `topics`, and `tags` routes are excluded. Production chronology additionally requires the numbered folder convention.
@@ -458,8 +469,8 @@ The IDs below are stable. The concise machine index is `quartz-customizations.js
 
 - **Purpose / user requirement:** extend Quartz without forking core while remaining installable through Quartz 5's package/plugin loader.
 - **Stock Quartz behavior:** consumes community packages from `node_modules`; it has no `@bdv/*` packages.
-- **bobbydreamer behavior:** six local `file:` dependencies expose generated ESM from `dist`, while TypeScript/TSX beside each package is the only edit authority.
-- **Implementation location:** six local package directories (`quartz-content-context` plus five `quartz-ia-*` packages), their `package.json` files, root dependencies/lock, and generated `dist` files.
+- **bobbydreamer behavior:** seven local `file:` dependencies expose generated ESM from `dist`, while TypeScript/TSX beside each package is the only edit authority. The media adapter is disposable build output; the older six packages retain their checked/generated runtime artifacts.
+- **Implementation location:** seven local package directories (`quartz-content-context`, five `quartz-ia-*` packages, and `quartz-media`), their `package.json` files, root dependencies/lock, and generated `dist` files.
 - **Configuration/components/CSS:** registered by package source names in YAML; package metadata declares component/pageType/emitter categories.
 - **Scripts involved:** each package has an esbuild `build` script. Root `prebuild` installs plugins; `build`, `serve`, `docs`, and `quartz` invoke `node ./quartz/bootstrap-cli.mjs` directly. Local dependencies are junctions in this audited Windows workspace.
 - **Tests protecting it:** the launch-command regression rejects `npx quartz` in package scripts/Dockerfile and requires the in-tree CLI. `npm run validate:packages` rebuilds all ten entry points into a temporary directory and compares them with checked-in `dist` after CRLF/LF normalization.
@@ -503,6 +514,22 @@ The IDs below are stable. The concise machine index is `quartz-customizations.js
 - **Can newer native Quartz replace it?** Native status or authorship UI may replace rendering only if it preserves these metadata semantics, empty/default behavior, migration reproducibility, and article composition.
 - **How to validate after upgrade:** content validation, migration determinism, component fixtures, generated notice parity, Topics links/groups, tag routes, Search, both themes, and all reference widths.
 - **Historical authority:** Phase 6 audits and completion report.
+
+### QZ-CUST-022 — Repository-owned media inventory and derivative pipeline
+
+- **Purpose / user requirement:** make image discovery, inspection, derivative generation, invalidation, and evidence durable application tooling that Quartz consumes rather than logic buried in Quartz internals.
+- **Stock Quartz behavior:** copies referenced assets and emits ordinary image elements; it does not own this repository's source inventory, responsive derivative policy, cache contract, or audit evidence.
+- **bobbydreamer behavior:** `scripts/media/` inventories all source-owned raster images, parses rendered Markdown image references, records dimensions/bytes/hashes/alt state/duplicates/unreferenced candidates, and creates content-addressed WebP derivatives at eligible widths. Sources and Markdown remain unchanged. Cache keys cover source bytes and every output-affecting transform input, so warm builds reuse valid work and changed images invalidate only their own derivatives.
+- **Implementation location:** `scripts/media/`, `generated/media-inventory.json`, `scripts/validate-media-output.mjs`, and the disposable `generated/cache/media/`, `generated/media-manifest.json`, and `generated/media-last-run.json` outputs.
+- **Quartz integration:** `quartz-media/index.ts` is the only media-specific Quartz API adapter. It reads the repository manifest, enriches local image HAST nodes with intrinsic/responsive/loading attributes and presentation classes, and copies prepared derivatives into `public/media/`. `quartz.config.yaml` registers it after link processing; `quartz/styles/custom.scss` owns the subtle article-only visual treatment.
+- **Tests protecting it:** `scripts/media/media.test.mjs` covers complete ownership/reference inventory, dimensions and hashing, duplicate/unreferenced reporting, cold/warm/single-source/config invalidation, deterministic clean rebuilds, source immutability, naming, and missing-reference failure. `npm run media:verify` validates repository evidence and `npm run validate:media` validates generated HTML and derivative integrity.
+- **Content/data dependencies:** 491 colocated PNG/JPEG source assets are authoritative. The current snapshot has 487 referenced local images, four report-only unreferenced candidates, two duplicate-content groups, and no broken local image references.
+- **Routes affected:** all routes containing local raster images; canonical content and alias routes do not change. Prepared derivatives are emitted beneath `/media/` and source fallbacks retain their existing URLs.
+- **Responsive implications:** eligible large images receive width candidates at 480, 832, and 1280 pixels only when smaller than the source; every local raster image receives intrinsic dimensions; the first article image is eager and later images are lazy; transparent/small assets avoid framed treatment.
+- **Upgrade risk:** **MEDIUM**. Processing and cache behavior are Quartz-independent; only the adapter's transformer/emitter HAST contract and related selectors are upgrade-facing.
+- **Can newer native Quartz replace it?** A native responsive-image feature may replace the thin adapter only if it consumes the same repository-owned manifest/derivatives without taking ownership of hashing, policy, cache invalidation, evidence, or tests.
+- **How to validate after upgrade:** rebuild `quartz-media`, run media unit tests, `media:verify`, a clean and warm build, `validate:media`, the full site validators, and the representative three-viewport/two-theme browser matrix.
+- **Historical authority:** Phase 7 inventory, benchmark, and completion reports.
 
 ## Migration architecture
 
@@ -696,14 +723,15 @@ Quartz's `$tablet` and `$mobile` variables are the media-query authorities; the 
 
 Never edit `dist` as source. Edit the files named in **Source**, run the package build, then run the root checks/build. The Phase 4F audit proved every generated output matches its source after line-ending normalization.
 
-| Package                       | Purpose / interfaces consumed                                                                                | Source → generated                                                               | Registration / pages                            | Risk                                |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------- |
-| `@bdv/quartz-content-context` | Quartz component props and frontmatter; centralized status/authorship rendering                              | `components.tsx`, `index.ts`, `style.ts` → two dist files                        | Blog Article beforeBody priority 25             | MEDIUM                              |
-| `@bdv/quartz-ia-article-nav`  | Quartz component props/constructor, `resolveRelative`, local neighbor helpers                                | `components.tsx`, `index.ts`, `style.ts` → `dist/components.js`, `dist/index.js` | `afterBody`, numbered articles                  | MEDIUM                              |
-| `@bdv/quartz-ia-articles`     | `QuartzPageTypePlugin`, native `ContentBody`, shared `isBlogArticle`; matches Blog Articles and T.I.L        | `index.ts` → `dist/index.js`                                                     | order 44, layout `article`                      | MEDIUM/HIGH API coupling            |
-| `@bdv/quartz-ia-header`       | Quartz component props/constructor and `resolveRelative`                                                     | `components.tsx`, `index.ts`, `style.ts` → two dist files                        | global header priority 10                       | MEDIUM                              |
-| `@bdv/quartz-ia-pages`        | component/page/emitter/vfile APIs, internal emitter `write`, community date/path utilities, local IA helpers | `index.tsx`, `style.ts` → `dist/index.js`                                        | order 45; Blog/year/Topics + Quartz 4 redirects | HIGH                                |
-| `@bdv/quartz-ia-properties`   | native `TagList`, Quartz constructor type                                                                    | `components.tsx`, `index.ts` → two dist files                                    | Blog Article beforeBody priority 15             | HIGH because of registry workaround |
+| Package                       | Purpose / interfaces consumed                                                                                | Source → generated                                                               | Registration / pages                              | Risk                                |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------------------------------------- | ----------------------------------- |
+| `@bdv/quartz-content-context` | Quartz component props and frontmatter; centralized status/authorship rendering                              | `components.tsx`, `index.ts`, `style.ts` → two dist files                        | Blog Article beforeBody priority 25               | MEDIUM                              |
+| `@bdv/quartz-ia-article-nav`  | Quartz component props/constructor, `resolveRelative`, local neighbor helpers                                | `components.tsx`, `index.ts`, `style.ts` → `dist/components.js`, `dist/index.js` | `afterBody`, numbered articles                    | MEDIUM                              |
+| `@bdv/quartz-ia-articles`     | `QuartzPageTypePlugin`, native `ContentBody`, shared `isBlogArticle`; matches Blog Articles and T.I.L        | `index.ts` → `dist/index.js`                                                     | order 44, layout `article`                        | MEDIUM/HIGH API coupling            |
+| `@bdv/quartz-ia-header`       | Quartz component props/constructor and `resolveRelative`                                                     | `components.tsx`, `index.ts`, `style.ts` → two dist files                        | global header priority 10                         | MEDIUM                              |
+| `@bdv/quartz-ia-pages`        | component/page/emitter/vfile APIs, internal emitter `write`, community date/path utilities, local IA helpers | `index.tsx`, `style.ts` → `dist/index.js`                                        | order 45; Blog/year/Topics + Quartz 4 redirects   | HIGH                                |
+| `@bdv/quartz-ia-properties`   | native `TagList`, Quartz constructor type                                                                    | `components.tsx`, `index.ts` → two dist files                                    | Blog Article beforeBody priority 15               | HIGH because of registry workaround |
+| `@bdv/quartz-media`           | generated media manifest plus Quartz transformer/emitter HAST and output APIs                                | `index.ts` → disposable `dist/index.js`                                          | transformer after Crawl Links; derivative emitter | MEDIUM; intentionally thin adapter  |
 
 Build commands on this Windows workspace:
 
@@ -714,9 +742,10 @@ npm --prefix .\quartz-ia-articles run build
 npm --prefix .\quartz-ia-header run build
 npm --prefix .\quartz-ia-pages run build
 npm --prefix .\quartz-ia-properties run build
+npm --prefix .\quartz-media run build
 ```
 
-Each package script calls `..\node_modules\.bin\esbuild.cmd`, bundles for Node ESM, and leaves `preact*` and `@quartz-community/*` external. This exact script is Windows-specific. If an upgrade moves development to another OS, make the package scripts portable deliberately and test the generated exports; do not silently patch `dist`.
+The six established component/page packages call `..\node_modules\.bin\esbuild.cmd`, bundle for Node ESM, and leave `preact*` and `@quartz-community/*` external. Those exact scripts are Windows-specific. The media adapter calls the portable `esbuild` binary name; its `dist` is ignored and recreated automatically by the root lifecycle. If an upgrade moves development to another OS, make the older package scripts portable deliberately and test the generated exports; do not silently patch `dist`.
 
 ## Configuration inventory
 
@@ -724,7 +753,7 @@ Each package script calls `..\node_modules\.bin\esbuild.cmd`, bundles for Node E
 
 Key plugin differences from stock:
 
-- six `@bdv/*` local packages are enabled;
+- seven `@bdv/*` local packages are enabled, including the thin media adapter;
 - Obsidian parsing explicitly enables comments, highlight, wikilinks, callouts, Mermaid, inline tags, arrows, block references, YouTube/video, and checkboxes;
 - hard line breaks and Excalidraw are enabled;
 - TOC, Backlinks, Article Title, Content Meta, Graph, Search, Theme, and Recent Notes are conditionally relocated;
@@ -764,10 +793,11 @@ These dependencies are valid today but brittle across Quartz upgrades:
 - Native implementation details: TOC uses strict `>` against `minEntries`; Tag List direct registration collides with Theme in 5.0.0; Graph client code/data normalization and CDN loading; alias files use relative meta refresh.
 - Serving assumptions: Caddy reads static `index.html`/alias `.html`; Quartz preview is not a proof for dotted production routes; the production container runs Caddy on port 8080 with `/srv` as its static root.
 - Build artifacts: Quartz installs local-package `dist`, not TSX source. A stale dist can make source inspection lie about runtime behavior.
+- Media adapter contract: `@bdv/quartz-media` consumes generated HAST and emitter APIs, but discovery, hashing, transforms, cache policy, and audit evidence must remain under `scripts/media/` across upgrades.
 
 ## Tests and requirement-to-test matrix
 
-The current full baseline is 222 tests across 45 suites. Stock tests cover Quartz paths, trie/collisions, dispatcher, loader, registry, rendering, Search, Popover, frames, and CLI helpers. Custom protection includes:
+The current full baseline is 226 tests across 45 suites. Stock tests cover Quartz paths, trie/collisions, dispatcher, loader, registry, rendering, Search, Popover, frames, and CLI helpers. Custom protection includes:
 
 - `scripts/migrate-gatsby.test.mjs`: 21 migration/corpus tests;
 - `scripts/content-architecture.test.mjs`: corpus inventory and editorial-contract tests;
@@ -775,29 +805,31 @@ The current full baseline is 222 tests across 45 suites. Stock tests cover Quart
 - `quartz.explorer-order.test.ts`: 3 numeric/dotted chronology tests;
 - `quartz.ia.test.ts`: 20 IA/composition/token/build-runtime/cache tests.
 - `scripts/deploy-production.test.mjs`: 4 deployment-safety tests.
+- `scripts/media/media.test.mjs`: 4 end-to-end inventory, cache, determinism, immutability, and failure tests.
 
-| Customization              | Automated protection                                          | Generated/manual protection                       | Known gap                                       |
-| -------------------------- | ------------------------------------------------------------- | ------------------------------------------------- | ----------------------------------------------- |
-| 001–002 migration          | migration suite; validator                                    | manifest/build warning audit                      | none material                                   |
-| 003 routing/aliases        | collision/link/finalizer tests; generated validator           | automated Caddy route matrix                      | container execution requires Docker/Cloud Build |
-| 004 Caddy                  | Docker/Firebase regression; `validate:caddy`                  | Caddy 2.11.4 configuration + routes               | container execution requires Docker/Cloud Build |
-| 005 chronology             | comparator + IA tests; `validate:production`                  | full Blog/neighbors audit                         | none material                                   |
-| 006 page composition       | class/config + legacy/future matcher tests                    | representative page browser matrix                | no automated full DOM matrix                    |
-| 007 header                 | identity/token tests                                          | link/control/alignment/console matrix             | interactions/responsive are manual              |
-| 008 homepage               | Latest/H1/removal/config tests                                | homepage browser checks                           | Working on structure is selector-coupled        |
-| 009 Blog/year              | year/shared-component + description tests                     | committed 150-article production audit            | none material                                   |
-| 010 topics/tags            | ordinal, exact curated-group, and Tag List tests              | link click/topic/tag pages                        | none material                                   |
-| 011 Previous/Next          | neighbor/comparator tests; `validate:production`              | all 150 generated neighbor pairs                  | none material                                   |
-| 012 article metadata       | matcher/config/order/finalizer + Tag List tests               | all-article committed DOM audit                   | none material                                   |
-| 013 TOC                    | `audit-toc.mjs`                                               | representative responsive check                   | upstream strict-`>` is not unit-pinned          |
-| 014 Graph                  | placement/config regex                                        | data/browser interaction audit                    | no committed metrics or canvas test             |
-| 015 branding               | source test; generated validator                              | visual alignment/theme                            | no image-pipeline generator                     |
-| 016 typography/wrapping    | token/no-max test                                             | computed browser measurements                     | no screenshot/computed-style automation         |
-| 017 visual system          | limited structural tests                                      | full page/theme/viewport matrix                   | most presentation is manual                     |
-| 018 removals/compatibility | Explorer/Spotify/taxonomy tests                               | build/browser checks                              | config-default drift must be reviewed           |
-| 019 source/dist            | `validate:packages` rebuild comparison                        | ten generated entry points                        | none material                                   |
-| 020 cache/deployment       | cache-transition + deployment-plan tests; validators          | local/direct/public headers and warmed browser    | browser transition remains a release gate       |
-| 021 content architecture   | exact ledger/inventory/schema/component/topic/migration tests | generated notice parity and Topics browser matrix | About-page refresh remains separately deferred  |
+| Customization              | Automated protection                                          | Generated/manual protection                       | Known gap                                         |
+| -------------------------- | ------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
+| 001–002 migration          | migration suite; validator                                    | manifest/build warning audit                      | none material                                     |
+| 003 routing/aliases        | collision/link/finalizer tests; generated validator           | automated Caddy route matrix                      | container execution requires Docker/Cloud Build   |
+| 004 Caddy                  | Docker/Firebase regression; `validate:caddy`                  | Caddy 2.11.4 configuration + routes               | container execution requires Docker/Cloud Build   |
+| 005 chronology             | comparator + IA tests; `validate:production`                  | full Blog/neighbors audit                         | none material                                     |
+| 006 page composition       | class/config + legacy/future matcher tests                    | representative page browser matrix                | no automated full DOM matrix                      |
+| 007 header                 | identity/token tests                                          | link/control/alignment/console matrix             | interactions/responsive are manual                |
+| 008 homepage               | Latest/H1/removal/config tests                                | homepage browser checks                           | Working on structure is selector-coupled          |
+| 009 Blog/year              | year/shared-component + description tests                     | committed 150-article production audit            | none material                                     |
+| 010 topics/tags            | ordinal, exact curated-group, and Tag List tests              | link click/topic/tag pages                        | none material                                     |
+| 011 Previous/Next          | neighbor/comparator tests; `validate:production`              | all 150 generated neighbor pairs                  | none material                                     |
+| 012 article metadata       | matcher/config/order/finalizer + Tag List tests               | all-article committed DOM audit                   | none material                                     |
+| 013 TOC                    | `audit-toc.mjs`                                               | representative responsive check                   | upstream strict-`>` is not unit-pinned            |
+| 014 Graph                  | placement/config regex                                        | data/browser interaction audit                    | no committed metrics or canvas test               |
+| 015 branding               | source test; generated validator                              | visual alignment/theme                            | brand-mark regeneration remains manual            |
+| 016 typography/wrapping    | token/no-max test                                             | computed browser measurements                     | no screenshot/computed-style automation           |
+| 017 visual system          | limited structural tests                                      | full page/theme/viewport matrix                   | most presentation is manual                       |
+| 018 removals/compatibility | Explorer/Spotify/taxonomy tests                               | build/browser checks                              | config-default drift must be reviewed             |
+| 019 source/dist            | `validate:packages` rebuild comparison                        | eleven generated entry points                     | none material                                     |
+| 020 cache/deployment       | cache-transition + deployment-plan tests; validators          | local/direct/public headers and warmed browser    | browser transition remains a release gate         |
+| 021 content architecture   | exact ledger/inventory/schema/component/topic/migration tests | generated notice parity and Topics browser matrix | About-page refresh remains separately deferred    |
+| 022 media pipeline         | media unit tests; `media:verify`; `validate:media`            | cold/warm/change benchmarks and browser matrix    | animated/vector media remain intentional bypasses |
 
 Graph canvas interaction, visual/computed typography, responsive presentation, and browser console/overflow remain browser gates. Container execution and authenticated Google Cloud/Firebase state remain environment gates. Routing, generated Blog/article composition, chronology, metadata, RSS/robots, and source/dist parity now have committed validators.
 
@@ -844,7 +876,7 @@ The complete authoring, status, authorship, tag, image, source, code, investment
 
 The valid `date` gives the page the semantic Blog Article composition. The numeric folder prefix independently admits it to numeric chronology such as Latest Articles, Blog ordering, and Previous/Next. Do not omit the number for a production chronological post, and do not renumber historical posts. A static page normally needs only its route folder and supported frontmatter such as `title`; reserved routes remain classified by the page-class rules documented above.
 
-Content-only authoring does not require manually rebuilding the six local packages. If local-package TypeScript/TSX is changed, rebuild that package's generated `dist` output before starting Quartz, as documented in the local package inventory.
+Content-only authoring does not require manually rebuilding the seven local packages. Media inventory and adapter generation run automatically before `build` and `serve`. Add images beside their page before starting preview; when an image is added or replaced during an active preview session, restart `npm run serve` so the repository pipeline refreshes its manifest and derivatives. If other local-package TypeScript/TSX is changed, rebuild that package's generated `dist` output before starting Quartz, as documented in the local package inventory.
 
 ### One-time production build
 
@@ -896,7 +928,7 @@ Quartz 5.0.0 preview can leave a deleted page's generated HTML in `public` durin
 Run from `D:\20230422 - BigData\08. HTML\quartz\bdv4q2` in PowerShell. Rebuild any changed local package first.
 
 ```powershell
-# Full test baseline (currently 222 tests / 45 suites)
+# Full test baseline (currently 226 tests / 45 suites)
 npm test
 
 # Corpus inventory and editorial frontmatter contract
@@ -913,6 +945,10 @@ npm run validate:production
 
 # Cross-release mutable/immutable cache contract
 npm run validate:cache
+
+# Repository-owned media evidence and generated-output contract
+npm run media:verify
+npm run validate:media
 
 # Rebuild all local package entry points temporarily and compare checked-in dist
 npm run validate:packages
@@ -931,7 +967,7 @@ node scripts/migrate-gatsby.mjs --check
 node scripts/validate-gatsby.mjs --public public
 
 # Compare TOC eligibility to generated output
-node scripts/audit-toc.mjs --public public --output "..\bdv4q2-codex-todo\Quartz 5 — Phase 5 TOC Audit.md"
+node scripts/audit-toc.mjs --public public --output "..\bdv4q2-codex-todo\Quartz 5 — Phase 7 TOC Audit.md"
 ```
 
 Caddy 2.11.4 passed Phase 5 validation from a checksum-verified portable binary. When Caddy is available:

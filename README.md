@@ -30,6 +30,12 @@ npm run serve
 The local preview rebuilds as content changes. Blog content is stored in
 [`content`](./content).
 
+Article media stays beside its `index.md`. The repository-owned media pipeline
+audits those sources and prepares responsive derivatives automatically when
+`npm run serve` or `npm run build` starts. Its independent maintenance commands
+are `npm run media:audit`, `npm run media:build`, `npm run media:verify`, and
+`npm run media:clean`.
+
 Before adding or revising articles, read [`AUTHORING.md`](./AUTHORING.md). The
 site's durable editorial and historical-content rules are in
 [`CONTENT_ARCHITECTURE.md`](./CONTENT_ARCHITECTURE.md), and Quartz-specific
@@ -41,6 +47,7 @@ Run the repository checks before publishing:
 
 ```bash
 npm run validate:content
+npm run media:verify
 npm test
 npm run check
 npm run deploy:check

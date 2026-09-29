@@ -68,6 +68,7 @@ npm ci
 npm test
 npx tsc --noEmit
 npm run build
+npm run validate:media
 node scripts/migrate-gatsby.mjs --check
 node scripts/validate-gatsby.mjs --public public
 npm run validate:packages
@@ -79,7 +80,7 @@ git diff --check
 
 `npm run deploy:check` owns this sequence for routine publishing and adds `npm run validate:cache`. The explicit commands remain documented for debugging.
 
-`npm run build` invokes the in-tree Quartz 5 CLI and then finalizes production canonical/social metadata. Do not deploy output from `npm run serve`.
+`npm run build` first runs the repository-owned media processor, builds its thin Quartz adapter, invokes the in-tree Quartz 5 CLI, and then finalizes production canonical/social metadata. A clean checkout needs no pre-existing media cache: missing derivatives are recreated from immutable sources. Do not deploy output from `npm run serve`.
 
 When Caddy is available:
 
@@ -101,12 +102,15 @@ The build currently emits one understood plugin-index warning for each explicitl
 
 `npm run build` finalizes Quartz's stable `static/contentIndex.json` into `static/contentIndex-<sha256>.json` and rewrites every emitted application page to that content-specific URL. Search and Graph continue to consume the same Quartz `fetchData` promise; only the generated resource identity changes. A new application release can therefore never consume an incompatible prior Search index from a warmed browser cache.
 
-Caddy returns `public, max-age=31536000, immutable` only for content-hashed JS, CSS, and JSON. HTML, RSS, sitemap, robots, stable media, favicon, and other stable URLs return `no-cache`, which permits browser storage but requires revalidation before reuse. Validate this with:
+Caddy returns `public, max-age=31536000, immutable` only for content-hashed JS, CSS, JSON, WebP, and AVIF. Repository-generated responsive WebP names include the source hash and transformation contract, so they are safe in that class. Original colocated media, HTML, RSS, sitemap, robots, favicon, and other stable URLs return `no-cache`, which permits browser storage but requires revalidation before reuse. Validate this with:
 
 ```powershell
 npm run validate:cache
+npm run validate:media
 npm run validate:live -- http://localhost:8080
 ```
+
+The disposable local cache is `generated/cache/media/`; `generated/media-manifest.json` and `generated/media-last-run.json` are also build artifacts. None are required in Git or in a Docker build context for correctness. `generated/media-inventory.json` is deterministic committed evidence. `npm run media:clean` removes only disposable derivatives/run metadata and never source media. `sharp` is already a direct project dependency and its supported Windows/Linux packages are installed by the existing `npm ci` path.
 
 ## Manual recovery / debugging
 
