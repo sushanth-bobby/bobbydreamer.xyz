@@ -65,7 +65,9 @@ if (!/-\[0-9a-f\]\{8,64\}/.test(caddy)) {
   failures.push("Caddy immutable matcher does not cover Quartz content hashes")
 }
 
-const immutable = allFiles.filter((file) => /-[0-9a-f]{8,64}\.(?:css|js|json)$/.test(file))
+const immutable = allFiles.filter((file) =>
+  /-[0-9a-f]{8,64}\.(?:css|js|json|webp|avif)$/.test(file),
+)
 const revalidated = allFiles.filter((file) => !immutable.includes(file))
 
 if (failures.length > 0) {

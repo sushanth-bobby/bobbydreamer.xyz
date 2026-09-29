@@ -3,7 +3,7 @@
 
 	# Stable URLs may change between releases and must revalidate. Quartz-generated
 	# content-hashed resources are safe to retain indefinitely.
-	@immutableAsset path_regexp immutableAsset -[0-9a-f]{8,64}\.(?:css|js|json)$
+	@immutableAsset path_regexp immutableAsset -[0-9a-f]{8,64}\.(?:css|js|json|webp|avif)$
 	header @immutableAsset Cache-Control "public, max-age=31536000, immutable"
 	@mutableAsset {
 		not path_regexp mutableHashed -[0-9a-f]{8,64}\.(?:css|js|json)$

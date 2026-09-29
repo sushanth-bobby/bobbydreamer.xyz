@@ -5,3 +5,5 @@ content
 Caddyfile
 quartz-ia-*/dist
 quartz-content-context/dist
+quartz-media/dist
+generated/media-inventory.json

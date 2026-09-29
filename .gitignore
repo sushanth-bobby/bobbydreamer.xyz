@@ -10,5 +10,9 @@ private/
 .replit
 replit.nix
 .quartz/
+generated/cache/
+generated/media-manifest.json
+generated/media-last-run.json
+quartz-media/dist/
 quartz/cli/tui/dist/
 .turbo/

@@ -113,6 +113,11 @@ plugins:
     options:
       markdownLinkResolution: shortest
     order: 60
+  - source: "@bdv/quartz-media"
+    enabled: true
+    options:
+      manifestPath: generated/media-manifest.json
+    order: 65
   - source: "@quartz-community/description"
     enabled: true
     order: 70

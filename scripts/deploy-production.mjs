@@ -22,6 +22,7 @@ export const releaseGates = [
   ["npm", ["run", "validate:content"]],
   ["npm", ["run", "validate:production"]],
   ["npm", ["run", "validate:cache"]],
+  ["npm", ["run", "validate:media"]],
   ["git", ["diff", "--check"]],
 ]
 

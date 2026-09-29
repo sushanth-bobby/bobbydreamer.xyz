@@ -11,6 +11,7 @@ const packages = {
   "quartz-ia-header": ["index.ts", "components.tsx"],
   "quartz-ia-pages": ["index.tsx"],
   "quartz-ia-properties": ["index.ts", "components.tsx"],
+  "quartz-media": ["index.ts"],
 }
 
 const normalize = (value) => value.replaceAll("\r\n", "\n")

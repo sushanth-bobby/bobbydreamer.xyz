@@ -1,0 +1,30 @@
+{
+  "name": "@bdv/quartz-media",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild index.ts --bundle --platform=node --format=esm --outfile=dist/index.js --external:@quartz-community/*"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "dependencies": {
+    "unist-util-visit": "^5.1.0"
+  },
+  "quartz": {
+    "name": "quartz-media",
+    "displayName": "Repository media adapter",
+    "category": [
+      "transformer",
+      "emitter"
+    ],
+    "version": "1.0.0",
+    "defaultOrder": 65,
+    "defaultOptions": {
+      "manifestPath": "generated/media-manifest.json"
+    }
+  }
+}
