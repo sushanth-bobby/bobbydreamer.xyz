@@ -41,6 +41,8 @@ export function deploymentPlan(mode) {
     ...readOnly,
     ["gcloud", ["builds", "submit"]],
     ["gcloud", ["run", "deploy", productionService]],
+    ["npm", ["run", "validate:caddy", "--", "<candidate-url>"]],
+    ["npm", ["run", "validate:live", "--", "<candidate-url>"]],
     ["gcloud", ["run", "services", "update-traffic", productionService, "--to-revisions"]],
   ]
 }
@@ -128,6 +130,10 @@ export function replacementRevisionName(release) {
   return `${productionService}-p51-${release.slice(0, 28)}`
 }
 
+function replacementTag(release) {
+  return `candidate-${release.slice(0, 24)}`
+}
+
 async function waitForRevisionReady(revisionName, digest) {
   for (let attempt = 1; attempt <= cloudRunPollAttempts; attempt++) {
     const revision = await json("gcloud", [
@@ -173,6 +179,27 @@ async function waitForTraffic(revisionName) {
     }
   }
   throw new Error(`Cloud Run did not confirm 100% traffic on ${revisionName}`)
+}
+
+async function waitForTaggedRevision(revisionName, tag) {
+  for (let attempt = 1; attempt <= cloudRunPollAttempts; attempt++) {
+    const service = await json("gcloud", [
+      "run",
+      "services",
+      "describe",
+      productionService,
+      "--region",
+      productionRegion,
+    ])
+    const route = (service.status?.traffic ?? []).find(
+      (entry) => entry.revisionName === revisionName && entry.tag === tag && entry.url,
+    )
+    if (route?.url) return route.url
+    if (attempt < cloudRunPollAttempts) {
+      await new Promise((resolve) => setTimeout(resolve, cloudRunPollIntervalMs))
+    }
+  }
+  throw new Error(`Cloud Run did not expose tagged candidate ${revisionName}`)
 }
 
 async function firebaseState(project) {
@@ -415,6 +442,7 @@ async function production() {
   const release = releaseId(repository.commit, repository.dirty)
   const image = `gcr.io/${cloud.project}/${productionService}:${release}`
   const replacementRevision = replacementRevisionName(release)
+  const candidateTag = replacementTag(release)
   const record = {
     timestamp: new Date().toISOString(),
     releaseId: release,
@@ -486,11 +514,21 @@ async function production() {
       "--revision-suffix",
       replacementRevision.slice(productionService.length + 1),
       "--no-traffic",
+      "--tag",
+      candidateTag,
       "--quiet",
     ])
     await waitForRevisionReady(replacementRevision, digest)
+    const candidateUrl = await waitForTaggedRevision(replacementRevision, candidateTag)
     record.replacementRevision = replacementRevision
-    record.finalStatus = "REPLACEMENT_READY"
+    record.candidateUrl = candidateUrl
+    record.finalStatus = "CANDIDATE_READY"
+    await writeRecord(record)
+
+    await run("npm", ["run", "validate:caddy", "--", candidateUrl])
+    await run("npm", ["run", "validate:live", "--", candidateUrl])
+    record.candidateValidation = "PASS"
+    record.finalStatus = "CANDIDATE_VALIDATED"
     await writeRecord(record)
 
     await run("gcloud", [
@@ -527,6 +565,24 @@ async function production() {
     )
     record.freshClientValidation = "PASS"
     record.warmClientValidation = "PASS"
+    try {
+      await run("gcloud", [
+        "run",
+        "services",
+        "update-traffic",
+        productionService,
+        "--region",
+        productionRegion,
+        "--remove-tags",
+        candidateTag,
+        "--quiet",
+      ])
+      record.candidateTagRemoved = true
+    } catch (error) {
+      record.candidateTagRemoved = false
+      record.cleanupWarning = `Candidate tag cleanup failed: ${error.message}`
+      console.warn(record.cleanupWarning)
+    }
     record.finalStatus = "PASS"
     await writeRecord(record)
     console.log(`\nDeployment PASS. One production revision serves ${productionOrigin}.`)

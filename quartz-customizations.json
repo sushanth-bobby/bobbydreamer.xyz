@@ -1,13 +1,144 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "site": "https://bobbydreamer.xyz",
   "lastAudited": "2026-09-29",
   "quartzBaseline": {
     "version": "5.0.0",
-    "commit": "f1fba3fc55cbf60a60a5d09c95a49c042cdab63a",
+    "commit": "97a2d05f80c4c50534959b1d0d41cc4b3895625e",
+    "previousCommit": "f1fba3fc55cbf60a60a5d09c95a49c042cdab63a",
     "remote": "https://github.com/jackyzha0/quartz.git"
   },
+  "productionAdoption": {
+    "releasedAt": "2026-09-29T23:17:07.5661174+05:30",
+    "siteSourceCommit": "ed9ada66b2a4fa99a9385f435568f65ec4a3d529",
+    "releaseId": "20260929-230737-ed9ada66b2a4-dirty",
+    "packageHash": "3C1EFC8A8796E0375C9232667373FF8B101892F2B69D4536AFCBE7E58AB11D8B",
+    "lockHash": "444D5865B4E2F9195DE5D8EB8256CA6FC2AC25668925FDA04316B7C426405A42",
+    "imageDigest": "sha256:d89ab4440bc905aea3165b966fb75dc320e17ba1a6787a4b190c4dbaea41e3be",
+    "cloudRunRevision": "bdxyz-p8-20260929-230737-ed9ada66b2a4",
+    "validation": "Cloud Build, zero-traffic candidate, direct Cloud Run, public Firebase, and warmed-browser contracts passed"
+  },
   "coreImplementationModifications": 0,
+  "upgradePolicy": {
+    "siteOwner": "bobbydreamer.xyz",
+    "engineOwner": "upstream Quartz",
+    "approvalRequired": true,
+    "automaticQuartzUpgrades": false,
+    "automaticDependencyMerging": false,
+    "principle": "Upgrade the engine, preserve the site."
+  },
+  "ownershipRegistry": {
+    "QZ-CUST-001": {
+      "owner": "site-capability",
+      "quartzCoupling": "none",
+      "verification": "migration preflight, deterministic rerun, source immutability"
+    },
+    "QZ-CUST-002": {
+      "owner": "site-capability",
+      "quartzCoupling": "none",
+      "verification": "migration fixtures and exact repair-ledger tests"
+    },
+    "QZ-CUST-003": {
+      "owner": "site-capability",
+      "quartzCoupling": "configuration+emitter+server",
+      "verification": "route, alias, canonical, sitemap, Search, and Caddy matrices"
+    },
+    "QZ-CUST-004": {
+      "owner": "production-tooling",
+      "quartzCoupling": "generated-paths",
+      "verification": "Docker/Caddy routes and cache headers"
+    },
+    "QZ-CUST-005": {
+      "owner": "site-capability",
+      "quartzCoupling": "component-data",
+      "verification": "chronology, archives, duplicate/gap, and neighbor tests"
+    },
+    "QZ-CUST-006": {
+      "owner": "site-capability",
+      "quartzCoupling": "layout+component-registry",
+      "verification": "page-type fixtures and representative generated pages"
+    },
+    "QZ-CUST-007": {
+      "owner": "site-design+capability",
+      "quartzCoupling": "component-api",
+      "verification": "header, Search/cache, theme, and responsive browser matrix"
+    },
+    "QZ-CUST-008": {
+      "owner": "site-design+capability",
+      "quartzCoupling": "page-component-api",
+      "verification": "homepage semantics, ordering, Graph, and browser checks"
+    },
+    "QZ-CUST-009": {
+      "owner": "site-capability",
+      "quartzCoupling": "page-type+emitter-api",
+      "verification": "derived years, ordering, archive routes, and sitemap"
+    },
+    "QZ-CUST-010": {
+      "owner": "site-capability",
+      "quartzCoupling": "tag+page-components",
+      "verification": "curated groups, native tag routes, and content audit"
+    },
+    "QZ-CUST-011": {
+      "owner": "site-capability",
+      "quartzCoupling": "component-props",
+      "verification": "numeric neighbors across gaps, duplicates, and boundaries"
+    },
+    "QZ-CUST-012": {
+      "owner": "site-design+capability",
+      "quartzCoupling": "layout+components",
+      "verification": "exact title, tags, date/read-time order, and empty states"
+    },
+    "QZ-CUST-013": {
+      "owner": "site-capability",
+      "quartzCoupling": "toc-component+config",
+      "verification": "TOC eligibility audit and generated parity"
+    },
+    "QZ-CUST-014": {
+      "owner": "site-capability",
+      "quartzCoupling": "graph-component-api",
+      "verification": "homepage-only global graph and browser interaction"
+    },
+    "QZ-CUST-015": {
+      "owner": "site-design",
+      "quartzCoupling": "asset+config-hooks",
+      "verification": "asset references, metadata, and theme visual checks"
+    },
+    "QZ-CUST-016": {
+      "owner": "site-design",
+      "quartzCoupling": "theme+css",
+      "verification": "token tests and three-viewport overflow/title checks"
+    },
+    "QZ-CUST-017": {
+      "owner": "site-design",
+      "quartzCoupling": "theme+css+emitted-classes",
+      "verification": "CSS map and representative pages at both themes/breakpoints"
+    },
+    "QZ-CUST-018": {
+      "owner": "site-policy",
+      "quartzCoupling": "config-schema",
+      "verification": "configuration registration/removal and representative pages"
+    },
+    "QZ-CUST-019": {
+      "owner": "quartz-adapter",
+      "quartzCoupling": "plugin-loader+package-contracts",
+      "verification": "local package rebuild, source/dist parity, TypeScript, and build"
+    },
+    "QZ-CUST-020": {
+      "owner": "production-tooling",
+      "quartzCoupling": "emitted-resource-names",
+      "verification": "Release A/B cache simulation, production validator, deploy check"
+    },
+    "QZ-CUST-021": {
+      "owner": "site-content+capability",
+      "quartzCoupling": "rendering-component-api",
+      "verification": "ledger/content audit, context fixtures, and generated wording"
+    },
+    "QZ-CUST-022": {
+      "owner": "site-subsystem+quartz-adapter",
+      "quartzCoupling": "thin-hast+emitter-adapter",
+      "verification": "media unit/cache/source, manifest, HTML, and browser checks"
+    }
+  },
   "commands": {
     "workingDirectory": "D:\\20230422 - BigData\\08. HTML\\quartz\\bdv4q2",
     "authoringPreview": "npm run serve",
@@ -15,6 +146,8 @@
     "productionBuild": "npm run build",
     "mediaInventory": "npm run media:audit",
     "mediaVerification": "npm run media:verify && npm run validate:media",
+    "upgradeValidation": "npm run validate:upgrade",
+    "servedUpgradeValidation": "npm run validate:upgrade:served",
     "deploymentCheck": "npm run deploy:check",
     "deploymentPublish": "npm run deploy:production",
     "quartzCli": "npm run quartz -- <command>",
@@ -32,7 +165,7 @@
     "blogDescriptions": 150,
     "articleTagLists": 150,
     "propertiesPanels": 0,
-    "tests": 226,
+    "tests": 230,
     "testSuites": 45
   },
   "customizations": [

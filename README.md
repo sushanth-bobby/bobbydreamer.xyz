@@ -24,17 +24,44 @@ The project requires Node.js 22 or newer and npm 10.9.2 or newer.
 
 ```bash
 npm ci
+```
+
+Start the local development server from the repository:
+
+```powershell
+cd "D:\20230422 - BigData\08. HTML\quartz\bdv4q2"
 npm run serve
 ```
 
-The local preview rebuilds as content changes. Blog content is stored in
-[`content`](./content).
+`npm run serve` automatically:
 
-Article media stays beside its `index.md`. The repository-owned media pipeline
-audits those sources and prepares responsive derivatives automatically when
-`npm run serve` or `npm run build` starts. Its independent maintenance commands
-are `npm run media:audit`, `npm run media:build`, `npm run media:verify`, and
-`npm run media:clean`.
+1. Inventories the source images.
+2. Generates or reuses responsive WebP derivatives.
+3. Builds the thin Quartz media adapter.
+4. Starts the Quartz preview server.
+
+Then open [http://localhost:8080](http://localhost:8080).
+
+The local preview rebuilds as Markdown content changes. If you add or replace an
+image while the preview server is already running, stop it with `Ctrl+C` and run
+`npm run serve` again. Blog content is stored in [`content`](./content), with
+article media kept beside its `index.md`.
+
+For reference, the optional standalone media commands are:
+
+```bash
+npm run media:audit    # Rebuild the media inventory
+npm run media:build    # Generate/reuse derivatives
+npm run media:verify   # Verify the cache and derivatives
+npm run media:stats    # Display pipeline statistics
+npm run media:clean    # Remove disposable media cache/output metadata
+```
+
+A normal production build also handles the media pipeline automatically:
+
+```bash
+npm run build
+```
 
 Before adding or revising articles, read [`AUTHORING.md`](./AUTHORING.md). The
 site's durable editorial and historical-content rules are in

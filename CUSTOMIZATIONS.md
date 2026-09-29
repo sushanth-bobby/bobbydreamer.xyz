@@ -1,8 +1,10 @@
 # bobbydreamer.xyz — Quartz Customizations
 
-Quartz baseline: Quartz 5.0.0 at upstream commit `f1fba3f`  
-Current Quartz version: 5.0.0 (no Quartz upgrade since the baseline)  
-Baseline commit: `f1fba3fc55cbf60a60a5d09c95a49c042cdab63a`  
+Production Quartz baseline: Quartz 5.0.0 at approved upstream commit `97a2d05f80c4c50534959b1d0d41cc4b3895625e`
+Previous production baseline: `f1fba3fc55cbf60a60a5d09c95a49c042cdab63a`
+Site source identity: `ed9ada66b2a4fa99a9385f435568f65ec4a3d529` plus the recorded intentional Phase 8 dirty-tree changes
+Production release: `20260929-230737-ed9ada66b2a4-dirty`; Cloud Run revision `bdxyz-p8-20260929-230737-ed9ada66b2a4`; image digest `sha256:d89ab4440bc905aea3165b966fb75dc320e17ba1a6787a4b190c4dbaea41e3be`
+Release status: production adopted on 2026-09-29; direct, public, and warmed-browser validation passed
 Site: `https://bobbydreamer.xyz`  
 Last audited: 2026-09-29
 
@@ -13,14 +15,39 @@ This is the first document to read before changing or upgrading this site. It re
 The authorities, in descending order, are:
 
 1. the current `bdv4q2` repository and its tests;
-2. this document and `quartz-customizations.json`;
-3. the current migration source, `GatsbyMigration/content-original`;
-4. the Phase 0–4E.1 reports in `bdv4q2-codex-todo`;
-5. `bdv4q1`, which is reference-only.
+2. this document, `CUSTOMIZATION_REGISTRY.md`, and `quartz-customizations.json`;
+3. `SITE_CONTRACT.md` and the approval-gated `QUARTZ_UPGRADE.md` runbook;
+4. the current migration source, `GatsbyMigration/content-original`;
+5. the Phase 0–7 reports in `bdv4q2-codex-todo`;
+6. `bdv4q1`, which is reference-only.
 
-The audit verified the baseline from Git rather than accepting it from a handoff: branch `v5`, `HEAD`, `origin/v5`, and `upstream/v5` resolve to `f1fba3f`; `package.json` at that commit and now both report `5.0.0`; both remotes point to `https://github.com/jackyzha0/quartz.git`. The commit is not locally decorated with an exact tag.
+The audit verified the baseline and current state from Git rather than accepting them from a handoff. The site branch is `v5`; the previous Quartz production baseline was `f1fba3fc55cbf60a60a5d09c95a49c042cdab63a`; site HEAD at the Phase 8 rehearsal, local upgrade, and production build was `ed9ada66b2a4fa99a9385f435568f65ec4a3d529`; `package.json` still reports `5.0.0`; `origin` is the site repository and `upstream` is `https://github.com/jackyzha0/quartz.git`. The explicitly approved dependency target `97a2d05f80c4c50534959b1d0d41cc4b3895625e` was applied and adopted in production on 2026-09-29. Static, Caddy-served, Cloud Build/container, zero-traffic candidate, direct Cloud Run, public Firebase, and warmed-browser contracts passed without Quartz engine, adapter source, content, media-processor, design, route, or information-architecture changes. See `docs/quartz-upgrade-investigation-2026-09-29.md` for compatibility/rehearsal evidence and the Phase 8 completion report for release evidence.
 
 Older reports remain useful history. Where a later phase superseded an earlier state, the later state below is authoritative: Explorer is removed; the identity is 3rem rather than the initially requested 4rem; the mobile page title is 2rem; and every Blog Article renders tag pills rather than Properties. Numeric sequence remains a separate chronology concern.
+
+## Ownership model
+
+```text
+bobbydreamer.xyz
+├── CONTENT
+│   ├── 155 documents, metadata, tags, and aliases
+│   └── 491 authoritative source images
+├── SITE-OWNED CAPABILITIES
+│   ├── migration, information architecture, chronology, archives, and Topics
+│   ├── Learning Archive and historical/authorship contexts
+│   ├── Search/cache behavior, media processing, and deployment semantics
+│   └── the acceptance criteria for every user-visible feature
+├── SITE-OWNED DESIGN
+│   ├── typography, branding, header/navigation, and article composition
+│   └── responsive layout, image presentation, and light/dark styling
+├── QUARTZ ADAPTERS
+│   ├── seven local @bdv/* packages and YAML registration
+│   └── thin rendering, component, HAST, and emitter integration
+└── QUARTZ ENGINE
+    └── replaceable/upgradable only through explicit approval
+```
+
+The site owns the **what** and **why**; an adapter owns only the translation into a supported Quartz API. Engine replacement may require adapter changes, but it does not authorize changing content, routes, IA, design, or acceptance behavior. `CUSTOMIZATION_REGISTRY.md` is the concise ownership/coupling index; the `QZ-CUST-*` sections below are the detailed records; `quartz-customizations.json` is their machine-readable companion.
 
 ## Stock versus custom baseline
 
@@ -31,7 +58,7 @@ git diff --name-status f1fba3f
 git ls-files --others --exclude-standard
 ```
 
-Before this Phase 4F documentation was added, 288 of the 295 stock tracked paths were unchanged. Seven tracked paths differed and 682 paths were untracked; 645 of the untracked paths were the site content tree. There were 44 non-documentation path differences from stock, including the deleted empty content placeholder. Phase 4F adds this file and `quartz-customizations.json` but changes no runtime behavior.
+At Phase 8 site HEAD, 729 tracked paths differ from the Quartz merge base: 647 content paths, 32 local-package paths, 23 repository scripts, and the remaining configuration, production, asset, test, and documentation paths. The four changed paths beneath `quartz/` are supported extension surfaces only: two new brand assets, the favicon replacement, and `quartz/styles/custom.scss`. Quartz implementation-core modifications remain zero.
 
 ### Categorized inventory
 
@@ -60,11 +87,43 @@ Quartz implementation-core modifications: **0**.
 
 Phase 7 media processing sits above Quartz. `scripts/media/` owns discovery, metadata, content hashing, eligibility, transformation keys, deterministic names, WebP generation, cache reuse, inventory, cleanup, benchmarks, and core tests. `generated/media-inventory.json` is deterministic evidence. Disposable cache/output metadata lives under `generated/cache/media/`, `generated/media-manifest.json`, and `generated/media-last-run.json`.
 
+```text
+Source image
+    ↓
+media discovery
+    ↓
+SHA-256 identity
+    ↓
+eligibility decision
+    ↓
+resize / WebP policy
+    ↓
+deterministic derivative
+    ↓
+filesystem cache
+    ↓
+manifest
+    ↓
+@bdv/quartz-media
+    ↓
+Quartz render
+    ↓
+responsive image output (srcset / sizes with source fallback)
+```
+
 Quartz only consumes the result. `quartz-media/index.ts` is the thin supported transformer/emitter adapter: it reads the generated manifest, adds `width`, `height`, `srcset`, `sizes`, loading/decoding attributes and presentation classes, then copies prepared derivatives into `public/media/`. `quartz.config.yaml` registers that package after link processing, and `quartz/styles/custom.scss` owns the subtle article-only presentation. No processor or cache implementation lives in Quartz core.
 
 The cache key contains source bytes, width, format, encoder settings, and the repository media pipeline version. It deliberately excludes the Quartz version. A normal Quartz upgrade must preserve `content/`, `scripts/media/`, `generated/media-inventory.json`, media tests, and the cache contract. Rebuild `quartz-media`, then verify its small HAST/emitter contract against the changed Quartz API with `npm run media:verify`, `npm run validate:media`, and the full site suite. Never overwrite or relocate the media processor during an upstream Quartz update.
 
 If Quartz is replaced, the source images, inventory, hashing, derivative naming, image processing, invalidation model, cache, benchmarks, and tests survive unchanged. Only `quartz-media`, its YAML registration, and the article-image selectors may need adaptation.
+
+| Media layer                                                           | Owner                      | Survives Quartz replacement?                    | Upgrade action                                                      |
+| --------------------------------------------------------------------- | -------------------------- | ----------------------------------------------- | ------------------------------------------------------------------- |
+| Source images and Markdown references                                 | Content/site               | Yes, unchanged                                  | Prove source hashes/immutability                                    |
+| Discovery, SHA-256 identity, eligibility, resize/format/naming policy | Site subsystem             | Yes, unchanged                                  | Run media unit and deterministic rebuild tests                      |
+| Filesystem cache, manifest, inventory, benchmark evidence             | Site subsystem             | Yes, unchanged                                  | Run cold/warm/single-change verification                            |
+| `@bdv/quartz-media` HAST transformer/emitter                          | Quartz adapter             | Contract survives; implementation may change    | Rebuild against target APIs and run emitted HTML checks             |
+| Registration and article image selectors                              | Quartz adapter/site design | Requirement survives; hook/selectors may change | Inspect config/classes and browser-check three viewports/two themes |
 
 ## Architecture at a glance
 
@@ -130,7 +189,7 @@ The current build has no Git-date or LaTeX/KaTeX warnings. It reports one unders
 
 ## Customization catalogue
 
-The IDs below are stable. The concise machine index is `quartz-customizations.json`.
+The IDs below are stable. The concise human index is `CUSTOMIZATION_REGISTRY.md`; the machine index is `quartz-customizations.json`.
 
 | ID          | Name                                                         | Category                 | Risk   |
 | ----------- | ------------------------------------------------------------ | ------------------------ | ------ |
@@ -488,7 +547,7 @@ The IDs below are stable. The concise machine index is `quartz-customizations.js
 - **Stock Quartz behavior:** the Content Index emitter writes `static/contentIndex.json`; core page rendering injects a persistent `fetch()` for that stable URL. Caddy adds validators but no explicit cache policy, so browsers may apply heuristic freshness. Quartz hashes generated JS/CSS but not this data file.
 - **bobbydreamer behavior:** post-build finalization computes SHA-256 over the emitted index, publishes `static/contentIndex-<16 hex>.json`, removes the stable object, and rewrites all generated application pages to the content-addressed name. Search and Graph still use native `fetchData`. Caddy marks content-hashed JS/CSS/JSON immutable and requires revalidation for every stable URL.
 - **Implementation location:** `quartz.production.ts`, `scripts/finalize-production.ts`, `scripts/validate-cache-contract.mjs`, `scripts/validate-live-release.mjs`, `Caddyfile`, and `scripts/deploy-production.mjs`.
-- **Deployment model:** `npm run deploy:check` is cloud-read-only. `npm run deploy:production` runs authoritative gates, builds one immutable GCR image, starts one transient no-traffic replacement revision, moves the single production service to it only after readiness, verifies direct/public behavior, requires fresh/warmed browser checks, and automatically restores the recorded prior revision on post-switch failure. No permanent candidate service/tag, CI trigger, Firebase redeploy, or routine IAM mutation is introduced.
+- **Deployment model:** `npm run deploy:check` is cloud-read-only. `npm run deploy:production` runs authoritative gates, builds one immutable GCR image, starts one transient no-traffic replacement revision with a temporary direct-routing tag, validates the candidate through Caddy/live contracts before traffic moves, then verifies direct/public behavior and requires fresh/warmed browser checks. It automatically restores the recorded prior revision on post-switch failure and removes the temporary candidate tag after success. No permanent candidate service, CI trigger, Firebase redeploy, or routine IAM mutation is introduced.
 - **Tests protecting it:** cross-release Release A→B cache simulation, content-hash integrity, cache classification, live Search-result resolution, read-only preflight plan, gate/build/deploy/traffic ordering, rollback capture, and operational-project sanitization guard.
 - **Content/data dependencies:** the current index is shared by native Search and Graph. Any future data resource added at a stable URL must be classified as content-hashed/immutable or mutable/revalidated.
 - **Routes affected:** no canonical content route changes. Only the generated Search/Graph data asset URL changes per content version.
@@ -928,8 +987,11 @@ Quartz 5.0.0 preview can leave a deleted page's generated HTML in `public` durin
 Run from `D:\20230422 - BigData\08. HTML\quartz\bdv4q2` in PowerShell. Rebuild any changed local package first.
 
 ```powershell
-# Full test baseline (currently 226 tests / 45 suites)
+# Full test baseline (currently 230 tests / 45 suites)
 npm test
+
+# Registry, ownership, approval policy, and upgrade-proof documentation
+npm run validate:customizations
 
 # Corpus inventory and editorial frontmatter contract
 npm run validate:content
@@ -987,6 +1049,8 @@ npm run validate:caddy
 Then browser-test Home, Blog, one year, Topics, one native tag, T.I.L, About/iRevere, and numbered articles covering short/long titles, TOC/no TOC, and one/many tags at 1440×900, 900×900, and 390×844 in light/dark. Require zero console errors and zero page-level horizontal overflow.
 
 ## Future Quartz upgrade procedure
+
+`QUARTZ_UPGRADE.md` is the operational runbook and `SITE_CONTRACT.md` is the permanent acceptance gate. The checklist below remains the architectural rationale; where commands or sequencing differ, follow the runbook. A successful investigation or disposable rehearsal never grants permission to upgrade the working checkout.
 
 1. Record Git status, current Quartz/package/plugin versions, snapshot counts, and the validation baseline. Preserve unrelated user changes.
 2. Create an upgrade branch or isolated worktree from the current site state.

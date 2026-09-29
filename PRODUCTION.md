@@ -27,7 +27,7 @@ npm run deploy:production
 
 `deploy:check` is the read-only cloud preflight. It runs the authoritative repository gates, reports current content/TOC counts, verifies the active gcloud account/project, Cloud Build access, the one production Cloud Run service and revision, public IAM, and the existing Firebase Hosting rewrite. It never submits a build, deploys a revision, changes traffic, IAM, or Firebase.
 
-`deploy:production` repeats the gates after `npm ci`, shows the exact target and release summary, and requires an explicit human confirmation. It builds one immutable GCR image, asks the operator to warm a normal browser against current production, starts one replacement Cloud Run revision without traffic, and moves production to it only after Cloud Run reports it ready. It then validates the direct service and public domain, including the cache contract, and requires both fresh- and warmed-browser confirmation. A failure after traffic changes automatically restores the recorded prior revision and verifies the previous public homepage hash.
+`deploy:production` repeats the gates after `npm ci`, shows the exact target and release summary, and requires an explicit human confirmation. It builds one immutable GCR image, asks the operator to warm a normal browser against current production, starts one replacement Cloud Run revision without production traffic, and exposes that revision only through a temporary tag. The Caddy and live-release contracts must pass against the tagged candidate before traffic moves. It then promotes the exact validated revision, validates the direct service and public domain, requires both fresh- and warmed-browser confirmation, and removes the temporary tag after success. A failure after traffic changes automatically restores the recorded prior revision and verifies the previous public homepage hash.
 
 A clean committed tree is preferred. A dirty tree is never deployed silently: the release is marked `-dirty`, the changed paths are recorded in an ignored private execution record, and the operator must type `DEPLOY DIRTY`. Deployment records live under ignored `private/deployments/`; they contain no credentials and must not be committed.
 
@@ -134,10 +134,13 @@ gcloud run deploy "$SERVICE" \
   --platform managed \
   --region "$REGION" \
   --port 8080 \
+  --tag "candidate-${RELEASE}" \
   --no-traffic
+npm run validate:caddy -- "CANDIDATE_TAG_URL"
+npm run validate:live -- "CANDIDATE_TAG_URL"
 gcloud run services update-traffic "$SERVICE" \
   --region "$REGION" \
-  --to-latest
+  --to-revisions "VALIDATED_REVISION=100"
 ```
 
 Cloud Run keeps the currently serving revision active while the replacement starts. Do not run the traffic command unless the new revision is ready. The repository orchestrator performs and verifies this ordering automatically.
@@ -178,6 +181,19 @@ First test the Cloud Run service URL reported by `gcloud run services describe`;
 
 Record the deployed image digest, Cloud Run revision, Firebase Hosting release, smoke-test result, and deployment time.
 
+## Most recent verified Quartz maintenance release
+
+The 2026-09-29 Phase 8 release adopted Quartz 5.0.0 dependency baseline
+`97a2d05f80c4c50534959b1d0d41cc4b3895625e` using release label
+`20260929-230737-ed9ada66b2a4-dirty`. Cloud Build
+`7aee9456-ad6e-4f1a-9ace-11e31860ac89` produced immutable digest
+`sha256:d89ab4440bc905aea3165b966fb75dc320e17ba1a6787a4b190c4dbaea41e3be`;
+revision `bdxyz-p8-20260929-230737-ed9ada66b2a4` passed zero-traffic candidate,
+direct Cloud Run, public Firebase, mobile/theme, Search/Graph/media, and
+warmed-browser validation before becoming the 100% production revision. The
+previous revision and image were retained as the rollback target; Firebase and
+IAM required no change.
+
 ## Rollback
 
 Routine deployment records the previous production revision and automatically restores it when any post-switch gate fails. There is intentionally no separate high-complexity rollback system for this personal site.
@@ -203,4 +219,4 @@ After a successful deployment and fresh/warmed smoke validation, review zero-tra
 
 ## Quartz upgrades
 
-Do not combine a production release with a Quartz/framework upgrade. Follow the upgrade procedure and all 21 customization records in `CUSTOMIZATIONS.md` in a separate phase.
+Do not combine a routine content release with an uninvestigated Quartz/framework upgrade. Follow the intentional upgrade procedure and all 22 customization records in `CUSTOMIZATIONS.md` in a separately approved maintenance phase.
