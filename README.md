@@ -30,11 +30,17 @@ npm run serve
 The local preview rebuilds as content changes. Blog content is stored in
 [`content`](./content).
 
+Before adding or revising articles, read [`AUTHORING.md`](./AUTHORING.md). The
+site's durable editorial and historical-content rules are in
+[`CONTENT_ARCHITECTURE.md`](./CONTENT_ARCHITECTURE.md), and Quartz-specific
+behavior is catalogued in [`CUSTOMIZATIONS.md`](./CUSTOMIZATIONS.md).
+
 ## Validation
 
 Run the repository checks before publishing:
 
 ```bash
+npm run validate:content
 npm test
 npm run check
 npm run deploy:check

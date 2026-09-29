@@ -95,7 +95,7 @@ In another shell:
 npm run validate:caddy
 ```
 
-The build currently emits five understood plugin-index warnings because the five explicitly configured local `@bdv/*` packages do not publish `dist/index.d.ts`. They are loaded by the YAML configuration and validated by tests, the site build, and `validate:packages`. LaTeX/KaTeX warnings and unexpected reference failures must remain zero.
+The build currently emits one understood plugin-index warning for each explicitly configured local `@bdv/*` package because those packages do not publish `dist/index.d.ts`. They are loaded by the YAML configuration and validated by tests, the site build, and `validate:packages`. LaTeX/KaTeX warnings and unexpected reference failures must remain zero.
 
 ## Cache-safe release contract
 
@@ -199,4 +199,4 @@ After a successful deployment and fresh/warmed smoke validation, review zero-tra
 
 ## Quartz upgrades
 
-Do not combine a production release with a Quartz/framework upgrade. Follow the upgrade procedure and all 19 customization records in `CUSTOMIZATIONS.md` in a separate phase.
+Do not combine a production release with a Quartz/framework upgrade. Follow the upgrade procedure and all 21 customization records in `CUSTOMIZATIONS.md` in a separate phase.

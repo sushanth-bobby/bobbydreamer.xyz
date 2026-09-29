@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "site": "https://bobbydreamer.xyz",
-  "lastAudited": "2026-09-27",
+  "lastAudited": "2026-09-29",
   "quartzBaseline": {
     "version": "5.0.0",
     "commit": "f1fba3fc55cbf60a60a5d09c95a49c042cdab63a",
@@ -11,6 +11,7 @@
   "commands": {
     "workingDirectory": "D:\\20230422 - BigData\\08. HTML\\quartz\\bdv4q2",
     "authoringPreview": "npm run serve",
+    "contentValidation": "npm run validate:content",
     "productionBuild": "npm run build",
     "deploymentCheck": "npm run deploy:check",
     "deploymentPublish": "npm run deploy:production",
@@ -29,7 +30,7 @@
     "blogDescriptions": 150,
     "articleTagLists": 150,
     "propertiesPanels": 0,
-    "tests": 209,
+    "tests": 222,
     "testSuites": 45
   },
   "customizations": [
@@ -326,6 +327,7 @@
         "scripts/validate-local-packages.mjs",
         "quartz-ia-article-nav",
         "quartz-ia-articles",
+        "quartz-content-context",
         "quartz-ia-header",
         "quartz-ia-pages",
         "quartz-ia-properties"
@@ -362,6 +364,31 @@
       ],
       "upgradeRisk": "HIGH",
       "nativeReplacementCandidate": true
+    },
+    {
+      "id": "QZ-CUST-021",
+      "name": "Editorial metadata, content audit, and curated topic architecture",
+      "category": "content-governance",
+      "files": [
+        "CONTENT_ARCHITECTURE.md",
+        "AUTHORING.md",
+        "scripts/audit-content.mjs",
+        "scripts/content-editorial-overrides.json",
+        "quartz-content-context",
+        "quartz-ia-pages/index.tsx",
+        "quartz.config.yaml"
+      ],
+      "tests": [
+        "scripts/content-architecture.test.mjs",
+        "quartz.content-context.test.ts",
+        "approved editorial metadata is reproducible without changing Gatsby source",
+        "approved Learning Archive ledger has the exact reviewed corpus and context counts",
+        "special Learning Archive contexts render inside one coherent notice",
+        "Topics exposes the exact curated topic groups",
+        "production validation checks Learning Archive wording, contexts, and placement"
+      ],
+      "upgradeRisk": "MEDIUM",
+      "nativeReplacementCandidate": false
     }
   ]
 }

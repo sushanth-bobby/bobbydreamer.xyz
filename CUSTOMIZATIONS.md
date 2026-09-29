@@ -4,7 +4,7 @@ Quartz baseline: Quartz 5.0.0 at upstream commit `f1fba3f`
 Current Quartz version: 5.0.0 (no Quartz upgrade since the baseline)  
 Baseline commit: `f1fba3fc55cbf60a60a5d09c95a49c042cdab63a`  
 Site: `https://bobbydreamer.xyz`  
-Last audited: 2026-09-27
+Last audited: 2026-09-29
 
 This is the first document to read before changing or upgrading this site. It records the current repository state, why it differs from stock Quartz, which source files own each behavior, and how to prove that the behavior survived an upgrade. The repository is authoritative; historical phase reports explain intent and evolution.
 
@@ -40,8 +40,8 @@ Before this Phase 4F documentation was added, 288 of the 295 stock tracked paths
 | Unchanged Quartz files      | 288/295 baseline tracked paths, including Quartz CLI, parsers, emitters, component registry implementation, page renderer, and server implementation.                                                                                         |
 | Modified stock/config paths | `.prettierignore`, `package.json`, `package-lock.json`, `quartz.ts`, `quartz/styles/custom.scss`, `quartz/static/icon.png`; stock `content/.gitkeep` is deleted.                                                                              |
 | New configuration/helpers   | `quartz.config.yaml`, `quartz.ia.ts`, `quartz.explorer-order.ts`. There is no `quartz.config.ts` or `quartz.layout.ts` in this Quartz 5 design.                                                                                               |
-| New local packages          | `quartz-ia-article-nav`, `quartz-ia-articles`, `quartz-ia-header`, `quartz-ia-pages`, and `quartz-ia-properties` (24 source/metadata/generated paths).                                                                                        |
-| New scripts/tooling         | Migration tooling plus `finalize-production.ts`, `validate-production.mjs`, `validate-caddy.mjs`, `validate-local-packages.mjs`, and `audit-toc.mjs`.                                                                                         |
+| New local packages          | `quartz-content-context`, `quartz-ia-article-nav`, `quartz-ia-articles`, `quartz-ia-header`, `quartz-ia-pages`, and `quartz-ia-properties`. TypeScript/TSX is authoritative and checked-in `dist` is generated runtime.                       |
+| New scripts/tooling         | Migration tooling plus the editorial override ledger, corpus audit, production finalizer, generated/route/cache validators, local-package parity validator, deployment orchestration, and TOC audit.                                          |
 | New tests                   | `quartz.explorer-order.test.ts`, `quartz.ia.test.ts`, and the migration test above. Stock Quartz tests remain unchanged.                                                                                                                      |
 | Content architecture        | 155 Markdown documents in `content`: 153 migrated documents, the authored homepage, and one newly authored post; 150 numbered Blog Articles, four migrated static pages, and 491 source-owned colocated assets.                               |
 | New static assets           | `quartz/static/brand/bobbydreamer-mark-source.png` and derived transparent `bobbydreamer-mark.png`; stock `quartz/static/icon.png` is replaced by the same derived image bytes.                                                               |
@@ -116,7 +116,7 @@ Snapshot counts describe the 2026-09-24 corpus and may legitimately increase whe
 | 0 LaTeX/KaTeX warnings                                      | Known currency prose remains escaped at the migration boundary.                                                                                                                       |
 | 0 browser console errors / 0 page-level horizontal overflow | Representative page classes remain clean at 1440×900, 900×900, and 390×844 in both themes.                                                                                            |
 
-The current build has no Git-date or LaTeX/KaTeX warnings. It does report five understood plugin-index warnings because the explicitly configured local `@bdv/*` packages do not publish `dist/index.d.ts`; the YAML loader still loads their generated ESM, and package parity plus production validation prove the runtime path. Do not suppress new warnings globally.
+The current build has no Git-date or LaTeX/KaTeX warnings. It reports one understood plugin-index warning for each explicitly configured local `@bdv/*` package because they do not publish `dist/index.d.ts`; the YAML loader still loads their generated ESM, and package parity plus production validation prove the runtime path. Do not suppress new warnings globally.
 
 ## Customization catalogue
 
@@ -144,6 +144,7 @@ The IDs below are stable. The concise machine index is `quartz-customizations.js
 | QZ-CUST-018 | Intentional removals and content-compatibility configuration | configuration            | LOW    |
 | QZ-CUST-019 | Local-package source and generated-artifact lifecycle        | build architecture       | HIGH   |
 | QZ-CUST-020 | Cache-safe publishing and production replacement             | deployment               | HIGH   |
+| QZ-CUST-021 | Content architecture, status, and authorship                 | editorial/component      | MEDIUM |
 
 ### QZ-CUST-001 — Migration corpus ownership and deterministic pipeline
 
@@ -237,7 +238,7 @@ The IDs below are stable. The concise machine index is `quartz-customizations.js
 - **bobbydreamer behavior:** local classes are `home`, `article`, `til`, `static`, `archive`, `topic`, and `other`. A Blog Article is dated authored content outside reserved non-article routes; its numeric prefix is not its presentation classifier. Custom conditions place title/meta/TOC/backlinks/graph/navigation appropriately.
 - **Implementation location:** `classifyPage` in `quartz.ia.ts`; `registerCondition` calls in `quartz.ts`; local page-type plugins and `quartz.config.yaml` layout registrations.
 - **Configuration involved:** `home-page`, `not-home-page`, `blog-article`, `numbered-article`, `article-or-til`, and `never-render` conditions. `blog-article` controls article composition; `numbered-article` remains only where sequence is required. Right rails are empty on folder/tag/archive classes.
-- **Components involved:** all five local packages plus native Article Title, Content Meta, TOC, Backlinks, Graph, Search, Darkmode, Breadcrumbs, and Footer.
+- **Components involved:** all six local packages plus native Article Title, Content Meta, TOC, Backlinks, Graph, Search, Darkmode, Breadcrumbs, and Footer.
 - **CSS/scripts:** page/grid selectors in `custom.scss`; no migration script.
 - **Tests protecting it:** page-class, legacy/future Blog Article matcher, classification/chronology separation, and configuration-composition tests.
 - **Content/data dependencies:** a valid frontmatter publication date identifies authored Blog content after reserved home, `til`, `bio`, `irevere`, `music`, `blog`, `topics`, and `tags` routes are excluded. Production chronology additionally requires the numbered folder convention.
@@ -457,11 +458,11 @@ The IDs below are stable. The concise machine index is `quartz-customizations.js
 
 - **Purpose / user requirement:** extend Quartz without forking core while remaining installable through Quartz 5's package/plugin loader.
 - **Stock Quartz behavior:** consumes community packages from `node_modules`; it has no `@bdv/*` packages.
-- **bobbydreamer behavior:** five local `file:` dependencies expose generated ESM from `dist`, while TypeScript/TSX beside each package is the only edit authority.
-- **Implementation location:** five `quartz-ia-*` directories, their `package.json` files, root dependencies/lock, and generated `dist` files.
+- **bobbydreamer behavior:** six local `file:` dependencies expose generated ESM from `dist`, while TypeScript/TSX beside each package is the only edit authority.
+- **Implementation location:** six local package directories (`quartz-content-context` plus five `quartz-ia-*` packages), their `package.json` files, root dependencies/lock, and generated `dist` files.
 - **Configuration/components/CSS:** registered by package source names in YAML; package metadata declares component/pageType/emitter categories.
 - **Scripts involved:** each package has an esbuild `build` script. Root `prebuild` installs plugins; `build`, `serve`, `docs`, and `quartz` invoke `node ./quartz/bootstrap-cli.mjs` directly. Local dependencies are junctions in this audited Windows workspace.
-- **Tests protecting it:** the launch-command regression rejects `npx quartz` in package scripts/Dockerfile and requires the in-tree CLI. `npm run validate:packages` rebuilds all eight entry points into a temporary directory and compares them with checked-in `dist` after CRLF/LF normalization.
+- **Tests protecting it:** the launch-command regression rejects `npx quartz` in package scripts/Dockerfile and requires the in-tree CLI. `npm run validate:packages` rebuilds all ten entry points into a temporary directory and compares them with checked-in `dist` after CRLF/LF normalization.
 - **Content/data dependencies:** local packages import shared `quartz.ia.ts`/`quartz.explorer-order.ts`, so rebuilding can bundle those helpers.
 - **Routes affected:** header/site-wide, article/T.I.L page types, Blog/year/Topics/compatibility routes, article tags, and Previous/Next.
 - **Responsive implications:** local package styles own header and navigation/archive breakpoints.
@@ -485,6 +486,24 @@ The IDs below are stable. The concise machine index is `quartz-customizations.js
 - **How to validate after upgrade:** two-release cache regression, `npm run validate:cache`, local/direct/public `validate:live`, fresh Search, and a browser warmed against the prior production release.
 - **Historical authority:** Phase 5 live attempt and Phase 5.1 completion report.
 
+### QZ-CUST-021 — Content architecture, status, and authorship
+
+- **Purpose / user requirement:** define what the site publishes, preserve historical technical material without silent modernization, distinguish curated Topics from fine-grained tags, document the investment-journal boundary, and represent intentional AI authorship without labeling ordinary AI assistance.
+- **Stock Quartz behavior:** arbitrary frontmatter can be parsed, but Quartz does not define this editorial contract or render centralized historical/authorship context.
+- **bobbydreamer behavior:** omitted `status` means current; reviewed technical learning records use `historical` and render the approved Learning Archive wording; `superseded` and `point-in-time` remain distinct, and `superseded` requires `supersededBy`. Optional `learningArchiveContexts` values (`gatsby`, `google-domains`, and `gsutil`) add short notes inside the same presentation. Omitted `authorship` means user-authored even when AI-assisted; `authorship: ai` renders `Written by AI`. Numeric and `wai` tags are rejected. Phase 6.1 approved 90 historical Learning Archive articles; age and keyword occurrence were not classifiers.
+- **Implementation location:** `CONTENT_ARCHITECTURE.md`, `AUTHORING.md`, `scripts/audit-content.mjs`, `scripts/content-editorial-overrides.json`, the migration frontmatter projection, and local `quartz-content-context` source/generated output.
+- **Configuration/components/CSS:** Article Context is Blog Article `beforeBody` priority 25, after Content Meta at 20 and before article content. It emits no markup or gap for default current/user-authored content. Wording, supplemental-context composition, and responsive/theme CSS are centralized in the package. Overlapping contexts render one notice with one `Also note` list, never stacked warning boxes.
+- **Migration behavior:** approved metadata for migrated destinations lives in the editorial override ledger and is applied deterministically; immutable Gatsby source and migrated prose remain unchanged. The current ledger contains 90 historical assignments, including 9 Gatsby, 4 Google Domains, and 6 `gsutil` contexts; article 12 is the one two-context overlap.
+- **Topics behavior:** the existing eleven curated tag routes are grouped as Build & technology, Investment learning & journal, and Learning & reflection. Native `/tags/` remains complete. Navigation is unchanged.
+- **Tests protecting it:** exact ledger/count/context tests, corpus inventory/contract tests, editorial-ledger migration and source-immutability tests, current/Learning Archive/Gatsby/Google Domains/`gsutil`/overlap rendering tests, unrelated-old-content exclusions, exact curated-topic group test, generated article-context wording/parity in `validate:production`, and the release-gate `validate:content` command.
+- **Content/data dependencies:** frontmatter status/authorship fields, optional `learningArchiveContexts`, canonical successor routes, tags, and the migration destination key.
+- **Routes affected:** no canonical or alias changes; `/topics/` presentation is grouped while its eleven tag destinations remain identical.
+- **Responsive implications:** status/authorship blocks use normal flow and theme tokens; Topics groups retain two-column cards and collapse to one column at the existing mobile breakpoint.
+- **Upgrade risk:** **MEDIUM** because the component consumes Quartz component props/layout registration and the Topics presentation remains inside the local page-type package.
+- **Can newer native Quartz replace it?** Native status or authorship UI may replace rendering only if it preserves these metadata semantics, empty/default behavior, migration reproducibility, and article composition.
+- **How to validate after upgrade:** content validation, migration determinism, component fixtures, generated notice parity, Topics links/groups, tag routes, Search, both themes, and all reference widths.
+- **Historical authority:** Phase 6 audits and completion report.
+
 ## Migration architecture
 
 ### Corpus directories and tool authority
@@ -500,7 +519,9 @@ The IDs below are stable. The concise machine index is `quartz-customizations.js
 | `gatsbyMigrator.py`                         | Historical, retired                         | Flattens posts/assets, skips dotted folders/pages, handles few formats, and removes route semantics.                                                                                               |
 | `migrate-gatsby-poc.mjs` / test / validator | Historical and removed                      | Proved the representative design; superseded by full tools. No duplicate PoC implementation remains.                                                                                               |
 | `migrate-gatsby.mjs`                        | **Current authoritative writer/checker**    | Builds the complete manifest, validates preflight, and optionally writes deterministic content/manifest.                                                                                           |
-| `migrate-gatsby.test.mjs`                   | **Current regression authority**            | 20 migration-specific tests within the full suite.                                                                                                                                                 |
+| `content-editorial-overrides.json`          | Approved editorial metadata ledger          | Holds the 90 approved Phase 6.1 Learning Archive assignments and their optional special contexts; migration applies them without changing Gatsby source prose.                                     |
+| `audit-content.mjs`                         | Corpus inventory/editorial contract gate    | Produces the machine-readable inventory/counts and rejects unsupported status/context combinations, missing successor relationships, numeric tags, and the `wai` taxonomy tag.                     |
+| `migrate-gatsby.test.mjs`                   | **Current regression authority**            | 21 migration-specific tests within the full suite.                                                                                                                                                 |
 | `validate-gatsby.mjs`                       | **Current validation-only gate**            | Compares migrated Markdown/assets to deterministic output and validates generated pages, aliases, references, branding, numeric routes, and Spotify absence.                                       |
 | `gatsby-migration-manifest.json`            | Generated evidence                          | Machine-derived records for all 153 documents; regenerate with the migrator, do not hand-edit.                                                                                                     |
 
@@ -547,17 +568,17 @@ The production container now implements this architecture. Its builder runs the 
 
 Primary navigation is `Home` through the identity plus `Blog`, `Topics`, `T.I.L`, `iRevere`, `About`, Search, and Theme. Explorer and Cheats are not part of current navigation.
 
-| Page/route                            | Classification / page type          | Main composition                                                                                                                                                                                              |
-| ------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/`                                   | `home`, native content page         | Header; authored H1/content/Working on; desktop Latest in left rail; site Graph after body; Footer. No Article Title component.                                                                               |
-| `/<dated-content-route>/`             | `article`, local BlogArticlePages   | Header; Breadcrumb; Article Title; linked Tag List; Content Meta; conditional right TOC; content; right Backlinks; Footer. No Properties/description row. Numbered routes also receive numeric Previous/Next. |
-| `/blog/`                              | `archive`, local generated page     | Header; Article Title “Blog”; year navigation; numeric all-article listing with title/date/description; Footer.                                                                                               |
-| `/blog/<year>/`                       | `archive`, local generated page     | Same visible title/component as Blog; frontmatter-date membership; date-descending listing; Footer.                                                                                                           |
-| `/topics/`                            | `archive`, local generated page     | Header; Article Title; curated available topics; all-tags link; Footer.                                                                                                                                       |
-| `/tags/` and `/tags/<slug>`           | `topic`, native Tag Page            | Header; Article Title; native index/listing with title and tags; Footer; no right rail.                                                                                                                       |
-| `/til/`                               | `til`, local BlogArticlePages match | Header; Breadcrumb; Article Title; authored content; Backlinks; Footer. No Graph, TOC, article meta, or Previous/Next.                                                                                        |
-| `/irevere/`, `/bio/`, `/music/`       | `static`, native content page       | Header; Breadcrumb; Article Title; authored content; Footer. No Properties.                                                                                                                                   |
-| Other content/folder/canvas/bases/404 | `other` or native page type         | Native body with global header/footer and configured page-type exclusions; 404 has no beforeBody/left/right positions.                                                                                        |
+| Page/route                            | Classification / page type          | Main composition                                                                                                                                                                                                                                  |
+| ------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/`                                   | `home`, native content page         | Header; authored H1/content/Working on; desktop Latest in left rail; site Graph after body; Footer. No Article Title component.                                                                                                                   |
+| `/<dated-content-route>/`             | `article`, local BlogArticlePages   | Header; Breadcrumb; Article Title; linked Tag List; Content Meta; optional status/authorship context; conditional right TOC; content; right Backlinks; Footer. No Properties/description row. Numbered routes also receive numeric Previous/Next. |
+| `/blog/`                              | `archive`, local generated page     | Header; Article Title “Blog”; year navigation; numeric all-article listing with title/date/description; Footer.                                                                                                                                   |
+| `/blog/<year>/`                       | `archive`, local generated page     | Same visible title/component as Blog; frontmatter-date membership; date-descending listing; Footer.                                                                                                                                               |
+| `/topics/`                            | `archive`, local generated page     | Header; Article Title; curated available topics; all-tags link; Footer.                                                                                                                                                                           |
+| `/tags/` and `/tags/<slug>`           | `topic`, native Tag Page            | Header; Article Title; native index/listing with title and tags; Footer; no right rail.                                                                                                                                                           |
+| `/til/`                               | `til`, local BlogArticlePages match | Header; Breadcrumb; Article Title; authored content; Backlinks; Footer. No Graph, TOC, article meta, or Previous/Next.                                                                                                                            |
+| `/irevere/`, `/bio/`, `/music/`       | `static`, native content page       | Header; Breadcrumb; Article Title; authored content; Footer. No Properties.                                                                                                                                                                       |
+| Other content/folder/canvas/bases/404 | `other` or native page type         | Native body with global header/footer and configured page-type exclusions; 404 has no beforeBody/left/right positions.                                                                                                                            |
 
 ## Blog, description, date, and article metadata
 
@@ -569,6 +590,7 @@ On a Blog Article the visible order is:
 Article Title
 #tag-one  #tag-two
 Jan 02, 2022, 9 min read
+[Optional Learning Archive/status/authorship context]
 --------------------------------
 Article content
 ```
@@ -674,17 +696,19 @@ Quartz's `$tablet` and `$mobile` variables are the media-query authorities; the 
 
 Never edit `dist` as source. Edit the files named in **Source**, run the package build, then run the root checks/build. The Phase 4F audit proved every generated output matches its source after line-ending normalization.
 
-| Package                      | Purpose / interfaces consumed                                                                                | Source → generated                                                               | Registration / pages                            | Risk                                |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------- |
-| `@bdv/quartz-ia-article-nav` | Quartz component props/constructor, `resolveRelative`, local neighbor helpers                                | `components.tsx`, `index.ts`, `style.ts` → `dist/components.js`, `dist/index.js` | `afterBody`, numbered articles                  | MEDIUM                              |
-| `@bdv/quartz-ia-articles`    | `QuartzPageTypePlugin`, native `ContentBody`, shared `isBlogArticle`; matches Blog Articles and T.I.L        | `index.ts` → `dist/index.js`                                                     | order 44, layout `article`                      | MEDIUM/HIGH API coupling            |
-| `@bdv/quartz-ia-header`      | Quartz component props/constructor and `resolveRelative`                                                     | `components.tsx`, `index.ts`, `style.ts` → two dist files                        | global header priority 10                       | MEDIUM                              |
-| `@bdv/quartz-ia-pages`       | component/page/emitter/vfile APIs, internal emitter `write`, community date/path utilities, local IA helpers | `index.tsx`, `style.ts` → `dist/index.js`                                        | order 45; Blog/year/Topics + Quartz 4 redirects | HIGH                                |
-| `@bdv/quartz-ia-properties`  | native `TagList`, Quartz constructor type                                                                    | `components.tsx`, `index.ts` → two dist files                                    | Blog Article beforeBody priority 15             | HIGH because of registry workaround |
+| Package                       | Purpose / interfaces consumed                                                                                | Source → generated                                                               | Registration / pages                            | Risk                                |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------- |
+| `@bdv/quartz-content-context` | Quartz component props and frontmatter; centralized status/authorship rendering                              | `components.tsx`, `index.ts`, `style.ts` → two dist files                        | Blog Article beforeBody priority 25             | MEDIUM                              |
+| `@bdv/quartz-ia-article-nav`  | Quartz component props/constructor, `resolveRelative`, local neighbor helpers                                | `components.tsx`, `index.ts`, `style.ts` → `dist/components.js`, `dist/index.js` | `afterBody`, numbered articles                  | MEDIUM                              |
+| `@bdv/quartz-ia-articles`     | `QuartzPageTypePlugin`, native `ContentBody`, shared `isBlogArticle`; matches Blog Articles and T.I.L        | `index.ts` → `dist/index.js`                                                     | order 44, layout `article`                      | MEDIUM/HIGH API coupling            |
+| `@bdv/quartz-ia-header`       | Quartz component props/constructor and `resolveRelative`                                                     | `components.tsx`, `index.ts`, `style.ts` → two dist files                        | global header priority 10                       | MEDIUM                              |
+| `@bdv/quartz-ia-pages`        | component/page/emitter/vfile APIs, internal emitter `write`, community date/path utilities, local IA helpers | `index.tsx`, `style.ts` → `dist/index.js`                                        | order 45; Blog/year/Topics + Quartz 4 redirects | HIGH                                |
+| `@bdv/quartz-ia-properties`   | native `TagList`, Quartz constructor type                                                                    | `components.tsx`, `index.ts` → two dist files                                    | Blog Article beforeBody priority 15             | HIGH because of registry workaround |
 
 Build commands on this Windows workspace:
 
 ```powershell
+npm --prefix .\quartz-content-context run build
 npm --prefix .\quartz-ia-article-nav run build
 npm --prefix .\quartz-ia-articles run build
 npm --prefix .\quartz-ia-header run build
@@ -700,7 +724,7 @@ Each package script calls `..\node_modules\.bin\esbuild.cmd`, bundles for Node E
 
 Key plugin differences from stock:
 
-- five `@bdv/*` local packages are enabled;
+- six `@bdv/*` local packages are enabled;
 - Obsidian parsing explicitly enables comments, highlight, wikilinks, callouts, Mermaid, inline tags, arrows, block references, YouTube/video, and checkboxes;
 - hard line breaks and Excalidraw are enabled;
 - TOC, Backlinks, Article Title, Content Meta, Graph, Search, Theme, and Recent Notes are conditionally relocated;
@@ -743,34 +767,37 @@ These dependencies are valid today but brittle across Quartz upgrades:
 
 ## Tests and requirement-to-test matrix
 
-The current full baseline is 209 tests across 45 suites. Stock tests cover Quartz paths, trie/collisions, dispatcher, loader, registry, rendering, Search, Popover, frames, and CLI helpers. Custom protection includes:
+The current full baseline is 222 tests across 45 suites. Stock tests cover Quartz paths, trie/collisions, dispatcher, loader, registry, rendering, Search, Popover, frames, and CLI helpers. Custom protection includes:
 
-- `scripts/migrate-gatsby.test.mjs`: 20 migration/corpus tests;
+- `scripts/migrate-gatsby.test.mjs`: 21 migration/corpus tests;
+- `scripts/content-architecture.test.mjs`: corpus inventory and editorial-contract tests;
+- `quartz.content-context.test.ts`: status/authorship rendering and registration tests;
 - `quartz.explorer-order.test.ts`: 3 numeric/dotted chronology tests;
 - `quartz.ia.test.ts`: 20 IA/composition/token/build-runtime/cache tests.
-- `scripts/deploy-production.test.mjs`: 3 deployment-safety tests.
+- `scripts/deploy-production.test.mjs`: 4 deployment-safety tests.
 
-| Customization              | Automated protection                                 | Generated/manual protection                    | Known gap                                       |
-| -------------------------- | ---------------------------------------------------- | ---------------------------------------------- | ----------------------------------------------- |
-| 001–002 migration          | migration suite; validator                           | manifest/build warning audit                   | none material                                   |
-| 003 routing/aliases        | collision/link/finalizer tests; generated validator  | automated Caddy route matrix                   | container execution requires Docker/Cloud Build |
-| 004 Caddy                  | Docker/Firebase regression; `validate:caddy`         | Caddy 2.11.4 configuration + routes            | container execution requires Docker/Cloud Build |
-| 005 chronology             | comparator + IA tests; `validate:production`         | full Blog/neighbors audit                      | none material                                   |
-| 006 page composition       | class/config + legacy/future matcher tests           | representative page browser matrix             | no automated full DOM matrix                    |
-| 007 header                 | identity/token tests                                 | link/control/alignment/console matrix          | interactions/responsive are manual              |
-| 008 homepage               | Latest/H1/removal/config tests                       | homepage browser checks                        | Working on structure is selector-coupled        |
-| 009 Blog/year              | year/shared-component + description tests            | committed 150-article production audit         | none material                                   |
-| 010 topics/tags            | ordinal and Tag List tests; validator                | link click/topic/tag pages                     | curated set has no dedicated exact-list test    |
-| 011 Previous/Next          | neighbor/comparator tests; `validate:production`     | all 150 generated neighbor pairs               | none material                                   |
-| 012 article metadata       | matcher/config/order/finalizer + Tag List tests      | all-article committed DOM audit                | none material                                   |
-| 013 TOC                    | `audit-toc.mjs`                                      | representative responsive check                | upstream strict-`>` is not unit-pinned          |
-| 014 Graph                  | placement/config regex                               | data/browser interaction audit                 | no committed metrics or canvas test             |
-| 015 branding               | source test; generated validator                     | visual alignment/theme                         | no image-pipeline generator                     |
-| 016 typography/wrapping    | token/no-max test                                    | computed browser measurements                  | no screenshot/computed-style automation         |
-| 017 visual system          | limited structural tests                             | full page/theme/viewport matrix                | most presentation is manual                     |
-| 018 removals/compatibility | Explorer/Spotify/taxonomy tests                      | build/browser checks                           | config-default drift must be reviewed           |
-| 019 source/dist            | `validate:packages` rebuild comparison               | eight generated entry points                   | none material                                   |
-| 020 cache/deployment       | cache-transition + deployment-plan tests; validators | local/direct/public headers and warmed browser | browser transition remains a release gate       |
+| Customization              | Automated protection                                          | Generated/manual protection                       | Known gap                                       |
+| -------------------------- | ------------------------------------------------------------- | ------------------------------------------------- | ----------------------------------------------- |
+| 001–002 migration          | migration suite; validator                                    | manifest/build warning audit                      | none material                                   |
+| 003 routing/aliases        | collision/link/finalizer tests; generated validator           | automated Caddy route matrix                      | container execution requires Docker/Cloud Build |
+| 004 Caddy                  | Docker/Firebase regression; `validate:caddy`                  | Caddy 2.11.4 configuration + routes               | container execution requires Docker/Cloud Build |
+| 005 chronology             | comparator + IA tests; `validate:production`                  | full Blog/neighbors audit                         | none material                                   |
+| 006 page composition       | class/config + legacy/future matcher tests                    | representative page browser matrix                | no automated full DOM matrix                    |
+| 007 header                 | identity/token tests                                          | link/control/alignment/console matrix             | interactions/responsive are manual              |
+| 008 homepage               | Latest/H1/removal/config tests                                | homepage browser checks                           | Working on structure is selector-coupled        |
+| 009 Blog/year              | year/shared-component + description tests                     | committed 150-article production audit            | none material                                   |
+| 010 topics/tags            | ordinal, exact curated-group, and Tag List tests              | link click/topic/tag pages                        | none material                                   |
+| 011 Previous/Next          | neighbor/comparator tests; `validate:production`              | all 150 generated neighbor pairs                  | none material                                   |
+| 012 article metadata       | matcher/config/order/finalizer + Tag List tests               | all-article committed DOM audit                   | none material                                   |
+| 013 TOC                    | `audit-toc.mjs`                                               | representative responsive check                   | upstream strict-`>` is not unit-pinned          |
+| 014 Graph                  | placement/config regex                                        | data/browser interaction audit                    | no committed metrics or canvas test             |
+| 015 branding               | source test; generated validator                              | visual alignment/theme                            | no image-pipeline generator                     |
+| 016 typography/wrapping    | token/no-max test                                             | computed browser measurements                     | no screenshot/computed-style automation         |
+| 017 visual system          | limited structural tests                                      | full page/theme/viewport matrix                   | most presentation is manual                     |
+| 018 removals/compatibility | Explorer/Spotify/taxonomy tests                               | build/browser checks                              | config-default drift must be reviewed           |
+| 019 source/dist            | `validate:packages` rebuild comparison                        | ten generated entry points                        | none material                                   |
+| 020 cache/deployment       | cache-transition + deployment-plan tests; validators          | local/direct/public headers and warmed browser    | browser transition remains a release gate       |
+| 021 content architecture   | exact ledger/inventory/schema/component/topic/migration tests | generated notice parity and Topics browser matrix | About-page refresh remains separately deferred  |
 
 Graph canvas interaction, visual/computed typography, responsive presentation, and browser console/overflow remain browser gates. Container execution and authenticated Google Cloud/Firebase state remain environment gates. Routing, generated Blog/article composition, chronology, metadata, RSS/robots, and source/dist parity now have committed validators.
 
@@ -813,9 +840,11 @@ tags:
 ---
 ```
 
+The complete authoring, status, authorship, tag, image, source, code, investment-journal, and migrated-content rules live in `AUTHORING.md`. The editorial rationale and Topic model live in `CONTENT_ARCHITECTURE.md`.
+
 The valid `date` gives the page the semantic Blog Article composition. The numeric folder prefix independently admits it to numeric chronology such as Latest Articles, Blog ordering, and Previous/Next. Do not omit the number for a production chronological post, and do not renumber historical posts. A static page normally needs only its route folder and supported frontmatter such as `title`; reserved routes remain classified by the page-class rules documented above.
 
-Content-only authoring does not require manually rebuilding the five local packages. If local-package TypeScript/TSX is changed, rebuild that package's generated `dist` output before starting Quartz, as documented in the local package inventory.
+Content-only authoring does not require manually rebuilding the six local packages. If local-package TypeScript/TSX is changed, rebuild that package's generated `dist` output before starting Quartz, as documented in the local package inventory.
 
 ### One-time production build
 
@@ -867,8 +896,11 @@ Quartz 5.0.0 preview can leave a deleted page's generated HTML in `public` durin
 Run from `D:\20230422 - BigData\08. HTML\quartz\bdv4q2` in PowerShell. Rebuild any changed local package first.
 
 ```powershell
-# Full test baseline (currently 205 tests / 45 suites)
+# Full test baseline (currently 222 tests / 45 suites)
 npm test
+
+# Corpus inventory and editorial frontmatter contract
+npm run validate:content
 
 # TypeScript and formatting (the repository's combined check)
 npm run check
@@ -968,6 +1000,8 @@ Strong candidates to re-evaluate are Blog/year archive generation, Previous/Next
 - The production Dockerfile is a multi-stage build: repository-owned Quartz build first, then static `public/` under Caddy at `/srv` on port 8080. Never replace its runtime with Quartz preview.
 - Firebase Hosting remains the public custom-domain entry and rewrites to Cloud Run `bdxyz` in `asia-south1`; verify live IAM/revision state at deployment time rather than inferring it from repository configuration.
 - A stable `contentIndex.json` can outlive a release in the browser and combine old routes with new application code. Content-address the Search/Graph index, keep stable resources revalidated, and always test a browser warmed against the previous release.
+- Migration-owned Markdown is regenerated. Apply approved Learning Archive context, status, and authorship metadata through `scripts/content-editorial-overrides.json`, not a one-off destination edit.
+- AI assistance is normal authoring support, not taxonomy. Use `authorship: ai` only for intentionally substantially AI-authored work; never add a `wai` tag.
 
 ## Future AI startup prompt
 
@@ -1004,3 +1038,5 @@ Read these chronologically when intent or supersession matters:
 12. `Quartz 5 — Phase 4E.1 Unified Blog Article Composition Completion Report.md`
 13. `Quartz 5 — Phase 4F Customization Architecture & Upgrade Runbook Completion Report.md`
 14. `Quartz 5 — Phase 5 Production Readiness Deployment Operational Closure Completion Report.md`
+15. `Quartz 5 — Phase 5.1 Cache-Safe Publishing Pipeline Live Deployment Closure Completion Report.md`
+16. `Quartz 5 — Phase 6 Completion Report.md`
