@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1020" viewBox="0 0 1400 1020" role="img">
+<title>Firebase Architecture</title>
+<desc>Five local processing phases feed Firebase, which is used by Kickbear WebApp for watchlists, price triggers and company information.</desc>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6 0 12Z" fill="#c45b2c"/></marker></defs>
+<style>
+.title{font:700 38px system-ui,sans-serif;fill:#162033}
+.subtitle{font:17px system-ui,sans-serif;fill:#59667b}
+.heading{font:700 23px system-ui,sans-serif;fill:#162033}
+.step{font:650 21px system-ui,sans-serif;fill:#23344a}
+.detail{font:17px system-ui,sans-serif;fill:#52657d}
+.number{font:700 17px system-ui,sans-serif;fill:#c45b2c}
+.arrow{stroke:#c45b2c;stroke-width:3;fill:none;marker-end:url(#arrow)}
+</style>
+<rect width="1400" height="1020" fill="#f7f4ed"/>
+<text x="64" y="73" class="title">Firebase Architecture</text>
+<text x="64" y="107" class="subtitle">Local data pipeline → Firebase → Kickbear WebApp</text>
+<rect x="58" y="146" width="650" height="798" rx="22" fill="#f0ede6" stroke="#c7d0da" stroke-width="2"/>
+<text x="90" y="191" class="heading">LOCAL PROCESSING</text>
+<text x="90" y="219" class="subtitle">All five phases run locally</text>
+
+<rect x="90" y="250" width="585" height="98" rx="13" fill="#ffffff" stroke="#52657d" stroke-width="1.6"/>
+<text x="113" y="287" class="number">01</text>
+<text x="165" y="290" class="step">Download BSE / NSE and MC data</text>
+<path d="M382 348 V378" class="arrow"/>
+<rect x="90" y="382" width="585" height="98" rx="13" fill="#ffffff" stroke="#52657d" stroke-width="1.6"/>
+<text x="113" y="419" class="number">02</text>
+<text x="165" y="422" class="step">Download from GCP</text>
+<text x="165" y="451" class="detail">Live market data and watchlists</text>
+<path d="M382 480 V510" class="arrow"/>
+<rect x="90" y="514" width="585" height="98" rx="13" fill="#ffffff" stroke="#52657d" stroke-width="1.6"/>
+<text x="113" y="551" class="number">03</text>
+<text x="165" y="554" class="step">Analyze the data</text>
+<path d="M382 612 V642" class="arrow"/>
+<rect x="90" y="646" width="585" height="98" rx="13" fill="#ffffff" stroke="#52657d" stroke-width="1.6"/>
+<text x="113" y="683" class="number">04</text>
+<text x="165" y="686" class="step">Generate reporting data</text>
+<text x="165" y="715" class="detail">Firebase and existing Velocity BTD Reports</text>
+<path d="M382 744 V774" class="arrow"/>
+<rect x="90" y="778" width="585" height="98" rx="13" fill="#ffffff" stroke="#52657d" stroke-width="1.6"/>
+<text x="113" y="815" class="number">05</text>
+<text x="165" y="818" class="step">Load Firebase</text>
+
+<rect x="824" y="292" width="500" height="132" rx="18" fill="#fff" stroke="#c45b2c" stroke-width="3"/>
+<text x="858" y="341" class="heading">Firebase</text>
+<text x="858" y="378" class="detail">Published reporting and application data</text>
+<path d="M675 828 H757 Q785 828 785 780 V365 H820" class="arrow"/>
+<path d="M1074 424 V505" class="arrow"/>
+<rect x="789" y="512" width="550" height="432" rx="22" fill="#eaf0f7" stroke="#52657d" stroke-width="2"/>
+<text x="824" y="562" class="heading">KICKBEAR WEBAPP</text>
+<text x="824" y="591" class="subtitle">User-facing actions and company research</text>
+
+<rect x="824" y="625" width="480" height="80" rx="12" fill="#fff" stroke="#a6b5c6" stroke-width="1.5"/>
+<text x="846" y="657" class="number">01</text>
+<text x="898" y="658" class="step">Create watchlists</text>
+<text x="898" y="685" class="detail">Track announcements</text>
+<rect x="824" y="724" width="480" height="80" rx="12" fill="#fff" stroke="#a6b5c6" stroke-width="1.5"/>
+<text x="846" y="756" class="number">02</text>
+<text x="898" y="757" class="step">Create price triggers</text>
+<rect x="824" y="823" width="480" height="80" rx="12" fill="#fff" stroke="#a6b5c6" stroke-width="1.5"/>
+<text x="846" y="855" class="number">03</text>
+<text x="898" y="856" class="step">View company information</text>
+<text x="898" y="883" class="detail">Metrics, Results and Deals</text>
+</svg>

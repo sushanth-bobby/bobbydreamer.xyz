@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+<title id="title">How data reaches the Kickbear WebApp</title>
+<desc id="desc">Four domain pipelines show sources, extraction and analytics stores, and UI publications. Financials and Shareholding publish SQLite snapshots; Deals publishes CSV and SQLite state in the combined Web build. Technicals publishes independent SQLite. FastAPI reads selected publications and sends responses to React. The legend identifies database, file and exchange icons.</desc>
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#63758b"/></marker>
+<symbol id="db" viewBox="0 0 40 40"><path d="M5 10 V30 C5 39 35 39 35 30 V10" fill="#e4edf7" stroke="#456580" stroke-width="2"/><ellipse cx="20" cy="10" rx="15" ry="6" fill="#e4edf7" stroke="#456580" stroke-width="2"/><path d="M5 20 C5 28 35 28 35 20" fill="none" stroke="#456580" stroke-width="2"/></symbol>
+<symbol id="file" viewBox="0 0 40 40"><path d="M9 3 H25 L33 11 V37 H9Z" fill="#f5eadb" stroke="#9b7542" stroke-width="2"/><path d="M25 3 V11 H33 M14 19 H28 M14 25 H28 M14 31 H25" fill="none" stroke="#9b7542" stroke-width="2"/></symbol>
+<symbol id="exchange" viewBox="0 0 40 40"><path d="M4 13 L20 4 L36 13Z M4 35 H36 M8 31 V17 M16 31 V17 M24 31 V17 M32 31 V17" fill="#e6f0e9" stroke="#4b7963" stroke-width="2"/></symbol>
+</defs>
+<style>.title{font:700 32px system-ui,sans-serif;fill:#162033}.head{font:700 21px system-ui,sans-serif;fill:#162033}.body{font:18px system-ui,sans-serif;fill:#33465d}.small{font:16px system-ui,sans-serif;fill:#52657d}.mono{font:15px Consolas,monospace;fill:#33465d}.box{fill:white;stroke:#c5ced9;stroke-width:1.5}.flow{fill:none;stroke:#63758b;stroke-width:2;marker-end:url(#arrow)}.domain{font:700 18px system-ui,sans-serif;fill:#3c6c61}</style>
+<rect width="1600" height="1000" fill="#f7f4ed"/>
+<text x="40" y="52" class="title">How data reaches the Kickbear WebApp</text>
+<text x="40" y="84" class="body">Sources → domain-owned extraction and analytics → selected publications → API → screen</text>
+<text x="40" y="130" class="head">1. Sources</text><text x="385" y="130" class="head">2. Domain processing</text><text x="795" y="130" class="head">3. Publications read by the API</text>
+<rect x="780" y="149" width="430" height="529" rx="14" fill="#edf1f7" stroke="#9caec4" stroke-width="2"/>
+<text x="798" y="179" class="head">Combined Web build</text><text x="798" y="206" class="small">Selected local TEST / PROD build</text>
+
+<rect x="40" y="225" width="305" height="130" rx="10" class="box"/><use href="#exchange" x="56" y="240" width="32" height="32"/><text x="99" y="264" class="domain">Financials</text><text x="58" y="298" class="body">BSE / NSE XBRL, BSE tables</text><text x="58" y="328" class="body">MC financial data</text>
+<rect x="385" y="225" width="350" height="130" rx="10" class="box"/><use href="#db" x="401" y="240" width="32" height="32"/><text x="444" y="264" class="head">SQLite history / analytics</text><text x="403" y="298" class="body">Parse, map families, reconcile</text><text x="403" y="328" class="body">Preserve lineage; calculate ratios</text>
+<use href="#db" x="798" y="244" width="32" height="32"/><text x="841" y="267" class="head">Financials snapshot</text><text x="799" y="300" class="mono">financials_v1.sqlite</text><text x="799" y="330" class="small">Statements, ratios, source / scope / period</text>
+
+<rect x="40" y="380" width="305" height="130" rx="10" class="box"/><use href="#exchange" x="56" y="395" width="32" height="32"/><text x="99" y="419" class="domain">Deals</text><text x="58" y="453" class="body">BSE / NSE bulk and block deals</text><text x="58" y="483" class="small">+ prices, tracked entities, ownership</text>
+<rect x="385" y="380" width="350" height="130" rx="10" class="box"/><use href="#db" x="401" y="395" width="32" height="32"/><text x="444" y="419" class="head">MariaDB → analytics</text><text x="403" y="453" class="body">Resolve participants; join context</text><text x="403" y="483" class="body">Group patterns into review queues</text>
+<use href="#file" x="798" y="399" width="32" height="32"/><use href="#db" x="833" y="399" width="32" height="32"/><text x="876" y="422" class="head">Deals artifacts</text><text x="799" y="455" class="mono">deals/*.csv + SQLite state</text><text x="799" y="485" class="small">Selected-company reports and context</text>
+
+<rect x="40" y="535" width="305" height="130" rx="10" class="box"/><use href="#exchange" x="56" y="550" width="32" height="32"/><text x="99" y="574" class="domain">Shareholding</text><text x="58" y="608" class="body">BSE shareholding filings</text><text x="58" y="638" class="small">XML / HTML, reported by quarter</text>
+<rect x="385" y="535" width="350" height="130" rx="10" class="box"/><use href="#db" x="401" y="550" width="32" height="32"/><text x="444" y="574" class="head">DuckDB → Serving SQLite</text><text x="403" y="608" class="body">Extract ownership; analyze changes</text><text x="403" y="638" class="body">Promoters, pledges, institutions</text>
+<use href="#db" x="798" y="554" width="32" height="32"/><text x="841" y="577" class="head">Shareholding snapshot</text><text x="799" y="610" class="mono">shareholding_v1.sqlite</text><text x="799" y="640" class="small">Ownership views, reports and quality</text>
+
+<rect x="40" y="714" width="305" height="130" rx="10" class="box"/><use href="#file" x="56" y="729" width="32" height="32"/><text x="99" y="753" class="domain">Technicals</text><text x="58" y="787" class="body">Canonical adjusted price history</text><text x="58" y="817" class="small">OHLCV: exchange-derived CSV files</text>
+<rect x="385" y="714" width="350" height="130" rx="10" class="box"/><use href="#db" x="401" y="729" width="32" height="32"/><text x="444" y="753" class="head">Technicals pipeline</text><text x="403" y="787" class="body">Levels, trends, crosses, activity</text><text x="403" y="817" class="body">Combine states into opportunities</text>
+<rect x="780" y="704" width="430" height="150" rx="14" fill="#e8f1ec" stroke="#88a998" stroke-width="2"/><use href="#db" x="798" y="723" width="32" height="32"/><text x="841" y="747" class="head">Independent SQLite publication</text><text x="799" y="780" class="body">Technicals + Daily Opportunities</text><text x="799" y="813" class="small">Own TEST / PROD build and selection</text><text x="799" y="838" class="small">Not rebuilt by the combined Web build</text>
+
+<path d="M345 290 H379 M735 290 H774 M345 445 H379 M735 445 H774 M345 600 H379 M735 600 H774 M345 779 H379 M735 779 H774" class="flow"/>
+<path d="M1210 290 H1240 V445 M1210 445 H1264 M1210 600 H1240 V445 M1210 779 H1240 V445" fill="none" stroke="#63758b" stroke-width="2"/>
+<rect x="1270" y="370" width="285" height="150" rx="12" class="box"/><text x="1290" y="406" class="head">4. FastAPI</text><text x="1290" y="440" class="body">Read selected artifacts</text><text x="1290" y="469" class="body">Join, filter, sort, paginate</text><text x="1290" y="498" class="small">Return structured API responses</text>
+<path d="M1412 520 V567" class="flow"/>
+<rect x="1270" y="575" width="285" height="145" rx="12" class="box"/><text x="1290" y="611" class="head">5. React WebApp</text><text x="1290" y="645" class="body">Reports and companies</text><text x="1290" y="675" class="body">Charts, financials, metrics</text><text x="1290" y="703" class="small">Displays published analytics</text>
+
+<text x="40" y="888" class="small">Publication flow: refresh domain outputs → build / validate snapshots → atomically select → API reads the successful build.</text>
+<text x="40" y="916" class="small">webapp_data.sqlite supplies shared company / price / report data. JSON manifests and current.json record and select builds.</text>
+<use href="#db" x="40" y="944" width="30" height="30"/><text x="80" y="965" class="small">Database: SQLite, DuckDB or MariaDB (named in each box)</text>
+<use href="#file" x="620" y="944" width="30" height="30"/><text x="660" y="965" class="small">Files: CSV / XML / HTML / JSON</text>
+<use href="#exchange" x="1060" y="944" width="30" height="30"/><text x="1100" y="965" class="small">Exchange / financial source</text>
+</svg>
+
+

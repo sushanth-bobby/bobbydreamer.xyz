@@ -308,4 +308,15 @@ The other half of the policy is equally important: I will not silently accept ch
 
 Quartz turned out to be customizable enough for this site without a core fork. The cost of that flexibility is not primarily code. It is maintaining a clear boundary between stock behavior, local behavior, migrated content, and production serving—and keeping enough evidence that the next upgrade does not require learning the same lessons again.
 
+## Screenshots
+<div>
+<img src="images/bdxyz_quartz1.png" alt="Home">
+<img src="images/bdxyz_quartz2.png" alt="Home">
+<img src="images/bdxyz_quartz3.png" alt="Home">
+<img src="images/bdxyz_quartz4.png" alt="Home">
+</div>
+
+
+### Thank you for reading
+
 * * * 

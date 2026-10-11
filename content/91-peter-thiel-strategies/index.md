@@ -20,7 +20,7 @@ aliases:
 
 <a id="pt1"></a>
 
-#### Peter Thiel, You Are Not a Lottery Ticket - 2013
+## Peter Thiel, You Are Not a Lottery Ticket - 2013
 
 Below notes from below class and youtube videos,    
 
@@ -32,9 +32,9 @@ Globalization is basically about copying things that already work. China story. 
 
 When you go from 0 to 1, if you look at every event in the history of progress in the history of technology and science has something singular and non-repeatable about it. And if we ask  is the given invention, is the given startup, is the given artistic achievement was this something happened anyway or was this something total fluke. Its is a really hard question to answer as this has sample size of 1. 
 
-#### Question of Luck
+## Question of Luck
 
-##### A. Nature of the Problem
+### A. Nature of the Problem
 
 The biggest philosophical question underlying startups is how much luck is involved when they succeed. As important as the luck vs. skill question is, however, it’s very hard to get a good handle on. Statistical tools are meaningless if you have a sample size of one. It would be great if you could run experiments. Start Facebook 1,000 times under identical conditions. If it works 1,000 out of 1,000 times, you’d conclude it was skill. If it worked just 1 time, you’d conclude it was just luck. But obviously these experiments are impossible.
 
@@ -43,7 +43,7 @@ Some people gravitate toward explaining things as lucky. Others are inclined to 
 But people do tend to be extremely biased towards the luck side of things. Skill probably plays a much greater role than people typically think.
 
 
-##### B. Anti-Luck
+### B. Anti-Luck
 
 The weak argument against the luck hypothesis involves presenting scattered data points as evidence of repeatability. Several people have successfully started multiple companies that became worth more than a billion dollars. 
 
@@ -54,7 +54,7 @@ People have repeated successes and some people say they have just Big breakthrou
   3. Elon Musk - Paypal 🡪 Tesla 🡪 Solar City 🡪 Space X
 
 
-##### C. Sign of The Times 
+### C. Sign of The Times 
 
 It’s worth noting how much perspectives on this have changed over time. 
 
@@ -66,7 +66,7 @@ From the 18th century all the way through the 1950s or ‘60s, luck was perceive
 Today’s default view is more Malcolm Gladwell than Thomas Jefferson; success, we are told, “seems to stem as much from context as from personal attributes." You can’t control your destiny. Things have to combine just right. It’s all kind of an accident.
 
 
-##### D.  Applied to Startups
+### D.  Applied to Startups
 
 The theme that luck plays a big role is also dominant in the startup community. Paul Graham has attributed a great deal of startups’ success to luck. Robert Cringely wrote a book called Accidental Empires. The point is not to pick on these people—they’re obviously very competent and quite successful.
 
@@ -76,13 +76,13 @@ It’s worth noting that the existence of this class—being willing to teach th
 
 When you drill down and ask a question like *so was luck or not luck*, its really hard to say.  
 
-#### Determinate Vs. Indeterminate futures
+## Determinate Vs. Indeterminate futures
 
 As a society, we now gravitate towards explaining things by chance and luck rather than skill and calculation. All we can do here is point out that we seem to have shifted to the extreme luck side of the spectrum and suggest that it might make sense to dial back the pendulum the other way.  
 
 Naturally, we can use a 2 x 2 matrix to help us think about the future. On the vertical axis you have optimism and pessimism. On the horizontal axis you have determinate and indeterminate. The determinate perspective is that things are knowable and you can control them. The indeterminate perspective is that things are unknowable and uncontrollable. There are just too many chance events. 
 
-##### Future Framework
+### Future Framework
 
 You can simplistically say from this 2x2 matrix, that future is either optimistic or pessimistic and either determinate or indeterminate
 
@@ -126,7 +126,7 @@ If you look at these quadrants at financial way
 
 One of the strange things about indeterminate optimism is it has the low investment and low savings
 
-##### Substance vs. Process
+### Substance vs. Process
 
 Another way to look at the determinate vs. indeterminate question is through the lens of substance vs. process. What people do and what technology they build will depend on how they view the future. From an indeterminate perspective, they won’t know what to build. There’s nothing that specifically looks promising; it’s all just a distribution. So they will think less substantively and more procedurally.
 
@@ -146,14 +146,14 @@ How each quadrant shakes out in practice looks something like this:
 
 ![Practice](./pt-8.png)
 
-##### Definite Optimism : Some classic examples from US history 
+### Definite Optimism : Some classic examples from US history 
  
 * Transcontinental railroad, this was a huge work and they did it. 
 * Robert Moses - Comes with bulldozer leveled neighbour hoods, Built parks, roadways. It sort of stopped in 1960s 
 * In 1950s, Big civil engineering projects designed by School teacher in san francisco there congressional meetings for this. Somehow it was stopped. 
 * All classic science fiction visions : Cities underwater, moon, mars and in space they were very definite ideas of future. Today if you look at this, they sort of look past or fiction. But 50years back they believed that its possible. 
 
-##### Indefinite Optimism : Finance
+### Indefinite Optimism : Finance
 
 * Portfolio investing theory - You should invest in the stock market index. 
 * Strange thing in this shift from definite to indefinite views of the future is the engineering to finance one of the things that happen is money becomes important. 
@@ -176,7 +176,7 @@ The era of indefinite optimism is arguably coming to an end. Look at government 
 
 In an indefinite world, investors will value secret plans at zero. But in a determinate world, robustness of the secret plan is one of the most important metrics. Any company with a good secret plan will always be undervalued in a world where nobody believes in secrets and nobody believes in plans. The ability to execute against long-term secret plan is thus incredibly powerful and important.
 
-##### Indefinite : Politics
+### Indefinite : Politics
 
 If you think that the future is indeterminate, the most important people are statisticians. Pollsters become more important than politicians. There has been a massive upward trend on polling in the last 30 years. We have polls on everything. And we believe them to be authoritative—it’s dangerous to try and outthink a statistically shifting bloc of voters. Unsurprisingly, then, politicians react to the polls instead of thinking about the future. This helps explain the strange mystery in 2008 of why John McCain picked Sarah Palin as a running mate. The McCain people reviewed all the polls about Republican governors and senators. Most were very unpopular. Palin, by contrast, had an 89% approval rating in Alaska. Just parsing poll data, Palin was the obvious choice. That didn’t work out quite as well as they expected. This has nothing to do with Palin’s merits as a candidate; it just goes to show how statistical poll data, and not clear thinking, can dominate politics. Taking a principled stand on unpopular positions is not what our leaders are incented to do. 
 
@@ -186,7 +186,7 @@ Think on, what the government actually does has changed radically. In the past, 
 
 <a id="pt2"></a>
 
-#### Zero to One
+## Zero to One
 
 Most engineering fields are bad fields to go in the western world in the last 40-50 years mechanical engineer, chemical engineer, electrical engineer that was down in 1980s itself, astro engineer is a bad idea in last 40-50 years. 
 
@@ -232,7 +232,7 @@ In Christianity,
 
 <a id="pt3"></a>
 
-#### Competition is for Losers 2014
+## Competition is for Losers 2014
 
 * Entrepreneurs always have to aim for monopoly, competition is for losers. 
 
@@ -261,7 +261,7 @@ We are giant technology market where competition is in every direction and we ar
 
 Monopoly businesses will have huge cashflow and higher gross margins, they don't know what to do with their money. 
 
-##### How to start monopoly
+### How to start monopoly
 
 * Start small and monopolize
   * Its easier to dominate a small market than a large one
@@ -329,7 +329,7 @@ To understand Thiel’s ideas, we need to begin with the person who influenced P
  
 Competition distracts us from things that are more important, meaningful, or valuable. We buy things we don’t need with money we don’t have to impress people we don’t like. Trapped in a never-ending rat race, lawyers climbed the corporate ladder by winning favor with partners at the top. Others engaged in small acts of sabotage against their coworkers. Law school was worse. Like lobsters in a bucket, wannabe lawyers battled for law school placement and law firm employment. Each goal led to the next. Rather than focusing their attention on the end goal of developing a legal expertise, transforming the Constitution, or rescuing the powerless from tyrannical injustice, they elbowed their peers so they could score higher than their classmates on standardized tests. The competition was zero-sum. The better one student did, the worse their peers scored.
 
-##### Section 1: Don’t Copy Your Neighbors
+### Section 1: Don’t Copy Your Neighbors
 
 Everybody imitates. We cannot resist Mimetic contagion, and that will never change. But there are bad ways to copy and good ways to copy. Bad imitators follow the crowd and mirror false idols, while good imitators copy a transcendent goal or figure. 
 
@@ -341,7 +341,7 @@ Similar people are most prone to Mimetic envy because we tend to compete for sta
 
 Girard observed that even when you put a group of kids together in a room full of toys, they’ll inevitably desire the same toy instead of finding their own toy to play with. A rivalry will emerge. Human see, human want. Our capacity for imitation leads to envy. Babies’ interest in a particular toy has less to do with the toy itself and more to do with the fact that the other babies desire the toy. As soon as one child desires the toy, so do the others. Eventually, even though there are many toys available to play with, all the children want the same toy.
  
-##### Competitive strategy in business
+### Competitive strategy in business
  
 Michael Porter’s philosophy of business strategy. Porter is a Harvard Business School professor known for his theories on economics and business strategy. He believed that strong businesses aim to be unique, not the best. Trying to outcompete rivals leads to mediocre performance, so companies should avoid competition and seek to create value instead of beating rivals. 
 
@@ -357,7 +357,7 @@ High profits attract competition. According to economic theory, if outside entre
 
 Thiel offers an alternative to perfect competition: monopoly. Without competition, they can produce at the quantity and price combination that maximizes their profits. Successful strategies attract imitators, so the best businesses are difficult to copy. Firms in a competitive industry who sell a commodity product cannot turn a profit.  But companies who have a monopoly can set their own prices since they offer an in-demand product that cannot be replicated. Monopoly firms are big fish in a small pond. 
 
-##### Section 2: Time Moves Forward
+### Section 2: Time Moves Forward
 
 Keller quoted Robert Nisbet, the author of The History of the Idea of Progress. In it, Nisbet argues that ancient people saw time as cyclical, and no idea has been more important to Western Civilization than the idea of progress. 
 
@@ -369,7 +369,7 @@ To Peter Thiel, short-term thinking is the essence of sin. Like The Bible, he ad
 
 Thiel concludes that time is linear, not cyclical. The future won’t look like the present. It will either be much worse or much better. Or more explicitly, “stagnation leads straight to apocalypse.” If we don’t, we’ll suffer from limitless Mimetic violence; and if things go well, we might find our place in God’s peaceful kingdom. 
 
-##### Section 3: The Future will Be Different From the Present
+### Section 3: The Future will Be Different From the Present
 
 > “And I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea.” 
 > —— Revelation 21:1
@@ -384,7 +384,7 @@ Thiel fears that due to technologies like nuclear weapons, humans are already ca
 Thiel encourages us to be specific about the long-term future we want to create. Here, he counters the secular and Eastern philosophy. Under the secular mindset, there is no transcendent future after death. This is it. You have one life. Similarly, according to Eastern religions, we lose our individuality and lose our material lives so we can become part of the whole again. But Christianity offers a different perspective: work for the fruits of eternity instead of chasing the fleeting pleasures of the day. Don’t place too much weight on the present moment. Instead of focusing on meaningless scandals, endless political dramas, or the limitless accumulation of wealth, we should focus on the impending catastrophe at the end of the road. Work to prevent runaway Girardian violence. That way, when the Day of Judgement comes, we’ll lean towards the side of the good. 
 
 
-##### The end of the future
+### The end of the future
 Since the Financial Crisis, tens of thousands of Americans have moved into the Indefinite Optimism and Definite Pessimism quadrants. 
 
 According to Thiel, this shift has been worse than acknowledged. A 2011 essay called The [End of the Future](https://www.nationalreview.com/2011/10/end-future-peter-thiel/), which lives on the homepage of the website of his venture capital firm, argues that progress has stagnated.
@@ -415,7 +415,7 @@ In an essay called The Trouble with Optionality Harvard professor Mihir Desai wo
 
 We lack courage, not genius. We’re swimming in money, but starving for ambition. Every venture capitalist I meet says there’s too much money and not enough good ideas.
 
-##### Promise of hope
+### Promise of hope
 
 Our spirits rise when hopes are high. That’s why the day before Christmas is as exhilarating as Christmas Day. Big, bright gifts sit under the tree. Smaller ones hang in firetruck-red socks over the living room fireplace. Children play. Parents cook. Grandparents tell stories. And the rush of anticipation releases everybody’s serotonin.
 
@@ -423,7 +423,7 @@ Likewise, everybody knows that a team with belief is hard to beat. But a team th
 
 Hope enables believers to endure unimaginable suffering. A hope so resilient that like a Captain America’s shield, it can survive any evil, any sickness, or any torture. No matter the obstacles, certainty about the future gives you the confidence to act in the present. 
 
-##### Peter Thiel’s Advice
+### Peter Thiel’s Advice
 
 Peter Thiel with Christian inspired foundations has three principles
 

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">Bhavcopy files become repeatable history</title><desc id="desc">A source-based diagram showing exchange Bhavcopy files downloaded and unpacked by Java, loaded into MySQL history, then queried by reusable analyses.</desc>
+  <rect width="1200" height="300" fill="#f7f4ed"/><style>.h{font:700 25px system-ui;fill:#162033}.t{font:18px system-ui;fill:#26364d}.b{fill:#fff;stroke:#52657d;stroke-width:2}.a{stroke:#c45b2c;stroke-width:4;marker-end:url(#m)}</style><defs><marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6 0 12z" fill="#c45b2c"/></marker></defs>
+  <text x="40" y="48" class="h">From one comparison to a repeatable local history</text>
+  <rect x="40" y="100" width="230" height="100" rx="12" class="b"/><text x="73" y="143" class="h">Bhavcopy</text><text x="73" y="177" class="t">daily exchange files</text>
+  <rect x="345" y="100" width="230" height="100" rx="12" class="b"/><text x="415" y="143" class="h">Java</text><text x="377" y="177" class="t">download · unzip · load</text>
+  <rect x="650" y="100" width="230" height="100" rx="12" class="b"/><text x="707" y="143" class="h">MySQL</text><text x="689" y="177" class="t">calendar + price history</text>
+  <rect x="955" y="100" width="205" height="100" rx="12" class="b"/><text x="992" y="143" class="h">Questions</text><text x="977" y="177" class="t">TI · n-day · high/low</text>
+  <line x1="270" y1="150" x2="330" y2="150" class="a"/><line x1="575" y1="150" x2="635" y2="150" class="a"/><line x1="880" y1="150" x2="940" y2="150" class="a"/>
+  <text x="40" y="255" class="t">SOURCE-BASED DIAGRAM — intermediate housekeeping omitted for readability</text>
+</svg>

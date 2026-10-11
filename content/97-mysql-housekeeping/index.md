@@ -40,7 +40,7 @@ ORDER BY FRAG_RATIO DESC LIMIT 10;
 
 If FRAG% is > 2 then we can take below actions when its less than that you can consider the fragmentation is low. 
 
-##### OPTIMIZE TABLE
+## OPTIMIZE TABLE
 
 This reorganizes the physical storage of table data and associated index data, to reduce storage space and improve I/O efficiency when accessing the table.
 
@@ -65,7 +65,7 @@ When looking at the docs there were other alternative options recommended like,
 
 Trying the first option, i didn't get much results. Second option worked for me. Below are the results
 
-##### Test 1
+### Test 1
 
 ```sql 
 -- Before 
@@ -85,7 +85,7 @@ alter table metrics engine=InnoDB;
 +--------+---------------------------+-------------+--------------+-----------+
 ```
 
-##### Test 2
+### Test 2
 ```sql 
 -- Before 
 +-------------------+----------------+---------------+
@@ -107,7 +107,7 @@ Records: 0  Duplicates: 0  Warnings: 0
 +-------------------+----------------+---------------+
 ```
 
-##### ANALYZE TABLE 
+## ANALYZE TABLE 
 
 ANALYZE TABLE performs a key distribution analysis and stores the distribution for the named table or tables.
 

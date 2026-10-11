@@ -11,7 +11,7 @@ This is from one of the lectures of Dr.Hamming with the same title.
 
 Hamming was brought in to help other scientists and physicists. ie., stooge. Hamming was envious, so started examining, why they were so different. In his mind, questions were *Why?* and *What is the difference?* and started asking scientists after going through their biographies, autobiographies *How did you come to do this?*. Below are some observations made by Hamming while working with his Great Colleagues at Bell Labs. 
 
-#### It's all a matter of luck
+## It's all a matter of luck
 
 * Luck favours the prepared mind. When i met Feymen, i knew he will get a Nobel Prize or something. If you see that man, energy and ability, he was going to do something. It was in his nature to be something. So, its, you prepare yourself and luck hits you. 
 * Sir Issac Newton said *If others would think as hard as I did, then they would get similar results.*
@@ -21,7 +21,7 @@ Hamming was brought in to help other scientists and physicists. ie., stooge. Ham
 
 * * * 
 
-#### Most important thing about great people is they believe they can do great work
+## Most important thing about great people is they believe they can do great work
 
 * Shannon style "I am not scared of nothing". Learnt from playing chess and advancing queen. This approach is useful when you are stuck and having nothing else to do. 
 
@@ -40,7 +40,7 @@ When you have a vision, you go a long way and excellence is one of the best trac
 
 * * * 
 
-#### When you are working on big problems, keep your mind open dont isolate yourself. 
+## When you are working on big problems, keep your mind open dont isolate yourself. 
 
 Another trait, it took me a while to notice. I noticed the following facts about people who work with the door open or the door closed. I notice that if you have the door to your office closed, you get more work done today and tomorrow, and you are more productive than most. But 10 years later somehow you don't know quite know what problems are worth working on; all the hard work you do is sort of tangential in importance. He who works with the door open gets all kinds of interruptions, but he also occasionally gets clues as to what the world is and what might be important. Now I cannot prove the cause and effect sequence because you might say, *The closed door is symbolic of a closed mind.* I don't know. But I can say there is a pretty good correlation between those who work with the doors open and those who ultimately do important things, although people who work with doors closed often work harder. Somehow they seem to work on slightly the wrong thing - not much, but enough that they miss fame.
 
@@ -54,7 +54,7 @@ You should study your own success as when your time comes, you know how to succe
 
 * * * 
 
-#### Knowledge and productivity are like compound interest
+## Knowledge and productivity are like compound interest
 
 * You observe that most great scientists have tremendous drive. I worked for ten years with John Tukey at Bell Labs. He had tremendous drive. One day about three or four years after I joined, I discovered that John Tukey was slightly younger than I was. John was a genius and I clearly was not. Well I went storming into Bode's office and said, *How can anybody my age know as much as John Tukey does?* He leaned back in his chair, put his hands behind his head, grinned slightly, and said, You would be surprised Hamming, how much you would know if you worked as hard as he did that many years.* I simply slunk out of the office!
 
@@ -69,7 +69,7 @@ Race is not to the swiftest, the guy who works hard doesn't win
 
 * * * 
 
-#### Friday afternoon is for great thoughts. 
+## Friday afternoon is for great thoughts. 
 
 By great thoughts I mean ones like:
 * What will be the role of computers in all of AT&T?
@@ -83,19 +83,19 @@ By great thoughts I mean ones like:
 
 * * * 
 
-#### Great scientists tolerate ambiguity very well
+## Great scientists tolerate ambiguity very well
 
 Most people like to believe something is or is not true. They believe the theory enough to go ahead; they doubt it enough to notice the errors and faults so they can step forward and create the new replacement theory. If you believe too much you'll never notice the flaws; if you doubt too much you won't get started. It requires a lovely balance. But most great scientists are well aware of why their theories are true and they are also well aware of some slight misfits which don't quite fit and they don't forget it. Darwin writes in his autobiography that he found it necessary to write down every piece of evidence which appeared to contradict his beliefs because otherwise they would disappear from his mind. When you find apparent flaws you've got to be sensitive and keep track of those things, and keep an eye out for how they can be explained or how the theory can be changed to fit them. Those are often the great contributions. Great contributions are rarely done by adding another decimal place. It comes down to an emotional commitment. Most great scientists are completely committed to their problem. Those who don't become committed seldom produce outstanding, first-class work.
 
 * * * 
 
-#### Not enough emotional committment
+## Not enough emotional committment
 
 Everybody who has studied creativity is driven finally to saying, *creativity comes out of your subconscious.* Somehow, suddenly, there it is. It just appears. Well, we know very little about the subconscious; but one thing you are pretty well aware of is that your dreams also come out of your subconscious. And you're aware your dreams are, to a fair extent, a reworking of the experiences of the day. If you are deeply immersed and committed to a topic, day after day after day, your subconscious has nothing to do but work on your problem. And so you wake up one morning, or on some afternoon, and there's the answer. For those who don't get committed to their current problem, the subconscious goofs off on other things and doesn't produce the big result. So the way to manage yourself is that when you have a real important problem you don't let anything else get the center of your attention - you keep your thoughts on the problem. Keep your subconscious starved so it has to work on your problem, so you can sleep peacefully and get the answer in the morning, free.
 
 * * * 
 
-#### Most great scientists know many important problems
+## Most great scientists know many important problems
 
 They have something between 10 and 20 important problems for which they are looking for an attack. And when they see a new idea come up, one hears them say *Well that bears on this problem.* They drop all the other things and get after it. Now I can tell you a horror story that was told to me but I can't vouch for the truth of it. I was sitting in an airport talking to a friend of mine from Los Alamos about how it was lucky that the fission experiment occurred over in Europe when it did because that got us working on the atomic bomb here in the US. He said *No; at Berkeley we had gathered a bunch of data; we didn't get around to reducing it because we were building some more equipment, but if we had reduced that data we would have found fission.* They had it in their hands and they didn't pursue it. They came in second!
 
@@ -108,7 +108,7 @@ They are not important problems because we do not have an attack. It's not the c
 
 * * * 
 
-#### Selling
+## Selling
 
 There are three things you have to do in selling. 
 1. You have to learn to write clearly and well so that people will read it
@@ -119,7 +119,7 @@ We had a lot of so-called *back room scientists.* In a conference, they would ke
 
 * * * 
 
-#### Demonstrate Greatness to get Great Work
+## Demonstrate Greatness to get Great Work
 
 When you hire a plumber to fix plumbing, you expect him to be already trained, you expect him to be able. 
 

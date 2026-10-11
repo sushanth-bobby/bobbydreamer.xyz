@@ -7,7 +7,7 @@ tags:
   - quest-for-wealth
 ---
 
-### Valuation Tools - Reading a 10K,Annual Reports
+## Valuation Tools - Reading a 10K,Annual Reports
 
 * Financial Disclosures have become data dumps
 * In todays world, its not that you don't have information but you have to separate out information that matters from that don't. 
@@ -31,11 +31,11 @@ How **risky are the cash flows** from both existing assets and growth assets ?
 When will that firm become a **mature firm**, and what are the potential roadblocks?  
 
 
-#### Key Valuation Questions
+### Key Valuation Questions
 
 ![Value Growth](./aswath-damodaran-value-growth.png)
 
-#### Template for reading financial disclosures
+### Template for reading financial disclosures
 
 * Timing & Currency
   - Calender year or April-March
@@ -60,7 +60,7 @@ When will that firm become a **mature firm**, and what are the potential roadblo
 * Corporate Governance
   - Differences in voting rights across share classes, special rights or privileges given to insiders etc. 
 
-#### Parting Advice
+### Parting Advice
 
 Read the 10K or Annual Reports and make note of pages like below
 
@@ -72,7 +72,7 @@ Read the 10K or Annual Reports and make note of pages like below
 
 * * * 
 
-### Session 5A: Accounting Inconsistencies
+## Session 5A: Accounting Inconsistencies
 
 1. Tax Rates
 * As companies age, the *Effective Tax Rate* will move towards marginal tax rates. 
@@ -102,7 +102,7 @@ Read the 10K or Annual Reports and make note of pages like below
 
 ![Value Drivers for a Company](./aswath-damodaran-value-drivers-for-a-company.png)
 
-### References
+## References
 * [The Value of Stories in Business, Talks at Google, Aswath Damodaran](../70-qfw-aswath-damodaran)
 * [Youtube: Valuation Tools Webcast - Reading a 10K](https://youtu.be/UzUJzdn7c2w)
 * [Wealth Education](../40-wealth-education)

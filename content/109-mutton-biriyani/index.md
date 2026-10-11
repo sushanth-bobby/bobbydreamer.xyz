@@ -6,7 +6,7 @@ tags:
   - moms-food-recipe
 ---
 
-#### Ingredients
+## Ingredients
 
 ![Ingredients](./aBiriyani.png)
 
@@ -22,7 +22,7 @@ tags:
 10. 1 spoon of rock salt and tumeric
 11. 2 small spoon of red chilli powder
 
-#### Preparation
+## Preparation
 * Make ginger garlic paste 
 
 ![Ginger Garlic Paste](./bGGPaste.png)

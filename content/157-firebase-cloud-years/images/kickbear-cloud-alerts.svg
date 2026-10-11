@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+<title id="title">Kickbear cloud alerts architecture</title>
+<desc id="desc">App Engine cron calls application routes, which publish Pub/Sub messages to trigger scraping Cloud Functions. The functions fetch website data and update Firebase Realtime Database. Announcement and deal writes trigger Firebase Cloud Functions, which look up subscribers and ask SendGrid to deliver emails.</desc>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5 0 10Z" fill="#52657d"/></marker>
+</defs>
+<style>
+text{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+.title{font-size:34px;font-weight:700;fill:#162033}
+.sub{font-size:18px;fill:#59667b}
+.section{font-size:15px;font-weight:700;letter-spacing:1.4px;fill:#52657d}
+.name{font-size:23px;font-weight:650;fill:#23344a}
+.detail{font-size:17px;fill:#52657d}
+.label{font-size:16px;fill:#52657d}
+.box{fill:#fff;stroke:#b8c5d2;stroke-width:1.8}
+.flow{fill:none;stroke:#52657d;stroke-width:2.5;marker-end:url(#arrow)}
+</style>
+<rect width="1200" height="860" fill="#f7f4ed"/>
+<text x="54" y="65" class="title">Kickbear cloud alerts</text>
+<text x="54" y="99" class="sub">Scheduled collection → Firebase updates → personal email notifications</text>
+
+<text x="54" y="150" class="section">01  SCHEDULE THE WORK</text>
+<rect x="54" y="174" width="308" height="116" rx="16" class="box"/>
+<text x="78" y="218" class="name">App Engine cron</text>
+<text x="78" y="250" class="detail">Runs on a schedule</text>
+<rect x="446" y="174" width="308" height="116" rx="16" class="box"/>
+<text x="470" y="218" class="name">App Engine routes</text>
+<text x="470" y="250" class="detail">Receive scheduled requests</text>
+<rect x="838" y="174" width="308" height="116" rx="16" class="box"/>
+<text x="862" y="218" class="name">Pub/Sub</text>
+<text x="862" y="250" class="detail">Messages trigger collection</text>
+<path d="M362 232H438" class="flow"/>
+<path d="M754 232H830" class="flow"/>
+<path d="M992 290V332H208V392" class="flow"/>
+<text x="490" y="323" class="label">Trigger scraping function</text>
+
+<text x="54" y="372" class="section">02  COLLECT AND STORE</text>
+<rect x="54" y="400" width="308" height="138" rx="16" class="box"/>
+<text x="78" y="442" class="name">Cloud Functions</text>
+<text x="78" y="474" class="detail">Scrape websites</text>
+<text x="78" y="501" class="detail">Organize and save updates</text>
+<rect x="446" y="400" width="308" height="138" rx="16" class="box"/>
+<text x="470" y="442" class="name">Firebase</text>
+<text x="470" y="474" class="detail">Realtime Database</text>
+<text x="470" y="501" class="detail">Announcements, deals, other data</text>
+<rect x="838" y="400" width="308" height="138" rx="16" class="box"/>
+<text x="862" y="442" class="name">Source websites</text>
+<text x="862" y="474" class="detail">BSE announcements and deals</text>
+<text x="862" y="501" class="detail">Other market data sources</text>
+<path d="M362 469H438" class="flow"/>
+<text x="371" y="454" class="label">Write</text>
+<path d="M992 400V353H286V392" class="flow"/>
+<text x="826" y="376" class="label">Fetch website data</text>
+<path d="M600 538V585H208V640" class="flow"/>
+<text x="342" y="576" class="label">Announcement / deal write triggers notification</text>
+
+<text x="54" y="621" class="section">03  DELIVER RELEVANT ALERTS</text>
+<rect x="54" y="649" width="308" height="138" rx="16" fill="#fff" stroke="#c45b2c" stroke-width="2"/>
+<text x="78" y="691" class="name">Firebase Cloud Functions</text>
+<text x="78" y="723" class="detail">Look up relevant subscribers</text>
+<text x="78" y="750" class="detail">Prepare notification details</text>
+<rect x="446" y="649" width="308" height="138" rx="16" class="box"/>
+<text x="470" y="691" class="name">SendGrid</text>
+<text x="470" y="723" class="detail">Build emails from templates</text>
+<text x="470" y="750" class="detail">Send to selected recipients</text>
+<rect x="838" y="649" width="308" height="138" rx="16" class="box"/>
+<text x="862" y="691" class="name">Subscriber inboxes</text>
+<text x="862" y="723" class="detail">Announcement and deal emails</text>
+<text x="862" y="750" class="detail">Updates for followed companies</text>
+<path d="M362 718H438" class="flow"/>
+<path d="M754 718H830" class="flow"/>
+<text x="54" y="830" class="sub">Earlier App Engine / Node.js setup · Other Firebase updates are stored without this email path.</text>
+</svg>

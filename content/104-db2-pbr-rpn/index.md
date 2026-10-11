@@ -12,7 +12,7 @@ status: historical
 **Date**: JUL 30, 2017 02:30 AM      
 **Actual Article**: [PBR RPN explained](https://www.idug.org/browse/blogs/blogviewer?blogkey=548357ab-0a83-4e07-bff8-82de62ab079e)
 
-#### Bit of history 
+## Bit of history 
 
 * Introduced to lift partition sizes up to 1TB from 256G
 * As PBR table sizes continue to grow, it becomes harder and harder to REORG entire tablespace in one go for schema changes. For maintenance purposes, partition level REORG is available but for other scenarios where attributes changed are at tablespace level, REORG is required at tablespace level. 
@@ -21,7 +21,7 @@ status: historical
   - `REORG with REBALANCE` keyword. But if some customers rely on partitioning scheme cant go with this approach. 
 * It is possible to increase DSSIZE for partitions as there is a relationship between DSSIZE, number of partitions, page size. It is a tablespace level attribute which requires a REORG of the entire table space for it to take effect. The underlying reason for these issues is the format of the 5 byte RID in DB2. The RID uniquely identifies each row in a table space. For partitioned table spaces, the 4 byte page number includes a number of bits that identify the partition number. So the more partitions the fewer bits are left for the page number and vice versa. We say that the page number is “absolute” because it identifies the page number and partition within the table space.
 
-#### Introducing PBR RPN
+## Introducing PBR RPN
 
 The solution to these issues is two-fold.
 
@@ -35,14 +35,14 @@ If you have LOB or XML columns in a table that is in a PBR RPN table space, then
 
 Similarly, partitioned indexes (PI and DPSI) on PBR RPN table spaces now support DSSIZE on CREATE INDEX and ALTER INDEX, allowing you to manage index partition sizes independently of table space size.
 
-#### Benefits
+## Benefits
 
 * The maximum size of a range partitioned table space and therefore the maximum size of a given table in DB2 increases to 4Pb, containing up to 280Tn rows.
 * DSSIZE can now be increased up to 1Tb through an immediate ALTER at the partition level. No application impact, no need for a REORG at all and complex considerations regarding page size or number of partitions.
 * Index partition sizes can now be up to 1Tb in size and managed independently of table space DSSIZE.
 * Log records can now be processed by partition, simplifying DSN1LOGP processing.
 
-#### Conversion and Exploitation
+## Conversion and Exploitation
 
 * It’s available in DB2 12 from M500 onwards.
 * DB2 12 introduces new zparm `PAGESET_PAGENUM`. The options are `ABSOLUTE` or `RELATIVE`.
@@ -50,7 +50,7 @@ Similarly, partitioned indexes (PI and DPSI) on PBR RPN table spaces now support
 * Conversion of existing range-partitioned table spaces is performed through `ALTER TABLESPACE` with `PAGENUM RELATIVE` parameter. Tablespace will be placed in AREOR state and it requires a REORG of the entire tablespace.
 * There is no backout option available(ALTER back to ABSOLUTE). 
 
-#### Usage considerations
+## Usage considerations
 * There is a new log record format to support 7 byte RIDs. This log record format is written from M100 onwards
 * There is a new mapping table format for REORG SHRLEVEL CHANGE. Support for 7 byte RIDs follows the same method as for 10 byte log RBAs in V11. This means that in V12 M100 online REORG will support both V11 and V12 format mapping tables. Once function level M500 or above is activated, the REORG utility will only accept V12 format mapping tables. If a V11 format mapping table is given (or no mapping table at all), then the REORG utility will ignore it, create its own and drop it at the end of the REORG or at the end of a sequence of REORGs. Note that the new mapping table format is used irrespective of whether you are using PBR RPN or not.
 * The conversion to PBR RPN requires a REORG of the entire table space.

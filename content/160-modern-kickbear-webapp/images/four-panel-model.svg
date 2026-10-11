@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+<title id="title">Kickbear WebApp four-panel model</title>
+<desc id="desc">Four panels from left to right: sidebar with reports, listing of reported companies, company details with a chart on top and financials below, and metrics.</desc>
+<style>.h{font:700 26px system-ui;fill:#162033}.label{font:700 21px system-ui;fill:#162033}.t{font:17px system-ui;fill:#52657d}.small{font:14px system-ui;fill:#52657d}.b{fill:#fff;stroke:#52657d;stroke-width:2}.rule{stroke:#dde3eb;stroke-width:1}.tag{font:700 14px system-ui;fill:#8b3d1e}</style>
+<rect width="1200" height="650" fill="#f7f4ed"/>
+<text x="40" y="48" class="h">Kickbear WebApp — four-panel model</text>
+<text x="40" y="78" class="t">Reports → reported companies → company details → metrics</text>
+<rect x="40" y="110" width="190" height="465" rx="10" class="b"/>
+<text x="58" y="140" class="tag">PANEL 1</text><text x="58" y="173" class="label">Sidebar</text><text x="58" y="203" class="t">Reports</text>
+<rect x="50" y="235" width="170" height="42" rx="6" fill="#e8edf5"/>
+<text x="62" y="261" class="small">Daily Opportunities</text><text x="62" y="310" class="t">Deals</text><text x="62" y="356" class="t">Shareholding</text><text x="62" y="402" class="t">Technicals</text><text x="62" y="448" class="t">Bullish / Bearish</text><text x="62" y="494" class="t">Watchlists</text>
+<rect x="245" y="110" width="245" height="465" rx="10" class="b"/>
+<text x="263" y="140" class="tag">PANEL 2</text><text x="263" y="173" class="label">Reported companies</text><text x="263" y="203" class="t">Company listing</text><text x="263" y="250" class="small">Search · filter · sort</text>
+<rect x="255" y="273" width="225" height="44" rx="6" fill="#e8edf5"/><text x="268" y="301" class="t">Selected company</text>
+<text x="268" y="350" class="t">Company</text><text x="268" y="398" class="t">Company</text><text x="268" y="446" class="t">Company</text><text x="268" y="494" class="t">Company</text>
+<path d="M263 365 H472 M263 413 H472 M263 461 H472 M263 509 H472" class="rule" fill="none"/>
+<rect x="505" y="110" width="430" height="465" rx="10" class="b"/>
+<text x="523" y="140" class="tag">PANEL 3</text><text x="523" y="173" class="label">Company Details</text>
+<text x="523" y="220" class="t">Chart</text><path d="M535 240 V353 H903" fill="none" stroke="#dde3eb" stroke-width="2"/>
+<path d="M545 330 L578 315 L610 323 L643 283 L675 295 L709 266 L741 280 L774 250 L806 263 L839 236 L891 244" fill="none" stroke="#3c7b70" stroke-width="3" stroke-linejoin="round"/>
+<path d="M505 377 H935" class="rule"/><text x="523" y="413" class="t">Financials</text><text x="523" y="440" class="small">Statements · ratios · periods</text>
+<path d="M523 456 H917 M523 488 H917 M523 520 H917 M523 552 H917 M683 456 V552 M761 456 V552 M839 456 V552" class="rule" fill="none"/>
+<rect x="950" y="110" width="210" height="465" rx="10" class="b"/>
+<text x="968" y="140" class="tag">PANEL 4</text><text x="968" y="173" class="label">Metrics</text><text x="968" y="203" class="t">Selected company</text>
+<g fill="#eef2f6"><rect x="968" y="239" width="174" height="72" rx="6"/><rect x="968" y="331" width="174" height="72" rx="6"/><rect x="968" y="423" width="174" height="72" rx="6"/></g>
+<text x="985" y="270" class="small">Metric</text><text x="985" y="296" class="label">—</text><text x="985" y="362" class="small">Metric</text><text x="985" y="388" class="label">—</text><text x="985" y="454" class="small">Metric</text><text x="985" y="480" class="label">—</text>
+<text x="40" y="618" class="small">Explanatory wireframe based on the described layout — not a screenshot of the running application.</text>
+</svg>

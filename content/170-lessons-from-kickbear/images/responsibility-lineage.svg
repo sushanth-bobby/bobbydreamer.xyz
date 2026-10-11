@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="650" viewBox="0 0 1600 650" role="img" aria-labelledby="title desc">
+<title id="title">Kickbear transitions: beginnings, changes, overlap and current state</title>
+<desc id="desc">Processing began with Java. Python was introduced and coexisted with Java before replacing it; Java programs are no longer executed. Reporting began with Java Velocity reports. The earlier Kickbear UI coexisted with Velocity reports, followed by Streamlit, then the React and FastAPI WebApp. Streamlit is now being fully replaced. Overlap describes transition periods, not the current architecture.</desc>
+<style>.title{font:700 30px system-ui,sans-serif;fill:#162033}.head{font:700 21px system-ui,sans-serif;fill:#162033}.text{font:19px system-ui,sans-serif;fill:#33465d}.small{font:17px system-ui,sans-serif;fill:#52657d}.label{font:700 20px system-ui,sans-serif;fill:#3c6c61}</style>
+<rect width="1600" height="650" fill="#f7f4ed"/>
+<text x="40" y="52" class="title">How Kickbear changed over time</text>
+<text x="40" y="88" class="text">Tools overlapped during transitions, then older parts were replaced.</text>
+<rect x="40" y="120" width="1520" height="64" rx="8" fill="#dde5ef"/>
+<text x="60" y="160" class="head">Responsibility</text><text x="250" y="160" class="head">How it started</text><text x="535" y="160" class="head">What changed</text><text x="890" y="160" class="head">What overlapped</text><text x="1250" y="160" class="head">What exists now</text>
+<rect x="40" y="200" width="1520" height="150" rx="8" fill="white" stroke="#d3dbe5" stroke-width="1.5"/>
+<rect x="40" y="366" width="1520" height="192" rx="8" fill="white" stroke="#d3dbe5" stroke-width="1.5"/>
+<g stroke="#dde3eb"><path d="M230 200 V350 M515 200 V350 M870 200 V350 M1230 200 V350 M230 366 V558 M515 366 V558 M870 366 V558 M1230 366 V558"/></g>
+<text x="60" y="240" class="label">Processing</text>
+<text x="250" y="240" class="text">Java programs collected</text><text x="250" y="271" class="text">and processed data.</text>
+<text x="535" y="240" class="text">Python took on processing</text><text x="535" y="271" class="text">tasks and eventually</text><text x="535" y="302" class="text">replaced Java.</text>
+<text x="890" y="240" class="text">Java and Python ran alongside</text><text x="890" y="271" class="text">each other during the move.</text>
+<text x="1250" y="240" class="text">Python data pipelines.</text><text x="1250" y="279" class="small">Java programs are no</text><text x="1250" y="307" class="small">longer executed.</text>
+<text x="60" y="408" class="label">Reporting / UI</text>
+<text x="250" y="408" class="text">Java generated HTML</text><text x="250" y="439" class="text">reports using Velocity.</text>
+<text x="535" y="408" class="text">Velocity reports → Kickbear UI</text><text x="535" y="439" class="text">→ Streamlit</text><text x="535" y="470" class="text">→ React / FastAPI WebApp.</text>
+<text x="890" y="408" class="text">Velocity reports and the earlier</text><text x="890" y="439" class="text">Kickbear UI coexisted.</text><text x="890" y="480" class="text">Later, Streamlit and the new</text><text x="890" y="511" class="text">WebApp overlapped in transition.</text>
+<text x="1250" y="408" class="text">React / FastAPI WebApp.</text><text x="1250" y="449" class="small">Streamlit is being</text><text x="1250" y="477" class="small">fully replaced.</text>
+<text x="40" y="605" class="head">Overlap was a stage in the transition, not a claim that every old tool still runs.</text>
+<text x="40" y="636" class="small">Current status reflects Sushanth's account; the rows describe different responsibilities rather than one simultaneous cutover.</text>
+</svg>
+

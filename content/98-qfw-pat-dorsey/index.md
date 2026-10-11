@@ -9,12 +9,12 @@ tags:
 
 ![Pat Dorsey](./pat-dorsey.png)
 
-##### Capitalism Works
+## Capitalism Works
 
 * Capital seeks the highest returns possible: High profits attract competition.
 * So....most businesses with high returns on capital will see returns decrease over time.
 
-##### Moat Basics
+## Moat Basics
 
 * Economic moats are structural & sustainable qualities that are inherent to the business.
   - Not hot products. (Heelys? Krispy Kreme?Sugar is a moat)
@@ -27,7 +27,7 @@ tags:
 * What are the common characteristics of these business
 * Whats the similarities in these business
 
-##### Intangible Assets
+## Intangible Assets
 
 * Brands
   + Increase willingness to pay / lower search costs
@@ -44,7 +44,7 @@ tags:
   + Legal oligopoly vs. regulatory fiat 
   + Casinos(limited licenses), landfills(nobody likes to live there, less number licenses), aircraft parts(Most of the parts are made by one company, good business)
 
-##### Widening the Moat: Brands
+## Widening the Moat: Brands
 
 * Brands are valuable if they deliver a consistent or aspirational experience. 
   + Consistency lowers search costs & drives loyalty. Don't change & give people a reason to switch!
@@ -56,7 +56,7 @@ tags:
 
 >Confidence is how other people see you.
 
-##### Switching Costs
+## Switching Costs
 * Does the cost of switching to a competing product or service outweigh the benefits?
   + Integrate with customer's business: Upfront costs of implementation payback from renewals
     - Silverlake Axis, Oracle, SimCorp 
@@ -70,7 +70,7 @@ tags:
     - Fastenal(Makes bolts, product doesn't cost much, but brings huge economic cost to the company), Ecolab, Novozymes, Fuchs Petrolub
     - Lubricant which improves performance of a mining machine, that lubricant costs less when compared to the actual machine or production, so even if they increase 20%, they will pay for it.
 
-##### The Network Effect
+## The Network Effect
 
 * Provide a service that increases in value as the number of users expands.
   + Aggregate demand b/t fragmented parties.
@@ -83,7 +83,7 @@ tags:
 
 ![Network Effects](./network-effects.png)
 
-##### Cost Advantages
+## Cost Advantages
 
 * Process: Invent a cheaper way to deliver a product that can't be replicated quickly.
   + Inditex, RyanAir, GEICO, Dell
@@ -93,10 +93,10 @@ tags:
 
 * Niche: Establish minimum efficient scale
 
-##### What About Management?
+## What About Management?
 * "Good jockeys will do well on good horses, but not on broken-down nags." (Buffett)
 
-##### Moats, Management & Mistakes
+## Moats, Management & Mistakes
 
 * Moats can buffer management mistakes 
   + Microsoft minted money despite Steve Ballmer
@@ -104,7 +104,7 @@ tags:
   + Moodys put profits before integrity, and still cranked out a 40% operating margin
   + But even a genius like David Neeleman couldn't change that fact that JetBlue is an airline - the worst industry known to mankind.
 
-##### The Good & the Bad
+## The Good & the Bad
 * Good managers are constantly looking for ways to widen a company's moat
   + Amazon's focus on the customer experience(There is a lots of trust involved)
   + Costco's focus on using scale to lower costs
@@ -113,14 +113,14 @@ tags:
   + This process is called "deworsification," or "setting fire to large piles of cash."
   + Example Cisco -- Starting a consumer business, Garmin -- Starting a GPS Handset business(Every phone has GPS)
 
-##### An Exception to Every Rule
+## An Exception to Every Rule
 
 * A tiny minority of managers can create enormous value via astute capital allocation - even if they don't start with great horses.
   + Warren Buffett (Berkshire), Brian Joffe (Bidvest), Dick Kovacevich (Wells Fargo), Steve & Mitch Rales (Danaher)
 
 * They are hard to find, and false positives abound...but they can create enormous wealth over time. Keep an eye out!
 
-##### Valuing Moats
+## Valuing Moats
 * The value of an economic moat is largely dependent on reinvestment opportunities
 
 * The ability to reinveset tons of cash at a high incremenetal ROIC = a very valuable moat.
@@ -129,15 +129,15 @@ tags:
 * If a firm has limited ability to reinvest, the moat adds little to intrinsic value.
   +McCormick, Microsoft, Oracle
 
-##### Isn't Moat Already Priced In ?
+## Isn't Moat Already Priced In ?
 * Moats usually matter in the long run than in short
 * Most investors assume the current state of the world persists longer than it usually does.
 
-##### Finding Moats = Finding Inefficiency
+## Finding Moats = Finding Inefficiency
 * Quantitative data is efficiently priced in
 * Qualitative insight is less efficiently priced
 
-##### Moats in a Global Context
+## Moats in a Global Context
 * Local differences create moats 
   + Canadian banks, Edenred, German car washes
 

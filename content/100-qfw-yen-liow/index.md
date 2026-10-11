@@ -11,7 +11,7 @@ tags:
 
 Yen Liow is a managing partner in Aravt Global LLC
 
-#### Ubuntu -- I am because we are
+## Ubuntu -- I am because we are
 
 *find your why; your reason for being*     
 *If you know your WHY? You will find your HOW ?*
@@ -19,7 +19,7 @@ Yen Liow is a managing partner in Aravt Global LLC
 * Bigger the WHY. More powerful the HOW.
 * If there are no consequences for your WHY. You will not have good solutions. 
 
-#### The Goal
+## The Goal
 
 * **To learn in DOG YEARS:** Accelerate your pattern recognition and judgement. 
 * **Law of Compounding:** Get it right early and unleash time. 
@@ -30,13 +30,13 @@ If you do not train and refine your learning style, you cannot see great investm
 
 * **The ALTERNATIVE:** real time learning loops = really slow compounding...
 
-#### Frameworks
+## Frameworks
 
 **Pattern Recognition:** How do you systematically break down the vast universe of investment opportunities to a finite set of ideas that you have a change of generating sustainably superior returns ? 
 
 **Focus:** How do you maximize your return on time ? 
 
-#### How fast can you learn ? 
+## How fast can you learn ? 
 
 Judgement and Insight is not a function of time, it is a function of repetitions. Function of exposure to decision points and datasets to condition your pattern recognition and refine your judgement. This is a controllable variable. 
 
@@ -44,7 +44,7 @@ Pattern recognition = exposure to statistically significant data sets to form ca
 
 Judgement = exposure to decision points and feedback loops to refine within a mental model or framework of thought. 
 
-#### Rewiring your relationship with pain
+## Rewiring your relationship with pain
 
 Fully *embrace struggle* as your partner on your journey to excellence.
 
@@ -62,11 +62,11 @@ Context is everything; it is the WHY ?
 
 If you are struggling, it means you are learning and growing. 
 
-#### The Path
+## The Path
 
 ![The Path](./yen-liow-the-path.png)
 
-##### The Compound Math
+### The Compound Math
 
 This is by far the most important force in the universe and you have to get left side of the chart as early as you possibly can. This applies to literally everything in life whether its capital, ability, contacts, insights, whatever the function that needs to be compounded. This is the most important path of your learning curve. 
 
@@ -75,7 +75,7 @@ Thing to remember is, you have to control your *'i'* and lengthen your *'n'*. Th
 > the first rule of compounding is to never interrupt it unnecessarily     
 > -- Charlie Munger 
 
-##### The Mastery Step Function 
+### The Mastery Step Function 
 
 **Q:** Take a guess looking at the chart, where does *mastery* live in this chart ? 
 
@@ -85,7 +85,7 @@ These are step function increases in ability. These are controlled and uncontrol
 
 Mastery Step functions are tiny subparts of the exponential curve(compound chart). 
 
-#### Charlie Munger and the Munger Partners (1962-1975)
+## Charlie Munger and the Munger Partners (1962-1975)
 
 Charlie Munger compounded at 20% for 14 years with a volume of 33%. He suffered two >30% losses back to back in the final three years of his partnership. I am not sure another fund in the modern era could survive this. 
 
@@ -93,7 +93,7 @@ Charlie Munger compounded at 20% for 14 years with a volume of 33%. He suffered 
 
 > To play this game, you have to become a highly functional, committed, learning machine. 
 
-#### Deconstruction
+## Deconstruction
 
 It starts with knowing    
 
@@ -103,7 +103,7 @@ It starts with knowing
 
 > Recommended book to read : The 4-Hour Body, The 4-Hour Work Week by Tim Ferriss
 
-#### Deliberate Practice
+## Deliberate Practice
 
 Its a 3-Step process, 
 
@@ -125,7 +125,7 @@ Its a 3-Step process,
 
 > Recommended book to read : Wooden on Leadership, John Wooden
 
-#### Feedback loop/Refinement
+## Feedback loop/Refinement
 
 **Mistake evalation** 
 
@@ -140,7 +140,7 @@ Its a 3-Step process,
 * Feel the mistake deeply(but only deep enough that it helps and not hinders your development)
 
 
-#### The Power of Questions
+## The Power of Questions
 
 > If I had an hour to solve a problem and my life depended on the solution, I would spend the first 55 minutes determining the proper question to ask, for once I know the proper question, I could solve the problem in less than five minutes.     
 > -- Albert Einstein
@@ -178,7 +178,7 @@ Key questions to ponder,
 7. Are you being passive or active in acquiring these skills?
 8. What exactly is your pain for developing yourself? Can you articulate your intermediate and long term goals?
 
-#### Decision making - Frameworks
+## Decision making - Frameworks
 
 **This is the single most imporant area of our R&D**
 
@@ -193,18 +193,18 @@ The earlier in your career and the more accountable you are for your decisions, 
 
 > Recommended book to read : DECISIVE - HOW TO MAKE BETTER CHOICES IN LIFE AND WORK, Chip Heath & Dan Heath
 
-#### Upgrading your OS - Memory 
+## Upgrading your OS - Memory 
 
 To connect dots, create dots! MIND MAPS
 You cannot solve what you cannot remember
 
 > Recommended book to read : Memory Book, Harry Lorayne & Jerry Lucas
 
-#### Upgrading your OS - Contrast/Comparative learning
+## Upgrading your OS - Contrast/Comparative learning
 
 Breakdown the complex problem into segments and try to solve the segments and reassemble it.
 
-#### Elements of a great case study 
+## Elements of a great case study 
 
 1. Clear explanation of the industry structure and company strategy 
 2. Sufficient data to assess how the company evolved

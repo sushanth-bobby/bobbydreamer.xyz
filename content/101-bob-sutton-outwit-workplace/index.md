@@ -38,9 +38,9 @@ Some diagnostic questions are
 * Damage ? 
   - You should analyze yourself and see how much you are suffering ? Worse you are suffering more dramatic action you got to take. 
 
-### Survival Methods 
+## Survival Methods 
 
-##### 1. Make a clean get away
+### 1. Make a clean get away
 
   * Get out if situation is bad, but don't be stupid about it by burning bridges.
   * JetBlue Flight Attendent example. 
@@ -53,7 +53,7 @@ Some diagnostic questions are
     * Classic HIPPO - Highest Paid Person in the Room(opinion)
     * Literally HIPPO - Tiny ears and Giant Mouth 
 
-##### 2. Asshole avoidance techniques
+### 2. Asshole avoidance techniques
 
   * Find ways to limit the frequency , duration and intensity of exposure
   * Keep your distance from them, then you have less communication and less influence. 
@@ -72,7 +72,7 @@ Some diagnostic questions are
   > Beware, The Witch is on her broom     
   > -- Andrew Paxton
 
-##### 3. Reframing - Mind tricks that protect your soul
+### 3. Reframing - Mind tricks that protect your soul
 
   * Change your perceptions so assholes are less threatening and less upsetting - even good things. 
   * These are methods where you work on changing the definition of the situation, so it doesn't affect you so much, even though you dont change the situation. 
@@ -99,7 +99,7 @@ Some diagnostic questions are
   * Take a clinical perspective
     - Imagine yourself as a doctor who is doing a Phd on assholism. When someone acts as a jerk in front of you, you tell yourself, how lucky you are to have a amazing specimen of this behaviour upclose. This is sort of your stamp or bug collection sort of. 
  
-##### 4. Fighting back
+### 4. Fighting back
 
 Consider how much power you have in the situation, how much documentation you can get, and what your options are. 
 
@@ -129,5 +129,5 @@ Consider how much power you have in the situation, how much documentation you ca
     2. Similar peoples attract, they like each other and might perform very well. 
 
 
-### # References
+## # References
 * [bobsutton.net](https://www.bobsutton.net)

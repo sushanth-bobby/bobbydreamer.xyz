@@ -53,7 +53,7 @@ Piece of advice that I give to everybody is to network intensely. This business 
 
 * * * 
 
-##### Traits of exceptional investor
+## Traits of exceptional investor
 * Raw passion
 * Insane work ethic
 * Heart of a champion(resilience -- People with history of personal or professional challenges but incredible resilience they comeback fighting really really hard)
@@ -76,7 +76,7 @@ We are “one team, one portfolio, one P&L”. There are no sleeves in our firm.
 
 * * * 
 
-##### How do you create intellectual tension? 
+## How do you create intellectual tension? 
 
 See, in a team-oriented approach like ours, one of the biggest weaknesses potentially is that we all start to believe in our own crap. So how do we create intellectual tension ? And when I first started ShawSpring, I probably interviewed a number, probably dozens of just peers of mine who are portfolio managers, and I would ask them a simple question: how do you make sure that intellectual tension happens in your firm? And a lot of people will say nice things like it’s a horizontal environment. Anybody can talk to me as the portfolio manager and tell me my ideas are shoddy ideas, or their bad ideas, they’re crap or open-door policy. So those are pretty, I think important but how do you institutionalize it, how do you build it into your process? And a couple of the institutions that we’ve talked with over the years, I think do it really, really well.So, in one institution’s case, the CIO, the chief investment officer actually doesn’t really get involved in the sponsorship of an initial idea. So, he might actually source an investment manager and say a thing, oh this hedge fund is very interesting but he won’t get involved in the initial sponsorship. He could put it into a pipeline, but it’s up to one of his teammates to go ahead and sponsor that, to be a primary sponsor for that idea. And that primary sponsor then takes it to a point but then it has to invite a secondary sponsor to sponsor that idea and by the time work is maybe about a third of the way through. That’s when the CIO steps in and the singular responsibility there is to try to kill the idea.
 
@@ -90,7 +90,7 @@ So, the bar is really high, but it’s not wasted work. Actually, one of the mos
 
 * * * 
 
-##### Vetting potential partner process
+## Vetting potential partner process
 
 Most of our partners are actually through inbound inquiry, they often end up being pre-vetted by another one of our partners. So, we have a fairly good understanding and insight as to the quality of the partner even before we have an initial discussion. It’s very rare actually to have a partner come in inbound where we had no first or second degree of connection to that partner.
 

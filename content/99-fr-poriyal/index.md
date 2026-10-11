@@ -9,7 +9,7 @@ tags:
 
 ![vegetable Poriyal](./poriyal.png)
 
-#### Ingredients
+## Ingredients
 
 1. 4 Tablespoon Sunflower oil
 2. 2 small spoon Mustard Seed
@@ -24,7 +24,7 @@ tags:
 11. 1 Capsicum (optional)
 12. 1 Glass full of Peas (optional)
 
-#### Preparation
+## Preparation
 
 * Turn on stove with tawa
 * When tawa is hot, put 5-7 tablespoon of oil

@@ -92,7 +92,7 @@ Visualize yourself as the person you in–tend to be in the future. Your selfima
 
 * * *
 
-#### 1. Set the Table
+## 1. Set the Table
 
 Clarity is perhaps the most important concept in personal productivity
 
@@ -121,7 +121,7 @@ Think about your goals and review them daily. Every morning when you begin, take
 
 * * *
 
-#### 2. Plan Every Day in Advance
+## 2. Plan Every Day in Advance
 
 > Planning is bringing the future into the present so that you can do something about it now.    
 > --- ALAN LAKEIN
@@ -164,7 +164,7 @@ When you plan each day in advance, you will find it much easier to get going and
 
 * * *
 
-#### 3. Apply the 80/20 Rule to Everything
+## 3. Apply the 80/20 Rule to Everything
 
 It is also called the “Pareto Principle” after the Italian economist Vilfredo Pareto. 
 
@@ -190,7 +190,7 @@ Time management is taking control over what you do next. And you are always free
 
 * * *
 
-#### 4. Consider the Consequences
+## 4. Consider the Consequences
 
 The mark of the superior thinker is his or her ability to accurately predict the consequences of doing or not doing something. The potential consequences of any task or activity are the key determinants of how important a task really is to you and to your company. This way of evaluating the significance of a task is how you determine what your next frog really is.
 
@@ -236,7 +236,7 @@ Do first things first and second things not at all. As Goethe said, “The thing
 
 * * *
 
-#### 5. Practice Creative Procrastination
+## 5. Practice Creative Procrastination
 
 Deliberately and consciously procrastinate on small tasks. Put off eating smaller or less ugly frogs. Eat the biggest and ugliest frogs before anything else. Do the worst first!
 
@@ -252,7 +252,7 @@ Your job is to deliberately procrastinate on tasks that are of low value so that
 
 * * *
 
-#### 6. Use the ABCDE Method Continually
+## 6. Use the ABCDE Method Continually
 
 > The first law of success is concentration—to bend all the energies to one point, and to go directly to that point, looking neither to the right nor to the left.    
 > ---WILLIAM MATHEWS
@@ -271,7 +271,7 @@ An “E” task is defined as something that you can eliminate altogether, and i
 
 * * *
 
-#### 7. Focus on Key Result Areas 
+## 7. Focus on Key Result Areas 
 
 > When every physical and mental resource is focused, one’s power to solve a problem multiplies tremendously.     
 > ---NORMAN VINCENT PEALE
@@ -300,7 +300,7 @@ Here is one of the greatest questions you will ever ask and answer. “What one 
 
 * * *
 
-#### 8. Apply the Law of Three 
+## 8. Apply the Law of Three 
 
 > Do what you can, with what you have, where you are.    
 > --- THEODORE ROOSEVELT
@@ -345,7 +345,7 @@ Don't bring work to home. While in office, sit and do work.
 
 * * *
 
-#### 9. Prepare Thoroughly Before You Begin 
+## 9. Prepare Thoroughly Before You Begin 
 
 > No matter what the level of your ability, you have more potential than you can ever develop in a lifetime.     
 > --- JAMES T. MCCAY
@@ -361,7 +361,7 @@ My personal rule is “Get it 80 percent right and then correct it later.”
 
 * * *
 
-#### 10. Take It One Oil Barrel at a Time 
+## 10. Take It One Oil Barrel at a Time 
 
 > Persons with comparatively moderate powers will accomplish much, if they apply themselves wholly and indefatigably to one thing at a time.     
 > --- SAMUEL SMILES 
@@ -370,7 +370,7 @@ There is an old saying that “by the yard it’s hard; but inch by inch, anythi
 
 * * *
 
-#### 11. Upgrade Your Key Skills 
+## 11. Upgrade Your Key Skills 
 
 > The only certain means of success is to render more and better service than is expected of you, no matter what your task may be.     
 > --- OG MANDINO
@@ -393,7 +393,7 @@ Refuse to allow a weakness or a lack of ability in any area to hold you back. Ev
 
 * * *
 
-#### 12. Identify Your Key Constraints 
+## 12. Identify Your Key Constraints 
 
 > Concentrate all your thoughts on the task at hand. The sun’s rays do not burn until brought to a focus.     
 > --- ALEXANDER GRAHAM BELL
@@ -410,7 +410,7 @@ Successful people always begin the analysis of constraints by asking the questio
 
 * * *
 
-#### 13. Put the Pressure on Yourself 
+## 13. Put the Pressure on Yourself 
 
 > The first requisite for success is the ability to apply your physical and mental energies to one problem incessantly without growing weary.     
 > --- THOMAS EDISON
@@ -427,7 +427,7 @@ Successful people continually put the pressure on themselves to perform at high 
 
 * * *
 
-#### 14. Motivate Yourself into Action
+## 14. Motivate Yourself into Action
 
 To keep yourself motivated, you must resolve to become a complete optimist. You must decide to respond positively to the words, actions, and reactions of the people and situations around you. You must refuse to let the unavoidable difficulties and setbacks of daily life affect your mood or emotions.
 
@@ -449,21 +449,21 @@ Fourth, optimists think and talk continually about their goals. They think about
 
 * * *
 
-#### 17. Focus Your Attention 
+## 17. Focus Your Attention 
 
 > All of life is the study of attention; where your attention goes, your life follows.     
 > --- JIDDU KRISHNAMURTI
 
 * * *
 
-#### 18. Slice and Dice the Task 
+## 18. Slice and Dice the Task 
 
 > The beginning of a habit is like an invisible thread, but every time we repeat the act we strengthen the strand, add to it another filament, until it becomes a great cable and binds us irrevocably, in thought and act.     
 > --- ORISON SWETT MARDEN
 
 * * *
 
-#### 19. Create Large Chunks of Time 
+## 19. Create Large Chunks of Time 
 
 > Nothing can add more power to your life than concentrating all of your energies on a limited set of targets.    
 > --- NIDO QUBEIN

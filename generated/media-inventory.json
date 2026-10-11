@@ -1,24 +1,36 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "sourceAssets": 491,
-    "imageAssets": 491,
-    "nonImageAssets": 0,
-    "totalBytes": 70033270,
-    "referencedAssets": 487,
-    "unreferencedAssets": 4,
-    "optimizationEligible": 165,
+    "sourceAssets": 582,
+    "imageAssets": 580,
+    "nonImageAssets": 2,
+    "totalBytes": 79086614,
+    "referencedAssets": 521,
+    "unreferencedAssets": 61,
+    "optimizationEligible": 184,
     "brokenLocalReferences": 0,
     "externalImageReferences": 1,
     "duplicateGroups": 2,
     "byExtension": {
       ".jpg": {
-        "count": 8,
-        "bytes": 9908407
+        "count": 66,
+        "bytes": 11961846
       },
       ".png": {
-        "count": 478,
-        "bytes": 59348543
+        "count": 500,
+        "bytes": 66281953
+      },
+      ".csv": {
+        "count": 1,
+        "bytes": 13810
+      },
+      ".json": {
+        "count": 1,
+        "bytes": 22941
+      },
+      ".svg": {
+        "count": 9,
+        "bytes": 29744
       },
       ".jpeg": {
         "count": 5,
@@ -26,7 +38,7 @@
       }
     },
     "altText": {
-      "meaningful": 459,
+      "meaningful": 493,
       "empty": 29,
       "missing": 0
     }
@@ -3458,41 +3470,6 @@
       }
     },
     {
-      "path": "content/112-stock-market-terms/buffett_indicator_usa_historical.png",
-      "contentRelativePath": "112-stock-market-terms/buffett_indicator_usa_historical.png",
-      "outputPath": "112-stock-market-terms/buffett_indicator_usa_historical.png",
-      "owner": "content/112-stock-market-terms/index.md",
-      "extension": ".png",
-      "mime": "image/png",
-      "bytes": 37421,
-      "sha256": "9c078d0ba887f0f15766b0d1f95639094adc08777e3b905843bd4207580e6756",
-      "width": 890,
-      "height": 445,
-      "aspectRatio": 2,
-      "hasAlpha": true,
-      "pages": 1,
-      "animated": false,
-      "metadataError": null,
-      "referenceCount": 1,
-      "renderReferenceCount": 1,
-      "referenceKinds": [
-        "markdown-image"
-      ],
-      "referencedBy": [
-        {
-          "document": "content/112-stock-market-terms/index.md",
-          "kind": "markdown-image",
-          "target": "./buffett_indicator_usa_historical.png"
-        }
-      ],
-      "apparentlyUnused": false,
-      "supported": true,
-      "optimization": {
-        "eligible": false,
-        "reason": "small-file"
-      }
-    },
-    {
       "path": "content/112-stock-market-terms/cf-bad.png",
       "contentRelativePath": "112-stock-market-terms/cf-bad.png",
       "outputPath": "112-stock-market-terms/cf-bad.png",
@@ -3633,41 +3610,6 @@
       }
     },
     {
-      "path": "content/112-stock-market-terms/composite-chart-stock-interest-rates.png",
-      "contentRelativePath": "112-stock-market-terms/composite-chart-stock-interest-rates.png",
-      "outputPath": "112-stock-market-terms/composite-chart-stock-interest-rates.png",
-      "owner": "content/112-stock-market-terms/index.md",
-      "extension": ".png",
-      "mime": "image/png",
-      "bytes": 143637,
-      "sha256": "1e72ea20386ccd7578670e04fea33d20fe2436298dc1a1958e1c60f57975913a",
-      "width": 1088,
-      "height": 496,
-      "aspectRatio": 2.193548,
-      "hasAlpha": true,
-      "pages": 1,
-      "animated": false,
-      "metadataError": null,
-      "referenceCount": 1,
-      "renderReferenceCount": 1,
-      "referenceKinds": [
-        "markdown-image"
-      ],
-      "referencedBy": [
-        {
-          "document": "content/112-stock-market-terms/index.md",
-          "kind": "markdown-image",
-          "target": "./composite-chart-stock-interest-rates.png"
-        }
-      ],
-      "apparentlyUnused": false,
-      "supported": true,
-      "optimization": {
-        "eligible": true,
-        "reason": "responsive-raster"
-      }
-    },
-    {
       "path": "content/112-stock-market-terms/roe-impact-of-debt.png",
       "contentRelativePath": "112-stock-market-terms/roe-impact-of-debt.png",
       "outputPath": "112-stock-market-terms/roe-impact-of-debt.png",
@@ -3700,6 +3642,76 @@
       "optimization": {
         "eligible": false,
         "reason": "small-dimensions"
+      }
+    },
+    {
+      "path": "content/112a-interest-rates/images/buffett_indicator_usa_historical.png",
+      "contentRelativePath": "112a-interest-rates/images/buffett_indicator_usa_historical.png",
+      "outputPath": "112a-interest-rates/images/buffett_indicator_usa_historical.png",
+      "owner": "content/112a-interest-rates/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 37421,
+      "sha256": "9c078d0ba887f0f15766b0d1f95639094adc08777e3b905843bd4207580e6756",
+      "width": 890,
+      "height": 445,
+      "aspectRatio": 2,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/112a-interest-rates/index.md",
+          "kind": "markdown-image",
+          "target": "./images/buffett_indicator_usa_historical.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "small-file"
+      }
+    },
+    {
+      "path": "content/112a-interest-rates/images/composite-chart-stock-interest-rates.png",
+      "contentRelativePath": "112a-interest-rates/images/composite-chart-stock-interest-rates.png",
+      "outputPath": "112a-interest-rates/images/composite-chart-stock-interest-rates.png",
+      "owner": "content/112a-interest-rates/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 143637,
+      "sha256": "1e72ea20386ccd7578670e04fea33d20fe2436298dc1a1958e1c60f57975913a",
+      "width": 1088,
+      "height": 496,
+      "aspectRatio": 2.193548,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/112a-interest-rates/index.md",
+          "kind": "markdown-image",
+          "target": "./images/composite-chart-stock-interest-rates.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
       }
     },
     {
@@ -7291,6 +7303,2735 @@
       "optimization": {
         "eligible": false,
         "reason": "small-dimensions"
+      }
+    },
+    {
+      "path": "content/152-customizing-quartz5-for-bobbydreamerxyz/images/bdxyz_quartz1.png",
+      "contentRelativePath": "152-customizing-quartz5-for-bobbydreamerxyz/images/bdxyz_quartz1.png",
+      "outputPath": "152-customizing-quartz5-for-bobbydreamerxyz/images/bdxyz_quartz1.png",
+      "owner": "content/152-customizing-quartz5-for-bobbydreamerxyz/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 245502,
+      "sha256": "4adcf2bfe31dd8a9f6c235f276c295990263495393704744398fb00a7991c9ee",
+      "width": 1557,
+      "height": 1267,
+      "aspectRatio": 1.228887,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "html-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/152-customizing-quartz5-for-bobbydreamerxyz/index.md",
+          "kind": "html-image",
+          "target": "images/bdxyz_quartz1.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/152-customizing-quartz5-for-bobbydreamerxyz/images/bdxyz_quartz2.png",
+      "contentRelativePath": "152-customizing-quartz5-for-bobbydreamerxyz/images/bdxyz_quartz2.png",
+      "outputPath": "152-customizing-quartz5-for-bobbydreamerxyz/images/bdxyz_quartz2.png",
+      "owner": "content/152-customizing-quartz5-for-bobbydreamerxyz/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 158877,
+      "sha256": "57e8fcacad7bbe76ed94df5446a501dd22807a9534d05a02138f1a7986adba5d",
+      "width": 1277,
+      "height": 1007,
+      "aspectRatio": 1.268123,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "html-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/152-customizing-quartz5-for-bobbydreamerxyz/index.md",
+          "kind": "html-image",
+          "target": "images/bdxyz_quartz2.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/152-customizing-quartz5-for-bobbydreamerxyz/images/bdxyz_quartz3.png",
+      "contentRelativePath": "152-customizing-quartz5-for-bobbydreamerxyz/images/bdxyz_quartz3.png",
+      "outputPath": "152-customizing-quartz5-for-bobbydreamerxyz/images/bdxyz_quartz3.png",
+      "owner": "content/152-customizing-quartz5-for-bobbydreamerxyz/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 130494,
+      "sha256": "443b74a2cec6cf840aab151314a6472d91a8b1f66625b8493f02ac10407649e5",
+      "width": 1427,
+      "height": 1220,
+      "aspectRatio": 1.169672,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "html-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/152-customizing-quartz5-for-bobbydreamerxyz/index.md",
+          "kind": "html-image",
+          "target": "images/bdxyz_quartz3.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/152-customizing-quartz5-for-bobbydreamerxyz/images/bdxyz_quartz4.png",
+      "contentRelativePath": "152-customizing-quartz5-for-bobbydreamerxyz/images/bdxyz_quartz4.png",
+      "outputPath": "152-customizing-quartz5-for-bobbydreamerxyz/images/bdxyz_quartz4.png",
+      "owner": "content/152-customizing-quartz5-for-bobbydreamerxyz/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 554668,
+      "sha256": "365732a719fe3b6806a16e3917aee7d80663f28ba236cb89122019fe12daa28f",
+      "width": 1522,
+      "height": 1192,
+      "aspectRatio": 1.276846,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "html-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/152-customizing-quartz5-for-bobbydreamerxyz/index.md",
+          "kind": "html-image",
+          "target": "images/bdxyz_quartz4.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/153-bobbydreamer-gatsby/bdgats-blog.jpg",
+      "contentRelativePath": "153-bobbydreamer-gatsby/bdgats-blog.jpg",
+      "outputPath": "153-bobbydreamer-gatsby/bdgats-blog.jpg",
+      "owner": "content/153-bobbydreamer-gatsby/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 40500,
+      "sha256": "3d162c677a29e9e677125e8afcf37392a04923cb37bd6b7a10e485a12547a066",
+      "width": 360,
+      "height": 752,
+      "aspectRatio": 0.478723,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "html-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/153-bobbydreamer-gatsby/index.md",
+          "kind": "html-image",
+          "target": "bdgats-blog.jpg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "small-dimensions"
+      }
+    },
+    {
+      "path": "content/153-bobbydreamer-gatsby/bdgats-home.jpg",
+      "contentRelativePath": "153-bobbydreamer-gatsby/bdgats-home.jpg",
+      "outputPath": "153-bobbydreamer-gatsby/bdgats-home.jpg",
+      "owner": "content/153-bobbydreamer-gatsby/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 56605,
+      "sha256": "28acdcadfae9a44ed307732a76abd163ee292c86925b5e13bf714407c91d7963",
+      "width": 360,
+      "height": 926,
+      "aspectRatio": 0.388769,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "html-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/153-bobbydreamer-gatsby/index.md",
+          "kind": "html-image",
+          "target": "bdgats-home.jpg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "small-dimensions"
+      }
+    },
+    {
+      "path": "content/153-bobbydreamer-gatsby/bdgats-irevere.jpg",
+      "contentRelativePath": "153-bobbydreamer-gatsby/bdgats-irevere.jpg",
+      "outputPath": "153-bobbydreamer-gatsby/bdgats-irevere.jpg",
+      "owner": "content/153-bobbydreamer-gatsby/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 53863,
+      "sha256": "23d1e037f3989eb7ddbda860b543889e089afe4cf718fffe719d41b8df2a5e60",
+      "width": 360,
+      "height": 754,
+      "aspectRatio": 0.477454,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "html-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/153-bobbydreamer-gatsby/index.md",
+          "kind": "html-image",
+          "target": "bdgats-irevere.jpg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "small-dimensions"
+      }
+    },
+    {
+      "path": "content/153-bobbydreamer-gatsby/bdgats-night.jpg",
+      "contentRelativePath": "153-bobbydreamer-gatsby/bdgats-night.jpg",
+      "outputPath": "153-bobbydreamer-gatsby/bdgats-night.jpg",
+      "owner": "content/153-bobbydreamer-gatsby/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 74354,
+      "sha256": "db48430792f35789e88c541d575a8c706bca26f2af4af76be5ddca81917211f2",
+      "width": 360,
+      "height": 780,
+      "aspectRatio": 0.461538,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "html-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/153-bobbydreamer-gatsby/index.md",
+          "kind": "html-image",
+          "target": "bdgats-night.jpg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "small-dimensions"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/01-intro-to-bigquery-analytics-machine-learning.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/01-intro-to-bigquery-analytics-machine-learning.jpg",
+      "outputPath": "154-google-cloud-skills-journey/01-intro-to-bigquery-analytics-machine-learning.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 20257,
+      "sha256": "1a40721a1b584c408ce9a3418e99549a11d9ba9619dc2c6cfec9ff91745fdef2",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/02-intro-to-infrastructure.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/02-intro-to-infrastructure.jpg",
+      "outputPath": "154-google-cloud-skills-journey/02-intro-to-infrastructure.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 14292,
+      "sha256": "14eb60a03ca84e6bcdcd23ec2d9d057ab9f0c3a38b992b2ce2313adbbc43ff04",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/03-build-infrastructure-with-terraform-on-google-cloud.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/03-build-infrastructure-with-terraform-on-google-cloud.jpg",
+      "outputPath": "154-google-cloud-skills-journey/03-build-infrastructure-with-terraform-on-google-cloud.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 20216,
+      "sha256": "d79a209095d946e96c1ff660bb4a6898f65c2640bf74d249f9491437e1bad076",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/04-implementing-cloud-load-balancing-for-compute-engine.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/04-implementing-cloud-load-balancing-for-compute-engine.jpg",
+      "outputPath": "154-google-cloud-skills-journey/04-implementing-cloud-load-balancing-for-compute-engine.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 21310,
+      "sha256": "10e1a1e36b5fed2da256e72ab2347d5bb928e81a2e3af6a47154c9fd746c8705",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/05-create-ml-models-with-bigquery-ml.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/05-create-ml-models-with-bigquery-ml.jpg",
+      "outputPath": "154-google-cloud-skills-journey/05-create-ml-models-with-bigquery-ml.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 18527,
+      "sha256": "97a438f92cb55571ecd8be76c67bc92f117ae3114af8eef3ef2c754c072331ed",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/06-develop-your-google-cloud-network.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/06-develop-your-google-cloud-network.jpg",
+      "outputPath": "154-google-cloud-skills-journey/06-develop-your-google-cloud-network.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 18992,
+      "sha256": "cb3a40ec266af76c652502788a32b722e80a3ec7240514bd91428bcafc50d7d7",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/07-develop-serverless-apps-with-firebase.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/07-develop-serverless-apps-with-firebase.jpg",
+      "outputPath": "154-google-cloud-skills-journey/07-develop-serverless-apps-with-firebase.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 17627,
+      "sha256": "d87f2b057bd59bd04221f221ce569cf826a5be96a8039634957512f492a5924b",
+      "width": 403,
+      "height": 421,
+      "aspectRatio": 0.957245,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/08-prepare-data-for-ml-apis-on-google-cloud.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/08-prepare-data-for-ml-apis-on-google-cloud.jpg",
+      "outputPath": "154-google-cloud-skills-journey/08-prepare-data-for-ml-apis-on-google-cloud.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 17462,
+      "sha256": "88124e0e4383fe3b3555561760df0d8d86b3871ccdcf50ab45deac47e1aa943b",
+      "width": 403,
+      "height": 421,
+      "aspectRatio": 0.957245,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/09-derive-insights-from-bigquery-data.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/09-derive-insights-from-bigquery-data.jpg",
+      "outputPath": "154-google-cloud-skills-journey/09-derive-insights-from-bigquery-data.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 16945,
+      "sha256": "750a1ce19aa15ee45de219f59ce86d99ef278988c6e56256cba98ffe416c8787",
+      "width": 403,
+      "height": 421,
+      "aspectRatio": 0.957245,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/10-cloud-engineering.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/10-cloud-engineering.jpg",
+      "outputPath": "154-google-cloud-skills-journey/10-cloud-engineering.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 15973,
+      "sha256": "9ce60ab06abc0b9ef532556ae23f55e0d6ff5becc3b402d17d6c135e3c497001",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/11-cloud-sql.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/11-cloud-sql.jpg",
+      "outputPath": "154-google-cloud-skills-journey/11-cloud-sql.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 13980,
+      "sha256": "f3ff361c5eb425951d03bb6e210998d5f1d48354e8d1c1bd4826d3160cd6a3a3",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/12-google-cloud-next-onair-20-cloud-hero-game-week-6.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/12-google-cloud-next-onair-20-cloud-hero-game-week-6.jpg",
+      "outputPath": "154-google-cloud-skills-journey/12-google-cloud-next-onair-20-cloud-hero-game-week-6.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 21074,
+      "sha256": "c37cec041e5ae6e89d2b66ecc2d2ab32ae7572cbf28b59f6daf66df2c5548fc3",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/13-deprecated-cloud-architecture.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/13-deprecated-cloud-architecture.jpg",
+      "outputPath": "154-google-cloud-skills-journey/13-deprecated-cloud-architecture.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 17319,
+      "sha256": "59c39783c48a593a9ebf5d943f7b3b02c9c370c6bd7b6c6d5de1a9946282cc4b",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/14-datastax-on-google-cloud-speedrun.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/14-datastax-on-google-cloud-speedrun.jpg",
+      "outputPath": "154-google-cloud-skills-journey/14-datastax-on-google-cloud-speedrun.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 22694,
+      "sha256": "d06655bd5b1e95512a93303dca0eea1d8e7c2f7dc89806ea82710d353329379c",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/15-google-cloud-next-onair-20-cloud-hero-game-week-5.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/15-google-cloud-next-onair-20-cloud-hero-game-week-5.jpg",
+      "outputPath": "154-google-cloud-skills-journey/15-google-cloud-next-onair-20-cloud-hero-game-week-5.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 19768,
+      "sha256": "b98e64565f3a45971f5a1a01e27c52804ef6e8818c4cbb50b53d41e88dbef9d5",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/16-google-cloud-next-onair-20-cloud-hero-game-week-3.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/16-google-cloud-next-onair-20-cloud-hero-game-week-3.jpg",
+      "outputPath": "154-google-cloud-skills-journey/16-google-cloud-next-onair-20-cloud-hero-game-week-3.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 20561,
+      "sha256": "2e7994ae89eff5713f3c312fa0cab48ade787943a7878ed97cd61cb1722b78cc",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/17-set-up-an-app-dev-environment-on-google-cloud.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/17-set-up-an-app-dev-environment-on-google-cloud.jpg",
+      "outputPath": "154-google-cloud-skills-journey/17-set-up-an-app-dev-environment-on-google-cloud.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 18868,
+      "sha256": "73dffe84f7839528638f2e8659ab94d2c0132de831d8a3f086c6c1d5bbe992f4",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/18-workspace-add-ons.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/18-workspace-add-ons.jpg",
+      "outputPath": "154-google-cloud-skills-journey/18-workspace-add-ons.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 16498,
+      "sha256": "801e65fd3c812d1a519fac6f83b3b674693457b9fa26e5313ef076e5235a943d",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/19-deploy-kubernetes-applications-on-google-cloud.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/19-deploy-kubernetes-applications-on-google-cloud.jpg",
+      "outputPath": "154-google-cloud-skills-journey/19-deploy-kubernetes-applications-on-google-cloud.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 18216,
+      "sha256": "be378e4b3682fdd47456aa122a506b48907607a56607bd53927a02f32ca92514",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/20-intro-to-ml-image-processing.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/20-intro-to-ml-image-processing.jpg",
+      "outputPath": "154-google-cloud-skills-journey/20-intro-to-ml-image-processing.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 17073,
+      "sha256": "35948f932f78ce6fb02393c8c25556afcade077178dedb1173b21950ef9e5b98",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/21-google-cloud-run-serverless-workshop.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/21-google-cloud-run-serverless-workshop.jpg",
+      "outputPath": "154-google-cloud-skills-journey/21-google-cloud-run-serverless-workshop.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 18938,
+      "sha256": "517845f418bef5366afcd5e936e678e3e2fb944c5a8055da99e2d9d27037f2fb",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/22-cloud-development.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/22-cloud-development.jpg",
+      "outputPath": "154-google-cloud-skills-journey/22-cloud-development.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 16216,
+      "sha256": "aaddfb40aafee04f2975f852b6713b94a22571e1be05f3e9c9f9bad612821418",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/23-deprecated-application-development-python.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/23-deprecated-application-development-python.jpg",
+      "outputPath": "154-google-cloud-skills-journey/23-deprecated-application-development-python.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 19700,
+      "sha256": "3382e425b5d302de78b7a04cbbc6505fbd6f07c8394872c978fd6b7c97024d02",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/24-deprecated-data-science-on-google-cloud-machine-learning.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/24-deprecated-data-science-on-google-cloud-machine-learning.jpg",
+      "outputPath": "154-google-cloud-skills-journey/24-deprecated-data-science-on-google-cloud-machine-learning.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 22895,
+      "sha256": "624d8f5973041bedfde34179057ac0d157d7b024274f5bcc1abf57dcd4335b1f",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/25-google-kubernetes-engine-best-practices-security.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/25-google-kubernetes-engine-best-practices-security.jpg",
+      "outputPath": "154-google-cloud-skills-journey/25-google-kubernetes-engine-best-practices-security.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 19845,
+      "sha256": "c446edb76d111390dfbbd0b05d6ff09f98a99ac00ae4ef3fbb98253cfe92e4e7",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/26-google-kubernetes-engine-best-practices.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/26-google-kubernetes-engine-best-practices.jpg",
+      "outputPath": "154-google-cloud-skills-journey/26-google-kubernetes-engine-best-practices.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 24549,
+      "sha256": "995ae63d9f111e4c763aba35779e52ec4efdddce81d74fc6b1a3df2dfb032bee",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/27-cloud-hero-application-development.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/27-cloud-hero-application-development.jpg",
+      "outputPath": "154-google-cloud-skills-journey/27-cloud-hero-application-development.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 17578,
+      "sha256": "9289a101a1863602112f37bc065306dc9c47d2ff0da2a524f78d1c2a2fc90b20",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/28-scientific-data-processing.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/28-scientific-data-processing.jpg",
+      "outputPath": "154-google-cloud-skills-journey/28-scientific-data-processing.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 16758,
+      "sha256": "4d6bb05a5ee04ce7f931472ea120799dd3d51aa216fa2dc9ca464bed8bc0e71d",
+      "width": 403,
+      "height": 421,
+      "aspectRatio": 0.957245,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/29-using-the-cloud-sdk-command-line.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/29-using-the-cloud-sdk-command-line.jpg",
+      "outputPath": "154-google-cloud-skills-journey/29-using-the-cloud-sdk-command-line.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 17564,
+      "sha256": "5a833ba8647c7f507df206332527ff7bd90b3d9c2370b46ad5f4c784c4e0417a",
+      "width": 403,
+      "height": 421,
+      "aspectRatio": 0.957245,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/30-understand-your-google-cloud-costs.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/30-understand-your-google-cloud-costs.jpg",
+      "outputPath": "154-google-cloud-skills-journey/30-understand-your-google-cloud-costs.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 18721,
+      "sha256": "a2e89f83fa71c1a73ec06bebff0a7f32788cae39fc715c2a4ce07d2c0a6e6523",
+      "width": 403,
+      "height": 421,
+      "aspectRatio": 0.957245,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/31-google-developer-essentials.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/31-google-developer-essentials.jpg",
+      "outputPath": "154-google-cloud-skills-journey/31-google-developer-essentials.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 17070,
+      "sha256": "5943308552ff53eafa0cf9932232c35e4376d027dcb91bc8abca9a65c4f830d8",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/32-deprecated-windows-on-google-cloud.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/32-deprecated-windows-on-google-cloud.jpg",
+      "outputPath": "154-google-cloud-skills-journey/32-deprecated-windows-on-google-cloud.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 18139,
+      "sha256": "288518770c9eda0e9f75581afa8b56bea62a0a66ca0b0aca5d722a792df3ea70",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/33-30-days-of-data-challenge-invitational-game.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/33-30-days-of-data-challenge-invitational-game.jpg",
+      "outputPath": "154-google-cloud-skills-journey/33-30-days-of-data-challenge-invitational-game.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 23654,
+      "sha256": "b922f53d30b095f342a7a31c9a881abf081defe10aa07389a45a6285ad5f2788",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/34-baseline-data-ml-ai.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/34-baseline-data-ml-ai.jpg",
+      "outputPath": "154-google-cloud-skills-journey/34-baseline-data-ml-ai.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 16462,
+      "sha256": "9a1cb5afd9dac629e0bd46a844ef1dd094f05842d36a157bb8230add5e1251a0",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/35-vm-migration.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/35-vm-migration.jpg",
+      "outputPath": "154-google-cloud-skills-journey/35-vm-migration.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 14529,
+      "sha256": "475053d5e50da8ca7141c02920b2f682c3518962431e6d551b0be50236c7e274",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/36-deprecated-bigquery-basics-for-data-analysts.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/36-deprecated-bigquery-basics-for-data-analysts.jpg",
+      "outputPath": "154-google-cloud-skills-journey/36-deprecated-bigquery-basics-for-data-analysts.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 19374,
+      "sha256": "802bf49433a1de7c48b1e20e19eed47739d98282ced2584bfe528c3332d9044a",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/37-deprecated-data-engineering.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/37-deprecated-data-engineering.jpg",
+      "outputPath": "154-google-cloud-skills-journey/37-deprecated-data-engineering.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 16975,
+      "sha256": "1dd2d848955e56f32e39adf0dfd62cbf6c4e6364c3dbb7ddc8663a14f4e3829a",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/38-cloud-adoption-strategies.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/38-cloud-adoption-strategies.jpg",
+      "outputPath": "154-google-cloud-skills-journey/38-cloud-adoption-strategies.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 17069,
+      "sha256": "9ff27820b91c111d6b79aba1cab3c0f24a9841f9b3599b987329588a9c9d67ce",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/39-deprecated-google-cloud-s-operations-suite.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/39-deprecated-google-cloud-s-operations-suite.jpg",
+      "outputPath": "154-google-cloud-skills-journey/39-deprecated-google-cloud-s-operations-suite.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 18151,
+      "sha256": "5b8ba60e68e6e449c1d6d94c9d12c150a63b0b2ad13204bebf5c9934a2d2504d",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/40-deprecated-kubernetes-solutions.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/40-deprecated-kubernetes-solutions.jpg",
+      "outputPath": "154-google-cloud-skills-journey/40-deprecated-kubernetes-solutions.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 17705,
+      "sha256": "383e92dbf82070aab0dcb8851bf04474b29c3145a7e05cb68d82491305bf8eca",
+      "width": 403,
+      "height": 421,
+      "aspectRatio": 0.957245,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/41-baseline-deploy-develop.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/41-baseline-deploy-develop.jpg",
+      "outputPath": "154-google-cloud-skills-journey/41-baseline-deploy-develop.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 16933,
+      "sha256": "3b90f9ec37075e9053434ee4f0c2672b89b0e2dd4339e280288af49c3663b9c5",
+      "width": 403,
+      "height": 421,
+      "aspectRatio": 0.957245,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/42-baseline-infrastructure.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/42-baseline-infrastructure.jpg",
+      "outputPath": "154-google-cloud-skills-journey/42-baseline-infrastructure.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 15858,
+      "sha256": "9c7e8337f524f5e60c5e0a9aea47cbac3d37cd351f0a44e876fa3fbad9fad67a",
+      "width": 403,
+      "height": 421,
+      "aspectRatio": 0.957245,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/43-deprecated-bigquery-for-data-analysis.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/43-deprecated-bigquery-for-data-analysis.jpg",
+      "outputPath": "154-google-cloud-skills-journey/43-deprecated-bigquery-for-data-analysis.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 23893,
+      "sha256": "13663ad81210a8dddcd7bddc95a97c08a8bce1618a52d4d56dbc038a6f5b97fc",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/44-kubernetes-in-google-cloud.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/44-kubernetes-in-google-cloud.jpg",
+      "outputPath": "154-google-cloud-skills-journey/44-kubernetes-in-google-cloud.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 20215,
+      "sha256": "e41f3c5b58d1d4f777b68ccd7fe22d8ef4cbe66bc184110c50ac430a948e0d4c",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/45-deprecated-network-performance-and-optimization.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/45-deprecated-network-performance-and-optimization.jpg",
+      "outputPath": "154-google-cloud-skills-journey/45-deprecated-network-performance-and-optimization.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 19249,
+      "sha256": "7e388922fa0b1c0bfd719d1ab51d5844ded266400c1341ae2ed45f411f31441d",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/46-automate-deployment-and-manage-traffic-on-a-google-cloud-network.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/46-automate-deployment-and-manage-traffic-on-a-google-cloud-network.jpg",
+      "outputPath": "154-google-cloud-skills-journey/46-automate-deployment-and-manage-traffic-on-a-google-cloud-network.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 22859,
+      "sha256": "da73700c61115b95f0601ad38c51d4adb90aadf447942c96e8e3912e5edce581",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/47-security-identity-fundamentals.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/47-security-identity-fundamentals.jpg",
+      "outputPath": "154-google-cloud-skills-journey/47-security-identity-fundamentals.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 18009,
+      "sha256": "d30418131e396502878e810b67809bf7133fbf4c03749785fee2df05efc9ff84",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/48-google-cloud-essentials.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/48-google-cloud-essentials.jpg",
+      "outputPath": "154-google-cloud-skills-journey/48-google-cloud-essentials.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 16307,
+      "sha256": "c9b1cfceccef276d332537e0e7b19699c8e0729f2b24f5152ea625fab42f3c73",
+      "width": 403,
+      "height": 445,
+      "aspectRatio": 0.905618,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/badges.csv",
+      "contentRelativePath": "154-google-cloud-skills-journey/badges.csv",
+      "outputPath": "154-google-cloud-skills-journey/badges.csv",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".csv",
+      "mime": null,
+      "bytes": 13810,
+      "sha256": "31d32b394cc153719c8a4edcebb73294c5408b61ba8a668ef27a1a8ad5281a50",
+      "width": null,
+      "height": null,
+      "aspectRatio": null,
+      "hasAlpha": null,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": false,
+      "optimization": {
+        "eligible": false,
+        "reason": "bypass-format"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/badges.json",
+      "contentRelativePath": "154-google-cloud-skills-journey/badges.json",
+      "outputPath": "154-google-cloud-skills-journey/badges.json",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".json",
+      "mime": null,
+      "bytes": 22941,
+      "sha256": "ef82a86af62affe50f969bad3624c54b0b91dfe218cba7eec453e073d6018f2b",
+      "width": null,
+      "height": null,
+      "aspectRatio": null,
+      "hasAlpha": null,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": false,
+      "optimization": {
+        "eligible": false,
+        "reason": "bypass-format"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/contact-sheet-01.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/contact-sheet-01.jpg",
+      "outputPath": "154-google-cloud-skills-journey/contact-sheet-01.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 197812,
+      "sha256": "6dc1f7a91a8ee42a67027def2903caaf0f0cf7827950a0ad463c73f73f973c85",
+      "width": 1282,
+      "height": 2136,
+      "aspectRatio": 0.600187,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/154-google-cloud-skills-journey/index.md",
+          "kind": "markdown-image",
+          "target": "./contact-sheet-01.jpg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/contact-sheet-02.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/contact-sheet-02.jpg",
+      "outputPath": "154-google-cloud-skills-journey/contact-sheet-02.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 211536,
+      "sha256": "d1dbcaec1cd103a4378eb145c2d04adf9c87d8246af54ca17680dde07508e16a",
+      "width": 1282,
+      "height": 2136,
+      "aspectRatio": 0.600187,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/154-google-cloud-skills-journey/index.md",
+          "kind": "markdown-image",
+          "target": "./contact-sheet-02.jpg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/contact-sheet-03.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/contact-sheet-03.jpg",
+      "outputPath": "154-google-cloud-skills-journey/contact-sheet-03.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 209990,
+      "sha256": "d6edf6060a66ab664eee1b197a0744916b2b2681bc128143f15829ba2dc1519a",
+      "width": 1282,
+      "height": 2136,
+      "aspectRatio": 0.600187,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/154-google-cloud-skills-journey/index.md",
+          "kind": "markdown-image",
+          "target": "./contact-sheet-03.jpg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/contact-sheet-04.jpg",
+      "contentRelativePath": "154-google-cloud-skills-journey/contact-sheet-04.jpg",
+      "outputPath": "154-google-cloud-skills-journey/contact-sheet-04.jpg",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 209287,
+      "sha256": "47d6043bba6a51693015717bc710182f794cb1e6ddf08b302da4d11709f0005d",
+      "width": 1282,
+      "height": 2136,
+      "aspectRatio": 0.600187,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/154-google-cloud-skills-journey/index.md",
+          "kind": "markdown-image",
+          "target": "./contact-sheet-04.jpg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/154-google-cloud-skills-journey/gcp-skills-score.png",
+      "contentRelativePath": "154-google-cloud-skills-journey/gcp-skills-score.png",
+      "outputPath": "154-google-cloud-skills-journey/gcp-skills-score.png",
+      "owner": "content/154-google-cloud-skills-journey/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 29587,
+      "sha256": "9da803c62078c50af0a5ddc989b0296f564520e6356c627cd9bd80f893655293",
+      "width": 531,
+      "height": 417,
+      "aspectRatio": 1.273381,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "html-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/154-google-cloud-skills-journey/index.md",
+          "kind": "html-image",
+          "target": "gcp-skills-score.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "small-dimensions"
+      }
+    },
+    {
+      "path": "content/155-before-kickbear/images/bse-excel.png",
+      "contentRelativePath": "155-before-kickbear/images/bse-excel.png",
+      "outputPath": "155-before-kickbear/images/bse-excel.png",
+      "owner": "content/155-before-kickbear/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 92417,
+      "sha256": "9665d1332a35973df8fed32c432c9224e143b42d1c804d24e1c94c9e392bf417",
+      "width": 1225,
+      "height": 571,
+      "aspectRatio": 2.145359,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/155-before-kickbear/index.md",
+          "kind": "markdown-image",
+          "target": "images/bse-excel.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/155-before-kickbear/images/btd1.png",
+      "contentRelativePath": "155-before-kickbear/images/btd1.png",
+      "outputPath": "155-before-kickbear/images/btd1.png",
+      "owner": "content/155-before-kickbear/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 158079,
+      "sha256": "6f57b625ba6894e38d565715532d884fffafacfbd6544872ab492a8ffdbaf440",
+      "width": 2556,
+      "height": 942,
+      "aspectRatio": 2.713376,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/155-before-kickbear/index.md",
+          "kind": "markdown-image",
+          "target": "images/btd1.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/155-before-kickbear/images/btd2.png",
+      "contentRelativePath": "155-before-kickbear/images/btd2.png",
+      "outputPath": "155-before-kickbear/images/btd2.png",
+      "owner": "content/155-before-kickbear/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 161000,
+      "sha256": "3370af424bd85f27cdfbec2c15bc58543483b5a6cfd1fc086774e8461a0c686b",
+      "width": 2557,
+      "height": 947,
+      "aspectRatio": 2.700106,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/155-before-kickbear/index.md",
+          "kind": "markdown-image",
+          "target": "images/btd2.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/155-before-kickbear/images/btd3.png",
+      "contentRelativePath": "155-before-kickbear/images/btd3.png",
+      "outputPath": "155-before-kickbear/images/btd3.png",
+      "owner": "content/155-before-kickbear/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 483435,
+      "sha256": "9e18af01b491f82118f9c31f03aee0168126e3aed426bb3b0a0f8b4402a9736e",
+      "width": 2512,
+      "height": 1027,
+      "aspectRatio": 2.445959,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/155-before-kickbear/index.md",
+          "kind": "markdown-image",
+          "target": "images/btd3.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/155-before-kickbear/images/files-to-history.svg",
+      "contentRelativePath": "155-before-kickbear/images/files-to-history.svg",
+      "outputPath": "155-before-kickbear/images/files-to-history.svg",
+      "owner": "content/155-before-kickbear/index.md",
+      "extension": ".svg",
+      "mime": "image/svg+xml",
+      "bytes": 1831,
+      "sha256": "004b20eb7247f695de69fb1f75c6c98040b6b956164b3476a77968e6d85f84ec",
+      "width": 1200,
+      "height": 300,
+      "aspectRatio": 4,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/155-before-kickbear/index.md",
+          "kind": "markdown-image",
+          "target": "images/files-to-history.svg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": false,
+      "optimization": {
+        "eligible": false,
+        "reason": "bypass-format"
+      }
+    },
+    {
+      "path": "content/155-before-kickbear/images/three-sheet-origin.svg",
+      "contentRelativePath": "155-before-kickbear/images/three-sheet-origin.svg",
+      "outputPath": "155-before-kickbear/images/three-sheet-origin.svg",
+      "owner": "content/155-before-kickbear/index.md",
+      "extension": ".svg",
+      "mime": "image/svg+xml",
+      "bytes": 2110,
+      "sha256": "b5b4972a67e8ae54f100544e1f30fcc7f13bed9f53212d16cd50ade728b74abf",
+      "width": 1200,
+      "height": 430,
+      "aspectRatio": 2.790698,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": false,
+      "optimization": {
+        "eligible": false,
+        "reason": "bypass-format"
+      }
+    },
+    {
+      "path": "content/156-building-btd/images/btd4.png",
+      "contentRelativePath": "156-building-btd/images/btd4.png",
+      "outputPath": "156-building-btd/images/btd4.png",
+      "owner": "content/156-building-btd/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 189857,
+      "sha256": "a4e677767485b1dd1f6385da82b0efc606949922e59830723c6768398cad0535",
+      "width": 2555,
+      "height": 950,
+      "aspectRatio": 2.689474,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/156-building-btd/index.md",
+          "kind": "markdown-image",
+          "target": "images/btd4.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/156-building-btd/images/btd5.png",
+      "contentRelativePath": "156-building-btd/images/btd5.png",
+      "outputPath": "156-building-btd/images/btd5.png",
+      "owner": "content/156-building-btd/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 188074,
+      "sha256": "e33a217dec8a13086b661333be67439c552f96bd5115d9233592e8aeff7942e0",
+      "width": 2557,
+      "height": 985,
+      "aspectRatio": 2.595939,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/156-building-btd/index.md",
+          "kind": "markdown-image",
+          "target": "images/btd5.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/156-building-btd/images/btd6.png",
+      "contentRelativePath": "156-building-btd/images/btd6.png",
+      "outputPath": "156-building-btd/images/btd6.png",
+      "owner": "content/156-building-btd/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 220099,
+      "sha256": "938452ae0fa7c8650698d2c28d0cee4d8ce8fdeb07c85e250e2e86d10053e448",
+      "width": 2557,
+      "height": 995,
+      "aspectRatio": 2.569849,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/156-building-btd/index.md",
+          "kind": "markdown-image",
+          "target": "images/btd6.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/156-building-btd/images/connected-batch.svg",
+      "contentRelativePath": "156-building-btd/images/connected-batch.svg",
+      "outputPath": "156-building-btd/images/connected-batch.svg",
+      "owner": "content/156-building-btd/index.md",
+      "extension": ".svg",
+      "mime": "image/svg+xml",
+      "bytes": 2286,
+      "sha256": "50e56fadc50cb16e4f028c61bd9e8d3a24e117494178aa7137d4511c426050e6",
+      "width": 1400,
+      "height": 520,
+      "aspectRatio": 2.692308,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/156-building-btd/index.md",
+          "kind": "markdown-image",
+          "target": "images/connected-batch.svg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": false,
+      "optimization": {
+        "eligible": false,
+        "reason": "bypass-format"
+      }
+    },
+    {
+      "path": "content/156-building-btd/images/historical-databrowser-2020-02-21.png",
+      "contentRelativePath": "156-building-btd/images/historical-databrowser-2020-02-21.png",
+      "outputPath": "156-building-btd/images/historical-databrowser-2020-02-21.png",
+      "owner": "content/156-building-btd/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 31532,
+      "sha256": "0edc5118057a9b33243d368caaf396e398aa787239d9796e5b1e3746d432a380",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.333333,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/156-building-btd/images/historical-hni-list-2020-02-21.png",
+      "contentRelativePath": "156-building-btd/images/historical-hni-list-2020-02-21.png",
+      "outputPath": "156-building-btd/images/historical-hni-list-2020-02-21.png",
+      "owner": "content/156-building-btd/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 158770,
+      "sha256": "95d314b6363bafef8ab791addf3e2b660f7bd1ed2764e6548472a75e99f1e1b3",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.333333,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/156-building-btd/images/historical-miop-highslows-2020-02-21.png",
+      "contentRelativePath": "156-building-btd/images/historical-miop-highslows-2020-02-21.png",
+      "outputPath": "156-building-btd/images/historical-miop-highslows-2020-02-21.png",
+      "owner": "content/156-building-btd/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 125077,
+      "sha256": "a0bef7ff106587f78d5ce5b6f7c8c8ee8838ddf16ccd3424b84be3cfa6c72ba3",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.333333,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/156-building-btd/images/historical-miop-sneaky-2020-02-21.png",
+      "contentRelativePath": "156-building-btd/images/historical-miop-sneaky-2020-02-21.png",
+      "outputPath": "156-building-btd/images/historical-miop-sneaky-2020-02-21.png",
+      "owner": "content/156-building-btd/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 113686,
+      "sha256": "8a0ea8692136dcf989b04a5d920810e79e507568d7e419a28eb3ac8d6176a668",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.333333,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/156-building-btd/images/historical-nday-up-2020-02-21.png",
+      "contentRelativePath": "156-building-btd/images/historical-nday-up-2020-02-21.png",
+      "outputPath": "156-building-btd/images/historical-nday-up-2020-02-21.png",
+      "owner": "content/156-building-btd/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 119217,
+      "sha256": "ff933b262f27ad970f712a2f55501350dbb44933cb0b9ba679ad99d4719e8e68",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.333333,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "unreferenced"
+      }
+    },
+    {
+      "path": "content/157-firebase-cloud-years/images/bse_announcements.jpg",
+      "contentRelativePath": "157-firebase-cloud-years/images/bse_announcements.jpg",
+      "outputPath": "157-firebase-cloud-years/images/bse_announcements.jpg",
+      "owner": "content/157-firebase-cloud-years/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 55083,
+      "sha256": "dacd4c67181d76f83774fa2ad61156894d7d6658b61ed4e9535c71864e7e36ba",
+      "width": 270,
+      "height": 722,
+      "aspectRatio": 0.373961,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "html-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/157-firebase-cloud-years/index.md",
+          "kind": "html-image",
+          "target": "images/bse_announcements.jpg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "small-dimensions"
+      }
+    },
+    {
+      "path": "content/157-firebase-cloud-years/images/bse_deals.jpg",
+      "contentRelativePath": "157-firebase-cloud-years/images/bse_deals.jpg",
+      "outputPath": "157-firebase-cloud-years/images/bse_deals.jpg",
+      "owner": "content/157-firebase-cloud-years/index.md",
+      "extension": ".jpg",
+      "mime": "image/jpeg",
+      "bytes": 51542,
+      "sha256": "6daec0a57fae10313c113a96ee4dbd6aa0fbc44d547aeb778465b8a2df823122",
+      "width": 270,
+      "height": 730,
+      "aspectRatio": 0.369863,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "html-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/157-firebase-cloud-years/index.md",
+          "kind": "html-image",
+          "target": "images/bse_deals.jpg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "small-dimensions"
+      }
+    },
+    {
+      "path": "content/157-firebase-cloud-years/images/firebase-architecture-updated.svg",
+      "contentRelativePath": "157-firebase-cloud-years/images/firebase-architecture-updated.svg",
+      "outputPath": "157-firebase-cloud-years/images/firebase-architecture-updated.svg",
+      "owner": "content/157-firebase-cloud-years/index.md",
+      "extension": ".svg",
+      "mime": "image/svg+xml",
+      "bytes": 4104,
+      "sha256": "5a6871cb953263b9f020c5d3a69fe4f456360e24229994b7232c97b97193371e",
+      "width": 1400,
+      "height": 1020,
+      "aspectRatio": 1.372549,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/157-firebase-cloud-years/index.md",
+          "kind": "markdown-image",
+          "target": "images/firebase-architecture-updated.svg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": false,
+      "optimization": {
+        "eligible": false,
+        "reason": "bypass-format"
+      }
+    },
+    {
+      "path": "content/158-python-research-workflow/images/bearishBullish.png",
+      "contentRelativePath": "158-python-research-workflow/images/bearishBullish.png",
+      "outputPath": "158-python-research-workflow/images/bearishbullish.png",
+      "owner": "content/158-python-research-workflow/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 64048,
+      "sha256": "597c7b0d66818f08f30a6945377c65afc7b4c3d420ebc12e7a46b42961ce4007",
+      "width": 1260,
+      "height": 587,
+      "aspectRatio": 2.146508,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/158-python-research-workflow/index.md",
+          "kind": "markdown-image",
+          "target": "images/bearishBullish.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": false,
+        "reason": "small-file"
+      }
+    },
+    {
+      "path": "content/158-python-research-workflow/images/radarSystem_da.png",
+      "contentRelativePath": "158-python-research-workflow/images/radarSystem_da.png",
+      "outputPath": "158-python-research-workflow/images/radarsystem_da.png",
+      "owner": "content/158-python-research-workflow/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 365492,
+      "sha256": "cf6d5322762b5bd35eead9f5af479d7df33ce042c9448194edca78b953cd8209",
+      "width": 2551,
+      "height": 860,
+      "aspectRatio": 2.966279,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/158-python-research-workflow/index.md",
+          "kind": "markdown-image",
+          "target": "images/radarSystem_da.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/158-python-research-workflow/images/stable-table-handoff.png",
+      "contentRelativePath": "158-python-research-workflow/images/stable-table-handoff.png",
+      "outputPath": "158-python-research-workflow/images/stable-table-handoff.png",
+      "owner": "content/158-python-research-workflow/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 1410599,
+      "sha256": "8253169cbcaec1b6370af0cc79d70d6035360e5863868d0db048b39afb2d8579",
+      "width": 2172,
+      "height": 724,
+      "aspectRatio": 3,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/158-python-research-workflow/index.md",
+          "kind": "markdown-image",
+          "target": "images/stable-table-handoff.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/158-python-research-workflow/images/trendAnalysis.png",
+      "contentRelativePath": "158-python-research-workflow/images/trendAnalysis.png",
+      "outputPath": "158-python-research-workflow/images/trendanalysis.png",
+      "owner": "content/158-python-research-workflow/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 150862,
+      "sha256": "e2fcdc2f0d0fcb4ee9d538ba40268984b777b099655b1c0e8b079da536350c27",
+      "width": 2062,
+      "height": 897,
+      "aspectRatio": 2.298774,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/158-python-research-workflow/index.md",
+          "kind": "markdown-image",
+          "target": "images/trendAnalysis.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
+      }
+    },
+    {
+      "path": "content/159-xbrl-data-engineering/images/xbrl-rightsizing.svg",
+      "contentRelativePath": "159-xbrl-data-engineering/images/xbrl-rightsizing.svg",
+      "outputPath": "159-xbrl-data-engineering/images/xbrl-rightsizing.svg",
+      "owner": "content/159-xbrl-data-engineering/index.md",
+      "extension": ".svg",
+      "mime": "image/svg+xml",
+      "bytes": 1741,
+      "sha256": "ec16521de720ca3a462f8a1dbabb3cb75dcbbf1c4b862c1087339c4bb1697a38",
+      "width": 1200,
+      "height": 410,
+      "aspectRatio": 2.926829,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 0,
+      "renderReferenceCount": 0,
+      "referenceKinds": [],
+      "referencedBy": [],
+      "apparentlyUnused": true,
+      "supported": false,
+      "optimization": {
+        "eligible": false,
+        "reason": "bypass-format"
+      }
+    },
+    {
+      "path": "content/160-modern-kickbear-webapp/images/domain-federation.svg",
+      "contentRelativePath": "160-modern-kickbear-webapp/images/domain-federation.svg",
+      "outputPath": "160-modern-kickbear-webapp/images/domain-federation.svg",
+      "owner": "content/160-modern-kickbear-webapp/index.md",
+      "extension": ".svg",
+      "mime": "image/svg+xml",
+      "bytes": 8323,
+      "sha256": "2aef264f974ef74888b9b2962b927467a5b34faac1f37cd9af90f50eeb83cb50",
+      "width": 1600,
+      "height": 1000,
+      "aspectRatio": 1.6,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/160-modern-kickbear-webapp/index.md",
+          "kind": "markdown-image",
+          "target": "images/domain-federation.svg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": false,
+      "optimization": {
+        "eligible": false,
+        "reason": "bypass-format"
+      }
+    },
+    {
+      "path": "content/160-modern-kickbear-webapp/images/four-panel-model.svg",
+      "contentRelativePath": "160-modern-kickbear-webapp/images/four-panel-model.svg",
+      "outputPath": "160-modern-kickbear-webapp/images/four-panel-model.svg",
+      "owner": "content/160-modern-kickbear-webapp/index.md",
+      "extension": ".svg",
+      "mime": "image/svg+xml",
+      "bytes": 3788,
+      "sha256": "7644b336ffd81dfa13c15dcbd74f4e6224a5faa9c839597c8091d55c2ac8c30c",
+      "width": 1200,
+      "height": 650,
+      "aspectRatio": 1.846154,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/160-modern-kickbear-webapp/index.md",
+          "kind": "markdown-image",
+          "target": "images/four-panel-model.svg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": false,
+      "optimization": {
+        "eligible": false,
+        "reason": "bypass-format"
+      }
+    },
+    {
+      "path": "content/160-modern-kickbear-webapp/images/review-watchlist-loop.svg",
+      "contentRelativePath": "160-modern-kickbear-webapp/images/review-watchlist-loop.svg",
+      "outputPath": "160-modern-kickbear-webapp/images/review-watchlist-loop.svg",
+      "owner": "content/160-modern-kickbear-webapp/index.md",
+      "extension": ".svg",
+      "mime": "image/svg+xml",
+      "bytes": 1838,
+      "sha256": "5498b3f3d04bfe1accc66fe2b8b1b99bb9fe6b9d91366a017bc58dfce661d45e",
+      "width": 1200,
+      "height": 300,
+      "aspectRatio": 4,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/160-modern-kickbear-webapp/index.md",
+          "kind": "markdown-image",
+          "target": "images/review-watchlist-loop.svg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": false,
+      "optimization": {
+        "eligible": false,
+        "reason": "bypass-format"
+      }
+    },
+    {
+      "path": "content/170-lessons-from-kickbear/images/responsibility-lineage.svg",
+      "contentRelativePath": "170-lessons-from-kickbear/images/responsibility-lineage.svg",
+      "outputPath": "170-lessons-from-kickbear/images/responsibility-lineage.svg",
+      "owner": "content/170-lessons-from-kickbear/index.md",
+      "extension": ".svg",
+      "mime": "image/svg+xml",
+      "bytes": 3723,
+      "sha256": "9ae42695e8e86884670383418086e7ba1db6adb74bb459852054f36793884b31",
+      "width": 1600,
+      "height": 650,
+      "aspectRatio": 2.461538,
+      "hasAlpha": true,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "markdown-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/170-lessons-from-kickbear/index.md",
+          "kind": "markdown-image",
+          "target": "images/responsibility-lineage.svg"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": false,
+      "optimization": {
+        "eligible": false,
+        "reason": "bypass-format"
+      }
+    },
+    {
+      "path": "content/170-lessons-from-kickbear/images/the-kickbear-journey-timeline.png",
+      "contentRelativePath": "170-lessons-from-kickbear/images/the-kickbear-journey-timeline.png",
+      "outputPath": "170-lessons-from-kickbear/images/the-kickbear-journey-timeline.png",
+      "owner": "content/170-lessons-from-kickbear/index.md",
+      "extension": ".png",
+      "mime": "image/png",
+      "bytes": 1782038,
+      "sha256": "ef829e96ffe1d298fa37c073ada369e43672a8aa61f6e07ae73177456933d883",
+      "width": 1774,
+      "height": 887,
+      "aspectRatio": 2,
+      "hasAlpha": false,
+      "pages": 1,
+      "animated": false,
+      "metadataError": null,
+      "referenceCount": 1,
+      "renderReferenceCount": 1,
+      "referenceKinds": [
+        "html-image"
+      ],
+      "referencedBy": [
+        {
+          "document": "content/170-lessons-from-kickbear/index.md",
+          "kind": "html-image",
+          "target": "./images/the-kickbear-journey-timeline.png"
+        }
+      ],
+      "apparentlyUnused": false,
+      "supported": true,
+      "optimization": {
+        "eligible": true,
+        "reason": "responsive-raster"
       }
     },
     {

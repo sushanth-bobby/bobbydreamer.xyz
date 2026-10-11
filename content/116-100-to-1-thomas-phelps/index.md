@@ -176,7 +176,7 @@ To invest sensibly, we must try, however humbly, to answer these practical quest
 
 * * * 
 
-### What is inflation ? 
+## What is inflation ? 
 
 Inflation is cheating. It results solely from efforts to get something from nothing. If the government did something for the poor - or for our military forces in Vietnam - by taking something equal from you and me, no inflation would result. The poor or the military would have more. You and I would have less. The balance between supply and demand would be unchanged. 
 
@@ -188,7 +188,7 @@ Inflation is most bullish on common stocks when it follows a deep depression and
 
 * * * 
 
-### What is Interest ?       
+## What is Interest ?       
 
 Interest is the price of time. It measures the cost of having or doing now what we hope to be able to pay for later. Thus everything bought with borrowed money costs more than it would if bought for cash. 
 
@@ -200,7 +200,7 @@ There is nothing good or bad about debt and interest per se despite the Puritani
 
 * * * 
 
-### Bonds Vs. Stocks
+## Bonds Vs. Stocks
 
 If own a stock in a company, you are a partner in the business. If you own a company's bonds, you are one of its creditors. 
 
@@ -314,5 +314,5 @@ In *Alice in Wonderland* one had to run fast in order to stand still. In the sto
 
 * * * 
 
-### # References
+## # References
 * [Wealth Education](../40-wealth-education)

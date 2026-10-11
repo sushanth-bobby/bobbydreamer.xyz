@@ -12,7 +12,7 @@ tags:
 > A stock does not know that you own it
 > -- Peter Lynch 
 
-#### # Notes & Quotes
+## # Notes & Quotes
 
 * Know what you own, you should able to say in a minute or less
 * Market falls every two years. Correction of 10%.  Fall of 25% or more is bear market.
@@ -32,7 +32,7 @@ tags:
 
 * * * 
 
-#### # Investment Strategies
+## # Investment Strategies
 
 1. **What do you need to become a great investor?**    
 
@@ -130,7 +130,7 @@ tags:
 
 * * * 
 
-#### # Lynch's Six Categories
+## # Lynch's Six Categories
 Lynch believes that it is important to set some realistic expectations about each stock's potential.
 
 He usually ranks the companies by size and then places them into one of six categories: slow growers, stalwarts, fast growers, cyclicals, turnarounds, and asset plays.
@@ -167,7 +167,7 @@ Companies with valuable assets that Wall Street analysts have missed.
 
 * * * 
 
-#### # Fundamentals and Financial Statements
+## # Fundamentals and Financial Statements
 
 Lynch believes that investors can separate good companies from mediocre ones by sticking to the fundamentals and combing through financial statements to find profitable firms with solid business models.
 

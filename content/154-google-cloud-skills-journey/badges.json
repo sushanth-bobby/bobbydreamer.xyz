@@ -1,0 +1,488 @@
+{
+  "source": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d?locale=en",
+  "profileName": "Sushanth Bobby Lloyds",
+  "badgeCount": 48,
+  "scrapedAt": "2026-10-04T15:58:46.090Z",
+  "badges": [
+    {
+      "index": 1,
+      "badgeId": "2301644",
+      "title": "Intro to BigQuery: Analytics & Machine Learning",
+      "earned": "Jun 22, 2022 EDT",
+      "earnedLabel": "Earned Jun 22, 2022 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/2301644",
+      "imageSource": "https://cdn.qwiklabs.com/8jIRw6wEbuVFg0Iq8Rj9hsnTaz8nQCZaKSMAYMsd%2BrI%3D",
+      "screenshot": "01-intro-to-bigquery-analytics-machine-learning.jpg"
+    },
+    {
+      "index": 2,
+      "badgeId": "2293063",
+      "title": "Intro to Infrastructure",
+      "earned": "Jun 21, 2022 EDT",
+      "earnedLabel": "Earned Jun 21, 2022 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/2293063",
+      "imageSource": "https://cdn.qwiklabs.com/SwRp3mqaZ5bAWHeFGa0nDi26vE3OuKxO4VT5phD7PxU%3D",
+      "screenshot": "02-intro-to-infrastructure.jpg"
+    },
+    {
+      "index": 3,
+      "badgeId": "1014086",
+      "title": "Build Infrastructure with Terraform on Google Cloud",
+      "earned": "May 30, 2021 EDT",
+      "earnedLabel": "Earned May 30, 2021 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/1014086",
+      "imageSource": "https://cdn.qwiklabs.com/%2FKUEUbsdBWyqqeB0YDC%2F3mI31F6bkRqWZxLub9cQcpQ%3D",
+      "screenshot": "03-build-infrastructure-with-terraform-on-google-cloud.jpg"
+    },
+    {
+      "index": 4,
+      "badgeId": "747011",
+      "title": "Implementing Cloud Load Balancing for Compute Engine",
+      "earned": "Apr 15, 2021 EDT",
+      "earnedLabel": "Earned Apr 15, 2021 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/747011",
+      "imageSource": "https://cdn.qwiklabs.com/AWXga43fWcp%2Fm7S9tR0IYI4AiOgvMtvsFm56u7knzww%3D",
+      "screenshot": "04-implementing-cloud-load-balancing-for-compute-engine.jpg"
+    },
+    {
+      "index": 5,
+      "badgeId": "709982",
+      "title": "Create ML Models with BigQuery ML",
+      "earned": "Apr 7, 2021 EDT",
+      "earnedLabel": "Earned Apr 7, 2021 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/709982",
+      "imageSource": "https://cdn.qwiklabs.com/bUT4aVxw4PPx1m6ym87xeU%2BWXmiv%2FQtKXvDwUiQnH78%3D",
+      "screenshot": "05-create-ml-models-with-bigquery-ml.jpg"
+    },
+    {
+      "index": 6,
+      "badgeId": "682275",
+      "title": "Develop Your Google Cloud Network",
+      "earned": "Mar 24, 2021 EDT",
+      "earnedLabel": "Earned Mar 24, 2021 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/682275",
+      "imageSource": "https://cdn.qwiklabs.com/dSWcl7S0A7ugT%2FhWCw2ASLYslLNp%2FYFys9VL%2BfGfUpo%3D",
+      "screenshot": "06-develop-your-google-cloud-network.jpg"
+    },
+    {
+      "index": 7,
+      "badgeId": "682268",
+      "title": "Develop Serverless Apps with Firebase",
+      "earned": "Mar 24, 2021 EDT",
+      "earnedLabel": "Earned Mar 24, 2021 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/682268",
+      "imageSource": "https://cdn.qwiklabs.com/LRL9RjmKNLL4Rkdv%2FA7MnoHqTm8e2%2Bvbga%2BEnHfdl6Y%3D",
+      "screenshot": "07-develop-serverless-apps-with-firebase.jpg"
+    },
+    {
+      "index": 8,
+      "badgeId": "681988",
+      "title": "Prepare Data for ML APIs on Google Cloud",
+      "earned": "Mar 24, 2021 EDT",
+      "earnedLabel": "Earned Mar 24, 2021 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/681988",
+      "imageSource": "https://cdn.qwiklabs.com/Z9RnG0DZDYJa%2BuUUC4NNASbN%2F8q4Ay6Bi4AUpLARkJM%3D",
+      "screenshot": "08-prepare-data-for-ml-apis-on-google-cloud.jpg"
+    },
+    {
+      "index": 9,
+      "badgeId": "680594",
+      "title": "Derive Insights from BigQuery Data",
+      "earned": "Mar 23, 2021 EDT",
+      "earnedLabel": "Earned Mar 23, 2021 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/680594",
+      "imageSource": "https://cdn.qwiklabs.com/ROF3jx1otis8FToM7cqO4c0n5a4%2BsP%2Bq3mDSIqYngCE%3D",
+      "screenshot": "09-derive-insights-from-bigquery-data.jpg"
+    },
+    {
+      "index": 10,
+      "badgeId": "608072",
+      "title": "Cloud Engineering",
+      "earned": "Dec 28, 2020 EST",
+      "earnedLabel": "Earned Dec 28, 2020 EST",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/608072",
+      "imageSource": "https://cdn.qwiklabs.com/VwBmz5J2MvvRf0Lvmt54lfL4tBaRx0vHWbhr31H5f34%3D",
+      "screenshot": "10-cloud-engineering.jpg"
+    },
+    {
+      "index": 11,
+      "badgeId": "608062",
+      "title": "Cloud SQL",
+      "earned": "Dec 28, 2020 EST",
+      "earnedLabel": "Earned Dec 28, 2020 EST",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/608062",
+      "imageSource": "https://cdn.qwiklabs.com/BIuLt9go7FjzFC7m6FMhqbVx1GqwzTpvVCViKyniRXI%3D",
+      "screenshot": "11-cloud-sql.jpg"
+    },
+    {
+      "index": 12,
+      "badgeId": "321562",
+      "title": "Google Cloud Next OnAir ‘20 - Cloud Hero Game: Week 6",
+      "earned": "Aug 25, 2020 EDT",
+      "earnedLabel": "Earned Aug 25, 2020 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/321562",
+      "imageSource": "https://cdn.qwiklabs.com/97wgQftmh8Cb9501vW0gulLLP2F6rXE036iney3aNlw%3D",
+      "screenshot": "12-google-cloud-next-onair-20-cloud-hero-game-week-6.jpg"
+    },
+    {
+      "index": 13,
+      "badgeId": "316845",
+      "title": "DEPRECATED Cloud Architecture",
+      "earned": "Aug 21, 2020 EDT",
+      "earnedLabel": "Earned Aug 21, 2020 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/316845",
+      "imageSource": "https://cdn.qwiklabs.com/vxdruFLTcqw0nwmak0LLQtgkThxMcbUCk8ZWMWvKaBI%3D",
+      "screenshot": "13-deprecated-cloud-architecture.jpg"
+    },
+    {
+      "index": 14,
+      "badgeId": "315546",
+      "title": "Datastax on Google Cloud Speedrun",
+      "earned": "Aug 21, 2020 EDT",
+      "earnedLabel": "Earned Aug 21, 2020 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/315546",
+      "imageSource": "https://cdn.qwiklabs.com/bTV0tugYVodnxlCqZA5i2qf5O%2FLqf857INUq1JpWSxI%3D",
+      "screenshot": "14-datastax-on-google-cloud-speedrun.jpg"
+    },
+    {
+      "index": 15,
+      "badgeId": "311075",
+      "title": "Google Cloud Next OnAir ‘20 - Cloud Hero Game: Week 5",
+      "earned": "Aug 17, 2020 EDT",
+      "earnedLabel": "Earned Aug 17, 2020 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/311075",
+      "imageSource": "https://cdn.qwiklabs.com/x8drSyLDBmR3h67Yja9w1c9Kh5GmXpmJMscm1hadEeA%3D",
+      "screenshot": "15-google-cloud-next-onair-20-cloud-hero-game-week-5.jpg"
+    },
+    {
+      "index": 16,
+      "badgeId": "305204",
+      "title": "Google Cloud Next OnAir ‘20 - Cloud Hero Game: Week 3",
+      "earned": "Aug 10, 2020 EDT",
+      "earnedLabel": "Earned Aug 10, 2020 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/305204",
+      "imageSource": "https://cdn.qwiklabs.com/%2BqlOsLyVtM2DUBPhPgvC%2FLf9yQ6qHUtL7eLQkMb5U5c%3D",
+      "screenshot": "16-google-cloud-next-onair-20-cloud-hero-game-week-3.jpg"
+    },
+    {
+      "index": 17,
+      "badgeId": "297706",
+      "title": "Set Up an App Dev Environment on Google Cloud",
+      "earned": "Jul 29, 2020 EDT",
+      "earnedLabel": "Earned Jul 29, 2020 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/297706",
+      "imageSource": "https://cdn.qwiklabs.com/cfor4RrFeZVD65Yz1R4o2hFlOivAjJ6TMVWX3HOqKRc%3D",
+      "screenshot": "17-set-up-an-app-dev-environment-on-google-cloud.jpg"
+    },
+    {
+      "index": 18,
+      "badgeId": "296376",
+      "title": "Workspace: Add-ons",
+      "earned": "Jul 26, 2020 EDT",
+      "earnedLabel": "Earned Jul 26, 2020 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/296376",
+      "imageSource": "https://cdn.qwiklabs.com/3iNFjWjTNtUAVUlqSeqRCtyscuy1kkOKYubzCdOk0Fg%3D",
+      "screenshot": "18-workspace-add-ons.jpg"
+    },
+    {
+      "index": 19,
+      "badgeId": "296028",
+      "title": "Deploy Kubernetes Applications on Google Cloud",
+      "earned": "Jul 25, 2020 EDT",
+      "earnedLabel": "Earned Jul 25, 2020 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/296028",
+      "imageSource": "https://cdn.qwiklabs.com/d3%2FXEgAy%2BUqECXqNRrszWcIim%2B00PJBkoJfTctGdphk%3D",
+      "screenshot": "19-deploy-kubernetes-applications-on-google-cloud.jpg"
+    },
+    {
+      "index": 20,
+      "badgeId": "295969",
+      "title": "Intro to ML: Image Processing",
+      "earned": "Jul 25, 2020 EDT",
+      "earnedLabel": "Earned Jul 25, 2020 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/295969",
+      "imageSource": "https://cdn.qwiklabs.com/f0wGmHk9O3qo%2BYGiBpDkuT%2B6eNW5Qfsc3UUbpoG2x%2F4%3D",
+      "screenshot": "20-intro-to-ml-image-processing.jpg"
+    },
+    {
+      "index": 21,
+      "badgeId": "216058",
+      "title": "Google Cloud Run Serverless Workshop",
+      "earned": "Mar 25, 2020 EDT",
+      "earnedLabel": "Earned Mar 25, 2020 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/216058",
+      "imageSource": "https://cdn.qwiklabs.com/PPaDOcjHRfxehQHu0EhrmYc825l4oCft9W8CSBlSp3I%3D",
+      "screenshot": "21-google-cloud-run-serverless-workshop.jpg"
+    },
+    {
+      "index": 22,
+      "badgeId": "213598",
+      "title": "Cloud Development",
+      "earned": "Mar 14, 2020 EDT",
+      "earnedLabel": "Earned Mar 14, 2020 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/213598",
+      "imageSource": "https://cdn.qwiklabs.com/NJXdOUqfszVky%2FyoHmmZfjSyB5b7Z8Td69Vk0LBrETs%3D",
+      "screenshot": "22-cloud-development.jpg"
+    },
+    {
+      "index": 23,
+      "badgeId": "213597",
+      "title": "DEPRECATED Application Development - Python",
+      "earned": "Mar 14, 2020 EDT",
+      "earnedLabel": "Earned Mar 14, 2020 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/213597",
+      "imageSource": "https://cdn.qwiklabs.com/6crbHP0GzB95S9mjijuJIR%2BVsUw7Q%2FdKxTu9%2BEoKjyM%3D",
+      "screenshot": "23-deprecated-application-development-python.jpg"
+    },
+    {
+      "index": 24,
+      "badgeId": "213396",
+      "title": "[Deprecated] Data Science on Google Cloud: Machine Learning",
+      "earned": "Mar 13, 2020 EDT",
+      "earnedLabel": "Earned Mar 13, 2020 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/213396",
+      "imageSource": "https://cdn.qwiklabs.com/wT5VIrX28jmHoZRolJuNMyHFoKShr5f6ID1Ih27IfoM%3D",
+      "screenshot": "24-deprecated-data-science-on-google-cloud-machine-learning.jpg"
+    },
+    {
+      "index": 25,
+      "badgeId": "211286",
+      "title": "Google Kubernetes Engine Best Practices: Security",
+      "earned": "Mar 4, 2020 EST",
+      "earnedLabel": "Earned Mar 4, 2020 EST",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/211286",
+      "imageSource": "https://cdn.qwiklabs.com/au0cvGzjt7Jds1qEiYkWjqgNjVIQzEhJxhjIiU%2FHEEQ%3D",
+      "screenshot": "25-google-kubernetes-engine-best-practices-security.jpg"
+    },
+    {
+      "index": 26,
+      "badgeId": "184288",
+      "title": "Google Kubernetes Engine Best Practices",
+      "earned": "Dec 7, 2019 EST",
+      "earnedLabel": "Earned Dec 7, 2019 EST",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/184288",
+      "imageSource": "https://cdn.qwiklabs.com/ADaXlAStdLeNuVHxyPMg5Q9N7itl1EARUFVp4Nt3Vek%3D",
+      "screenshot": "26-google-kubernetes-engine-best-practices.jpg"
+    },
+    {
+      "index": 27,
+      "badgeId": "182649",
+      "title": "Cloud Hero: Application Development",
+      "earned": "Dec 5, 2019 EST",
+      "earnedLabel": "Earned Dec 5, 2019 EST",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/182649",
+      "imageSource": "https://cdn.qwiklabs.com/S9tcYNCHnVn3E5aTwziz2xM6nQYoyuOnznoRCrXBrIY%3D",
+      "screenshot": "27-cloud-hero-application-development.jpg"
+    },
+    {
+      "index": 28,
+      "badgeId": "180923",
+      "title": "Scientific Data Processing",
+      "earned": "Dec 3, 2019 EST",
+      "earnedLabel": "Earned Dec 3, 2019 EST",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/180923",
+      "imageSource": "https://cdn.qwiklabs.com/WRsrTGVuJkdGMNto2Yen2z3gtKyUegADjvRPFoueN80%3D",
+      "screenshot": "28-scientific-data-processing.jpg"
+    },
+    {
+      "index": 29,
+      "badgeId": "163366",
+      "title": "Using the Cloud SDK Command Line",
+      "earned": "Nov 2, 2019 EDT",
+      "earnedLabel": "Earned Nov 2, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/163366",
+      "imageSource": "https://cdn.qwiklabs.com/NPjp%2FhWug%2FiwqJHIQVpPftAyAIVydLE81dFaK1oaQx4%3D",
+      "screenshot": "29-using-the-cloud-sdk-command-line.jpg"
+    },
+    {
+      "index": 30,
+      "badgeId": "163307",
+      "title": "Understand Your Google Cloud Costs",
+      "earned": "Nov 1, 2019 EDT",
+      "earnedLabel": "Earned Nov 1, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/163307",
+      "imageSource": "https://cdn.qwiklabs.com/MTpdtWs4mWAMhWiv1fFiN5sFClt4f7pX%2FZNUaTHF3GU%3D",
+      "screenshot": "30-understand-your-google-cloud-costs.jpg"
+    },
+    {
+      "index": 31,
+      "badgeId": "146784",
+      "title": "Google Developer Essentials",
+      "earned": "Oct 19, 2019 EDT",
+      "earnedLabel": "Earned Oct 19, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/146784",
+      "imageSource": "https://cdn.qwiklabs.com/6XR%2F0%2FqiHaaCbKFbtI5YOVFtM4ojyye%2FWC5o%2B9QXjb4%3D",
+      "screenshot": "31-google-developer-essentials.jpg"
+    },
+    {
+      "index": 32,
+      "badgeId": "124454",
+      "title": "DEPRECATED Windows on Google Cloud",
+      "earned": "Sep 14, 2019 EDT",
+      "earnedLabel": "Earned Sep 14, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/124454",
+      "imageSource": "https://cdn.qwiklabs.com/smlA%2BmjzWEdUX3Hreta8a9x4jDcJ1nK6w8btbFasxxk%3D",
+      "screenshot": "32-deprecated-windows-on-google-cloud.jpg"
+    },
+    {
+      "index": 33,
+      "badgeId": "121481",
+      "title": "30 Days of Data Challenge: Invitational Game",
+      "earned": "Sep 6, 2019 EDT",
+      "earnedLabel": "Earned Sep 6, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/121481",
+      "imageSource": "https://cdn.qwiklabs.com/QPViB8LD%2Fa8dnhLdFjBejs7CoToC9eRxi4ZAIPv5Euk%3D",
+      "screenshot": "33-30-days-of-data-challenge-invitational-game.jpg"
+    },
+    {
+      "index": 34,
+      "badgeId": "106569",
+      "title": "Baseline: Data, ML, AI",
+      "earned": "Aug 15, 2019 EDT",
+      "earnedLabel": "Earned Aug 15, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/106569",
+      "imageSource": "https://cdn.qwiklabs.com/mUeNKNWDtaeEhrbfOk9ZeoVzk2S1rvU5FFHfT%2BeD2%2F4%3D",
+      "screenshot": "34-baseline-data-ml-ai.jpg"
+    },
+    {
+      "index": 35,
+      "badgeId": "104676",
+      "title": "VM Migration",
+      "earned": "Aug 11, 2019 EDT",
+      "earnedLabel": "Earned Aug 11, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/104676",
+      "imageSource": "https://cdn.qwiklabs.com/%2FGFk0sBGLPkR1R2qYk1AfzMgcd%2BgoJY3DSR8U4KSgeA%3D",
+      "screenshot": "35-vm-migration.jpg"
+    },
+    {
+      "index": 36,
+      "badgeId": "102466",
+      "title": "DEPRECATED BigQuery Basics for Data Analysts",
+      "earned": "Aug 7, 2019 EDT",
+      "earnedLabel": "Earned Aug 7, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/102466",
+      "imageSource": "https://cdn.qwiklabs.com/0LkFP0Xw2Se0bzbZFFKSNA2P1YJFm4vPlv3GQ%2FyRqaA%3D",
+      "screenshot": "36-deprecated-bigquery-basics-for-data-analysts.jpg"
+    },
+    {
+      "index": 37,
+      "badgeId": "100930",
+      "title": "[DEPRECATED] Data Engineering",
+      "earned": "Aug 5, 2019 EDT",
+      "earnedLabel": "Earned Aug 5, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/100930",
+      "imageSource": "https://cdn.qwiklabs.com/KS6gqGqz%2BvMrVQXdkHkkXRUr%2FLB5gaxEVP91KizG6z0%3D",
+      "screenshot": "37-deprecated-data-engineering.jpg"
+    },
+    {
+      "index": 38,
+      "badgeId": "83803",
+      "title": "Cloud Adoption Strategies",
+      "earned": "Jun 26, 2019 EDT",
+      "earnedLabel": "Earned Jun 26, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/83803",
+      "imageSource": "https://cdn.qwiklabs.com/RC3a4v7sfoh6lkK%2FtYEvc8Peb7NKI1T6iGI6A2BC%2BVY%3D",
+      "screenshot": "38-cloud-adoption-strategies.jpg"
+    },
+    {
+      "index": 39,
+      "badgeId": "79737",
+      "title": "DEPRECATED Google Cloud's Operations Suite",
+      "earned": "Jun 15, 2019 EDT",
+      "earnedLabel": "Earned Jun 15, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/79737",
+      "imageSource": "https://cdn.qwiklabs.com/jmOmIOo0v%2B8mc8olLKKya7NCqA8OnBrICHjFrHfNjBE%3D",
+      "screenshot": "39-deprecated-google-cloud-s-operations-suite.jpg"
+    },
+    {
+      "index": 40,
+      "badgeId": "77905",
+      "title": "Deprecated Kubernetes Solutions",
+      "earned": "Jun 9, 2019 EDT",
+      "earnedLabel": "Earned Jun 9, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/77905",
+      "imageSource": "https://cdn.qwiklabs.com/g0mMXqCJlFqtKZMmMjnQ6FQznbxkiki6nJxaf1VlD5Q%3D",
+      "screenshot": "40-deprecated-kubernetes-solutions.jpg"
+    },
+    {
+      "index": 41,
+      "badgeId": "75659",
+      "title": "Baseline: Deploy & Develop",
+      "earned": "May 31, 2019 EDT",
+      "earnedLabel": "Earned May 31, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/75659",
+      "imageSource": "https://cdn.qwiklabs.com/Gr1dCDnlpdxxbYz2dNePcJKGBU3sH021gWn40LuGg1Y%3D",
+      "screenshot": "41-baseline-deploy-develop.jpg"
+    },
+    {
+      "index": 42,
+      "badgeId": "74374",
+      "title": "Baseline: Infrastructure",
+      "earned": "May 27, 2019 EDT",
+      "earnedLabel": "Earned May 27, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/74374",
+      "imageSource": "https://cdn.qwiklabs.com/NtUPpJDEaMXjCLLydHa47LdBW7IP6zpfKCLNt4L%2FhLo%3D",
+      "screenshot": "42-baseline-infrastructure.jpg"
+    },
+    {
+      "index": 43,
+      "badgeId": "74034",
+      "title": "DEPRECATED BigQuery for Data Analysis",
+      "earned": "May 25, 2019 EDT",
+      "earnedLabel": "Earned May 25, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/74034",
+      "imageSource": "https://cdn.qwiklabs.com/8koHiK0rA7p9BJ2LZKHPe56Mtm%2FgAbYP5gS1nLhLWB4%3D",
+      "screenshot": "43-deprecated-bigquery-for-data-analysis.jpg"
+    },
+    {
+      "index": 44,
+      "badgeId": "67326",
+      "title": "Kubernetes in Google Cloud",
+      "earned": "Apr 21, 2019 EDT",
+      "earnedLabel": "Earned Apr 21, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/67326",
+      "imageSource": "https://cdn.qwiklabs.com/bkRf9t2b3njdN6yv5EtyW4ApFjrrtcdI9gxnfIuvlXk%3D",
+      "screenshot": "44-kubernetes-in-google-cloud.jpg"
+    },
+    {
+      "index": 45,
+      "badgeId": "66748",
+      "title": "DEPRECATED Network Performance and Optimization",
+      "earned": "Apr 19, 2019 EDT",
+      "earnedLabel": "Earned Apr 19, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/66748",
+      "imageSource": "https://cdn.qwiklabs.com/TzGtjwH02xdTIFHpn5s%2FYr4yOtzDMDiTCpCY581ZnzI%3D",
+      "screenshot": "45-deprecated-network-performance-and-optimization.jpg"
+    },
+    {
+      "index": 46,
+      "badgeId": "65699",
+      "title": "Automate Deployment and Manage Traffic on a Google Cloud Network",
+      "earned": "Apr 14, 2019 EDT",
+      "earnedLabel": "Earned Apr 14, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/65699",
+      "imageSource": "https://cdn.qwiklabs.com/Ef0OkQxBmntC7PeRmlcdsoNPzy7cxUvwwGY9oDLCFCE%3D",
+      "screenshot": "46-automate-deployment-and-manage-traffic-on-a-google-cloud-network.jpg"
+    },
+    {
+      "index": 47,
+      "badgeId": "62928",
+      "title": "Security & Identity Fundamentals",
+      "earned": "Apr 5, 2019 EDT",
+      "earnedLabel": "Earned Apr 5, 2019 EDT",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/62928",
+      "imageSource": "https://cdn.qwiklabs.com/kiLShCU%2BbdJnKpaXgXCIxSiBl8cb6DnxOMIz8xr90Fk%3D",
+      "screenshot": "47-security-identity-fundamentals.jpg"
+    },
+    {
+      "index": 48,
+      "badgeId": "52675",
+      "title": "Google Cloud Essentials",
+      "earned": "Feb 9, 2019 EST",
+      "earnedLabel": "Earned Feb 9, 2019 EST",
+      "badgeUrl": "https://www.skills.google/public_profiles/ce5ee3f8-a0e8-4f4c-b6f8-2f4dc8fb948d/badges/52675",
+      "imageSource": "https://cdn.qwiklabs.com/jsSYBfmx0HU2%2FS0jWJkOq61EBGLdXopfwcjxqGcmdq8%3D",
+      "screenshot": "48-google-cloud-essentials.jpg"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Reconstructed three-sheet Excel comparison</title>
+  <desc id="desc">Two synthetic Bhavcopy date sheets feed a third sheet containing a lookup, percentage change calculation, and sorted result.</desc>
+  <rect width="1200" height="430" fill="#f7f4ed"/>
+  <style>.h{font:700 26px system-ui;fill:#162033}.t{font:18px system-ui;fill:#26364d}.s{font:14px ui-monospace,monospace;fill:#26364d}.box{fill:#fff;stroke:#52657d;stroke-width:2}.arrow{stroke:#c45b2c;stroke-width:4;fill:none;marker-end:url(#m)}.tag{font:700 14px system-ui;fill:#8b3d1e}</style>
+  <defs><marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#c45b2c"/></marker></defs>
+  <text x="40" y="45" class="h">Reconstructed from Bobby's recollection — synthetic rows</text>
+  <rect x="40" y="85" width="300" height="245" rx="10" class="box"/><text x="65" y="125" class="h">Sheet 1</text><text x="65" y="158" class="t">Bhavcopy: Date A</text><text x="65" y="200" class="s">AAA   100.00</text><text x="65" y="232" class="s">BBB    52.00</text><text x="65" y="264" class="s">CCC   210.00</text>
+  <rect x="450" y="85" width="300" height="245" rx="10" class="box"/><text x="475" y="125" class="h">Sheet 2</text><text x="475" y="158" class="t">Bhavcopy: Date B</text><text x="475" y="200" class="s">AAA   108.00</text><text x="475" y="232" class="s">BBB    49.00</text><text x="475" y="264" class="s">CCC   231.00</text>
+  <rect x="860" y="85" width="300" height="245" rx="10" class="box"/><text x="885" y="125" class="h">Sheet 3</text><text x="885" y="158" class="t">VLOOKUP → change → sort</text><text x="885" y="200" class="s">CCC  +10.0%</text><text x="885" y="232" class="s">AAA   +8.0%</text><text x="885" y="264" class="s">BBB   -5.8%</text>
+  <path d="M340 205 H435" class="arrow"/><path d="M750 205 H845" class="arrow"/>
+  <text x="40" y="385" class="tag">RECONSTRUCTED — the original workbook does not survive</text>
+</svg>

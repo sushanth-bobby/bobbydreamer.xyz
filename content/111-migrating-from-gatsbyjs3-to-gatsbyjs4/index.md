@@ -26,7 +26,7 @@ Basically the intention was not to migrate but to add following features to the 
 3. Add Table of Content plugin - **Failed**
 
 
-#### What did i do
+## What did i do
 
 1. Upgraded NodeJS from v10.16.3 to v14.17.3 ( typical windows installation )
 2. Upgraded NPM from 6.11.3 to 7.20.0
@@ -107,7 +107,7 @@ gatsby-plugin-gatsby-cloud@latest gatsby-plugin-google-analytics@latest gatsby-p
 
 **After this forceful update, to my surprise, there were no errors.**
 
-#### Now to the main goals
+## Now to the main goals
 1. **Failed** : Wanted to add Latex Support to the site as i wanted to showoff some math stuff. Tried 
     * Plugins : gatsby-remark-katex
     * Plugins : gatsby-remark-mathjax
@@ -134,14 +134,14 @@ This whole thing wasted 2 days of my time.
 
 * * * 
 
-##### Wish LekoArts adds following to this starter pack
+### Wish LekoArts adds following to this starter pack
 
 * Latex support
 * Table of Contents
 
 * * * 
 
-#### Gatsby Experience 3.9.0 
+## Gatsby Experience 3.9.0 
 
 * `gatsby build --verbose` - Build time increased by 10mins. Earlier it was 10mins now its 22mins and taking lots of memory than usual enough to restart the computer. 
 
@@ -149,7 +149,7 @@ This whole thing wasted 2 days of my time.
 
 * `gatsby develop --verbose` - Every page click browsing within the site, is taking long time to process. Earlier it doesn't take time unless that page is updated. 
 
-#### # Next steps after migrating
+## # Next steps after migrating
 * [First set of custom changes made to this starter theme](../23-shadowing-and-non-shadowing)
 * [Changes to gatsby-config.js, hero and bottom](../04-how-i-made-this-site)
 * [Adding a Favicon](../09-adding-favicon-to-gatsby)

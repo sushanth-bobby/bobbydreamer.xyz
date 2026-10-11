@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" role="img" aria-labelledby="title desc">
+<title id="title">Kickbear Python workflows architecture</title>
+<desc id="desc">Google Workflows orchestrates Python Cloud Functions for BSE and NSE daily bhavcopy, deals, BSE financial results and shareholding. Collection functions download source files to Google Cloud Storage. Processing functions read those files and insert records into BigQuery. Execution status and history are updated in Firebase.</desc>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5 0 10Z" fill="#52657d"/></marker>
+<marker id="control" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5 0 10Z" fill="#c45b2c"/></marker>
+</defs>
+<style>
+text{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+.title{font-size:34px;font-weight:700;fill:#162033}
+.sub{font-size:18px;fill:#59667b}
+.section{font-size:15px;font-weight:700;letter-spacing:1.4px;fill:#52657d}
+.name{font-size:22px;font-weight:650;fill:#23344a}
+.detail{font-size:17px;fill:#52657d}
+.label{font-size:16px;fill:#52657d}
+.box{fill:#fff;stroke:#b8c5d2;stroke-width:1.8}
+.flow{fill:none;stroke:#52657d;stroke-width:2.5;marker-end:url(#arrow)}
+.control{fill:none;stroke:#c45b2c;stroke-width:2.5;marker-end:url(#control)}
+.status{fill:none;stroke:#52657d;stroke-width:2;stroke-dasharray:7 6;marker-end:url(#arrow)}
+</style>
+<rect width="1200" height="850" fill="#f7f4ed"/>
+<text x="54" y="65" class="title">Kickbear Python workflows</text>
+<text x="54" y="99" class="sub">Collect source files → store in GCS → load BigQuery · Record execution status in Firebase</text>
+
+<text x="54" y="150" class="section">MULTIPLE WORKFLOWS, A SHARED PROCESSING PATTERN</text>
+<rect x="54" y="172" width="344" height="94" rx="14" class="box"/>
+<text x="76" y="209" class="name">Daily market data</text>
+<text x="76" y="240" class="detail">BSE / NSE bhavcopy and deals</text>
+<rect x="428" y="172" width="344" height="94" rx="14" class="box"/>
+<text x="450" y="209" class="name">Financial results</text>
+<text x="450" y="240" class="detail">BSE disclosures</text>
+<rect x="802" y="172" width="344" height="94" rx="14" class="box"/>
+<text x="824" y="209" class="name">Shareholding</text>
+<text x="824" y="240" class="detail">BSE filings</text>
+
+<rect x="428" y="302" width="344" height="100" rx="16" fill="#fff" stroke="#c45b2c" stroke-width="2"/>
+<text x="450" y="342" class="name">Google Workflows</text>
+<text x="450" y="374" class="detail">Orchestrates Python functions</text>
+<path d="M428 352H178V468" class="control"/>
+<text x="190" y="339" class="label">Trigger collection</text>
+<path d="M748 402V468" class="control"/>
+<text x="790" y="431" class="label">Trigger processing stages</text>
+
+<text x="54" y="443" class="section">DATA PIPELINE</text>
+<rect x="54" y="478" width="248" height="145" rx="16" class="box"/>
+<text x="76" y="519" class="name">Cloud Functions</text>
+<text x="76" y="553" class="detail">Python collection</text>
+<text x="76" y="582" class="detail">Fetch BSE / NSE data</text>
+<rect x="336" y="478" width="248" height="145" rx="16" class="box"/>
+<text x="358" y="519" class="name">Cloud Storage</text>
+<text x="358" y="553" class="detail">Downloaded source files</text>
+<text x="358" y="582" class="detail">Available for later stages</text>
+<rect x="618" y="478" width="260" height="145" rx="16" class="box"/>
+<text x="640" y="519" class="name">Cloud Functions</text>
+<text x="640" y="553" class="detail">Python processing</text>
+<text x="640" y="582" class="detail">Read files; prepare records</text>
+<rect x="912" y="478" width="234" height="145" rx="16" class="box"/>
+<text x="934" y="519" class="name">BigQuery</text>
+<text x="934" y="553" class="detail">Insert processed data</text>
+<text x="934" y="582" class="detail">Exchange / filing history</text>
+<path d="M302 550H328" class="flow"/>
+<path d="M584 550H610" class="flow"/>
+<path d="M878 550H904" class="flow"/>
+
+<rect x="428" y="701" width="344" height="100" rx="16" class="box"/>
+<text x="450" y="741" class="name">Firebase</text>
+<text x="450" y="773" class="detail">Execution status and history</text>
+<path d="M178 623V750H418" class="status"/>
+<path d="M748 623V691" class="status"/>
+<text x="205" y="686" class="label">Update status as stages run</text>
+<path d="M824 747H861" class="control"/>
+<text x="875" y="753" class="label">Orchestration</text>
+<path d="M824 781H861" class="status"/>
+<text x="875" y="787" class="label">Status updates</text>
+<text x="54" y="834" class="label">Shared architecture; individual workflows can have different collection and processing stages.</text>
+</svg>

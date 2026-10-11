@@ -13,16 +13,16 @@ status: historical
 **Slides**: [Part 1](https://storage.googleapis.com/bobbydreamer-com-technicals/db2/Db2-strategies%20ofmanaginguniversaltablespacesutsforoptimalperformancepart1.pdf), [Part 2](https://storage.googleapis.com/bobbydreamer-com-technicals/db2/Db2-strategies%20ofmanaginguniversaltablespacesutsforoptimalperformancepart2.pdf)     
 **Actual Presentation**: [Google - Achieving Optimal Availability, Usability and Performance with Universal Table Space](https://www.google.com/search?q=Achieving+Optimal+Availability%2C+Usability+and+Performance+with+Universal+Table+Space&oq=Achieving+Optimal+Availability%2C+Usability+and+Performance+with+Universal+Table+Space) and click on link with *https://event.on24.com*
 
-### Part 1
+## Part 1
 
-#### Deprecated
+### Deprecated
 
 * Simple tablespaces cannot be created after V9, but its supported
 * Segmented, Classic partitioned by range, has organized UTS are deprecated starting with V10 and cannot create/alter at V12M504 or later like SQL DDL cannot be run by a package with APPLCOMPAT >= M504 or package with CURRENT APPLICATION COMPATIBILITY register set >=M504. 
   - To run SQL DDL against these object, you need to downgrade application compatibility level which can be toggled(up or down) either in APPLCOMPAT bind option or via special register CURRENT APPLICATION COMPATIBILITY. 
 * **Note:** All new tablespaces should be either UTS (PBR or PBG)
 
-#### Transition to PBR UTS
+### Transition to PBR UTS
 
 ```
 ALTER TABLESPACE … SEGSIZE n
@@ -33,14 +33,14 @@ ALTER TABLESPACE DB1.MyTS SEGSIZE 32
 * This converts Classic partition to UTS PBR
 * Subsequent REORG Materializes the conversion
 
-##### Benefits
+#### Benefits
 
 * DPSI 
   - Index partitioning capability with less index levels which improves performance 
   - Partition pruning
   - Utility parallelism
 
-##### Transition from PBR UTS to PBR UTS Relative Page number (RPN)
+#### Transition from PBR UTS to PBR UTS Relative Page number (RPN)
 
 ```
 ALTER TABLESPACE DB1.MyTS PAGENUM RELATIVE
@@ -52,7 +52,7 @@ ALTER TABLESPACE DB1.MyTS PAGENUM RELATIVE
   - Base and XML table space can be migrated separately
   - Can coexist running with mix of RELATIVE/ABSOLUTE attributes across base and XML table spaces
 
-##### Whats PBR RPN
+#### Whats PBR RPN
 
 * Introduced to lift partition sizes up to 1TB from 256G
 * DSSIZE is no longer set at the tablespace level.
@@ -60,7 +60,7 @@ ALTER TABLESPACE DB1.MyTS PAGENUM RELATIVE
 * Alter to decrease is a pending alter followed by REORG to materialize. 
 * zParm option available to set at system level. 
 
-#### Transition to PBG UTS
+### Transition to PBG UTS
 ```
 # Converts simple/segmented to PBG UTS
 ALTER TABLESPACE DB1.MyTS MAXPARTITIONS 4
@@ -68,7 +68,7 @@ ALTER TABLESPACE DB1.MyTS MAXPARTITIONS 4
 * Its a pending alter, so subsequent REORG will materialize the tablespace. 
 * Don't over define MAXPARTITIONS like 1024 
 
-#### Db2 12 FL508(V12R1M508)
+### Db2 12 FL508(V12R1M508)
 * Supports ability to move a single table or set of tables from one single source table space to a set
 of target PBG UTS table spaces
 * Migration plan is like earlier, its a pending alter then materialized by REORG
@@ -92,15 +92,15 @@ of target PBG UTS table spaces
   - Target tablespace can be recovered to PIT before REORG materialized it. It will result in empty tablespace. 
   - Source tablespace cannot be recovered PIT to state before the REORG moved the tables but DSN1COPY or UNLOAD could be used to unload from IC as original source tablespace is not dropped. 
 
-#### Default behaviour of UTS - Pseudo deleted(PD) free space
+### Default behaviour of UTS - Pseudo deleted(PD) free space
 * Introduced in Db2 V10
 * Its used for lock avoidance and purely used for querying, transactions meaning this technique allows a query to access commited row that is locked by insert or delete but not update. Committed in-progress transaction data can be read. This avoid timeouts and waits for locks. 
 * PD freespace is created for every deleted row. 
 * PD freespace is cleaned by page compaction process triggered by insert, update, redo insert, undo delete/update later when a set of conditions are met(page is committed, PD data rows PUNC bit is OFF)
 
-#### Default behaviour of UTS - Locking
+### Default behaviour of UTS - Locking
 
-##### SELECTIVE PARTITION LOCKING SCHEME is used for UTS
+#### SELECTIVE PARTITION LOCKING SCHEME is used for UTS
 * There is no table lock
 * Same locking protocol used for partitioned tablespace
 * Partition lock is acquired as it is accessed. If the page being accessed is committed even partition lock is acquired(lock avoidance). 
@@ -109,10 +109,10 @@ of target PBG UTS table spaces
   - Partitioned/UTS : Row/Page -> Partition
 * Applications using LOCK TABLE statement when migrating from Segmented to UTS PBG will not see same behaviour due to *Selective partition locking scheme* and *Lock avoidance*
 
-##### Lock Escalation
+#### Lock Escalation
 * Locks are escalated to partition level but only the partitions that UoW touches. This behaviour is same in Classic Partitioned and PBR
 
-##### How locking affects INSERT transaction in PBG
+#### How locking affects INSERT transaction in PBG
 * Insert transaction requests conditional IX(Intent eXclusive) partition lock to access data in the partition
   - This is introduced to skip lock wait, if there are multiple partitions. 
 
@@ -140,17 +140,17 @@ of target PBG UTS table spaces
 
 * * * 
 
-#### Additional Information
+### Additional Information
 
-##### Accesspath Information
+#### Accesspath Information
 * SYSTABLEPART is not used by Db2 Optimizer
 * NACTIVEF in SYSTABLESPACE is important, but NACTIVEF is not touched by REORG and will remain -1 which means the Optimizer will use NPAGESF from SYSTABLES
 
 * * * 
 
-### Part 2
+## Part 2
 
-#### Case study: Common PBG Insert performance
+### Case study: Common PBG Insert performance
 
 * Problem Statement     
   - A workload consisting of almost 1000 concurrent threads inserting into the same partition based on clustering index key, resulting in concentrated contention **“hot spots”** around the end of partition such as: latches on pages, data page contention, space map pages, etc.
@@ -162,7 +162,7 @@ of target PBG UTS table spaces
   - Reduce data page contention by distributing insert transactions more evenly across different partitions - using PBR UTS with *hidden ROWID*
   - More empty partitions at the end to elevate cross partition search? Smaller partition size with more partitions for the table space?
 
-#### Managing Multiple partitions of PBG
+### Managing Multiple partitions of PBG
 
 More Partitions     
 
@@ -179,7 +179,7 @@ Less Partition
 
 > Keeping empty partitions at the end of tablespace can alleviate high page counts when you have cross partition space search. 
 
-#### Simple Insert Flow with Clustering Key
+### Simple Insert Flow with Clustering Key
 
 ![Insert Flow](./db2-pbg-insert-flow.png)
 
@@ -193,7 +193,7 @@ Less Partition
 * *CPU time* may consume for space search between space map and data pages. 
 * When writing logs, there can be *Deferred Write I/O Wait*
 
-#### What influences Db2 Space search 
+### What influences Db2 Space search 
 
 * Different workload patterns have different *hot spots*. 
 
@@ -217,7 +217,7 @@ Below are factors under our control to influence Db2 space map control.
 * Lock size
   - Page vs. Row level locking
 
-#### Managing Lock Size
+### Managing Lock Size
 
 * If you are accessing by **Sequential Key Order**
   - Use Page lock
@@ -234,7 +234,7 @@ Below are factors under our control to influence Db2 space map control.
   - In data sharing environment, the object is GBP dependent as well as having logical lock on the row, you are going to have P-Lock on the datapages
   - MAXROWS 1 with lock size PAGE can avoid additional data page p-locks in data sharing, however, it may cause increased space map page contention with high concurrent inserts 
 
-#### APPEND table space attribute on UTS
+### APPEND table space attribute on UTS
 
 * Provides fast relief of performance concern related to excessive space search
 * Adding the new data rows to the end of partition / table space
@@ -255,7 +255,7 @@ Suppose you are in 5th partition(last), when you specify append, Db2 will not lo
 * This is not optimal for better spae reuse as there is no backward space search to look for deleted free space. 
 * Ideal for only sequential workload. 
 
-#### Member-private space map and it’s corresponding data pages
+### Member-private space map and it’s corresponding data pages
 * Option for solving insert “hot spot”
 * Most commonly used when high concurrent insert workloads in a data sharing environment
 * Records are not inserted using clustering index
@@ -265,7 +265,7 @@ Suppose you are in 5th partition(last), when you specify append, Db2 will not lo
 
 ![Member cluster 1](./db2-mc-1.png)
 
-##### How MEMBER CLUSTER works
+#### How MEMBER CLUSTER works
 * Member-private space map and it’s corresponding data pages
   - Buffer Manager serializes which space map page are owned by which member, its a form of affinity but a loose affinity thats determined by Buffer Manager at runtime and it uses that by Page P-Lock control mechanism. Page P-Locks is just a reminder that its applied on space map, index pages, data pages with row level locking. 
   – P-lock request is registered in IRLM XES hash bucket entries
@@ -274,7 +274,7 @@ Suppose you are in 5th partition(last), when you specify append, Db2 will not lo
 
 ![Member cluster 2](./db2-mc-2.png)
 
-##### MEMBER CLUSTER space comparison
+#### MEMBER CLUSTER space comparison
 
 **Classic Partitioned tablespace**    
 
@@ -290,7 +290,7 @@ SEGSIZE controls number of pages covered by each space map page
 * More pages per space map page, less contention on space map page with other data sharing members. 
 * May want to combine with LOCKSIZE ROW and proper page size. 
 
-#### Case study #1: Using Member Cluster to solve space map page contention
+### Case study #1: Using Member Cluster to solve space map page contention
 
 **User case study scenario**     
 * PBG UTS, MAXPARTITIONS 2, no MEMBER CLUSTER, random insert, LOCKSIZE ROW, PCTFREE at 80%
@@ -344,7 +344,7 @@ SEGSIZE controls number of pages covered by each space map page
 **Immediate solution**     
 * Removed MEMBER CLUSTER and things went back to running well again
 
-#### Case study #2: Using Member Cluster with delete and update transactions
+### Case study #2: Using Member Cluster with delete and update transactions
 
 **User case study scenario**     
 * PBG UTS, MAXPARTITIONS 2, MEMBER CLUSTER, sequential insert, LOCKSIZE ROW, single insert,
@@ -370,7 +370,7 @@ SEGSIZE controls number of pages covered by each space map page
   * If insert need to skip smaller SEGSIZE 4, you will skip only 40 data pages. 
   * If SEGSIZE 64, it will need to skip 640 data pages.  
 
-#### Insert Algorithm 2(IAG2) Concepts
+### Insert Algorithm 2(IAG2) Concepts
 
 ![Insert Algorithm 2](./db2-iag2.png)
 
@@ -408,7 +408,7 @@ Idea is to reduce data page contention within same data sharing member. Here dat
   - Table space is out of space
   - When there is a lock escalation or SQL LOCK TABLE
 
-#### Case study #3: Alternative design to improve insert performance
+### Case study #3: Alternative design to improve insert performance
 
 For PBG clustered sequential insert, “hot spot” can occur within partition
 
@@ -425,9 +425,9 @@ For PBG clustered sequential insert, “hot spot” can occur within partition
 
 * * * 
 
-#### Q&A Session
+### Q&A Session
 
-##### Db2 General Space Search using clustering index
+#### Db2 General Space Search using clustering index
 
 * Db2 will identify using clustering index path of the next RID
 * Look in the index, the key RID path and thats gonna identify the target data page. 
@@ -437,12 +437,12 @@ For PBG clustered sequential insert, “hot spot” can occur within partition
 * Db2 is going to go to the front of the tablespace or first partition and search all space maps looking for holes to fill. 
 
 * * * 
-##### Additional Information
+#### Additional Information
 
 * Having a large SEGSIZE(32 or 64) helps in maintaining data row clustering. 
 * When you do append, it going to latch the last spacemap looking for space and its going to have a window for looking for space here. 
 
 * * * 
 
-### References
+## References
 * [Db2 Notes](../105-db2-notes)

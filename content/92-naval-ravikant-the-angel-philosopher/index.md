@@ -9,7 +9,7 @@ tags:
 
 ![Naval Ravikant](./naval-ravikant.png)
 
-##### Turnoff the monkey mind 
+### Turnoff the monkey mind 
 
 When we are born, we are blank slates pretty much living in the moment.  Don't get lost in the thoughts and play movie in the head. Planning is good but too much thinking and planning destroys happiness. Mind is a tool, you should be driving and controlling it, not the other way around. 
 
@@ -17,7 +17,7 @@ Within a positive thought there is a little seed of negative thought. When someo
 
 Children live in neutral state as they don't have personal preference or desires. Neutral state is the happy state until one get caught up in their heads. 
 
-##### My Foundational values
+### My Foundational values
 
 Values are something you don't compromise on. 
 
@@ -28,7 +28,7 @@ Values are something you don't compromise on.
 
 If the values lineup little things don't matter
 
-##### Radical honesty 
+### Radical honesty 
 
 I would combine radical honesty with old rule that Warren Buffett have. Praise specifically, criticize generally. 
 
@@ -77,7 +77,7 @@ Same is when making decisions, more desire that I have that I worked out a certa
 
 * * * 
 
-##### Two-factor code against my calendar.    
+### Two-factor code against my calendar.    
 
 * Current me always making promises for future me but current me is tired, exhausted, want to sleep, read some book and be with family
 * Future me is always this dynamic individual who always show up to every meeting and have lots of energy want to get lots of things done. 
@@ -86,7 +86,7 @@ I need to two-factor my commitment may I should write it down and revisit it aft
 
 * * * 
 
-##### Specialization is for insects
+### Specialization is for insects
 
 At some levels, all humans are broad, multi-variate but we get summarized but at deep level we know thats not true. 
 
@@ -96,7 +96,7 @@ Everyone should be able to do everything. I don't belive in model, you should tr
 
 * * * 
 
-##### Desire is a contract
+### Desire is a contract
 
 Desire to me is a contract that you make with yourself to be unhappy until you get what you want. 
 
@@ -106,7 +106,7 @@ Pick your one overwhelming desire, its okay to suffer over that one but on the o
 
 * * * 
 
-##### Correct criticism of captialism
+### Correct criticism of captialism
 
 Correct criticism of captialism is when it does not provide equal opportunity and so we should always strive to provide equal opportunity but people confuse with equal outcome. When you have equal outcome that can only be enfored through violence. Free people make different choices and when they make different choices they get different outcomes. If you don't let them suffer the consequences of bad choices or reap the rewards from good choices then you forcibly redistributing through violence. 
 
@@ -116,7 +116,7 @@ This create income inequality as it comes from outcome inequality and thats beca
 
 * * * 
 
-##### Socialism comes from the heart
+### Socialism comes from the heart
 
 We are all socialist at heart, capitalism comes from the head. Nassim talebs says
 
@@ -145,7 +145,7 @@ Here is Naval Ravikants Tweetstorm collections
 
 ### Seek Wealth, Not Money or Status
 
-##### Wealth is assets that earn while you sleep
+### Wealth is assets that earn while you sleep
 
 Wealth is the thing you want. Wealth is assets that earn while you sleep; it’s the factory of robots cranking out things. Wealth is the computer program running at night that’s serving other customers. Wealth is money in the bank that is reinvested into other assets and businesses.
 
@@ -153,19 +153,19 @@ A house can be a form of wealth, because you can rent it out; although that’s 
 
 My definition of wealth is oriented toward businesses and assets that can earn while you sleep.
 
-##### Wealth buys your freedom
+### Wealth buys your freedom
 You want wealth because it buys you freedom—so you don’t have to wear a tie like a collar around your neck; so you don’t have to wake up at 7:00 a.m. to rush to work and sit in commute traffic; so you don’t have to waste your life grinding productive hours away into a soulless job that doesn’t fulfill you.
 
 The purpose of wealth is freedom; it’s nothing more than that. To get the resources to do what you want, you have to stand out.
 
-##### Money is how we transfer wealth
+### Money is how we transfer wealth
 Money is how we transfer wealth. Money is social credits; it’s the ability to have credits and debits of other people’s time.
 
 If I do my job right and create value for society, society says, “Oh, thank you. We owe you something in the future for the work that you did. Here’s a little IOU. Let’s call that money.”
 
 That money gets debased because people steal the IOUs; the government prints extra IOUs;
 
-##### Status is your rank in the social hierarchy
+### Status is your rank in the social hierarchy
 
 There are fundamentally two huge games in life that people play. One is the money game. Money is not going to solve all of your problems; but it’s going to solve all of your money problems. I think people know that. They realize that, so they want to make money.
 
@@ -196,7 +196,7 @@ Even in nature, there are more parasites than there are non-parasitical organism
 
 Most of the wealth in civilization, in fact all of it, has been created. It got created from somewhere. It got created from people. It got created from technology. It got created from productivity. It got created from hard work. This idea that it’s stolen is this horrible zero-sum game that people who are trying to gain status play.
 
-##### Everyone can be rich
+### Everyone can be rich
 
 But the reality is everyone can be rich. We can see that by seeing, that in the First World, everyone is basically richer than almost anyone who was alive 200 years ago.
 
@@ -212,11 +212,11 @@ I like to think that if I lost all my money and if you drop me on a random stree
 
 There’s four kinds of luck that we’re talking about. This came from a book. Marc Andreessen, wrote a [blog post](https://pmarchive.com/luck_and_the_entrepreneur.html) about it.
 
-##### 1. Blind luck
+### 1. Blind luck
 
 The first kind of luck you might say is blind luck. Where I just got lucky because something completely out of my control happened. That’s fortune, that’s fate.
 
-##### 2. Luck from hustling
+### 2. Luck from hustling
 
 Then there’s luck that comes through persistence, hard work, hustle, motion. Which is when you’re running around creating lots of opportunities, you’re generating a lot of energy, you’re doing a lot of things, lots of things will get stirred up in the dust.
 
@@ -224,11 +224,11 @@ It’s almost like mixing a petri dish and seeing what combines. Or mixing a bun
 
 We, as a group, you could argue, got together because of that. Nenad had put up these great videos online, I saw them on Twitter. In that sense, he generated his own luck by creating videos until people like me keep finding him.
 
-##### 3. Luck from preparation
+### 3. Luck from preparation
 
 A third way is that you become very good at spotting luck. If you are very skilled in a field, you will notice when a lucky break happens in that field. When other people who aren’t attuned to it won’t notice. So you become sensitive to luck and that’s through skill and knowledge and work.
 
-##### 4. Luck from your unique character
+### 4. Luck from your unique character
 
 Then the last kind of luck is the weirdest, hardest kind. But that’s what we want to talk about. Which is where you build a unique character, a unique brand, a unique mindset, where then luck finds you.
 
@@ -240,7 +240,7 @@ Now, that’s an extreme example. The person who got lucky by finding the treasu
 
 You created your own luck. You put yourself in a position to be able to capitalize on that luck. Or to attract that luck when nobody else has created that opportunity for themselves. When we talk about “without getting lucky,” we want to be deterministic, we don’t want to leave it to chance.
 
-##### In 1,000 parallel universes, you want to be wealthy in 999 of them
+### In 1,000 parallel universes, you want to be wealthy in 999 of them
 
 Nivi: Do you want to elaborate a little bit more on the idea that in a 1,000 parallel universes you want to get rich in 999 of them? I think some people are going to see that and say, “that sounds impossible, it sounds like it’s too good to be true.”
 
@@ -262,7 +262,7 @@ We’re talking about getting wealthy so you can retire, so you have your freedo
 
 ### Make Luck Your Destiny
 
-##### Build your character so opportunity finds you
+### Build your character so opportunity finds you
 
 One of the things I think that is important to making money, when you want the kind of reputation that makes people do deals through you. I use the example of like, if you’re a great diver then treasure hunters will come and give you a piece of the treasure for your diving skills.
 
@@ -270,7 +270,7 @@ If you’re a trusted, reliable, high-integrity, long-term thinking deal maker, 
 
 Warren Buffett, he gets offered deals, and he gets to buy companies, and he gets to buy warrants, and bailout banks and do things that other people can’t do because of his reputation.
 
-##### You have to be a little eccentric to be out on the frontier by yourself
+### You have to be a little eccentric to be out on the frontier by yourself
 
 Nivi: Yeah, the two quotes that I’ve seen that express this kind of luck in addition to that Benjamin Disraeli one, are this one from Sam Altman where he said, “extreme people get extreme results.” I think that’s pretty nice. And then there’s this other one from Jeffrey Pfeffer, who is a professor at Stanford that, “you can’t be normal and expect abnormal returns.” I’ve always enjoyed that one too.
 
@@ -291,17 +291,17 @@ If you look at even doctors who get rich, like really rich, it’s because they 
 
 So, essentially you’re working for somebody else, and that person is taking on the risk, and has the accountability, and the intellectual property, and the brand. So, they’re just not gonna pay you enough. They’re gonna pay you the bare minimum that they have to, to get you to do their job. And that can be a high bare minimum, but it’s still not gonna be true wealth where you’re retired.
 
-##### Renting out your time means you’re essentially replaceable
+### Renting out your time means you’re essentially replaceable
 
 Replaceable because you’re now doing a set role. Most set roles can be taught. If they can be taught like in a school, then eventually you’re gonna be competing with someone who’s got more recent knowledge, who’s been taught, and is coming in to replace you.
 
-##### You must own equity to gain your financial freedom
+### You must own equity to gain your financial freedom
 
 So everybody who really makes money at some point owns a piece of a product, or a business, or some kind of IP. That can be through stock options, so you can be working at a tech company. That’s a fine way to start.
 
 But usually the real wealth is created by starting your own companies, or by even investors. They’re in an investment firm, and they’re buying equity. These are much more the routes to wealth. It doesn’t come through the hours.
 
-##### You want a career where your inputs don’t match your outputs
+### You want a career where your inputs don’t match your outputs
 
 You really just want a job, or a career, or a profession where your inputs don’t match your outputs. Businesses that have high creativity and high leverage tends to be ones where you could do an hour of work, and it can have a huge effect. Or you can do 1,000 hours of work, and it can have no effect. An engineer who is working on the wrong thing, or not quite as good, or just not as creative, or thoughtful, or whatever, can work for an entire a year, and every piece of code they ship ends up not getting used. Customers don’t want it.
 
@@ -311,11 +311,11 @@ Tools and leverage are what create this disconnection between inputs and outputs
 
 ### Live Below Your Means for Freedom
 
-##### People living below their means have freedom
+### People living below their means have freedom
 
 Its very important, just to not upgrade your lifestyle all the time. To maintain your freedom. And it just gives you freedom of operation. You basically, once you make a little bit of money, you still want to be living like your old self, so that just the worry goes away. So, don’t run out to upgrade that house, and lifestyle, and all that stuff.
 
-##### The most dangerous things are heroin and a monthly salary
+### The most dangerous things are heroin and a monthly salary
 
 Let’s say you’re getting paid \$1,000 an hour. The problem is, is that when you go into a work lifestyle like that, you don’t just suddenly go from making \$20 an hour to making \$1,000 an hour. That’s a progression over a long career.
 
@@ -323,7 +323,7 @@ One subtle problem is that as you upgrade your lifestyle as you make more money 
 
 ### Give Society What It Doesn’t Know How to Get
 
-##### Society will pay you for creating what it wants and delivering it at scale
+### Society will pay you for creating what it wants and delivering it at scale
 
 Money is IOUs from society saying, “You did something good in the past. Now here’s something that we owe you for the future.” And so society will pay you for creating things that it wants.
 
@@ -339,7 +339,7 @@ Steve Jobs, and his team of course figured out that society would want smartphon
 
 And they figured out how to get one into every First World citizen’s pocket, and eventually every Third World citizen too. And so because of that they’re handsomely rewarded, and Apple is the most valuable company in the world.
 
-##### Entrepreneur’s job is to try to bring the high end to the mass market
+### Entrepreneur’s job is to try to bring the high end to the mass market
 
 It starts as high end. First it starts as an act of creativity. First you create it just because you want it. You want it, and you know how to build it, and you need it. And so you build it for yourself. Then you figure out how to get it to other people. And then for a little while rich people have it.
 
@@ -348,11 +348,11 @@ Like, for example rich people had chauffeurs, and then they had black town cars.
 But the entrepreneur’s job starts even before that, which is creation. Entrepreneurship is essentially an act of creating something new from scratch. Predicting that society will want it, and then figuring out how to scale it, and get it to everybody in a profitable way, in a self-sustaining way.
 
 
-##### Diversity that becomes a creative superpower
+### Diversity that becomes a creative superpower
 
 Given that each person has different skillsets, different interests, different obsessions. And it’s that diversity that becomes a creative superpower. So, each person can be creatively superb at their own unique thing.
 
-##### Escape competition through authenticity
+### Escape competition through authenticity
 
 when you’re competing with people it’s because you’re copying them. It’s because you’re trying to do the same thing. But every human is different. Don’t copy.
 
@@ -367,7 +367,7 @@ Longterm game, it’s positive sum. We’re all baking the pie together. We’re
 
 From Sam Altman a while back, where he was talking about delegation, and he was saying, “One of the important things for delegation is, delegate to people who are actually good at the thing that you want them to do.”
 
-##### Integrity is what someone does, despite what they say they do
+### Integrity is what someone does, despite what they say they do
 
 Reading signals is very, very important. Signals are what people do despite what they say. So, it’s important to pay attention to subtle signals. We all know that socially if someone treats a waiter, or waitress in a restaurant really badly, then it’s only a matter of time until they treat you badly.
 
@@ -379,7 +379,7 @@ For example, I had a friend of mine whose company I invested in, and the company
 
 And I was always grateful to him for that. I said, “Wow, that’s amazing that you were so good to your investors. You didn’t wipe them out.” And he got offended by that. He said, “I didn’t do it for you. I didn’t do it for my investors. I did it for me. It’s my own self-esteem. It’s what I care about. That’s how I live my life.” That’s the kind of person you want to work with.
 
-##### Self-esteem is the reputation that you have with yourself.
+### Self-esteem is the reputation that you have with yourself.
 
 good people, moral people, ethical people, easy to work with people, reliable people, tend to have very high self-esteem because they have very good reputations with themselves, and they understand that.
 
@@ -400,7 +400,7 @@ And all the really successful people I know have a very strong action bias. They
 
 So, if you want to be successful in life, creating wealth, or having good relationships, or being fit, or even being happy, you need to have an action bias towards getting what you want.
 
-##### Rational optimists
+### Rational optimists
 
 You have to be optimistic about it. Not irrationally. You know, there’s nothing worse than someone who is foolhardy and chasing something that’s not worth it.
 
@@ -412,7 +412,7 @@ And it takes a lot of work to build even small things. I don’t think the corne
 
 But for whatever reason, education, circumstance, they didn’t get the chance to think as big, so the outcome is not as big. So, it’s just better to think big. Obviously, rationally, within your means, stay optimistic.
 
-##### We descended from pessimists
+### We descended from pessimists
 
 Historically, if you go back 2,000 years, 5,000 years, 10,000 years, two people are wandering through a jungle, they hear a tiger. One’s an optimist, and says, “Oh, it’s not headed our way.” The other one says, “I’m a pessimist, I’m out of here.” And the pessimist runs and survives, and the optimist gets eaten. So, we’re descended from pessimists. We’re genetically hardwired to be pessimists.
 
@@ -474,7 +474,7 @@ But in every industry, there is a definition of the builder. In our tech industr
 
 The other side of it is sales. Again, selling has a very broad definition. Selling doesn’t necessarily just mean selling individual customers, but it can mean marketing, it can mean communicating, it can mean recruiting, it can mean raising money, it can mean inspiring people, it could mean doing PR. It’s a broad umbrella category.
 
-##### The Silicon Valley model is a builder and seller
+### The Silicon Valley model is a builder and seller
 
 In Silicon Valley startup model, you have two founders, one of whom is  world class at selling, and one of whom is world class at building. This works. 
 
@@ -510,7 +510,7 @@ Read original and foundational books like
 * Instead of reading a book on biotech right now, pick up The Eighth Day of Creation by Watson and Crick. 
 * Instead of reading on cosomology from todays, pick pick up Richard Feynman’s Six Easy Pieces and start with basic physics. 
 
-##### Dont fear any book 
+### Dont fear any book 
 
 All of us have that memory of when we were sitting in class and we’re learning mathematics, and it was all logical and all made sense until at one point the class moved too fast and we fell behind.
 
@@ -606,7 +606,7 @@ Capital is a powerful form of leverage. It can be converted to labor. It can be 
 
 ### Product Leverage is Egalitarian
 
-##### Status goods are limited to a few people
+### Status goods are limited to a few people
 
 If you look at something like buying a Rolex, which is no longer about telling time. It’s a signaling  good. It’s all about showing off, “I have a Rolex.” That’s a zero-sum game.
 
@@ -624,7 +624,7 @@ When somebody listens to this podcast or watches a YouTube video about this, it 
 
 Joe Rogan is working no harder on his current podcast than he was on Podcast number 1, but on Podcast number 1,100 he’s making a million dollars from the podcast whereas for the previous one he probably lost money; for the first one. That’s an example of zero marginal cost.
 
- ##### Network effects: value grows as the square of the customers
+ ### Network effects: value grows as the square of the customers
 
 Then, the most subtle but the most important is this idea of network effects. It comes from computer networking. Bob Metcalfe, who created Ethernet, famously coined Metcalfe’s Law, which is the value of a network is proportional to the square of the number of nodes in the network.
 
@@ -650,7 +650,7 @@ A person like that, people will throw infinite leverage behind him because of hi
 
 Judgment, especially demonstrated judgment, with high accountability, clear track record, is critical.
 
-##### Without experience, judgment is often less than useless
+### Without experience, judgment is often less than useless
 
 Judgment is very hard to build up. This is where both intellect and experience come in play.
  
@@ -671,7 +671,7 @@ The more outraged somebody is, I guarantee you, the worse their judgment is. If 
 
 ### Set an Aspirational Hourly Rate
 
-##### Outsource tasks that cost less than your hourly rate
+### Outsource tasks that cost less than your hourly rate
 
 No one is going to value you more than you value you. Set a high personal hourly rate, and stick to it. When I was young, I decided I was worth a lot more than the market thought I was worth. And I started treating myself that way.
 
@@ -707,7 +707,7 @@ And no matter how high your bar is, raise it.
 
 Finally, once you’ve picked the right thing to work on and the right people, work as hard as you can.
 
-##### Nobody really works 80 hours a week
+### Nobody really works 80 hours a week
 
 This is where the mythology gets a little crazy. People who say they work 80-hour weeks, or even 120-hour weeks, often are just status signaling. It’s showing off. Nobody really works 80 to 120 hours a week at high output, with mental clarity. Your brain breaks down. You won’t have good ideas.
 
@@ -715,13 +715,13 @@ The way people tend to work most effectively, especially in knowledge work, is t
 
 It’s more like a lion hunting and less like a marathoner running. You sprint and then you rest. You reassess and then you try again. You end up building a marathon of sprints.
 
-##### Inspiration is perishable
+### Inspiration is perishable
 
 Inspiration is perishable. When you have inspiration, act on it right then and there.
 
 If I’m inspired to write a blog post or publish a tweetstorm, I should do it right away. Otherwise, it’s not going to get out there. I won’t come back to it. Inspiration is a beautiful and powerful thing. When you have it, seize it.
 
-##### Impatience with actions, patience with results
+### Impatience with actions, patience with results
 
 People talk about impatience. When do you know to be impatient? When do you know to be patient?
 
@@ -735,7 +735,7 @@ If I discover a problem in one of my businesses, I won’t sleep until the resol
 
 ### Be Too Busy to “Do Coffee”
 
-##### Ruthlessly decline meetings
+### Ruthlessly decline meetings
 
 Be too busy to ‘do coffee’ while keeping an uncluttered Calendar
  
@@ -785,7 +785,7 @@ Sometimes you get trapped in the wrong game because you’re competing. The best
 
 Authenticity naturally gets you away from competition. Does it mean that you want to be authentic to the point where there’s no product-market fit? It may turn out that you’re the best juggler on a unicycle. But maybe there isn’t much of a market for that, even with YouTube videos. So you have to adjust until you find product-market fit.
 
-##### Specialize in being you
+### Specialize in being you
 
 But people are multivariate. They have a lot of skills. As you go through your career, you’ll find you gravitate towards the things you’re good at, which by definition are the things you enjoy doing. Otherwise, you wouldn’t be good at them. You wouldn’t have put in the time.
 
@@ -829,7 +829,7 @@ One way to apply this advice is to look at who is getting leverage off of the wo
 
 People naturally do this because they want to move up the corporate ladder
 
-##### You will do better in a small organization
+### You will do better in a small organization
 
 You will have more accountability, and your work will be more visible. You’re more likely to be able to try different things, which can help you discover the thing you are uniquely good at. People will be more likely to give you leverage through battlefield promotions. You’ll have more flexibility. There will be more authenticity in how the company operates.
 
@@ -885,7 +885,7 @@ I prefer to work with boutiques. My ideal law firm is a law firm of one. My idea
 
 I generally say, though: “Negotiations are won by whoever cares less.” Negotiation is about not wanting it too badly. If you want something too badly, the other person can extract more value from you.If someone is taking advantage of you in a negotiation, your best option is to turn it from a short-term game into a long-term game. Try to make it a repeat game. Try to bring reputation into the negotiation. Try to include other people who may want to play games with this person in the future.
 
-##### Convert single-move games to multi-move games
+### Convert single-move games to multi-move games
 
 So you try to go through friends. You try to find people with good reputations. You’re converting an expensive single-move game with a high probability of cheating on both sides into a multi-move game.
 
@@ -897,7 +897,7 @@ Another way is to say: “I’m going to do this project with you, and I have th
 
 Life gets a lot easier when you know someone’s got your back
 
-##### Mutual trust makes it easy to do business
+### Mutual trust makes it easy to do business
 
 Relationships offer a good example of compound interest. Once you’ve been in a good relationship with somebody for a while—whether it’s business or romantic—life gets a lot easier because you know that person’s got your back. You don’t have to keep questioning.
 
